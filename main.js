@@ -1,5 +1,5 @@
 
-console.log("MAIN JS");
+// console.log("MAIN JS");
 
 
 let log = console.log.bind();
@@ -11,7 +11,7 @@ const training_button = id("training_button");
 
 let params = new URLSearchParams(document.location.search);
 let kanji_id = params.get("kanji");
-log("kanji id param: " + kanji_id);
+// log("kanji id param: " + kanji_id);
 
 
 // pathList.forEach(path => {
@@ -288,12 +288,23 @@ log("kanji id param: " + kanji_id);
 
 let currentIndex = 0;
 let pathList = null;
+const h = "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽゔっゎぁぃぅぇぉゃゅょゐゑ";
+const k = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポヴッヮァィゥェォャュョヰヱー";
+const letterList = "abcdefghijklmnopqrstuvwxyzçàâäéèêëîïôöûüù'- ";
+const kanaList = h+k;
 
 let currentSection = "main";
 let bSearching = false;
 const search_input = id("search_input");
 const search_btn = id("search_btn");
 const stop_search_btn = id("stop_search_btn");
+let bModal = false;
+let bModalOpened = false;
+const modal_container = id("modal_container");
+modal_container.style.height = (window.innerHeight-50) + "px";
+id("header").addEventListener("click", e => {
+	if (bModal) closeModal();
+});
 search_input.addEventListener("click", e => {
 	log("input click");
 	bSearching = true;
@@ -341,51 +352,119 @@ search_btn.addEventListener("click", e => {
 	}
 });
 
+function isFullKana(pWord) {
+	let bFullKana = true;
+	for (let i = 0; i < pWord.length; i++) {
+		if (!kanaList.includes(pWord[i])) {
+			bFullKana = false;
+			i = pWord.length;
+		}
+	}
+	return bFullKana;
+}
+function isFullLetter(pWord) {
+	let bFullLetter = true;
+	for (let i = 0; i < pWord.length; i++) {
+		if (!letterList.includes(pWord[i].toLowerCase())) {
+			bFullLetter = false;
+			i = pWord.length;
+		}
+	}
+	return bFullLetter;
+}
+
+function startApp() {
+	none(id("loading_container"));
+	id("search_input").disabled = false;
+	id("search_btn").disabled = false;
+	id("training_button").disabled = false;
+	unset(id("main_background"));
+
+	// changeSection("training");
+}
+
 function search(pWord) {
+	if (bModal) closeModal();
 	let foundKanjiList = [];
 	let exactWordArr = [];
 	let includingWordArr = [];
+	let bFullLetter = false;
+	let bFullKana = false;
+	pWord = pWord.trim();
+	pWord = pWord.toLowerCase();
 	if (pWord != "") {
 
-		log("searching for " + pWord);
-		for (let i = 0; i < pWord.length; i++) {
-			if (Kanji.kanjiList.includes(pWord[i])) {
-				const kanji = Kanji.list.find(k => k.kanji == pWord[i]);
-				foundKanjiList.push(kanji.id);
-			}
-		}
-
-		log("FoundKanji index: ");
-		log(foundKanjiList);
-
-		if (Word.wordList.includes(pWord)) {
-			exactWordArr = Word.list.filter(w => w.word == pWord);
-			includingWordArr = Word.list.filter(w => (w.word.includes(pWord) && w.word !== pWord));
+		if (isFullLetter(pWord)) {
+			bFullLetter = true;
 		} else {
-			includingWordArr = Word.list.filter(w => (w.word.includes(pWord) && w.word !== pWord));
+			log("NOT FULL LETTER");
 		}
-		log(exactWordArr);
-		log(includingWordArr);
 
-		const unset_back = "unset_back";
+		if (isFullKana(pWord)) {
+			bFullKana = true;
+		} else {
+			// log("NOT FULL KANA");
+		}
+
+		if (!bFullLetter && !bFullKana) {
+			for (let i = 0; i < pWord.length; i++) {
+				if (Kanji.kanjiList.includes(pWord[i])) {
+					const kanji = Kanji.list.find(k => k.kanji == pWord[i]);
+					foundKanjiList.push(kanji.id);
+				}
+			}
+	
+			if (Word.wordList.includes(pWord)) {
+				exactWordArr = Word.list.filter(w => w.word == pWord);
+				includingWordArr = Word.list.filter(w => (w.word.includes(pWord) && w.word !== pWord));
+			} else {
+				includingWordArr = Word.list.filter(w => (w.word.includes(pWord) && w.word !== pWord));
+			}
+
+		} else if (bFullLetter) {
+			let tempArr = Kanji.list.filter(k => k.imi.toLowerCase().includes(pWord));
+			tempArr.forEach(k => {
+				foundKanjiList.push(k.id);
+			});
+			log("found kanji list: ");
+			log(foundKanjiList);
+			// if (Word.imiList.includes(pWord)) {
+				// log("imiList includes pWord: " + pWord);
+				exactWordArr = Word.list.filter(w => w.imi.toLowerCase() == pWord);
+				includingWordArr = Word.list.filter(w => (w.imi.toLowerCase().includes(pWord) && w.imi.toLowerCase() != pWord));
+			// }
+		} else if (bFullKana) {
+			let tempArr = Kanji.list.filter(k => k.kunYomiRaw.includes(pWord));
+			tempArr.forEach(k => {
+				foundKanjiList.push(k.id);
+			});
+			log("found kanji list: ");
+			log(foundKanjiList);
+			// if (Word.imiList.includes(pWord)) {
+				// log("imiList includes pWord: " + pWord);
+				exactWordArr = Word.list.filter(w => w.yomiRaw == pWord);
+				includingWordArr = Word.list.filter(w => (w.yomiRaw.includes(pWord) && w.yomiRaw != pWord));
+			// }
+		}
+
 		let kanjiHTML = `<div class="kanji_result_header">漢字 ${foundKanjiList.length}</div>`;
 
 		const kanji_result_container = id("kanji_result_container");
 		foundKanjiList.forEach( (k, index) => {
-			let yomi = `${Kanji.list[k].onYomi}${(Kanji.list[k].onYomi.length > 0 && Kanji.list[k].kunYomi.length > 0) ? " | " : ""}${Kanji.list[k].kunYomi}`;
-			if (yomi.length >= 46) {
-				yomi = yomi.slice(0, 45);
-				yomi += "...";
-			}
-			let imi = `${Kanji.list[k].imi}`;
-			if (imi.length >= 106) {
-				imi = imi.slice(0, 104);
-				imi += "...";
-			}
+		let yomi = `${Kanji.list[k].onYomi}${(Kanji.list[k].onYomi.length > 0 && Kanji.list[k].kunYomi.length > 0) ? " | " : ""}${Kanji.list[k].kunYomi}`;
+		if (yomi.length >= 46) {
+			yomi = yomi.slice(0, 45);
+			yomi += "...";
+		}
+		let imi = `${Kanji.list[k].imi}`;
+		if (imi.length >= 106) {
+			imi = imi.slice(0, 104);
+			imi += "...";
+		}
 
-			kanjiHTML +=
+		kanjiHTML +=
 			`
-			<div class="kanji_result" id="kanji_id_${k}" onClick="kanjiInfo(${k})">
+			<div class="kanji_result" id="kanji_id_${k}" onClick="kanjiInfo(${k}, this)">
 				<div class="kanji_result_kanji">${Kanji.list[k].kanji}</div>
 				<div class="kanji_result_yomi_imi">
 					<div class="kanji_result_yomi">${yomi}</div>
@@ -406,6 +485,9 @@ function search(pWord) {
 		});
 		kanjiHTML += "</div>";
 		kanji_result_container.innerHTML = kanjiHTML;
+
+		log(exactWordArr);
+		log(includingWordArr);
 		
 		const word_result_container = id("word_result_container");
 		let wordHTML = `<div class="kanji_result_header">単語 ${exactWordArr.length + includingWordArr.length}</div>`;
@@ -432,7 +514,6 @@ function search(pWord) {
 			}
 			wordHTML += "</div></div>";
 		});
-
 		
 		includingWordArr.forEach(w => {
 			wordHTML += 
@@ -473,9 +554,89 @@ function search(pWord) {
 		`;
 	}
 }
-function kanjiInfo(pIndex) {
+
+function kanjiInfo(pIndex, e) {
+
 	log("KANJI INFO: " + pIndex);
 	log(Kanji.list[pIndex]);
+
+	let html = 
+	`
+	<div id="modal">
+		<!--<div class="modal_content">-->
+			<div class="modal_header">
+				<div class="modal_kanji">${Kanji.list[pIndex].kanji}</div>
+				<div class="modal_kanji_info">
+					<div class="modal_stroke_bushu">
+						<p class="modal_stroke">${Kanji.list[pIndex].kakusuu}画</p>
+						<!--<p class="modal_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].bushu}</p>-->
+
+						<span id="modal_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].bushu}<span
+							class="modal_tooltip_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].yomi}</span>
+						</span>
+
+					</div>
+					<div class="modal_plus_alpha">
+						<div class="kanken_lvl word_kanken">
+							<div class="kanken_left">${Kanji.list[pIndex].kanken}</div>
+							<div class="kanken_right">級</div>
+						</div>
+						<p class="modal_kanken_page">(${Kanji.list[pIndex].jitenRef})</p>
+					</div>
+					<div class="modal_itaiji">${Kanji.list[pIndex].itaiji}</div>
+
+				</div>
+				<div class="modal_anim_container">
+					<div id="kanji_animation">
+						<div id="kai_bg"></div>
+						<div id="kai"></div>
+					</div>
+				</div>
+			</div>
+			<div class="modal_main">
+				<p class="modal_separator">音読み</p>
+				<p class="modal_onyomi">${Kanji.list[pIndex].onYomi != "" ? Kanji.list[pIndex].onYomi : "<span class='no_yomi'>&nbsp-</span>"}</p>
+				<p class="modal_separator">訓読み</p>
+				<p class="modal_kunyomi">${Kanji.list[pIndex].kunYomi != "" ? Kanji.list[pIndex].kunYomi : "<span class='no_yomi'>&nbsp-</span>"}</p>
+				<p class="modal_separator">意味</p>
+				<p class="modal_imi">${Kanji.list[pIndex].imi}</p>
+				<p class="modal_separator">単語・熟語</p>
+				<div class="modal_words">
+	`;
+
+	let no_border = ""
+	Kanji.list[pIndex].wordList.forEach((i,index) => {
+		if (index == Kanji.list[pIndex].wordList.length-1) no_border = "no_border";
+		html +=
+		`
+		<div class="word_result ${no_border}" id="word_id_${i}">
+			<div class="word_result_yomi_word">
+				<div class="word_result_yomi">${Word.list[i].yomi}</div>
+				<div class="word_result_word">${Word.list[i].word}</div>
+				<div class="word_result_imi">${Word.list[i].imi}</div>
+			</div>
+		</div>
+		`;
+	})
+	html +=
+	`
+					</div>
+				</div>
+			<!--</div>-->
+		</div>
+	`;
+
+	modal_container.innerHTML = html;
+
+	
+
+	id("modal").addEventListener("click", e => {
+		// log("CLICK MODAL");
+		e.stopPropagation();
+	});
+	openModal();
+	test(pIndex);
+
 }
 
 stop_search_btn.addEventListener("click", e => {
@@ -488,15 +649,43 @@ stop_search_btn.addEventListener("click", e => {
 });
 
 document.body.addEventListener("click", e => {
-	log("click body"); //2
+	log(e.target);
+	// log("click body"); //2
 	if (bSearching) {
-		log("go stop searching"); //3
+		// log("go stop searching"); //3
 		unset(search_btn);
 		none(stop_search_btn);
 	} else {
-		log("no action");
+		// log("no action");
 	}
 });
+
+modal_container.addEventListener("click", e => {
+	// log("Click modal container");
+	if (bModal) closeModal();
+});
+
+function openModal() {
+	bModal = true;
+	bModalOpened = true;
+	flex(id("modal_container"));
+	setTimeout(() => {
+		editClass(id("modal_container"), "modal_open");
+	},0.1);
+
+	none(id("footer_menu_btn"));
+	unset(id("footer_close_modal_btn"));
+}
+function closeModal() {
+	bModal = false;
+	modal_container.innerHTML = "";
+	none(modal_container);
+	editClass(modal_container, "modal_open", false);
+	pathList = null;
+
+	none(id("footer_close_modal_btn"));
+	unset(id("footer_menu_btn"));
+}
 
 setInterval(() => {
 
@@ -528,26 +717,25 @@ setInterval(() => {
 			currentIndex = 0;
 		}
 	}
+	
 }, 500);
 
 
 
 function test(pId) {
-	log("test("+ pId +")");
 	log(Kanji.list);
 	log(Kanji.list[pId]);
 	
 	if (Kanji.list.length > 0 && Kanji.list[pId].pathList.length > 0) {
-		log(Kanji.list[pId]);
-		let innerHTML = `<svg width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" baseProfile="full">`;
+		let innerHTML = `<svg width="75" height="75" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" baseProfile="full">`;
 		Kanji.list[pId].pathList.forEach(p => {
-			innerHTML += `<path d="${p}" style="fill:none;stroke:rgba(255,0,0,1);stroke-width:5" />`
+			innerHTML += `<path d="${p}" style="fill:none;stroke:rgba(220,220,220,1);stroke-width:5" />`
 		});
 		innerHTML += `</svg>`;
 	
-		let innerHTML2 = `<svg width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" baseProfile="full">`;
+		let innerHTML2 = `<svg width="75" height="75" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" baseProfile="full">`;
 		Kanji.list[pId].pathList.forEach(p => {
-			innerHTML2 += `<path d="${p}" style="fill:none;stroke:black;stroke-width:5" />`
+			innerHTML2 += `<path d="${p}" style="fill:none;stroke:rgba(0 118 188);stroke-width:5" />`
 		});
 		innerHTML2 += `</svg>`;
 	
@@ -564,24 +752,7 @@ function test(pId) {
 			path.style.strokeDashoffset = length;
 		});
 		currentIndex = 0;
-
-
-		const kanji_container = id("kanji_container");
-		kanji_container.innerHTML = `
-			<div id="kanji_container">
-				<h2>${Kanji.list[pId].kanji}</h2>
-				<p>${Kanji.list[pId].itaiji}</p>
-				<p>${Kanji.list[pId].onYomi}</p>
-				<p>${Kanji.list[pId].kunYomi}</p>
-				<p>${Kanji.list[pId].imi}</p>
-				<p>${Kanji.list[pId].kakusuu}</p>
-				<p>${Kanji.list[pId].bushu-1} ${Kanji.bushuList[Kanji.list[pId].bushu-1].bushu} ${Kanji.bushuList[Kanji.list[pId].bushu-1].yomi}</p>
-				<p>${Kanji.list[pId].gakunen} ${Kanji.list[pId].kanken} ${Kanji.list[pId].jitenRef}</p>
-			</div>
-		`;
-
 	}
-
 }
 
 function changeSection(pSection) {
@@ -592,12 +763,14 @@ function changeSection(pSection) {
 			// editClass(main_button, "header_btn_active", true);
 			editClass(training_button, "header_btn_active", false);
 			// training_button.style.borderLeft = "2px solid rgba(0 118 188)";
+			unset(id("footer_zone"));
 			break;
 		case "training":
 			none(main_section);
 			unset(training_section);
 			// editClass(main_button, "header_btn_active", false);
 			editClass(training_button, "header_btn_active", true);
+			none(id("footer_zone"));
 			break;
 	}
 	currentSection = pSection;
@@ -643,8 +816,11 @@ function flex(element) {
 function block(element) {
     element.style.display = "block";
 }
-function rnd(pMin, pMax) { //? pMax NON COMPRIS
-    return Math.floor(Math.random() * (pMax - pMin)) + pMin;
+function rnd(pMin, pMax) {
+    return Math.floor(Math.random() * ((pMax+1) - pMin)) + pMin;
+}
+function copyToClipboard(pString) {
+	navigator.clipboard.writeText(pString);
 }
 
 function createPath(content) {
@@ -687,8 +863,6 @@ function createPath(content) {
 			}
 		}
 	}
-
-	log(kanji);
 }
 
 

@@ -1,6 +1,9 @@
 class Kanji {
 	static list = [];
 	static kanjiList = [];
+	static onYomiList = [];
+	static kunYomiList = [];
+	static imiList = [];
 	static gakunenList = [];
 	static bushuList = [
 		{ bushu: "一", yomi: "いち"},
@@ -227,11 +230,17 @@ class Kanji {
 		Kanji.kanjiList.push(this.kanji);
         this.onYomiList = pOnYomi.split("、");
         this.kunYomiList = pKunYomi.split("、");
+		Kanji.kunYomiList.push(pKunYomi);
         this.onYomi = pOnYomi;
         this.kunYomi = pKunYomi;
+		this.kunYomiRaw = this.kunYomi.replaceAll("(", "");
+		this.kunYomiRaw = this.kunYomiRaw.replaceAll(")", "");
+		this.kunYomiRaw = this.kunYomiRaw.replaceAll("～", "");
+
         this.kakusuu = pKakusuu;
         this.itaiji = pItaiji;
 		this.imi = pImi;
+		Kanji.imiList.push(this.imi.toLowerCase());
 		this.bushu = pBushu;
 		this.gakunen = pGakunen;
 		this.kanken = pKanken;
@@ -333,13 +342,8 @@ function createWord(pFile) {
 	// displayKanjiUrl();
 
 
+	startApp();
 
-
-	none(id("loading_container"));
-	id("search_input").disabled = false;
-	id("search_btn").disabled = false;
-	id("training_button").disabled = false;
-	unset(id("main_background"));
 }
 
 function LinkKanjiWords() {

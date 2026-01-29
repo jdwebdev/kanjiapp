@@ -23,12 +23,16 @@
 	--orange-light: rgb(233, 173, 132);
 	--orange: rgb(249, 102, 48);
 	--kanken_yellow: rgb(253, 242, 4);
+	--red: rgb(194, 39, 0);
 }
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	/* overflow-x: hidden; */
+
+	touch-action: manipulation
 }
 
 ul {
@@ -43,7 +47,7 @@ header {
 	position: fixed;
 	width: 100%;
 	margin-bottom: 50px;
-	/* height: 50px; */
+	z-index: 10;
 }
 
 @media (min-width: 601px) {
@@ -58,7 +62,7 @@ header {
 }
 
 main {
-	/* position: relative; */
+	position: relative;
 	/* background-color: aqua; */
 }
 
@@ -95,6 +99,9 @@ h1 {
 	margin-right: 10px;
 	/* width: 60px; */
 	min-width: 86px;
+	text-shadow: 0px 1px var(--dark_blue);
+	box-shadow: 0px 1px var(--dark_blue);
+
 }
 
 .header_btn {
@@ -243,10 +250,88 @@ h1 {
 
 .input_inactive {}
 
+/* ------------ */
 /* MAIN SECTION */
+/* ------------ */
+
 main {
 	padding-top: 50px;
 }
+
+#footer_zone {
+	position: fixed;
+	width: 75px;
+	height: 75px;
+	bottom: 20px;
+	right: 20px;
+
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	z-index: 20;
+}
+
+#footer_menu_btn {
+	width: 100%;
+	height: 100%;
+	/* background-color: red; */
+	border: none;
+	font-size: 50px;
+	color: white;
+	position: relative;
+	border-radius: 10px;
+
+}
+
+#span_1 {
+	position: absolute;
+	background-color: white;
+	width: 60%;
+	height: 8px;
+	top: 0;
+	left: 50%;
+	translate: -50% 15px;
+	border-radius: 5px;
+}
+
+#span_2 {
+	position: absolute;
+	background-color: white;
+	width: 60%;
+	height: 8px;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	border-radius: 5px;
+}
+
+#span_3 {
+	position: absolute;
+	background-color: white;
+	width: 60%;
+	height: 8px;
+	left: 50%;
+	bottom: 15px;
+	translate: -50% 0px;
+	border-radius: 5px;
+}
+
+
+#footer_close_modal_btn {
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	border: none;
+	font-size: 50px;
+	color: white;
+	padding-bottom: 10px;
+	display: none;
+}
+
+#footer_zone:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+
 
 #main_section {
 	/* margin-top: 50px; */
@@ -390,33 +475,638 @@ main {
 	text-align: center;
 }
 
+/* ----- */
+/* MODAL */
+/* ----- */
+#modal_container {
+	padding: 10px;
+	width: 100%;
+	/* height: 100%; */
+	position: absolute;
+	top: 100px;
+	display: none;
+	/* opacity: 0; */
+	transition: 0.3s ease;
+}
+
+#modal_container.modal_open {
+	background-color: rgba(100, 100, 100, 0.5);
+	display: flex;
+	opacity: 1;
+	top: 50px;
+	transition: 0.3s ease;
+}
+
+#modal {
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 4px 4px var(--dark_blue);
+	padding: 10px;
+	z-index: 10;
+	width: 100%;
+	height: max-content;
+	max-height: 620px;
+}
+
+.modal_content {
+	border: 2px solid var(--blue);
+	border-radius: 10px;
+	/* position: relative; */
+}
+
+.modal_header {
+	display: flex;
+	justify-content: space-between;
+	/* height: 82px; */
+	/* margin-bottom: 10px; */
+
+	/* TEST */
+	height: 92px;
+	padding-bottom: 10px;
+	border-top: 2px solid var(--blue);
+	border-left: 2px solid var(--blue);
+	border-right: 2px solid var(--blue);
+	border-radius: 10px 10px 0 0;
+}
+
+/* TODO !!!!*/
+.modal_main {
+	max-height: 470px;
+	overflow: auto;
+	/* display: table-row; */
+
+	/* TEST */
+	border-bottom: 2px solid var(--blue);
+	border-left: 2px solid var(--blue);
+	border-right: 2px solid var(--blue);
+	border-radius: 0 0 10px 10px;
+}
+
+
+.modal_kanji {
+	font-size: 60px;
+	padding: 5px;
+	border-right: 2px solid var(--blue);
+	border-bottom: 2px solid var(--blue);
+	border-radius: 0 0 10px 0;
+	width: 82px;
+	box-shadow: 1px 1px 5px var(--dark_blue);
+	text-align: center;
+}
+
+.modal_kanji_info {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	padding: 0 10px;
+}
+
+.modal_stroke_bushu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.modal_plus_alpha {
+	display: flex;
+
+	/* background-color: red; */
+}
+
+.modal_stroke {
+	/* background-color: aqua; */
+	height: 24px;
+	padding-top: 2px;
+	/* vertical-align: middle; */
+
+}
+
+.modal_tooltip_bushu {
+	visibility: hidden;
+	min-width: 100px;
+	max-width: 150px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 15;
+
+	/* top: 25px;
+	left: 0px; */
+	left: 50%;
+	transform: translate(-50%, 25px);
+
+	font-size: 15px;
+	padding: 2px;
+}
+
+#modal_bushu {
+	/* background-color: bisque; */
+	position: relative;
+}
+
+#modal_bushu:hover .modal_tooltip_bushu {
+	visibility: visible;
+}
+
+#modal_bushu:hover {
+	/* background-color: red; */
+}
+
+
+
+
+.modal_imi {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 2px;
+}
+
+
+.modal_kanken_page {
+	padding-top: 2px;
+}
+
+.modal_anim_container {
+	width: 80px;
+	height: 80px;
+	border-left: 2px solid var(--dark_blue);
+	border-bottom: 2px solid var(--dark_blue);
+	border-radius: 0 0 0 10px;
+}
+
+.no_yomi {
+	color: gray;
+}
+
+.modal_itaiji {
+	font-size: 20px;
+}
+
+
+
+.modal_separator {
+	background-color: black;
+	color: white;
+	margin: 5px 0px;
+	padding: 2px;
+}
+
+.modal_words {
+	/* overflow-y: auto;
+	height: 250px; */
+	/* background-color: red; */
+}
+
+.modal_onyomi {}
+
+.modal_kun {}
+
+.modal_kunyomi {}
+
+.modal_words_title {}
+
+.modal_wordlist {}
+
+.modal_word {}
+
+
+
+/* ---------------- */
+/* TRAINING SECTION */
+/* ---------------- */
+#training_section {
+	display: none;
+}
+
+
+.training_type_container {
+	display: flex;
+	flex-direction: column;
+}
+
+.training_type_btn {
+	height: 100px;
+	font-size: 30px;
+	border: none;
+	background-color: white;
+	border-bottom: 2px solid var(--blue);
+	transition: 0.3s ease;
+	position: relative
+}
+
+.clicked_training_type_btn {
+	height: 40px;
+	transform: height 0.3s ease;
+	color: var(--blue);
+	text-shadow: 0px 1px var(--trans_blue);
+}
+
+.other_training_type_btn {
+	opacity: 0;
+	height: 0px;
+	transform: height 0.3s ease;
+	transform: opacity 0.3s ease;
+	border: none;
+}
+
+.triangle {
+	/* display: inline-block; */
+	width: 25px;
+	height: 25px;
+	border: 12px solid black;
+	border-bottom-color: transparent;
+	border-right-color: transparent;
+	border-top-color: var(--blue);
+	border-left-color: transparent;
+	border-radius: 15px;
+	position: absolute;
+	top: 12px;
+}
+
+.triangle_left {
+	left: 10px;
+}
+
+.triangle_right {
+	right: 10px;
+}
+
+
+#kanken_container {
+	display: none;
+}
+
+.kanken_lvl_btns {
+	display: flex;
+	border-bottom: 2px solid black;
+}
+
+.kanken_lvl_btns li {
+	flex-grow: 1;
+	width: 20px;
+	border-right: 2px solid black;
+}
+
+.kanken_lvl_btn {
+	width: 100%;
+	height: 100px;
+	background-color: transparent;
+	border: none;
+	font-size: 20px;
+}
+
+#sonota_container {
+	display: none;
+	padding-top: 10px;
+	height: 30px;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#sonota_input {
+	width: 50%;
+	height: 25px;
+	font-size: 18px;
+}
+
+#sonota_start {
+	height: 25px;
+	background-color: var(--blue);
+	color: white;
+	width: 50px;
+	border: none;
+	border-radius: 5px;
+	font-size: 15px;
+	text-shadow: 0px 1px var(--dark_blue);
+	box-shadow: 1px 1px var(--dark_blue);
+}
+
+#training_container {
+	display: none;
+}
+
+.training_header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 5px;
+}
+
+#training_back_btn {
+	height: 30px;
+	background-color: var(--blue);
+	color: white;
+	width: 50px;
+	border: none;
+	border-radius: 5px;
+	font-size: 15px;
+	text-shadow: 0px 1px var(--dark_blue);
+	box-shadow: 1px 1px var(--dark_blue);
+	padding: 0px 5px;
+	padding-bottom: 2px;
+	font-size: 20px;
+	font-family: arial;
+}
+
+
+#progress_bar_container {
+	width: 80%;
+	margin-left: 20px;
+	height: 28px;
+	border: 1px solid black;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+}
+
+#progress_bar {
+	width: 0px;
+	height: 26px;
+	border-radius: 8px;
+	z-index: -10;
+	background-color: var(--blue);
+	position: absolute;
+}
+
+
+#training_progression {
+	margin-left: 5px;
+	padding: 5px;
+	text-align: right;
+	width: 20%;
+	font-family: Arial, Helvetica, sans-serif;
+	/* background-color: red; */
+}
+
+#training_zone {
+	padding: 5px;
+}
+
+.training_kanji {
+	font-size: 50px;
+	text-align: center;
+	border: 2px solid var(--blue);
+	border-radius: 10px;
+	height: 70px;
+	padding: 5px;
+	position: relative;
+}
+
+#training_itaiji {
+	border: 2px solid var(--blue);
+	border-top: none;
+	/* border-radius: 0px 0px 10px 10px; */
+	border-radius: 10px;
+	height: 40px;
+	font-size: 30px;
+	text-align: center;
+	background-color: rgba(200, 200, 200, 0.2);
+	padding-top: 2px;
+}
+
+#training_bushu {
+	position: absolute;
+	right: 10px;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.tooltip_bushu {
+	visibility: hidden;
+	width: 150px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 15;
+	top: 0px;
+	left: -150px;
+	font-size: 15px;
+	padding: 2px;
+
+	/* Ensure tooltip is displayed above content */
+}
+
+#training_bushu:hover .tooltip_bushu {
+	visibility: visible;
+}
+
+
+
+
+
+
+
+#training_onyomi {
+	font-size: 20px;
+	margin-top: 5px;
+}
+
+#training_kunyomi {
+	font-size: 20px;
+}
+
+#training_imi {
+	font-family: arial;
+	border-bottom: 2px solid black;
+	padding-bottom: 10px;
+}
+
+#training_wordlist {
+	height: 300px;
+	overflow-y: scroll;
+}
+
+.hidden_kanji {
+	color: red;
+	border: 1px dashed red;
+	border-radius: 5px;
+}
+
+
+.training_check_zone {
+	width: 100%;
+	padding: 5px;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	background-color: white;
+	left: 0;
+}
+
+#check_btn_container {
+	/* height: 50px; */
+}
+
+#check_btn {
+	width: 100%;
+	height: 40px;
+	border: 2px solid var(--blue);
+	background-color: white;
+	border-radius: 10px;
+	color: var(--blue);
+	font-size: 20px;
+
+	/* display: none; */
+}
+
+#maru_batsu_btns {
+
+	display: none;
+
+	height: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+#maru_batsu_btns button {
+	border: none;
+	width: 30%;
+	color: white;
+}
+
+#batsu_btn {
+	background-color: var(--red);
+	border-radius: 10px 0 0 10px;
+	font-size: 22px;
+}
+
+#maru_btn {
+	background-color: var(--blue);
+	border-radius: 0 10px 10px 0;
+	font-weight: 900;
+	font-size: 24px;
+}
+
+#training_result {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#training_mark {
+	margin-top: 15px;
+	border: 4px solid var(--blue);
+	border-radius: 50px;
+	width: 100px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+
+#training_mark p {
+	text-align: center;
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.training_perfect {
+	width: 50%;
+	margin-top: 30px;
+	border: 4px solid var(--blue);
+	border-radius: 10px;
+	color: var(--blue);
+	font-size: 20px;
+	font-weight: bolder;
+	height: 40px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	padding-top: 5px;
+	/* padding: 10px; */
+	/* padding-top: 25px; */
+	/* margin-top: 15px; */
+}
+
+.training_wrong_list_container {
+	width: 100%;
+	/* background-color: red; */
+	border: 4px solid var(--red);
+	border-radius: 10px;
+	padding: 10px;
+	padding-top: 25px;
+	margin-top: 15px;
+	position: relative;
+}
+
+.training_wrong_title {
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	background-color: white;
+	top: -17px;
+	padding: 5px;
+	border: 4px solid var(--red);
+	border-radius: 10px;
+	color: var(--red);
+	font-weight: bolder;
+}
+
+#training_wrong_list {
+	font-size: 20px;
+}
+
+.training_btns {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.training_sopy_see_btns {
+	background-color: var(--blue);
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	width: 70px;
+	text-shadow: 0px 1px var(--dark_blue);
+	box-shadow: 2px 2px var(--dark_blue);
+}
+
+
+
+.no_border {
+	border: none !important;
+}
+
+
+
+
+
+
+/* ---------------- */
+#slide_test {
+	background-color: black;
+	width: 1px;
+	height: 300px;
+	position: absolute;
+	top: 0px;
+	/* left: 10px; */
+}
+
+
+
+h2 {
+	color: white;
+}
+
+
 #kanji_animation {
 	position: relative;
 }
 
 #kai_bg {
 	position: absolute;
+	top: -2px;
+	left: -2px;
 }
 
 #kai {
 	position: absolute;
-}
-
-#kanji_container {
-	margin-top: 160px;
-}
-
-#kanji_list {
-	/* height: 500px; */
-	overflow-y: scroll;
-}
-
-#kanji_list button {
-	padding: 10px;
-	font-size: 20px;
-}
-
-/* TRAINING SECTION */
-#training_section {
-	display: none;
+	top: -2px;
+	left: -2px;
 }
