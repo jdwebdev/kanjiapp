@@ -81,7 +81,11 @@
 
 			<div id="training_container">
 				<div class="training_header">
-					<button id="training_back_btn" onClick="trainingBack()">↵</button>
+					<button id="training_back_btn" onClick="trainingBack()">
+						<span class="training_back_arrow_1"></span>
+						<span class="training_back_arrow_2"></span>
+						<span class="training_back_arrow_3"></span>
+					</button>
 					<div id="progress_bar_container">
 						<div id="progress_bar"></div>
 					</div>
@@ -94,9 +98,7 @@
 						</div>
 						<div class="training_wrong_list_container">
 							<div class="training_wrong_title">WRONG</div>
-							<p id="training_wrong_list">
-								自動当船楽曜原弓黄汽内寺戸買少新家羽社後答風馬半古近牛国考作父冬体絵直線首食計万聞教方刀太場元里分番春頭切会室今道引自鳥広市北谷点午同光高何門晴数昼妹麦弟強声母友姉毎組長紙海図活園
-							</p>
+							<p id="training_wrong_list"></p>
 							<div class="training_btns">
 								<button id="training_copy_btn" class="training_sopy_see_btns"
 									onClick="copyWrongList()">Copy</button>
@@ -110,12 +112,11 @@
 		</section>
 	</main>
 	<div id="footer_zone">
-		<button id="footer_menu_btn">
+		<button id="footer_menu_btn" onClick="footerMainBtn()">
 			<span id="span_1"></span>
 			<span id="span_2"></span>
 			<span id="span_3"></span>
 		</button>
-		<button id="footer_close_modal_btn" onClick="closeModal()">↵</button>
 	</div>
 
 	<script src="./class/word.js"></script>

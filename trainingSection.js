@@ -95,6 +95,10 @@ function sonotaStart() {
 	
 	current = -1;
 	wrongList = "";
+	
+	id("training_progression").innerHTML = (current+1) + "/" + kanjiTrainingList.length;
+	id("progress_bar").style.width = "0%";
+
 	next();
 }
 
@@ -142,8 +146,6 @@ function next() {
 	}
 	log("next()");
 
-	id("training_progression").innerHTML = (current+1) + "/" + kanjiTrainingList.length;
-	id("progress_bar").style.width = ((current+1) / kanjiTrainingList.length * 100) + "%";
 
 	
 	
@@ -207,6 +209,9 @@ function check(pThis) {
 
 	none(id("check_btn_container"));
 	flex(id("maru_batsu_btns"));
+
+	id("training_progression").innerHTML = (current+1) + "/" + kanjiTrainingList.length;
+	id("progress_bar").style.width = ((current+1) / kanjiTrainingList.length * 100) + "%";
 }
 
 function maruBatsu(pbMaru) {

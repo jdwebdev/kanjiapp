@@ -673,8 +673,8 @@ function openModal() {
 		editClass(id("modal_container"), "modal_open");
 	},0.1);
 
-	none(id("footer_menu_btn"));
-	unset(id("footer_close_modal_btn"));
+	editClass(id("span_1"), "span_1_arrow");
+	editClass(id("span_3"), "span_3_arrow");
 }
 function closeModal() {
 	bModal = false;
@@ -683,8 +683,16 @@ function closeModal() {
 	editClass(modal_container, "modal_open", false);
 	pathList = null;
 
-	none(id("footer_close_modal_btn"));
-	unset(id("footer_menu_btn"));
+	editClass(id("span_1"), "span_1_arrow", false);
+	editClass(id("span_3"), "span_3_arrow", false);
+}
+
+function footerMainBtn() {
+	if (bModal) {
+		closeModal();
+	} else {
+		//TODO
+	}
 }
 
 setInterval(() => {
