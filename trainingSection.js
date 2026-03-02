@@ -1,32 +1,3 @@
-// const slide_test = id("slide_test");
-// none(slide_test);
-// slide_test.style.left = window.innerWidth-1 + "px";
-
-function slideTest(pType) {
-	// log("type: " + pType);
-	// unset(slide_test);
-	// let width = 1;
-	// let position = window.innerWidth-1;
-	// let bStop = false;
-	// let interval = setInterval(() => {
-	// 	if (!bStop) {
-	// 		if (width >= window.innerWidth) {
-	// 			log("???")
-	// 			width = window.innerWidth;
-	// 			position = 0;
-	// 			clearInterval(interval);
-	// 		}
-
-	// 		slide_test.style.left = position + "px";
-	// 		slide_test.style.width = width + "px";
-	// 		width += 15;
-	// 		position -= 15;
-	// 	}
-	// }, 10);
-
-
-}
-
 let bMain = true;
 const TRAINING_TYPE = Object.freeze({
 	KANKEN: 0,
@@ -36,19 +7,21 @@ const TRAINING_TYPE = Object.freeze({
 let currentTraining = -1;
 let current = -1;
 let kanjiTrainingList = [];
+let kanjiIndexTrainingList = [];
 let wrongList = "";
+const kanjiapp_training = "kanjiapp_training";
 
 
-function openCategory(pType) {
+function openCategory(pCategory) {
 	if (currentTraining > -1) return;
 
 	const buttons = document.getElementsByClassName("training_type_btn");
-	log(pType);
+	// log(pCategory);
 	for (let i = 0; i < buttons.length; i++) {
 		if (bMain) {
-			if (buttons[i].innerText == pType) {
+			if (buttons[i].innerText == pCategory) {
 				editClass(buttons[i], "clicked_training_type_btn");
-				buttons[i].innerHTML = `<span class="triangle triangle_left"></span>` + pType + `<span class="triangle triangle_right"></span>`;
+				buttons[i].innerHTML = `<span class="triangle triangle_left"></span>` + pCategory + `<span class="triangle triangle_right"></span>`;
 			} else {
 				editClass(buttons[i], "other_training_type_btn");
 			}
@@ -59,7 +32,7 @@ function openCategory(pType) {
 		}
 	}
 	if (bMain) {
-		switch(pType) {
+		switch(pCategory) {
 			case "漢検":
 				block(id("kanken_container"));
 				break;
@@ -69,10 +42,12 @@ function openCategory(pType) {
 				flex(id("sonota_container"));
 				break;
 		}
+		none(id("training_continue"));
 	} else {
 		none(id("kanken_container"));
 		none(id("sonota_container"));
 		none(id("training_container"));
+		if (localSaveData()) flex(id("training_continue"));
 	}
 	bMain = !bMain;
 }
@@ -81,14 +56,19 @@ function sonotaStart() {
 	currentTraining = TRAINING_TYPE.SONOTA;
 	let trainingList = id("sonota_input").value;
 	let bOrder = id("sonota_order_box").checked;
-	log(trainingList);
+	// log(trainingList);
 	kanjiTrainingList = [];
+	kanjiIndexTrainingList = [];
 	
 	for (let i = 0; i < trainingList.length; i++) {
 		kanjiTrainingList.push(Kanji.list.find(k => k.kanji == trainingList[i]));
 	}
+	kanjiTrainingList.forEach(k => {
+		kanjiIndexTrainingList.push(k.id);
+	});
 	
-	log(kanjiTrainingList);
+	// log(kanjiTrainingList);
+	// log(kanjiIndexTrainingList);
 
 	none(id("sonota_container"));
 	block(id("training_container"));
@@ -102,14 +82,59 @@ function sonotaStart() {
 	next();
 }
 
+function trainingContinue() {
+	none(id("training_continue"));
+	let saveData = localStorage.getItem(kanjiapp_training);
+	if (saveData == null) return;
+
+	saveData = JSON.parse(saveData);
+	// log(saveData);
+
+	//? SONOTA START()
+	for (let i = 0; i < saveData.kanjiList.length; i++) {
+		kanjiTrainingList.push(Kanji.list.find(k => k.id == saveData.kanjiList[i]));
+	}
+	kanjiTrainingList.forEach(k => {
+		kanjiIndexTrainingList.push(k.id);
+	});
+
+	switch(saveData.trainingType) {
+		case TRAINING_TYPE.SONOTA: 
+			openCategory("その他");
+			none(id("sonota_container"));
+		break;
+	}
+
+	currentTraining = saveData.trainingType;
+
+	block(id("training_container"));
+
+	current = saveData.current-1;
+	wrongList = saveData.wrongList;
+
+	id("training_progression").innerHTML = (current+1) + "/" + kanjiTrainingList.length;
+	id("progress_bar").style.width = ((current+1) / kanjiTrainingList.length * 100) + "%";
+
+	if (saveData.checkDone) {
+		next();
+		check();
+	} else {
+		next();
+	}
+
+}
+
 function next() {
 	current++;
+	let obj = {current: current, checkDone: false, kanjiList: kanjiIndexTrainingList, wrongList: wrongList, trainingType: currentTraining };
+	localStorage.setItem(kanjiapp_training, JSON.stringify(obj));
+
 	const training_zone = id("training_zone");
 	let html = "";
 
 	if (current >= kanjiTrainingList.length) {
-		log("STOP !!!!");
-		log(wrongList);
+		// log("STOP !!!!");
+		// log(wrongList);
 
 		if (wrongList.length != "") {
 			html = `
@@ -144,7 +169,7 @@ function next() {
 
 		return;
 	}
-	log("next()");
+	// log("next()");
 
 
 	
@@ -212,6 +237,9 @@ function check(pThis) {
 
 	id("training_progression").innerHTML = (current+1) + "/" + kanjiTrainingList.length;
 	id("progress_bar").style.width = ((current+1) / kanjiTrainingList.length * 100) + "%";
+
+	let obj = {current: current, checkDone: true, kanjiList: kanjiIndexTrainingList, wrongList: wrongList, trainingType: currentTraining };
+	localStorage.setItem(kanjiapp_training, JSON.stringify(obj));
 }
 
 function maruBatsu(pbMaru) {
@@ -224,14 +252,40 @@ function maruBatsu(pbMaru) {
 	next();
 }
 
-function trainingBack() {
+function trainingBackBtn() {
+	id("dialog").showModal();
+}
+
+function trainingBack(pAction) {
+	id("dialog").close();
+	switch (pAction) {
+		case 0:
+			localStorage.removeItem(kanjiapp_training);
+			break;
+		case 1:
+			// let obj = {current: current, checkDone: false, kanjiList: kanjiIndexTrainingList, wrongList: wrongList, trainingType: currentTraining };
+			// localStorage.setItem(kanjiapp_training, JSON.stringify(obj));
+			break;
+		default: 
+			
+			return;
+	}
+	none(id("training_container"));
 	switch(currentTraining) {
 		case TRAINING_TYPE.SONOTA:
 			flex(id("sonota_container"));
-			none(id("training_container"));
 			break;
 	}
 	currentTraining = -1;
+}
+
+function localSaveData() {
+	return (localStorage.getItem(kanjiapp_training) != null)
+}
+
+function deleteTrainingData() {
+	localStorage.removeItem(kanjiapp_training);
+	none(id("training_continue"));
 }
 
 function copyWrongList() {

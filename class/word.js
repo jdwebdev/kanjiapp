@@ -4,7 +4,7 @@ class Word {
 	static wordList = [];
 	static imiList = [];
 	
-	constructor(pId, pWord, pYomi, pImi, pInfo) {
+	constructor(pId, pWord, pYomi, pImi, pInfo, pKanken) {
 		this.id = pId;
 		this.word = pWord;
 		Word.wordList.push(this.word);
@@ -17,6 +17,7 @@ class Word {
 		Word.imiList.push(this.imi.toLowerCase());
 		this.kanjiList = [];
 		this.yojijukugo = (pInfo == 4);
+		this.kanken = pKanken;
 
 		Word.list.push(this);
 	}

@@ -265,7 +265,7 @@ class Kanji {
 
 }
 
-readKANJIFile("./tsv/漢字と仮名 - 漢字.tsv");
+readKANJIFile("./tsv/漢字アプリ - 漢字.tsv");
 
 function readKANJIFile(pFile) {
     let rawFile = new XMLHttpRequest();
@@ -302,7 +302,7 @@ function createKanji(pFile) {
     // console.log(Kanji.list);
 	// log(Kanji.gakunenList);
 
-	readWORDFile("./tsv/漢字と仮名 - 語彙.tsv");
+	readWORDFile("./tsv/漢字アプリ - 語彙.tsv");
 }
 
 function readWORDFile(pFile) {
@@ -326,8 +326,8 @@ function createWord(pFile) {
     for (let i = 0; i < row.length; i++) {
         row[i] = row[i].split('\t');
         //?                  語彙	   読み	     意味	 
-        //?             pId, pWord,   pYomi,     pImi,      pInfo
-        test = new Word(i, row[i][0], row[i][1], row[i][2], row[i][3]);
+        //?             pId, pWord,   pYomi,     pImi,      pInfo,     pKanken
+        test = new Word(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4]);
     }
 
 	LinkKanjiWords();

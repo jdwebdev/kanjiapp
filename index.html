@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-	<title>漢字</title>
+	<title>漢字アプリ</title>
 	<link rel="stylesheet" href="./style.css">
 	<link rel="icon" href="./kan.ico">
 </head>
@@ -37,8 +37,6 @@
 				</div>
 			</div>
 			<div id="word_result_container"></div>
-
-			<div id="kanji_list"></div>
 		</section>
 		<section id="training_section">
 			<div class="training_type_container">
@@ -49,7 +47,7 @@
 			<div id="kanken_container">
 				<div id="kanken_lvl_list">
 					<ul class="kanken_lvl_btns">
-						<li><button class="kanken_lvl_btn">10級</button></li>
+						<li><button class="kanken_lvl_btn" onClick="openKankenDialog()">10級</button></li>
 						<li><button class="kanken_lvl_btn">9級</button></li>
 						<li class="no_border"><button class="kanken_lvl_btn">8級</button></li>
 					</ul>
@@ -78,10 +76,14 @@
 				</div>
 				<button id="sonota_start" onClick="sonotaStart()">GO</button>
 			</div>
-
+			<div id="training_continue">
+				<p>練習中</p>
+				<button onClick="deleteTrainingData()">データを消す</button>
+				<button onClick="trainingContinue()">続ける</button>
+			</div>
 			<div id="training_container">
 				<div class="training_header">
-					<button id="training_back_btn" onClick="trainingBack()">
+					<button id="training_back_btn" onClick="trainingBackBtn()">
 						<span class="training_back_arrow_1"></span>
 						<span class="training_back_arrow_2"></span>
 						<span class="training_back_arrow_3"></span>
@@ -109,10 +111,133 @@
 					</div>
 				</div>
 			</div>
+			<dialog id="dialog">
+				<p class="dialog_text">--- 練習中 ---</p>
+				<p class="">ここまでの進行状況を保存しますか？</p>
+				<div class="dialog_btn_container">
+					<!-- <button class="kanken_dialog_btn" onClick="trainingBack(-1)">キャンセル</button> -->
+					<button class="kanken_dialog_btn" onClick="trainingBack(1)">保存して戻る</button>
+					<button class="kanken_dialog_btn" onClick="trainingBack(0)">保存しないで戻る</button>
+					<button id="kanken_dialog_close_btn" class="kanken_dialog_btn dialog_close_btn"
+						onClick="trainingBack(-1)">
+						<span id="cross_left"></span>
+						<span id="cross_right"></span>
+					</button>
+				</div>
+			</dialog>
+			<dialog id="kanken_dialog">
+				<p class="kanken_dialog_text">設問を選んでください</p>
+				<div class="kanken_dialog_btn_container">
+					<button id="kd_btn_yomi" class="kanken_dialog_btn" onClick="">読み</button>
+					<button class="kanken_dialog_btn" onClick="">書き取り(単語)</button>
+					<button class="kanken_dialog_btn" onClick="">書き取り(漢字)</button>
+					<button class="kanken_dialog_btn" onClick="">部首</button>
+					<button class="kanken_dialog_btn" onClick="">四字熟語</button>
+					<button id="kanken_dialog_close_btn" class="kanken_dialog_btn dialog_close_btn"
+						onClick="closeKankenDialog()">
+						<span id="cross_left"></span>
+						<span id="cross_right"></span>
+					</button>
+				</div>
+			</dialog>
 		</section>
 	</main>
-	<div id="footer_zone">
-		<button id="footer_menu_btn" onClick="footerMainBtn()">
+
+	<section id="n_keyboard_container">
+		<input id="keyboard_input" class="keyboard_input" type="text">
+		<div id="keyboard">
+			<div id="keyboard_plus" class="keyboard_plus"> <!-- kp -->
+				<div class="kp_row">
+					<div class="void_btn">　</div>
+					<div id="kp_top_btn" class="kp_btn">う</div>
+					<div class="void_btn">　</div>
+				</div>
+				<div class="kp_row">
+					<button id="kp_left_btn" class="kp_btn">い</button>
+					<div id="kp_center_btn" class="kp_btn">あ</div>
+					<div id="kp_right_btn" class="kp_btn">え</div>
+				</div>
+				<div class="kp_row">
+					<div class="void_btn">　</div>
+					<div id="kp_bottom_btn" class="kp_btn">お</div>
+					<div class="void_btn">　</div>
+				</div>
+			</div>
+			<div class="keyboard_row" id="row1Test">
+				<button class="kana_btn" id="btn_a" onClick="handleKeyboard('a',event)">あ</button>
+				<button class="kana_btn" id="btn_ka" onClick="handleKeyboard('ka',event)">か</button>
+				<button class="kana_btn" id="btn_sa" onClick="handleKeyboard('sa',event)">さ</button>
+				<button class="kana_btn" id="btn_return" onClick="handleKeyboard('return',event)">←</button>
+			</div>
+			<div class="keyboard_row">
+				<button class="kana_btn" id="btn_ta" onClick="handleKeyboard('ta',event)">た</button>
+				<button class="kana_btn" id="btn_na" onClick="handleKeyboard('na',event)">な</button>
+				<button class="kana_btn" id="btn_ha" onClick="handleKeyboard('ha',event)">は</button>
+				<button class="invisible_kana_btn">　</button>
+			</div>
+			<div class="keyboard_row">
+				<button class="kana_btn" id="btn_ma" onClick="handleKeyboard('ma',event)">ま</button>
+				<button class="kana_btn" id="btn_ya" onClick="handleKeyboard('ya',event)">や</button>
+				<button class="kana_btn" id="btn_ra" onClick="handleKeyboard('ra',event)">ら</button>
+				<button class="invisible_kana_btn">　</button>
+				<!-- <button class="kana_btn" id="btn_enter" onClick="handleKeyboard('enter',event)">改行</button> -->
+			</div>
+			<div class="keyboard_row">
+				<button class="kana_btn" id="btn_modif" onClick="handleKeyboard('modif',event)">
+					<span class="btn_modif_content">
+						<span class="small_btn">小</span>゛
+					</span>
+				</button>
+				<button class="kana_btn" id="btn_wa" onClick="handleKeyboard('wa',event)">わ</button>
+				<button class="kana_btn small_btn" id="btn_switch" onClick="switchKana(event)">あア</button>
+				<button class="invisible_kana_btn">　</button>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<div id="footer_display_type" onClick="changeDisplayType()">
+		<div id="display_type">
+			<div id="dt_1">
+				<span id="sdt_1_1" class="span_display_type_1"></span>
+				<span id="sdt_1_2" class="span_display_type_2"></span>
+				<span id="sdt_1_3" class="span_display_type_3"></span>
+			</div>
+			<div id="dt_2">
+				<span id="sdt_2_1" class="span_display_type_1"></span>
+				<span id="sdt_2_2" class="span_display_type_2"></span>
+				<span id="sdt_2_3" class="span_display_type_3"></span>
+			</div>
+			<div id="dt_3">
+				<span id="sdt_3_1" class="span_display_type_1"></span>
+				<span id="sdt_3_2" class="span_display_type_2"></span>
+				<span id="sdt_3_3" class="span_display_type_3"></span>
+			</div>
+		</div>
+	</div>
+	<div id="footer_kanken_lvl">
+		<div>
+			<button class="footer_kanken_lvl_btn" onClick="displayKankenList('10')">10級</button>
+			<button class="footer_kanken_lvl_btn" onClick="displayKankenList('9')">9級</button>
+			<button class="footer_kanken_lvl_btn" onClick="displayKankenList('8')">8級</button>
+			<button class="footer_kanken_lvl_btn" onClick="displayKankenList('7')">7級</button>
+			<button class="footer_kanken_lvl_btn" onClick="displayKankenList('6')">6級</button>
+			<button class="footer_kanken_lvl_btn" onClick="displayKankenList('5')">5級</button>
+		</div>
+		<div>
+			<button class="footer_kanken_lvl_btn" onClick="displayKankenList('4')">4級</button>
+			<button class="footer_kanken_lvl_btn" onClick="displayKankenList('3')">3級</button>
+			<button class="footer_kanken_lvl_btn" onClick="displayKankenList('準2')">準2級</button>
+			<button class="footer_kanken_lvl_btn" onClick="displayKankenList('2')">2級</button>
+			<button class="footer_kanken_lvl_btn" onClick="displayKankenList('準1')">準1級</button>
+			<button class="footer_kanken_lvl_btn" onClick="displayKankenList('1')">1級</button>
+		</div>
+	</div>
+	<div id="footer_zone" class="">
+		<div id="footer_open">
+			<button id="footer_kanken" onClick="openKankenLvl()">漢検</button>
+		</div>
+		<button id="footer_menu_btn" class="" onClick="footerMainBtn()">
 			<span id="span_1"></span>
 			<span id="span_2"></span>
 			<span id="span_3"></span>
@@ -123,6 +248,7 @@
 	<script src="./class/kanji.js"></script>
 	<script src="./main.js"></script>
 	<script src="./trainingSection.js"></script>
+	<script src="./keyboard.js"></script>
 </body>
 
 </html>

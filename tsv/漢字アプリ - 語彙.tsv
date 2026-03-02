@@ -116,7 +116,7 @@
 水	みず	Eau				
 水曜(日)	すいよう(び)	Mercredi				
 水がめ	みずがめ	Jarre				
-水かさ	みずかさ	Hauteur/débit/volume d'eau (d'une rivière)				
+水嵩	みずかさ	Hauteur/débit/volume d'eau (d'une rivière)		6		
 木	き	Arbre				
 木曜(日)	もくよう(び)	Jeudi				
 三木	みき	Miki (nom de famille)				
@@ -223,7 +223,7 @@
 切れる	きれる	Bien couper; se rompre; s'épuiser				
 大切	たいせつ	Important, précieux				
 一切れ	ひときれ	Un morceau, une tranche				
-切り上げ	きりあげ	Fin; réévaluation				
+切り上げ	きりあげ	Fin; réévaluation		7		
 切り下げ	きりさげ	Réduction; dévaluation				
 国	くに	Pays				
 大国	たいこく	Grand pays, grande puissance				
@@ -432,7 +432,7 @@
 西ヨーロッパ	にしヨーロッパ	Europe de l'Ouest				
 北	きた	Nord				
 北方	ほっぽう	Nord				
-北風	ほくふう、きたかぜ	Vent du nord				
+北風	ほくふう、きたかぜ	Vent du nord		9		
 東北	とうほく	Tôhoku (Région du nord-Japon)				
 北東	ほくとう	Nord-est				
 北北東	ほくほくとう	Nord-nord-est				
@@ -770,7 +770,7 @@
 竹刀	しない	Sabre de bambou (au kendo)	当て字			
 竹の子	たけのこ	Pousse de bambou				
 竹のつえ	たけのつえ	Canne en bambou				
-竹やぶ	たけやぶ	Bosquet de bambous				
+竹藪	たけやぶ	Bosquet de bambous				
 筆	ふで	Pinceau				
 万年筆	まんねんひつ	Stylo				
 自筆	じひつ	Autographe, écrit de sa propre main				
@@ -855,7 +855,7 @@
 少々	しょうしょう	Un peu, quelque peu				
 少しずつ	すこしずつ	Petit à petit, peu à peu				
 省みる	かえりみる	Regarder en arrière, se souvenir du passé				
-省く	はぶく	Omettre, supprimer				
+省く	はぶく	Omettre, supprimer		7		
 自省	じせい	Réglexion, introspection				
 内省	ないせい	Introspection				
 省エネ(ルギー)	しょうエネ(ルギー)	Économie d'énergie				
@@ -897,7 +897,7 @@
 下戸	げこ	Sobre, qui ne boit pas				
 戸口	とぐち	Porte d'entrée				
 木戸	きど	Porte, entrée; portail de château/de jardin				
-雨戸	あまど	Porte coulissante extérieure (pluie), volet				
+雨戸	あまど	Porte coulissante extérieure (pluie), volet		9		
 所	ところ	Endroit, lieu				
 案内所	あんないじょ	Bureau d'information				
 名所	めいしょ	Lieu célèbre, site renommé				
@@ -978,14 +978,14 @@
 家事	かじ	Ménage, travaux domestiques				
 家内	かない	(Ma) femme				
 国家	こっか	État, nation				
-家来	けらい	Vassal, serviteur				
+家来	けらい	Vassal, serviteur		10		
 家主	やぬし	Propriétaire d'une maison				
 和室	わしつ	Chambre de style japonais				
 私室	ししつ	Chambre privée				
 室内	しつない	À l'intérieur d'une pièce, d'une maison				
 分室	ぶんしつ	Annexe, succursale				
 室長	しつちょう	Chef de chambrée; chef de section/service/salle				
-家屋	かおく	Maison, bâtiment				
+家屋	かおく	Maison, bâtiment		6		
 屋上	おくじょう	Sur le toit, toiture en terrasse				
 部屋	へや	Chambre, pièce				
 小屋	こや	Petite maison, hutte, baraque				
@@ -1017,7 +1017,7 @@
 古風	こふう	À l'ancienne mode; démodé, desuet				
 古語	こご	Mot obsolète; vieille maxime				
 古文	こぶん	Littérature classique				
-古今東西	ここんとうざい	En tous temps et en tous lieux	4	5		
+古今東西	ここんとうざい	En tous temps et en tous lieux	4		5	
 古本	ふるほん	Livre d'occasion				
 故	ゆえ	Raison, cause; circonstances				
 故人	こじん	Défunt				
@@ -1138,7 +1138,7 @@
 日付け	ひづけ	Date (d'une lettre)				
 気付く	きづく	S'apercevoir, remarquer				
 付き物	つきもの	Partie intégrante, faire partie de, accessoire				
-郡部	ぐんぶ	District rural				
+郡部	ぐんぶ	District rural		7		
 新田郡	にったぐん	District de Nitta (Préfecture de Gunma)				
 郡県	ぐんけん	Arrondissements et préfectures				
 県立	けんりつ	Préfectoral				
@@ -1334,7 +1334,7 @@
 無数	むすう	Innombrable, incalculable				
 手数	てすう	Peine , ennuis				
 類い	たぐい	Sorte, type, genre				
-親類	しんるい	Parenté				
+親類	しんるい	Parenté		7		
 人類	じんすい	Humanité, genre humain				
 書類	しょるい	Documents, papiers				
 分類	ぶんるい	Classification				
@@ -1433,7 +1433,7 @@
 糸目	いとめ	Fil mince; restriction (argent)				
 続く	つづく	Se poursuivre, se continuer				
 続ける	つづける	Continuer				
-続出	ぞくしゅつ	Apparaître l'un après l'autre, se succéder				
+続出	ぞくしゅつ	Apparaître l'un après l'autre, se succéder		7		
 続行	ぞっこう	Continuation				
 相続	そうぞく	Succession, héritage				
 手続き	てつづき	Formalités, processus administratif				
@@ -1473,7 +1473,7 @@
 早耳	はやみみ	Vite au courant				
 手早い	てばやい	Rapide, expéditif, agile				
 草	くさ	Herbe, plantes				
-草原	くさはら	Prairie, plaine herbeuse				
+草原	くさはら、そうげん	Prairie, plaine herbeuse		10		
 草木	そうもく、くさき	Plantes et arbres, végétation				
 草本	そうほん	Plante herbacée				
 草書	そうしょ	(Écriture cursive des kanji)				
@@ -1539,7 +1539,7 @@
 恋愛	れんあい	Amour				
 愛情	あいじょう	Amour, affection, tendresse				
 愛国心	あいこくしん	Amour de la patrie, patriotisme				
-愛読	あいどく	Aimer lire				
+愛読	あいどく	Aimer lire		7		
 愛想	あいそう	Affabilité, amabilité				
 受ける	うける	Recevoir, passer un examen				
 受かる	うかる	Être reçu à un examen				
@@ -1570,7 +1570,7 @@
 友人	ゆうじん	Ami				
 学友	がくゆう	Camarade d'école				
 親友	しんゆう	Ami intime, grand ami				
-友好	ゆうこう	Amitié				
+友好	ゆうこう	Amitié		6		
 友情	ゆうじょう	Camaraderie, amitié				
 有る	ある	Être, exister, avoir				
 国有	こくゆう	Appartenant à l'État, ératique				
@@ -1682,7 +1682,7 @@
 馬車	ばしゃ	Voiture à cheval				
 馬力	ばりき	Cheval-vapeur				
 馬術	ばじゅつ	Équitation, art équestre				
-竹馬	たけうま、ちくば	Échasses				
+竹馬	たけうま、ちくば	Échasses		10		
 馬小屋	うまごや	Écurie				
 駅	えき	Gare, station				
 東京駅	とうきょうえき	Gare de Tôkyô				
@@ -1692,7 +1692,7 @@
 駅員	えきいん	Employé de gare				
 鳥	とり	Oiseau				
 白鳥	はくちょう	Cygne				
-野鳥	やちょう	Oiseau sauvage				
+野鳥	やちょう	Oiseau sauvage		8		
 花鳥	かちょう	Fleurs et oiseaux				
 一石二鳥	いっせきにちょう	Faire d'une pierre deux coups	4			
 鳥居	とりい	Portique (entrée d'un sanctuaire Shinto)				
@@ -1729,7 +1729,7 @@
 同義語	どうぎご	Synonyme				
 類義語	るいぎご	Synonyme				
 会議	かいぎ	Conférence, réunion				
-協議	きょうぎ	Négociation, concertation, conférence				
+協議	きょうぎ	Négociation, concertation, conférence		7		
 議会	ぎかい	Parlement, Diète, Congrès				
 議員	ぎいん	Membre de la Diète/du Parlement/du Congrès				
 不思議	ふしぎ	Miracle, merveille, mystère; étrange				
@@ -1810,7 +1810,7 @@
 月末	げつまつ	Fin de mois				
 年末	ねんまつ	Fin de l'année				
 末代	まつだい	Âges à venir; éternité				
-末っ子	すえっこ	Benjamin, le plus jeune (de la famille)				
+末っ子	すえっこ	Benjamin, le plus jeune (de la famille)		7		
 未来	みらい	Futur				
 未知	みち	Inconnu				
 前代未聞	ぜんだいみもん	Inouï, sans précédent	4			
@@ -1928,7 +1928,7 @@
 反省	はんせい	Réflexion, examen de conscience				
 飯	めし	Riz cuit; repas, aliment				
 ご飯	ごはん	Riz cuit; repas				
-赤飯	せきはん	Riz cuit avec des haricots rouges				
+赤飯	せきはん	Riz cuit avec des haricots rouges		7		
 夕飯	ゆうはん、ゆうめし	Souper, repas du soir				
 麦飯	むぎめし	Riz cuit avec des grains d'orge				
 飯田	いいだ	Iida (nom de famille)				
@@ -1998,10 +1998,11 @@
 南極	なんきょく	Pôle Sud				
 見極める	みきわめる	Vérifier; examiner à fond				
 句	く	Phrase, expression; poème				
-語句	ごく	Phrase, expression				
+語句	ごく	Phrase, expression		6		
 成句	せいく	Locution figée, diction				
 文句	もんく	Paroles, expression; plainte, objection				
-句読点	くとうてん	Signes de ponctuation				
+句読	くとう	Ponctuation		6		
+句読点	くとうてん	Signes de ponctuation		6		
 引用句	いんようく	Citation				
 上旬	じょうじゅん	Première décade du mois, début du mois				
 中旬	ちゅうじゅん	Seconde décade du mois, milieu du mois				
@@ -2036,7 +2037,7 @@
 画家	がか	Peintre				
 日本画	にほんが	Peinture de style japonais				
 洋画	ようが	Peinture de style occidental				
-画用紙	がようし	Papier à dessin				
+画用紙	がようし	Papier à dessin		10		
 画面	がめん	Écran (TV, cinéma, ordinateur)				
 計画	けいかく	Projet, plan, dessein				
 上演	じょうえん	Représentation, spectacle				
@@ -2151,7 +2152,7 @@
 一昨年	おととし	Il y a deux ans				
 昨今	さっこん	Récemment, ces jours-ci, ces derniers temps				
 一段	いちだん	Un degré; un échelon				
-石段	いしだん	Escalier de pierre				
+石段	いしだん	Escalier de pierre		10		
 段々畑	だんだんばたけ	Champs en terrasses				
 手段	しゅだん	Moyen, mesure, procédé				
 段取り	だんどり	Préparation, programme, plan				
@@ -2211,7 +2212,7 @@
 紀元前	きげんぜん	Avant J.-C.				
 紀元後	きげんご	Après J.-C.				
 世紀	せいき	Siècle				
-紀行(文)	きこう(ぶん)	Récit de voyage				
+紀行(文)	きこう(ぶん)	Récit de voyage		7		
 風紀	ふうき	Discipline, moeurs, moralité publique				
 起きる	おきる	Se lever				
 起こる	おこる	Survenir, se produire				
@@ -2249,7 +2250,7 @@
 渡す	わたす	Transmettre, remettre				
 渡来	とらい	Importation				
 渡し船	わたしぶね	Bac, ferry-boat				
-渡り鳥	わたりどり	Oiseau migrateur				
+渡り鳥	わたりどり	Oiseau migrateur		9		
 見渡す	みわたす	Parcourir du regard, promener ses regards				
 手渡す	てわたす	Remettre (en mains propres)				
 席	せき	Siège, place				
@@ -2262,7 +2263,7 @@
 病	やまい	Maladie				
 病気	びょうき	Maladie				
 重病	じゅうびょう	Grave maladie				
-急病	きゅうびょう	Maladie subite				
+急病	きゅうびょう	Maladie subite		8		
 性病	せいびょう	Maladie vénérienne				
 病人	びょうにん	Malade patient				
 記憶	きおく	Mémoire, souvenir				
@@ -2404,7 +2405,7 @@
 養成	ようせい	Formation, entraînement				
 教養	きょうよう	Culture, éducation				
 養子	ようし	Enfant adoptif				
-休養	きゅうよう	Repos, délassement, détente				
+休養	きゅうよう	Repos, délassement, détente		7		
 様	さま	Condition, état; M., Mme., Mlle.				
 様子	ようす	Aspect, état, apparence				
 同様	どうよう	Identique, pareil				
@@ -2483,7 +2484,7 @@
 宿敵	しゅくてき	Ennemi héréditaire				
 強敵	きょうてき	Ennemi/adversaire puissant				
 敵意	てきい	Hostilité, animosité, inimité				
-敵対	てきたい	Hostilité, antagonisme				
+敵対	てきたい	Hostilité, antagonisme		6		
 不適	ふてき	Intrépide, hardi, audacieux				
 程	ほど	Degré, mesure				
 程度	ていど	Degré, niveau				
@@ -2533,8 +2534,8 @@
 植物	しょくぶつ	Plante				
 動植物	どうしょくぶつ	Animaux et plantes				
 植民地	しょくみんち	Colonie				
-植木	うえき	Plante de jardin/en pot				
-田植え	たうえ	Repiquage du riz				
+植木	うえき	Plante de jardin/en pot		10		
+田植え	たうえ	Repiquage du riz		10		
 値	あたい	Valeur, prix				
 価値	かち	Valeur				
 値うち	ねうち	Évaluation; valeur				
@@ -2596,7 +2597,7 @@
 芸術	げいじゅつ	Art				
 文芸	ぶんげい	Belles-lettres, littérature et art				
 演芸	えんげい	Spectacle, représentation				
-民芸	みんげい	Art populaire				
+民芸	みんげい	Art populaire		7		
 集まる	あつまる	(Se) rassembler				
 集う	つどう	(Se) rassembler				
 集める	あつめる	Rassembler, collectionner				
@@ -2669,7 +2670,7 @@
 遠い	とおい	Loin, distant				
 遠方	えんぽう	Lieu éloigné; grande distance				
 遠近法	えんきんほう	(Loi de la) perspective				
-遠足	えんそく	Excursion				
+遠足	えんそく	Excursion		10		
 遠心力	えんしんりょく	Force centrifuge				
 遠回し	とおまわし	Indirect, détourné				
 園	その	Jardin				
@@ -2956,8 +2957,8 @@
 食堂	しょくどう	Salle à manger; restaurant, cantine, cafétéria				
 能楽堂	のうがくどう	Théâtre Nô (lieu)				
 公会堂	こうかいどう	Salle publique/municipale				
-本堂	ほんどう	Bâtiment principal d'un temple				
-国会議事堂	こっかいぎじどう	Palais de la Diète/du Parlement				
+本堂	ほんどう	Bâtiment principal d'un temple		7		
+国会議事堂	こっかいぎじどう	Palais de la Diète/du Parlement		6		
 常に	つねに	Tout le temps				
 常夏	とこなつ	Été perpétuel				
 日常生活	にちじょうせいかつ	Vie quotidienne				
@@ -2982,7 +2983,7 @@
 受賞者	じゅしょうしゃ	Lauréat, gagnant				
 一束	ひとたば	Une liasse, une botte, une gerbe				
 約束	やくそく	Promesse, rendez-vous				
-結束	けっそく	Union, solidarité				
+結束	けっそく	Union, solidarité		7		
 花束	はなたば	Bouquet (de fleurs)				
 束ねる	たばねる	Mettre/lier/nouer ensemble; contrôler				
 速い	はやい	Rapide, prompt				
@@ -3059,13 +3060,13 @@
 放火	ほうか	Incendie volontaire				
 防ぐ	ふせぐ	Protéger, défendre, prévenir				
 防止	ぼうし	Prévention				
-予防	よぼう	Prévention, précaution, protection contre				
+予防	よぼう	Prévention, précaution, protection contre		6		
 国防	こくぼう	Défense nationale				
 防火	ぼうか	Protection/lutte contre les incendies				
 防水	ぼうすい	Imperméable, étanche				
 改める	あらためる	Modifier, renouveler				
 改まる	あらたまる	Changer, être renouvelé/modifié				
-改正	かいせい	Modification, révision				
+改正	かいせい	Modification, révision		7		
 改良	かいりょう	Amélioration, réforme				
 改新	かいしん	Réforme, rénovation				
 改名	かいめい	Changement de nom				
@@ -3088,7 +3089,7 @@
 酒屋	さかや	Marchand de vins/spiritueux				
 酒場	さかば	Bistrot, café, bar				
 公害	こうがい	Pollution				
-水害	すいがい	Inondation, dégâts des eaux				
+水害	すいがい	Inondation, dégâts des eaux		7		
 損害	そんがい	Dommage, dégât				
 利害	りがい	Avantage et désavantage, intérêt				
 有害	ゆうがい	Nuisible, nocif, malsain				
@@ -3213,7 +3214,7 @@
 録音	ろくおん	Enregistrement audio				
 録画	ろくが	Enregistrement d'images (vidéo, DVD)				
 目録	もくろく	Catalogue, inventaire, liste, répertoire				
-付録	ふろく	Supplément, appendice, annexe				
+付録	ふろく	Supplément, appendice, annexe		7		
 与える	あたえる	Donner, décerner				
 与党	よとう	Parti au pouvoir				
 与野党	よやとう	Partis au pouvoir et d'opposition				
@@ -3296,7 +3297,7 @@
 取材	しゅざい	Collecter des informations / reportage				
 教材	きょうざい	Matériel pédagogique / scolaire				
 題材	だいざい	Matière, sujet, thème				
-材木	ざいもく	Bois de construction				
+材木	ざいもく	Bois de construction		7		
 財産	ざいさん	Fortune, biens matériels, richesses				
 財政	ざいせい	Finances, administration financiaire				
 財界	ざいかい	Monde financiers, milieux économiques				
@@ -3352,7 +3353,7 @@
 根底	こんてい	Base, fondation				
 海底	かいてい	Fonds marins				
 河底	かてい	Lit d'une rivière				
-底力	そこぢから	Talent / énergie cachée / latente				
+底力	そこぢから	Talent / énergie cachée / latente		7		
 底値	そこね	Le prix le plus bas				
 公邸	こうてい	Résidence officielle				
 官邸	かんてい	Résidence officielle				
@@ -3386,7 +3387,7 @@
 同級生	どうきゅうせい	Camarade de classe, condisciple				
 等しい	ひとしい	Égal				
 等級	とうきゅう	Classe, grade, rang				
-一等	いっとう	Première classe				
+一等	いっとう	Première classe		8		
 平等	びょうどう	Égalité				
 同等	どうとう	Égalité, même rang				
 高等学校	こうとうがっこう	Lycée				
@@ -3618,7 +3619,7 @@
 日本側	にほんがわ	Du côté japonais, les japonais				
 測る	はかる	Mesurer				
 測量	そくりょう	Mesure, arpentage				
-測定	そくてい	Mesure, mesurage				
+測定	そくてい	Mesure, mesurage		6		
 観測	かんそく	Observation				
 目測	もくそく	Mesure à l'oeil, à vue d'oeil, évaluation				
 予測	よそく	Estimation, prévision				
@@ -3784,7 +3785,7 @@
 曇りガラス	くもりガラス	Verre dépoli				
 花曇り	はなぐもり	Temps nuageux à la floraison des cerisiers				
 暑い	あつい	(Temps) chaud				
-寒暑	かんしょ	Froid et chaud				
+寒暑	かんしょ	Froid et chaud		6		
 暑気	しょき	Chaleur, grande chaleur				
 暑中	しょちゅう	La mi-été				
 大暑	たいしょ	Jours de Canicule (vers le 23 juillet)				
@@ -3830,7 +3831,7 @@
 情熱	じょうねつ	Passion				
 熱心	ねっしん	Enthousiasme, zèle				
 勢い	いきおい	Force, puissance, énergie, vigueur; tendance				
-勢力	せいりょく	Influence, force				
+勢力	せいりょく	Influence, force		6		
 国勢	こくせい	État/puissance d'un pays				
 情勢	じょうせい	Situation, état actuel				
 大勢	たいせい	Situation/tendance générale				
@@ -3853,7 +3854,7 @@
 浅見	せんけん	Vue superficielle				
 浅学	せんがく	Connaissance superficielle				
 浅黒い	あさぐろい	(Couleur) sombre, brun, basané				
-遠浅	とおあさ	Plage à fond plat				
+遠浅	とおあさ	Plage à fond plat		7		
 残る	のこる	Rester, demeurer				
 残す	のこす	Laisser en arrière/derrière				
 残念	ざんねん	Regret, déception				
@@ -3921,7 +3922,7 @@
 清める	きよめる	Purifier				
 清まる	きよまる	Se purifier				
 清酒	せいしゅ	Saké clair/raffiné, saké				
-清書	せいしょ	Copie propre, mise au net				
+清書	せいしょ	Copie propre, mise au net		7		
 清水	せいすい、しみず	Eau pure/claire				
 清水寺	きよみずでら	Kiyomizu-dera (temple célèbre de Kyôto)				
 請う	こう	Demander				
@@ -4015,7 +4016,7 @@
 財布	さいふ	Porte-monnaie, portefeuille				
 布巾	ふきん	Torchon				
 毛布	もうふ	Couverture				
-分布	ぶんぷ	Distribution, répartition				
+分布	ぶんぷ	Distribution, répartition		6		
 公布	こうふ	Déclaration officielle, promulgation				
 希望	きぼう	Espoir, souhait, désir				
 希少	きしょう	Rare, limité				
@@ -4141,7 +4142,7 @@
 細長い	ほそながい	Long et mince, allongé, oblong				
 松	まつ	Pin				
 松原	まつばら	Pinède				
-松林	まつばやし	Forêt de pins				
+松林	まつばやし	Forêt de pins		7		
 松葉	まつば	Aiguille de pin				
 門松	かどまつ	Pin du Nouvel An (décoration)				
 松島	まつしま	Matsushima (Célèbre paysage côtier au nord de Sendai)				
@@ -4156,6 +4157,7 @@
 窓口	まどぐち	Guichet				
 二重窓	にじゅうまど	Double fenêtre/vitrage				
 窓際の席	まどぎわのせき	Siège côté fenêtre				
+漁	りょう	Pêche		7		
 漁業	ぎょぎょう	Pêche, industrie de la pêche				
 漁船	ぎょせｎ	Bateau/navire de pêche				
 漁場	ぎょじょう	Zone de pêche, pêcherie				
@@ -4251,7 +4253,7 @@
 減る	へる	Décroître, diminuer, baisser				
 減らす	へらす	Diminuer, réduire				
 増減	ぞうげん	Augmentation et diminution, fluctuation				
-加減	かげん	Addition et soustraction; état de santé				
+加減	かげん	Addition et soustraction; état de santé		6		
 減少	げんしょう	Diminution, réduction				
 半減	はんげん	Réduction de moitié				
 利益	りえき	Profit, avantage				
@@ -4295,7 +4297,7 @@
 栄え	はえ	Gloire, honneur, splendeur				
 栄える	はえる	Briller				
 栄える	さかえる	Prospérer, florir				
-栄養	えいよう	Nutrition				
+栄養	えいよう	Nutrition		6		
 光栄	こうえい	Honneur, gloire				
 栄光	えいこう	Gloire				
 見栄え	みばえ	Apparence extérieure				
@@ -4333,7 +4335,7 @@
 星空	ほしぞら	Ciel étoilé				
 牧	まき	Pâturage				
 牧場	ぼくじょう、まきば	Prairie, pâturage				
-牧草地	ぼくそうち	Pré, prairie, herbage, pâturage				
+牧草地	ぼくそうち	Pré, prairie, herbage, pâturage		7		
 放牧	ほうぼく	Faire paître, mettre au pâturage				
 牧羊者	ぼくようしゃ	Éleveur de moutons, berger				
 牧師	ぼくし	Curé, pasteur				
@@ -4482,7 +4484,7 @@
 買収	ばいしゅう	Achat, corruption				
 納める	おさめる	Payer; livrer; accepter, emmagasiner				
 納まる	おさまる	Être payé/livré				
-納税	のうぜい	Paiement des impôts				
+納税	のうぜい	Paiement des impôts		6		
 出納	すいとう	Recettes et dépenses				
 納得	なっとく	Compréhension, accord, approbation				
 納屋	なや	Grange, hangar, remise, débarras				
@@ -4552,7 +4554,7 @@
 語順	ごじゅん	Ordre des mots				
 五十音順	ごじゅうおんじゅん	Suivant l'ordre du syllabaire				
 順調	じゅんちょう	Bien, satisfaisant, sans problème				
-順序	じゅんじょ	Ordre, méthode, système				
+順序	じゅんじょ	Ordre, méthode, système		6	物事の順序を整理する	
 序説	じょせつ	Introduction, préface				
 序論	じょろん	Introduction, préface				
 序文	じょぶん	Préface, avant-propos				
@@ -4650,10 +4652,10 @@
 卒業証書	そつぎょうしょうしょ	Diplôme de fin d'études				
 卒中	そっちゅう	Attaque cérébrale, apoplexie				
 兵卒	へいそつ	Simple soldat, homme de troupe				
-率いる	ひきいる	Mener, diriger				
+率いる	ひきいる	Mener, diriger		6		
 率直	そっちょく	Franchise, droiture, sincérité				
 軽率	けいそつ	Étourdi, irréfléchi, insouciant				
-能率	のうりつ	Efficacité, rendement				
+能率	のうりつ	Efficacité, rendement		6		
 成長率	せいちょうりつ	Taux de croissance				
 血	ち	Sang				
 血液	けつえき	Sang				
@@ -4751,17 +4753,17 @@
 包丁	ほうちょう	Couteau de cuisine				
 小包み	こづつみ	Paquet				
 紙包み	かみづつみ	Paquet enveloppé dans du papier				
-包み紙	つつみがみ	Papier d'emballage				
+包み紙	つつみがみ	Papier d'emballage	7			
 平均	へいきん	Moyenne				
 均一	きんいつ	Uniforme				
-均等	きんとう	Égalité, uniformité, parité				
+均等	きんとう	Égalité, uniformité, parité		6		
 均質	きんしつ	Homogène				
 均分	きんぶん	Division à parts égales				
 蜂	はち	Abeille				
 養蜂	ようほう	Apiculture				
 蜂起	ほうき	Soulèvement, insurrection, révolte				
 蜂の巣	はちのす	Alvéole d'abeilles; ruche				
-虻蜂取らず	あぶはちとらず	Il ne faut pas courir deux lièvres à la fois				
+虻蜂取らず	あぶはちとらず	Il ne faut pas courir deux lièvres à la fois	諺			
 密度	みつど	Densité				
 人口密度	じんこうみつど	Densité de population				
 密接	みっせつ	Intime, étroit				
@@ -4914,7 +4916,7 @@
 統計	とうけい	Statistiques				
 伝統	でんとう	Tradition				
 命令	めいれい	Ordre				
-号令	ごうれい	Ordre, commandement				
+号令	ごうれい	Ordre, commandement		7		
 訓令	くんれい	Instructions, directives				
 発令	はつれい	Annonce/déclaration officielle				
 令和	れいわ	(Ère de) Reiwa (2019-)				
@@ -4979,7 +4981,7 @@
 略歴	りゃくれき	Bref curriculum vitae				
 計略	けいりゃく	Plan, stratagème, ruse, complot				
 戦略	せんりゃく	Stratégie, tactique				
-司法	しほう	Instance judiciaire, justice				
+司法	しほう	Instance judiciaire, justice		7		
 司令	しれい	Commandement, commandant				
 司会者	しかいしゃ	Président, animateur				
 司書	ししょ	Bibliothécaire				
@@ -5032,7 +5034,7 @@
 市況	しきょう	Situation du marché, le marché				
 不況	ふきょう	Dépression économique, marasme				
 祝う	いわう	Célébrer, féliciter				
-祝辞	しゅくじ	(Discours de) félicitations				
+祝辞	しゅくじ	(Discours de) félicitations		7		
 祝賀	しゅくが	Fête; félicitations				
 祝日	しゅくじつ	Jour de fête, jour férié				
 祝儀	しゅうぎ	Fête (de noces); cadeau				
@@ -5342,7 +5344,7 @@
 周到	しゅうとう	Scupuleux, minutieux, soigneux				
 倒れる	たおれる	Tomber, s'abattre, s'affondrer				
 倒す	たおす	Renverser, abattre, vaincre				
-卒倒	そっとう	Syncope, évanouissement				
+卒倒	そっとう	Syncope, évanouissement		7		
 倒産	とうさん	Faillite, banqueroute				
 倒閣	とうかく	Renversement d'un gouvernement				
 共倒れ	ともだおれ	Faillite / ruine commune, destruction mutuelle				
@@ -5431,7 +5433,7 @@
 全焼	ぜんしょう	Destruction totale par le feu				
 焼き鳥	やきとり	Brochettes de poulet				
 日焼け	ひやけ	Bronzage, hâle				
-夕焼け	ゆうやけ	Embrasement du soleil couchant				
+夕焼け	ゆうやけ	Embrasement du soleil couchant		10		
 変遷	へんせん	Changement, mutation, évolution				
 左遷	させん	Être dégradé / exilé				
 遷都	せんと	Transfert de la capitale				
@@ -5441,9 +5443,9 @@
 開票	かいひょう	Dépouillement du scrutin				
 伝票	でんぴょう	Fiche, note, ticket, bon				
 目標	もくひょう	But, objectif				
-標語	ひょうご	Slogan, devise				
+標語	ひょうご	Slogan, devise		7		
 標準語	ひょうじゅんご	Langue standard				
-標本	ひょうほん	Échantillon, exemple, modèle				
+標本	ひょうほん	Échantillon, exemple, modèle		7		
 商標	しょうひょう	Marque de fabrique / commerce				
 漂う	たたよう	Dériver, flotter				
 漂流	ひょうりゅう	Dériver; vagabonder				
@@ -5499,7 +5501,7 @@
 妥協案	だきょうあん	Proposition d'entente / de compromis				
 采配	さいはい	Bâton de maréchal / commandement; baguette (chef d'orchestre)				
 野菜	やさい	Légumes				
-菜園	さいえん	Potager				
+菜園	さいえん	Potager		7		
 菜食	さいしょく	Régime végétarien				
 山菜	さんさい	Plante sauvage comestible				
 菜種	なたね	Graine de colza				
@@ -5669,7 +5671,7 @@
 濃厚	のうこう	Densité, intensité, épaisseur				
 濃霧	のうむ	Brouillard épais / dense				
 豆	まめ	Pois, haricot; (préfixe) miniature				
-大豆	だいず	Graine de soja				
+大豆	だいず	Graine de soja		6		
 小豆	あずき	Petit haricot rouge				
 枝豆	えだまめ	Soja vert en branches				
 コーヒー豆	コーヒーまめ	Grain de café				
@@ -5761,7 +5763,7 @@
 固体	こたい	Corps solide				
 固有	こゆう	Propre, particulier, caractéristique				
 固定	こてい	Fixation, immobilisation				
-強固	きょうこ	Fort, solide, ferme, stable, fort				
+強固	きょうこ	Fort, solide, ferme, stable, fort		7		
 個人	こじん	Individu, personne (privée)				
 個体	こたい	Individu, personne				
 個性	こせい	Personnalité, individualité				
@@ -5906,7 +5908,7 @@
 昭和63年	しょうわろくじゅうさんねん	Année 1988				
 昭和年間	しょうわねんかん	Ère de Shôwa				
 昭和元年	しょうわがんねん	Première année de l'ère de Shôwa (1926)				
-照る	てる	Briller				
+照る	てる	Briller		7	太陽が照っている	
 照らす	てらす	Éclairer, illuminer; comparer				
 照れる	てれる	Se sentir embarrassé / gêné				
 照明	しょうめい	Éclairage, illumination				
@@ -6193,7 +6195,7 @@
 版権	はんけん	Droit d'auteur, copyright				
 初版	しょはん	Première édition				
 改訂版	かいていばん	Édition révisée				
-版画	はんが	Gravure sur bois, estampe				
+版画	はんが	Gravure sur bois, estampe		6		
 板	いた	Planche				
 甲板	かんぱん、こうはん	Pont (d'un navire)				
 合板	ごうばん、ごうはん	Contreplaqué				
@@ -6209,7 +6211,7 @@
 仮説	かせつ	Hypothèse, supposition				
 仮定	かてい	Supposition, hypothèse, postulat				
 仮面	かめん	Masque				
-仮名	かめい	Pseudonyme				
+仮名	かめい	Pseudonyme		6		
 仮病	けびょう	Maladie feinte / simulée				
 寛大	かんだい	Indulgence, générosité, tolérance				
 寛容	かんよう	Tolérance, indulgence, mansuétude				
@@ -6506,7 +6508,7 @@
 盗作	とうさく	Plagiat				
 盗品	とうひん	Marchandise volée, butin				
 塩	しお	Sel				
-食塩	しょくえん	Sel de table				
+食塩	しょくえん	Sel de table		7		
 塩分	えんぶん	Salinité, teneur en sel				
 塩酸	えんさん	Acide chlorydrique				
 塩水	しおみず、えんすい	Eau salée, saumure				
@@ -6618,7 +6620,7 @@
 移る	うつる	Déménager, se déplacer, changer; attraper (maladie)				
 移す	うつす	Déplacer, transférer (personnel); infecter				
 移動	いどう	Déplacement, migration				
-移転	いてん	Déménager, transfert				
+移転	いてん	Déménager, transfert		6		
 移民	いみん	Émigration, immigration, migrant				
 移住民	いじゅうみん	Émigration, immigration, migrant				
 移植	いしょく	Transplantation, greffe				
@@ -6823,7 +6825,7 @@
 別冊	べっさつ	Volume séparé / supplémentaire				
 分冊	ぶんさつ	Fascicule, volumes séparés				
 冊子	さっし	Livret, brochure				
-短冊	たんざく	Bande de papier (pour écrire un poème)				
+短冊	たんざく	Bande de papier (pour écrire un poème)	7			
 偏る	かたよる	Se mettre d'un côté, être partial				
 不偏	ふへん	Impartialité, neutralité				
 不偏不党	ふへんふとう	Impartialité, neutralité				
@@ -7015,7 +7017,7 @@
 日韓	にっかん	Japon et Corée du sud				
 在韓	ざいかん	Résidant / stationné en Corée du sud				
 綿	わた	Coton				
-木綿	もめん	Coton				
+木綿	もめん	Coton		6		
 綿布	めんぷ	Cotonnade				
 綿織物	めんおりもの	Étoffe / articles en coton				
 海綿	かいめん	Éponge				
@@ -7053,7 +7055,7 @@
 女囚	じょしゅう	Prisonnière, détenue				
 免囚	めんしゅう	Prisonnier libéré, ancien détenu				
 耕す	たがやす	Labourer, cultiver				
-耕地	こうち	Terre arable / cultivée				
+耕地	こうち	Terre arable / cultivée		6		
 耕作	こうさく	Culture, agriculture				
 耕作物	こうさくぶつ	Produits de ferme				
 農耕	のうこう	Culture, agriculture				
@@ -7556,7 +7558,7 @@
 切り離す	きりはなす	Trancher, détacher				
 刈る	かる	Couper, tondre, faucher, tailler				
 刈り入れ	かりいれ	Moisson, récolte				
-稲刈り	いねかり	Récolte / moisson du riz				
+稲刈り	いねかり	Récolte / moisson du riz		8		
 刈り取る	かりとる	Moissonner, faucher				
 刈り込む	かりこむ	Tailler, tondre				
 芝刈り機	しばかりき	Tondeuse à gazon				
@@ -7923,7 +7925,7 @@
 岩塩	がんえん	Sel gemme				
 岩屋	いわや	Caverne, grotte				
 岩登り	いわのぼり	Escalade, varappe				
-沖	おき	Haute / pleine mer, large				
+沖	おき	Haute / pleine mer, large		7		
 沖積世	ちゅうせきせい	Époque alluviale / holocène (géologie)				
 沖積期	ちゅうせきき	Époque alluviale / holocène (géologie)				
 沖合	おきあい	Haute mer, large				
@@ -7943,7 +7945,7 @@
 縫合	ほうごう	Suturer (une plaie)				
 天衣無縫	てんいむほう	Beauté naturelle / parfaite				
 縫い目	ぬいめ	Couture, point de couture				
-仮縫い	かりぬい	Faufilage; essayage				
+仮縫い	かりぬい	Faufilage; essayage		6		
 峰	みね	Sommet, cime, crête				
 連峰	れんぽう	Chaîne de montagnes				
 高峰	こうほう	Haute montagne, haut sommet				
@@ -8104,7 +8106,7 @@
 幸福	こうふく	Bonheur, félicité				
 祝福	しゅくふく	Bénédiction				
 福音	ふくいん	Evangile; bonne nouvelle				
-福引き	ふくびき	Loterie, tombola				
+福引き	ふくびき	Loterie, tombola		7		
 七福神	しちふくじん	Les Sept Divinités du Bonheur				
 幅	はば	Largeur, étendue; influence				
 振幅	しんぷく	Amplitude				
@@ -8311,7 +8313,7 @@
 徴税	ちょうぜい	Perception / levée d'impôt				
 徴兵	ちょうへい	Conscription; recrutement; recrue				
 懲らす	こらす	Punir, châtier				
-懲らしめる	こらしめる	Punir, châtier				
+懲らしめる	こらしめる	Punir, châtier		8		
 懲りる	こりる	Apprendre par l'expérience; en avoir assez, être lassé				
 懲罰	ちょうばつ	Punition, mesure disciplinaire				
 懲役	ちょうえき	Travaux forcés, réclusion				
@@ -8509,9 +8511,9 @@
 毒牙	どくが	Crochet à venin; perfidie, méchanceté				
 牙をむく	きばをむく	Montrer les dents				
 芽	め	Bourgeon, germe				
-発芽	はつが	Bourgeonner, germer				
+発芽	はつが	Bourgeonner, germer		7		
 麦芽	ばくが	Malt				
-新芽	しんめ	Bourgeon, jeune pousse				
+新芽	しんめ	Bourgeon, jeune pousse		7		
 芽生え	めばえ	Bourgeon, germe, bouton (de fleur)				
 木の芽	きのめ	Bourgeon; bourgeon du poivrier du Japon				
 優雅	ゆうが	Élégance, raffinement, grâce				
@@ -8666,7 +8668,7 @@
 真偽	しんぎ	Vrai et faux; vérité				
 偽物	にせもの	Faux, contrefaçon, imitation				
 似る	にる	Ressembler à, être similaire				
-類似	るいじ	Ressemblance, similarité, analogie				
+類似	るいじ	Ressemblance, similarité, analogie		6		
 相似	そうじ	Ressemblance, similarité, analogie				
 似顔	にがお	Portrait, caricature				
 空似	そらに	Ressemblance fortuite				
@@ -8803,7 +8805,7 @@
 依頼	いらい	Demande, requête; recours; dépendance				
 信頼	しんらい	Confiance				
 頼み込む	たのみこむ	Demander expressément				
-浅瀬	あさせ	Haut-fond, banc de sable; gué				
+浅瀬	あさせ	Haut-fond, banc de sable; gué		7		
 早瀬	はやせ	Rapide, courant fort				
 瀬戸際	せとぎわ	Moment critique / fatidique				
 瀬戸物	せともの	Porcelaine, faïence, poterie				
@@ -9068,7 +9070,7 @@
 兆し	きざし	Indice, signe, symptôme				
 兆す	きざす	Montrer ses signes / symptômes; pousser, germer				
 兆候	ちょうこう	Signe, indice, symptôme				
-前兆	ぜんちょう	Présage, signe avant-coureur				
+前兆	ぜんちょう	Présage, signe avant-coureur		7		
 吉兆	きっちょう	Bon augure, signe favorable				
 億兆	おくちょう	Multitude; le peuple, les masses				
 跳ぶ	とぶ	Sauter, bondir, sautiller				
@@ -9298,7 +9300,7 @@
 新築	しんちく	Construction neuve				
 改築	かいちく	Reconstruction				
 築山	つきやま	Colline artificielle				
-鉱石	こうせき	Minerai, minéral, cristal				
+鉱石	こうせき	Minerai, minéral, cristal		6		
 鉱物	こうぶつ	Minéral				
 鉄鉱	てっこう	Minerai de fer				
 鉱山	こうざん	Mine (minerai)				
@@ -9531,7 +9533,7 @@
 遭難信号	そうなんしんごう	Signaux de détresse				
 災難に遭う	さいなんにあう	Subir un malheur, avoir un accident				
 遭遇	そうぐう	Rencontrer, tomber sur				
-水槽	すいそう	Réservoir d'eau, citerne				
+水槽	すいそう	Réservoir d'eau, citerne		10		
 浴槽	よくそう	Baignoire				
 結晶	けっしょう	Cristal, cristallisation				
 愛の結晶	あいのけっしょう	Fruit de l'amour, enfant				
@@ -9832,7 +9834,7 @@
 米粒	こめつぶ	Grain de riz				
 雨粒	あまつぶ	Goutte de pluie				
 粉	こな	Farine; poudre				
-粉末	ふんまつ	Poudre				
+粉末	ふんまつ	Poudre		7		
 製粉所	せいふんじょ	Moulin				
 粉飾	ふんしょく	Embellissement; maquillage				
 粉ミルク	こなミルク	Lait en poudre				
@@ -9873,7 +9875,7 @@
 粘る	ねばる	Être visqueux; persévérer, s'obstiner				
 粘着	ねんちゃく	Adhérence				
 粘着力	ねんちゃくりょく	Force d'adhérence				
-粘土	ねんど	Glaise, argile				
+粘土	ねんど	Glaise, argile, pâte à modeler				
 粘液	ねんえき	Mucus, mucosité				
 粘膜	ねんまく	(Membrane) muqueuse				
 粘り強い	ねばりづよい	Persévérant, tenace, opiniâtre				
@@ -9951,9 +9953,9 @@
 搬入	はんにゅう	Apporter; déposer				
 搬出	はんしゅつ	Emporter; livrer				
 肥	こえ	Être bien en chair; engrais, fumier, excréments humains				
-肥やし	こやし	Être bien en chair; engrais, fumier, excréments humains				
+肥やし	こやし	Être bien en chair; engrais, fumier, excréments humains		6	牛の糞で肥やしを作る	
 肥やす	こやす	Fertiliser; faire grossir				
-肥える	こえる	Grossir; devenir fertile; avoir bon goût				
+肥える	こえる	Grossir; devenir fertile; avoir bon goût		6		
 肥料	ひりょう	Engrais, fertilisant				
 肥満	ひまん	Corpulence, obésité				
 堆肥	たいひ	Composte				
@@ -10938,8 +10940,8 @@
 大相撲	おおずもう	Tournoi de sumo; combat passionnant				
 俵	たわら	Sac de paille				
 土俵	どひょう	Arène, ring de sumo				
-米俵	こめだわら	Sac de riz				
-炭俵	すみだわら	Sac de charbon				
+米俵	こめだわら	Sac de riz		6		
+炭俵	すみだわら	Sac de charbon		6		
 一俵	いっぴょう	Un sac				
 仙人	せんにん	Ermite; magicien des montagnes				
 仙女	せんにょ	Fée, elfe, nymphe				
@@ -11010,7 +11012,7 @@
 枠組	わくぐみ	Cadre, ossature, structure				
 棚	たな	Étagère				
 本棚	ほんだな	Bibliothèque (meuble)				
-戸棚	とだな	Buffet, placard				
+戸棚	とだな	Buffet, placard		9		
 棚上げ	たなあげ	Remise à plus tard, ajournement				
 大陸棚	たいりくだな	Plateau continental				
 棚卸	たなおろし	Inventaire				
@@ -11201,3 +11203,305 @@
 錘状	すいじょう	En forme de fuseau				
 銑鉄	せんてつ	Fonte brute, gueuse (de fonte)				
 膨脹	ぼうちょう	Dilatation, expansion				
+玉入れ	たまいれ	Jeu du <a href="https://www.google.com/search?q=玉入れ" target="_blank">Tamaire</a>		10		
+竹蜻蛉	たけとんぼ	Bambou-coptère, libellule de bambou		10		
+天高く	てんたかく	Haut dans le ciel		10		
+草取り	くさとり	Sarclage, désherbage		10		
+取りやめ	とりやめ	中止		10		
+耳あて	みみあて	Cache-oreilles		10		
+けん玉	けんだま	Bilboquet		10		
+千代	ちよ	1000 ans, très longtemps		10		
+土手	どて	Berge, digue, levée (de terre); talus		10		
+盲導犬	もうどうけん	Chien d'aveugle		10		
+綾取り	あやとり	Ayatori, jeu de ficelles : jeu consistant à créer des formes avec une ficelle enroulée autour des doigts des deux mains		10		
+蓑虫	みのむし	Psyché, psychidae (papillon)		10		
+名月	めいげつ	Pleine lune		10		
+お弾き	おはじき	Bille		10		
+草むら	くさむら	Touffe d'herbe		10		
+凧揚げ	たこあげ	Vol de cerf-volant		10		
+目高	メダカ	Oryzias (poisson)		10		
+軽鴨	カルガモ	Canard de Chine		10		
+図工（図画工作）	ずこう(ずがこうさく)	Peinture et travaux manuels		10		
+虫メガネ	むしメガネ	Loupe		10		
+雪合戦	ゆきがっせん	Bataille de boules de neige		9		
+岩場	いわば	Rocher, paroi rocheuse		9		
+風車	かざぐるま	Moulin à vent		9		
+雛人形	ひなにんぎょう	Poupées traditionnelles exposées à l'occasion de la fête des filles, le 3 mars		9		
+初夏	しょか	Début de l'été		9		
+方角	ほうがく	Direction, sens, côté		9		
+給食	きゅうしょく	Demi-pension, déjeuner distribué collectivement aux élèves		9		
+給食当番	きゅうしょくとうばん	Distribuer le déjeuner à tour de rôle		9		
+鶯	うぐいす	Rossignol (du Japon)		9		
+蓮華	れんげ	Fleur de lotus, cuiller en porcelaine		9		
+蓮華の花	れんげのはな	Fleur de lotus		9		
+駆けっこ	かけっこ	Course de vitesse		9		
+金魚掬い	きんぎょすくい	Pêche du poisson rouge à l'épuisette		9		
+平均台	へいきんだい	Poutre (gymnastique)		9		
+紙粘土	かみねんど	Papier mâché		9		
+電線	でんせん	Fil électrique		9		
+薄・芒	すすき	Herbe des pampas		9		
+辺り	ほとり	Bord		8		
+行事	ぎょうじ	Fête, cérémonie		8		
+荷台	にだい	Benne (camion), porte-bagages		8		
+礼服	れいふく	Habit, tenue de cérémonie		8		
+他校	たこう	Autre école (que la sienne)		8		
+根気よく	こんきよく	Avec persévérance, patience		8		
+筆算	ひっさん	Calcul à la main; écrire et arithmétique		8		
+遊具	ゆうぐ	Jeux, zone de jeux (jardin, parc) 		8		
+火力発電	かりょくはつでん	Production thermique d'électricité		8		
+たんぽぽ	たんぽぽ	Pissenlit		8		
+代金	だいきん	Prix, coût		8		
+烏賊釣り	いかつり	Pêche à la seiche, au calmar		8		
+白身	しろみ	Blanc (d'oeuf), (chair) blanche)		8		
+通学路	つうがくろ	Chemin de l'école		8		
+追い抜く	おいぬく	Dépasser, doubler, surpasser		8		
+朝顔	あさがお	(Plante) Volubilis, ipomoea nil, ipomée du Japon		8		
+学校便り	がっこうだより	Communication, nouvelles (de l'école)		8		
+学級文庫	がっきゅうぶんこ	Livres pour les élèves, mis à disposition dans une classe		8		
+大木	たいぼく	Grand arbre		8		
+稲荷寿司	いなりずし	Poche de tofu frit, vinaigré et sucré, et remplie de riz, ainsi que de divers autres ingrédients		8		
+画板	がばん	Planche à dessin		8		
+俎・俎板・真魚板	まないた	Planche à découper		8		
+等分	とうぶん	Égal, part égale		8		
+衣替え	ころもがえ	Changement de vêtements suivant les saisons		8		
+大水	おおみず	Inondation		8		
+一着になる	いっちゃくになる	Arriver le premier (course)		8		
+交じり合う・混じり合う	まじりあう	Se mélanger		8		
+巻(き)尺	まきじゃく	Mètre à ruban		8		
+球根	きゅうこん	Bulbe, oignon (à fleur)		8		
+始業式	しぎょうしき	Cérémonie du commencement d'un trimestre (école)		8		
+終業式	しゅうぎょうしき	Cérémonie de fin du trimestre (école)		8		
+三角定規	さんかくじょうぎ	Équerre		8		
+空想にふける	くうそうにふける	Se perdre dans ses rêves 現実逃避する		8		
+実を捥ぐ	みをもぐ	Cueillir un fruit		8		
+練り歩く	ねりあるく	Défiler, faire le tour de		8	大通りを	
+一身	いっしん	Soi-même		8	チームの期待を一身に受ける	
+振り子	ふりこ	Balancier, pendule		8		
+振り子時計	ふりこどけい	Pendule		8		
+海岸線	かいがんせん	Côte, ligne côtière		8		
+蟋蟀	こおろぎ	Grillon		8		
+鰯・鰮	いわし	Sardine		8		
+踏み台	ふみだい	Escabeau, marchepied		8		
+静養	せいよう	Repos		7		
+日課	にっか	Tâche journalière, quotidienne		7		
+副食	ふくしょく	Nourriture, aliments d'appoint		7		
+不通	ふつう	Être coupé, rompu, barré (téléphone, route etc.)		7	電話が不通	
+剥製	はくせい	Empaillage, empaillement		7		
+節分	せつぶん	Fête de l'arrivée du printemps (vers 3 février)		7		
+欠番	けつばん	Numéro omis (ex : 13 dans hôtel/restaurant)		7		
+綿毛	わたげ	Duvet		7		
+参道	さんどう	Allée d'accès au temple		7		
+折れ線	おれせん	方向の違う線分を接続してできる線。折線(せっせん)		7		
+飛び交う	とびかう	Voler en tous sens, voltiger		7		
+放牧	ほうぼく	Pâturage		7		
+巣立つ	すだつ	Quitter son nid; débuter dans le monde		7		
+交差	こうさ	Croisement, intersection; bifurcation; embranchement		7		
+流失	りゅうしつ	Être emporté par les eaux		7		
+駅伝競走	えきでんきょうそう	長距離競走のひとつ。(略)駅伝		7		
+清流	せいりゅう	Courant limpide		7		
+鮎	あゆ	Ayu (poisson)		7		
+自給	じきゅう	Se suffire, autosuffisant		7		
+給油	きゅうゆ	Ravitaillement; ravitaillement en huile, essence, pétrole		7		
+種目	しゅもく	Catégorie, genre		7		
+妨げ	さまたげ	Obstacle		7		
+若葉	わかば	Jeune feuillage		7		
+曲芸	きょくげい	Tour d'acrobatie, exercice, tout d'équilibre, voltige		7		
+朝市	あさいち	Marché (matin)		7		
+猫の手も借りたい	ねこのてもかりたい	非常に忙しく手不足で、どんな手伝いでも欲しいことのたとえ		7		
+短冊切り	たんざくぎり	野菜などを短冊形にきること		7		
+四季折々	しきおりおり	一年の四つの季節、春・夏・秋・冬がそれぞれ異なる風情を持つことを表す表現		7		
+段落	だんらく	Paragraphe		7	段落ごとの要点	
+要点	ようてん	Point essentiel, important		7		
+分度器	ぶんどき	Rapporteur		7		
+宿場	しゅくば	Étape, relais		7		
+概数	がいすう	Nombre approximatif, chiffres approximatifs (arrondi)		7		
+襷	たすき	Cordon de coton servant à maintenir relevées les manches du kimono		7		
+帯に短し襷に長し	おびにみじかしたすきにながし	C'est soit trop court soit trop long　中途半端で役に立たないことのたとえ		7		
+新出	しんしゅつ	初めて出てくること		7		
+期日	ごじつ	予定している日。期限となっている日。約束の日。		7		
+戯れる	ざれる、じゃれる	Jouer, s'amuser		7		
+年表	ねんぴょう	Tableau chronologique, chronologie		7		
+包み隠す	つつみかくす	Cacher, dissimuler		7		
+食塩	しょくえん	Sel de table		7		
+川縁	かわべり	Bord d'une rivière 川端		7		
+川端	かわばた	Bord d'une rivière 川縁		7		
+挙手	きょしゅ	Lever la main, main levée		7		
+芽を吹く	めをふく	Bourgeonner		7		
+節水	せっすい	Économie d'eau		7		
+菜の花	なのはな	Fleur de colza		7		
+日照	にっしょう	Ensoleillement		7		
+日照時間	にっしょうじかん	Durée d'ensoleillement		7		
+養分	ようぶん	Éléments nutritifs; qualités nutritives		7		
+飛来	ひらい	飛んで来ること		7		
+灯油	とうゆ	Pétrole lampant		7		
+級友	きゅうゆう	Camarade de classe		7		
+元号	げんごう	Ère impériale		7		
+泣く子は育つ	なくこはそだつ	よく泣く子はよく成長するということ		7		
+蒔かぬ種は生えぬ	まかぬたねははえぬ	On n'a rien sans rien		7		
+必着で	ひっちゃくで	必ず着くこと。また、必ず着くようにすること		7		
+司法試験	しほうしけん	Concours national du barreau et de la magistrature; concours national d'admission en Centre d'études judiciaires		7		
+吸い付く	すいつく	Se coller à, adhérer à		7		
+史跡	しせき	Monument historique, vestiges		7		
+末広がり	すえひろがり	幸せや繁栄が終わりなく続くことを表現する言葉		7		
+底辺	ていへん	Bas-fonds de la société; base d'un triangle		7		
+名を成す	なをなす	Se faire un nom		7		
+熱戦	ねっせん	Lutte acharnée, combat acharné		7		
+大漁	たいりょう	Une bonne pêche		7	鰯が大漁だった	
+刷り上がる	すりあがる	Sortir de l'imprimerie		7		
+芸は身を助ける	げいはみをたすける	Un art bien assimilé aide toujours dans la vie		7		
+蕨	わらび	Fougère		7		
+蕨餅	わらびもち	Sorte de mochi gélatineux réalisé à partir d'amidon de fougère recouvert ou trempé dans du kinako		7		
+きな粉・黄な粉・黄粉	きなこ	Farine de soja sucrée saupoudrée sur des gâteaux de riz		7		
+まぶす	まぶす	Saupoudrer		7		
+工芸品	こうげいひん	Objet d'art		7		
+消印	けしいん	Cachet d'oblitération (de la poste)		7		
+消印有効	けしいんゆうこう	Le cachet de la poste faisant foi		7		
+糸瓜・天糸瓜	へちま	Luffa, courge éponge	当て字	7		
+蝗・稲子・螽	いなご	Sauterelle		7		
+少年老い易く学成り難し	しょうねんおいやすくがくなりがたし	若いと思っているうちにすぐ年をとってしまうが学問はなかなか成就しない。寸暇を惜しんで勉強せよということ		7		
+悲願	ひがん	Aspirer à, souhait le plus cher		7		
+秋刀魚	さんま	Scombrésocidé (poisson), Balaou du Japon	当て字	7		
+清らかな	きよらかな	Pur		7		
+必要は発明の母	ひつようははつめいのはは	Nécessité est mère d'industrie		7		
+好天	こうてん	Beau temps		7		
+漁港	ぎょこう	Port de pêche		7		
+漁に出る	りょうにでる	Aller à la pêche, pêcher		7		
+好きこそ物の上手なれ	すきこそもののじょうずなれ	C'est quand on aime quelque chose que l'on progresse		7		
+体積	たいせき	Volume, capacité		7		
+完走	かんそう	Courir jusqu'au bout (marathon, course)		7		
+努力に勝る天才なし	どりょくにまさるてんさいなし	??? Le génie ne peut pas l'emporter sur les efforts. Faire des efforts vaut mieux qu'être un génie		7		
+折に触れて	おりにふれて	De temps en temps		7		
+良心に従って	りょうしんにしたがって	Suivre sa conscience		7		
+百害あって一利なし	ひゃくがいあっていちりなし	多くの弊害はありつつもメリットが一つもないこと		7		
+園芸	えんげい	Horticulture, jardinage		7		
+王者	おうじゃ	Roi, champion		7		
+満天の星	まんてんのほし	Ciel étoilé d'innombrables astres		7		
+あやす	あやす	Bercer, amuser 機嫌を取る		7	赤ちゃんをあやした	
+参観日	さんかんび	Jour de visite (des parents dans les classes)		7		
+愛用	あいよう	Favori, préféré; se servir de préférence de, se servir habituellement de		7		
+案ずるより産むが易し	あんずるよりうむがやすし	La peur grossit les obstacles		7		
+打順	だじゅん	野球で、打者が打席に入る順番。バッティングオーダー。		7		
+粉雪	こなゆき	Neige poudreuse		7		
+念には念を入れる	ねんにはねんをいれる	Soigner, apporter du soin à		7		
+残り物には福がある	のこりものにはふくがある	Aux derniers les meilleurs morceaux		7		
+便りのないのは良い便り	たよりのないのはよいたより	Pas de nouvelles, bonne nouvelle		7		
+渦潮	うずしお	Tourbillon marin		7		
+来年のことを言うと鬼が笑う	らいねんのことをいうとおにがわらう	Nul ne peut savoir ce que sera l'année prochaine		7		
+欠航	けっこう	Service (avion, bateau) interrompu pour causes diverses		7		
+良薬は口に苦し	りょうやくはくちににがし	Un bon médicament doit être amer		7		
+保留	ほりゅう	Réserve		6		
+保留にする	ほりゅうにする	Mettre de côté, en stand-by		6		
+規則正しい	きそくただしい　	Régulier		6		
+志望校	しぼうこう	École (lycée, université) de son choix, que l'on souhaite intégrer		6		
+牧舎	ぼくしゃ	Ranch. 牧場で、飼っている家畜を入れる建物		6		
+打者	だしゃ	Batteur (baseball)		6		
+栄養素	えいようそ	Nutriment, substance nutritive		6		
+書記	しょき	Secrétaire (employé)		6	放送委員会の	
+接戦	せっせん	Partie serrée		6	試合は接戦だった	
+罪を憎んで人を憎まず	つみをにくんでひとをにくまず	犯した罪は憎んで罰しても、罪を犯した人まで憎んではならない		6		
+厚手	あつで	Épais		6		
+軽快な	けいかいな	Agile, léger		6		
+仏の顔も三度まで	ほとけのかおもさんど	どんなに慈悲深い人でも、無法なことを度々されると怒ること		6		
+天は人の上に人を造らず人の下に人を造らず	てんはひとのうえにひとをつくらずひとのしたにひとをつくらず	生来、人間は平等であり、貴賤・貧富の差別は初めからあるものではない		6		
+三人寄れば文殊の知恵	さんにんよればもんじゅのちえ	Deux avis valent mieux qu'un		6		
+寄港	きこう	Escale		6		
+仮分数	かぶんすう	Expression fractionnaire		6		
+桜草	さくらそう	Primevère		6		
+綿雲	わたぐも	Nuage cotonneux		6		
+野草	やそう、のぐさ	山野に自生する草。野の草		6		
+郭公	かっこう	Coucou (oiseau)		6	カッコウが木の枝に止まっている	
+逆上がり	さかあがり	鉄棒で、両足をそろえて伸ばしたまま前に上げ、腕の力を使って体を逆さにして引き上げる技		6		
+不始末	ふしまつ	Négligence, inattention, bévue		6	火の	
+知らぬが仏	しらぬがほとけ	Qui ne sait rien, de rien ne doute		6		
+紫陽花	あじさい	Hortensia		6		
+情けは人の為ならず	なさけはひとのためならず	他人に情けをかけることは、巡り巡ってやがて自分に帰ってくる。人に親切にしておけば、必ずよい報いがあるという教え		6		
+能ある鷹は爪を隠す	のうあるたかはつめをかくす	Le vrai mérite est modeste		6		
+損して得取れ	そんしてとくとれ	Il faut savoir perdre pour gagner		6		
+水鳥	みずどり	Oiseau aquatique		6		
+句点	くてん	Point de fin de phrase		6		
+読点	とうてん	Virgule		6		
+在来	ざいらい	Courantt, habituel, tradittionnel		6		
+在来線	ざいらいせん	Ancienne ligne		6		
+恩を仇で返す	おんをあだでかえす	Rendre le mal pour le bien; payer qqn d'ingratitude		6		
+痛ましい	いたましい	Pitoyable, misérable; navrant, déchirant; pénible		6		
+賞状	しょうじょう	Certificat de mérite, diplôme d'honneur		6	優勝の賞状	
+不統一	ふとういつ	Incohérence, manque d'unité, divergence		6		
+四股を踏む	しこをふむ	Mouvement de levée de jambe typique effectué par un Sumo		6	土俵の上で力士が	
+舌は禍の根	したはわざわいのね	言葉は災難を招くもとであるということ。口は禍の門(かど)		6		
+口は災いの元	くちはわざわいのもと	Qui parle trop s'attire des ennuis		6		
+造園	ぞうえん	Construction d'un jardin		6		
+断熱	だんねつ	Isolation thermique		6		
+舌鼓	したつづみ	Clappement de langue		6		
+在りし日	ありしひ	Passé, ancien temps, le vieux temps. 過ぎ去った日。以前。昔		6	の思い出	
+美意識	びいしき	美に関する意識。美しさを受容したり創造したりするときの心の働き		6		
+実名	じつめい	Vrai nom		6		
+略式	りゃくしき	Simplifié; sommaire		6		
+指図	さしず	Instructions; directives; ordre		6		
+指示	しじ	Indication; directives; instructions; conseil		6		
+愛護	あいご	Protection		6		
+鉋をかける	かんなをかける	Raboter (une planche)		6		
+絶え間なく	たえまなく	Sans interruption; sans cesse; continuellement; sans arrêt		6		
+支線	しせん	Branchement; embranchement; voie, ligne secondaire		6		
+幹線	かんせん	Ligne principale; grande ligne		6		
+鰙・若鷺・公魚	わかさぎ	Hypomesus nipponensis (poisson)		6		
+術語	じゅつご	Prédicat		6		
+増水	ぞうすい	Montée des eaux, crue		6	大雨のため、川が〜した	
+短気は損気	たんきはそんき	短気を起こすと、結局は自分の損になる		6		
+余り物に福がある	あまりものにふくがある	残り物には福がある (REF)	REF	6		
+目白・繍眼児	めじろ	Oiseau à lunettes; zostérops		6		
+総出	そうで	Tous ensemble		6		
+台形	だいけい	Trapèze		6		
+お玉杓子、蛞、蝌蚪	オタマジャクシ	Têtard		6		
+判読	はんどく	Déchiffrement		6		
+大判	おおばん	De grande taille (papier, cahier, livre); Pièce d'or ovale		6	〜の画用紙	
+液状化	えきじょうか	Liquéfaction		6		
+二酸化炭素	にさんかたんそ	Bioxyde de carbone		6		
+安置	あんち	Placer avec soin		6		
+目に余る	めにあまる	Être intolérable, insupportable	慣用句	6		
+検温	けんおん	Prendre la température de qqn		6		
+初夢	はつゆめ	Premier rêve de l'année, le 1er ou le 2 janvier		6		
+葉桜	はざくら	花が散って、若葉の出始めた桜		6		
+雑木林	ぞうきばやし	Taillis; bois en taillis; petit bois		6		
+米一俵分	こめいっぴょうぶん	Un sac de riz en paille (quantité)		6		
+草木染め	くさきぞめ	草や木の天然の色素を使って染めること。また、そめたもの		6		
+百分率	ひゃくぶんりつ	Pourcentage		6		
+習うより慣れろ	ならうよりなれろ	C'est en forgeant qu'on devient forgeron		6		
+余す所なく	あますところなく	Sans rien laisser		6		
+券売機	けんばいき	Distributeur de billet		6		
+非行	ひこう	Délinquance juvénile, mauvaise conduite		6		
+非行に走る	ひこうにはしる	Être délinquant		6		
+性急な	せいきゅうな	Précipité, hâtif		6	性急な判断	
+退く	のく	Se metttre de côté, s'écarter, se retirer, quitter		6	今月いっぱいで社長職から退く	
+各安	かくやす	Bon marché; avantageux, modique		6	航空券	
+大破	たいは	Gravement endommagé		6		
+綿100%	めんひゃくパーセント	100% coton		6		
+心境	しんきょう	État mental		6		
+声楽	せいがく	Musique vocale		6		
+走破	そうは	Parcourir		6		
+主眼	しゅがん	Point capital, essentiel		6		
+～に主眼を置く	～にしゅがんをおく	Viser à; avoir pour objectif		6		
+無事故	むじこ	Ne pas avoir eu d'accident		6		
+情景	じょうけい	Spectacle, scène		6		
+休刊	きゅうかん	Suspension d'une publication		6		
+横町	よこちょう	Ruelle		6		
+採用試験	さいようしけん	Concours de recrutement, d'admission		6		
+表面張力	ひょうめんちょうりょく	Tension superficielle (de surface)		6		
+大群	たいぐん	Foule, affluence		6		
+体幹	たいかん	Corps, torse; fuselage (REF 胴体)	REF	6		
+刊行	かんこう	Publication		6		
+禁漁	きんりょう	Prohibition de la pêche		6		
+順風	じゅんぷう	Vent propice, favorable		6		
+逆風	ぎゃくふう	Vent contraire		6		
+内職	ないしょく	Travail d'appoint, à domicile		6		
+辛酸を嘗める	しんさんをなめる	Subir de rudes épreuves 苦しく、つらい目にあう		6		
+文化財	ぶんかざい	Bien culturel		6		
+接種	せっしゅ	Inoculation		6		
+予防接種	よぼうせっしゅ	Se faire piquer par prévention, vaccin		6		
+永久歯	えいきゅうし	Dent permanente		6		
+文鳥	ぶんちょう	Moineau de Java (oiseau)		6		
+常態	じょうたい	État normal		6		
+賛同	さんどう	Adhésion, accord, consentement		6	人の	
+新興国	しんこうこく	Nation émergente		6		
+要領	ようりょう	Point essentiel; truc; manière		6		
+謝恩会	しゃおんかい	Réunion de remerciement		6		
+備えあれば憂いなし	そなえあればうれいなし	Il faut être prêt à tout, alors on n'a pas de surprise		6		
