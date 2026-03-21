@@ -1,0 +1,123 @@
+大学	だいがく	Faculté; université	1	1	Nom
+高校	こうこう	Lycée	1	1	Nom
+学生	がくせい	Étudiant(e) ; élève	1	1	Nom
+大学生	だいがくせい	Étudiant(e) à l'université	1	1	Nom
+留学生	りゅうがくせい	Étudiant(e) étranger/étrangère	1	1	Nom
+先生	せんせい	Enseignant(e); professeur	1	1	Nom
+～年生	～ねんせい	Étudiant(e) de … année	1	1	
+一年生	いちねんせい	Étudiant(e) de première année	1	1	
+専攻	せんこう	Spécialité	1	1	Nom
+私	わたし	Je ; moi	1	1	
+友達	ともだち	Ami(e)	1	1	Nom
+～さん		M./Mme …	1	1	
+～人	～じん	Personne …	1	1	
+日本人	にほんじん	Personne japonaise ; japonais(e)	1	1	Nom
+今	いま	Maintenant	1	1	
+午前	ごぜん	Matin	1	1	
+午後	ごご	Après-midi	1	1	
+～時	～じ	... heure(s)	1	1	
+一時	いちじ	Une heure	1	1	
+半	はん	Et demie	1	1	
+二時半	にじはん	Deux deures et demie	1	1	
+日本	にほん	Japon	1	1	Nom
+アメリカ		États-Unis	1	1	Nom
+～語	～ご	Langue ...	1	1	
+日本語	にほんご	Langue japonaise	1	1	Nom
+～歳	～さい	... ans	1	1	
+電話	でんわ	Téléphone	1	1	Nom
+～番	～ばん	Numéro ...	1	1	
+番号	ばんごう	Numéro	1	1	Nom
+名前	ままえ	Nom	1	1	いAdj
+何	なん、なに	Quoi	1	1	
+あのう		Hmm...	1	1	
+はい		Oui	1	1	
+そうです		C'est exact	1	1	
+そうですか		Je vois. ; C'est vrai ?	1	1	
+イギリス		Royaume-Uni	1	1	Nom
+オーストラリア		Australie	1	1	Nom
+韓国	かんこく	Corée du Sud	1	1	Nom
+カナダ		Canada	1	1	Nom
+中国	ちゅうごく	Chine	1	1	Nom
+インド		Inde	1	1	Nom
+エジプト		Égypte	1	1	Nom
+フィリピン		Philippines	1	1	Nom
+アジア研究	アジアけんきゅう	Études asiatiques	1	1	Nom
+経済	けいざい	Économie	1	1	Nom
+工学	こうがく	Ingénierie	1	1	Nom
+国際関係	こくさいかんけい	Relations internationales	1	1	Nom
+コンピューター		Informatique	1	1	Nom
+政治	せいじ	Sciences politiques	1	1	Nom
+生物学	せいぶつがく	Biologie	1	1	Nom
+ビジネス		Commerce	1	1	Nom
+文学	ぶんがく	Littérature	1	1	Nom
+歴史	れきし	Histoire	1	1	Nom
+医者	いしゃ	Médecin	1	1	Nom
+会社員	かいしゃいん	Employé(e) de bureau	1	1	Nom
+看護師	かんごし	Infirmier / infirmière	1	1	Nom
+高校生	こうこうせい	Lycéen(ne)	1	1	Nom
+主婦	しゅふ	Femme au foyer	1	1	Nom
+大学院生	だいがくいんせい	Étudiant(e) en doctorat	1	1	Nom
+弁護士	べんごし	Avocat(e)	1	1	Nom
+お母さん	おかあさん	Mère	1	1	
+お父さん	おとうさん	Père	1	1	
+お姉さん	おねえさん	Grande soeur	1	1	
+お兄さん	おにいさん	Grand frère	1	1	
+妹	いもうと	Petite soeur	1	1	
+弟	おとうと	Petit frère	1	1	
+これ		Celui-ci / celle-ci	1	2	
+それ		Celui-là / celle-là	1	2	
+あれ		Celui-là / celle-là (là-bas, plus éloigné)	1	2	
+どれ		Lequel / laquelle	1	2	
+この		Ce... / cette ... (proche)	1	2	
+その		Ce... / cette ... (éloigné)	1	2	
+あの		Ce... / cette ... (encore plus éloigné)	1	2	
+どの		Quel ... / quelle ...	1	2	
+ここ		Ici	1	2	
+そこ		Là	1	2	
+あそこ		Là-bas	1	2	
+どこ		Où	1	2	
+誰	だれ	Qui	1	2	
+美味しい	おいしい	Délicieux	1	2	いAdj
+魚	さかな	Poisson	1	2	Nom
+豚カツ	とんかつ	Escalope de porc	1	2	Nom
+肉	にく	Viande	1	2	Nom
+メニュー		Menu	1	2	Nom
+野菜	やさい	Légume	1	2	Nom
+傘	かさ	Parapluie	1	2	Nom
+かばん		Sac	1	2	Nom
+靴	くつ	Chaussures	1	2	Nom
+財布	さいふ	Portefeuille	1	2	Nom
+ジーンズ		Jean	1	2	Nom
+自転車	じてんしゃ	Vélo	1	2	Nom
+新聞	しんぶん	Journal	1	2	Nom
+スマホ		Smartphone	1	2	Nom
+Tシャツ		T-shirt	1	2	Nom
+時計	とけい	Montre; horloge	1	2	Nom
+ノート		Cahier; ordinateur portable	1	2	Nom
+ペン		Stylo	1	2	Nom
+帽子	ぼうし	Chapeau; casquette	1	2	Nom
+本	ほん	Livre	1	2	Nom
+銀行	ぎんこう	Banque	1	2	Nom
+コンビニ		Épicerie; magasin de proximité	1	2	Nom
+トイレ		Toilettes	1	2	Nom
+図書館	としょかん	Bibliothèque	1	2	Nom
+郵便局	ゆうびんきょく	Bureau de poste	1	2	Nom
+イギリス		Royaume-Uni	1	2	Nom
+韓国	かんこく	Corée du Sud	1	2	Nom
+中国	ちゅうごく	Chine	1	2	Nom
+英語	えいご	Anglais (langue)	1	2	Nom
+経済	けいざい	Économie	1	2	Nom
+コンピューター		Informatique	1	2	Nom
+ビジネス		Commerce	1	2	Nom
+歴史	れきし	Histoire	1	2	Nom
+お母さん	おかあさん	Mère	1	2	
+お父さん	おとうさん	Père	1	2	
+いくら		Combien	1	2	
+～円	～えん	... yens	1	2	
+高い	たかい	Cher; haut	1	2	いAdj
+いらっしゃいませ		Bienvenue (dans notre magasin)	1	2	Exp
+(～を)お願いします	(～を)おねがいします	..., s'il vous plaît.	1	2	Exp
+(～を)ください		Pourriez-vous me donner..., s'il vous plaît.	1	2	Exp
+じゃあ		Alors; dans ce cas	1	2	Exp
+どうぞ		Je vous en prie.; Voilà	1	2	Exp
+どうも		Merci.	1	2	Exp

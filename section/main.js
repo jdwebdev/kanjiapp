@@ -20,7 +20,24 @@ const k = "アイウエオカキクケコサシスセソタチツテトナニヌ
 const letterList = "abcdefghijklmnopqrstuvwxyzçàâäéèêëîïôöûüù'- ";
 const kana = h+k;
 
+const SECTION = Object.freeze({
+	MAIN: 0,
+	TRAINING: 1
+});
+const MODE = Object.freeze({
+	MAIN: 0,
+	GENKI: 1
+});
+
 let currentSection = "main";
+let currentMode = MODE.MAIN;
+//! ---------------------
+//TODO: Local storage : Genki mode
+//! ---------------------
+
+
+
+
 let bSearching = false;
 let bDisplayType1 = true;
 const footer_display_type = id("footer_display_type");
@@ -33,6 +50,8 @@ let bModal = false;
 let bModalOpened = false;
 const modal_container = id("modal_container");
 modal_container.style.height = (window.innerHeight-50) + "px";
+const alert_dialog = id("alert_dialog");
+
 id("header").addEventListener("click", e => {
 	if (bModal) closeModal();
 });
@@ -49,6 +68,10 @@ search_input.addEventListener("click", e => {
     }
 	if (currentSection != "main") {
 		changeSection("main");
+	}
+
+	if (currentMode == MODE.GENKI) {
+		editClass(id("genki_filter_container"), "active");
 	}
 
 	e.stopPropagation();
@@ -108,10 +131,13 @@ function startApp() {
 	none(id("loading_container"));
 	id("search_input").disabled = false;
 	id("search_btn").disabled = false;
-	id("training_button").disabled = false;
+	training_button.disabled = false;
 	unset(id("main_background"));
 
 	// changeSection("training");
+
+	footerMainBtn();
+
 }
 
 let foundKanjiList = [];
@@ -123,6 +149,17 @@ function search(pWord) {
 	exactWordArr = [];
 	includingWordArr = [];
 
+	switch (currentMode) {
+		case MODE.MAIN:
+			searchMainMode(pWord);
+		break;
+			case MODE.GENKI:
+			searchGenkiMode(pWord);
+		break;
+	}
+}
+
+function searchMainMode(pWord) {
 	let bFullLetter = false;
 	let bFullKana = false;
 	pWord = pWord.trim();
@@ -320,7 +357,11 @@ function displayKankenList(pLevel) {
 	// 	if (w.kanken == pLevel) exactWordArr.push(w)
 	// });
 	// foundKanjiList = Kanji.list.filter(k => k.kanken == pLevel);
-	footerMainBtn();
+	if (currentMode != MODE.MAIN) {
+		changeMainMode(MODE.MAIN);
+	} else {
+		footerMainBtn();
+	}
 
 	displayResult();
 
@@ -441,7 +482,7 @@ function openModal() {
 	}
 	bModal = true;
 	bModalOpened = true;
-	flex(id("modal_container"));
+	flex(modal_container);
 	setTimeout(() => {
 		editClass(id("modal_container"), "modal_open");
 		editClass(id("modal"), "modal_open");
@@ -450,7 +491,6 @@ function openModal() {
 	editClass(id("span_1"), "span_1_arrow");
 	editClass(id("span_3"), "span_3_arrow");
 	none(footer_display_type);
-	
 }
 function closeModal() {
 	bModal = false;
@@ -475,17 +515,23 @@ function footerMainBtn() {
 			editClass(id("footer_zone"),"open", false);
 			none(id("footer_open"));
 			editClass(id("span_1"), "span_1_arrow_right", false);
+			editClass(id("span_2"), "span_2_arrow_right", false);
 			editClass(id("span_3"), "span_3_arrow_right", false);
 
 			openKankenLvl(false);
 		} else {
 			editClass(id("footer_zone"),"open");
-
 			setTimeout(() => {
 				flex(id("footer_open"));
+				if (currentMode == MODE.GENKI) {
+					editClass(id("footer_genki"), "active");
+				} else {
+					editClass(id("footer_genki"), "active", false);
+				}
 			}, 300);
 			none(footer_display_type);
 			editClass(id("span_1"), "span_1_arrow_right");
+			editClass(id("span_2"), "span_2_arrow_right");
 			editClass(id("span_3"), "span_3_arrow_right");
 		}
 		bFooterOpen = !bFooterOpen;
@@ -497,19 +543,15 @@ function openKankenLvl(pbOpen = true) {
 		// log(id("footer_kanken_lvl").classList[0]);
 		if (id("footer_kanken_lvl").classList[0] == "open") {
 			editClass(id("footer_kanken_lvl"), "open", false);
+			editClass(id("footer_kanken"), "active", false);
 		} else {
 			editClass(id("footer_kanken_lvl"), "open");
+			editClass(id("footer_kanken"), "active");
 		}
 	} else {
 		editClass(id("footer_kanken_lvl"), "open", false);
+		editClass(id("footer_kanken"), "active", false);
 	}
-}
-function openKankenDialog() {
-	id("kanken_dialog").showModal();
-	id("kd_btn_yomi").blur();
-}
-function closeKankenDialog() {
-	id("kanken_dialog").close();
 }
 
 setInterval(() => {
@@ -580,6 +622,10 @@ function test(pId) {
 	}
 }
 
+
+//! ---------------------
+//TODO: SECTION.MAIN / SECTION.TRAINING
+//! ---------------------
 function changeSection(pSection) {
 	switch(pSection) {
 		case "main":
@@ -601,6 +647,45 @@ function changeSection(pSection) {
 	}
 	currentSection = pSection;
 }
+
+function changeMainMode(pMode) {
+	log("mode: " + pMode);
+	let header_title = id("header_title");
+	//! ---------------------
+	//TODO: CHANGE MODE
+	//! ---------------------
+	switch(pMode) {
+		case MODE.MAIN:
+			header_title.innerText = "漢字";
+			search_input.placeholder = "検索";
+			if (currentMode == MODE.GENKI) {
+				editClass(header_title,"genki", false);
+				editClass(id("genki_filter_container"), "active", false);
+			}
+			footerMainBtn();
+			break;
+		case MODE.GENKI:
+			if (currentMode == MODE.GENKI) {
+				changeMainMode(MODE.MAIN);
+				return;
+			}
+			header_title.innerText = "げんき";
+			search_input.placeholder = "げんき内検索";
+			search_input.focus();
+			editClass(header_title,"genki");
+			editClass(id("header"), "genki");
+			editClass(id("genki_filter_container"), "active");
+			footerMainBtn();
+
+			//! ----------
+			//TODO  HERE !!!!!!!!!!!!!!!!!!!!!!!!
+			//! ----------
+
+			break;
+	}
+	currentMode = pMode;
+}
+
 function changeDisplayType() {
 	// log(bDisplayType1);
 	if (bDisplayType1) {
@@ -623,7 +708,25 @@ function displayKanjiUrl() {
 	}
 }
 
-
+function alertDialog(pText) {
+	id("alert_dialog_text").innerHTML = pText;
+	alert_dialog.showModal();
+	alert_dialog.style.backgroundColor = "rgb(255,0,0)";
+	setTimeout(() => {
+		alert_dialog.style.backgroundColor = "rgb(183, 207, 221)";
+	}, 100);
+}
+function closeAlertDialog(btn = null) {
+	if (btn != null) {
+		editClass(btn, "active");
+		setTimeout(() => {
+			editClass(btn, "active", false);
+			closeAlertDialog();
+		}, 100);
+		return;
+	}
+	alert_dialog.close();
+}
 
 // ----------------------------------------
 // UTILS ----------------------------------
@@ -635,6 +738,18 @@ function editClass(e, pClass, pAdd = true) {
     } else {
         e.classList.remove(pClass);
     }
+}
+function pushBtn(btn, pbPush = true) {
+	let height = btn.offsetHeight;
+	if (pbPush) {
+		height -= 3;
+		btn.style.height = height + "px";
+		editClass(btn, "active");
+	} else {
+		height += 3;
+		btn.style.height = height + "px"
+		editClass(btn, "active", false);
+	}
 }
 function emptyInput() {
     let inputList = document.querySelectorAll("input");
@@ -668,6 +783,9 @@ function rnd(pMin, pMax) {
 }
 function copyToClipboard(pString) {
 	navigator.clipboard.writeText(pString);
+}
+function equal(value, ...pValues) { // value=2, pValue=[34, 56, 67, 32, 1]
+	return pValues.includes(value)
 }
 
 function createPath(content) {
@@ -710,6 +828,32 @@ function createPath(content) {
 			}
 		}
 	}
+}
+function toHira(pWord) {
+	log("before: " + pWord);
+	let newWord = "";
+	for (let i = 0; i < pWord.length; i++) {
+		if (h.includes(pWord[i])) {
+			newWord += pWord[i];
+		} else if (k.includes(pWord[i])) {
+			let index = k.indexOf(pWord[i]);
+			newWord += h[index];
+		} else {
+			newWord += pWord[i];
+		}
+	}
+	return newWord;
+}
+function randomizeList(pList) {
+	let tmp = 0;
+	let rndIndex = 0;
+	for (let i = 0; i < pList.length; i++) {
+		rndIndex = rnd(0, pList.length-1);
+		tmp = pList[i];
+		pList[i] = pList[rndIndex];
+		pList[rndIndex] = tmp;
+	}
+	return pList;
 }
 
 

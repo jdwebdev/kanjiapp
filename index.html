@@ -11,13 +11,13 @@
 
 <body>
 	<header id="header">
-		<h1>漢字</h1>
+		<h1 id="header_title">漢字</h1>
 		<form class="search_form" action="">
 			<input disabled id="search_input" type="text" placeholder="検索">
 			<button disabled id="search_btn">🔍</button>
 			<button id="stop_search_btn">×</button>
 		</form>
-		<button disabled id="training_button" class="header_btn" onClick="changeSection('training')">練習</button>
+		<button disabled id="training_button" class="header_btn" onClick="changeSection('training',this)">練習</button>
 	</header>
 
 	<div id="main_background">漢</div>
@@ -36,6 +36,87 @@
 					<p id="loading_kanji" class="rotating">漢</p>
 				</div>
 			</div>
+			<div id="genki_filter_container">
+				<ul id="genki_filter_ul">
+					<li class="genki_filter_li"><button id="genki_filter_all" class="genki_filter_btn active"
+							onClick="changeGenkiFilter(0)">全部</button></li>
+					<li class="genki_filter_li"><button id="genki_filter_word" class="genki_filter_btn semi_active"
+							onClick="changeGenkiFilter(1)">単語</button></li>
+					<li class="genki_filter_li"><button id="genki_filter_gram" class="genki_filter_btn semi_active"
+							onClick="changeGenkiFilter(2)">文法</button></li>
+					<li class="genki_filter_li"><button id="genki_filter_example" class="genki_filter_btn semi_active"
+							onClick="changeGenkiFilter(3)">例文</button>
+					</li>
+				</ul>
+
+				<div id="genki_filters">
+					<div id="genki_filter_cat">
+						<div>
+							<button class="genki_filter_cat_btn genki_filter_btn"
+								onClick="pushFilterCat('Nom',this)">Nom</button>
+							<button class="genki_filter_cat_btn genki_filter_btn"
+								onClick="pushFilterCat('いAdj',this)">いAdj</button>
+							<button class="genki_filter_cat_btn genki_filter_btn"
+								onClick="pushFilterCat('なAdj',this)">なAdj</button>
+							<button class="genki_filter_cat_btn genki_filter_btn"
+								onClick="pushFilterCat('U-Vb',this)">U-Vb</button>
+							<button class="genki_filter_cat_btn genki_filter_btn"
+								onClick="pushFilterCat('Ru-Vb',this)">Ru-Vb</button>
+						</div>
+						<div>
+							<button class="genki_filter_cat_btn genki_filter_btn"
+								onClick="pushFilterCat('Irr-Vb',this)">Irr-Vb</button>
+							<button class="genki_filter_cat_btn genki_filter_btn"
+								onClick="pushFilterCat('Adv',this)">Adv</button>
+							<button class="genki_filter_cat_btn genki_filter_btn"
+								onClick="pushFilterCat('Nb',this)">Nb</button>
+							<button class="genki_filter_cat_btn genki_filter_btn"
+								onClick="pushFilterCat('Loc',this)">Loc</button>
+							<button class="genki_filter_cat_btn genki_filter_btn"
+								onClick="pushFilterCat('Exp',this)">Exp</button>
+						</div>
+						<button id="genki_filter_cat_search_btn" onClick="searchByCat()">検索</button>
+					</div>
+					<div id="genki_filter_lesson">
+						<div>
+							<button class="genki_filter_lesson_btn genki_filter_btn"
+								onClick="pushFilterLesson('1',this)">1</button>
+							<button class="genki_filter_lesson_btn genki_filter_btn"
+								onClick="pushFilterLesson('2',this)">2</button>
+							<button class="genki_filter_lesson_btn genki_filter_btn"
+								onClick="pushFilterLesson('3',this)">3</button>
+							<button class="genki_filter_lesson_btn genki_filter_btn"
+								onClick="pushFilterLesson('4',this)">4</button>
+							<button class="genki_filter_lesson_btn genki_filter_btn"
+								onClick="pushFilterLesson('5',this)">5</button>
+							<button class="genki_filter_lesson_btn genki_filter_btn"
+								onClick="pushFilterLesson('6',this)">6</button>
+						</div>
+						<div>
+							<button class="genki_filter_lesson_btn genki_filter_btn"
+								onClick="pushFilterLesson('7',this)">7</button>
+							<button class="genki_filter_lesson_btn genki_filter_btn"
+								onClick="pushFilterLesson('8',this)">8</button>
+							<button class="genki_filter_lesson_btn genki_filter_btn"
+								onClick="pushFilterLesson('9',this)">9</button>
+							<button class="genki_filter_lesson_btn genki_filter_btn"
+								onClick="pushFilterLesson('10',this)">10</button>
+							<button class="genki_filter_lesson_btn genki_filter_btn"
+								onClick="pushFilterLesson('11',this)">11</button>
+							<button class="genki_filter_lesson_btn genki_filter_btn"
+								onClick="pushFilterLesson('12',this)">12</button>
+						</div>
+						<button id="genki_filter_cat_search_btn" onClick="searchByLesson()">検索</button>
+					</div>
+				</div>
+				<div id="genki_open_filters_dots">
+					<button id="genki_open_filters_btn" onClick="openFilters()">
+						<span id="open_filters_dot_1" class="open_filters_dots"></span>
+						<span id="open_filters_dot_2" class="open_filters_dots"></span>
+						<span id="open_filters_dot_3" class="open_filters_dots"></span>
+					</button>
+				</div>
+			</div>
 			<div id="word_result_container"></div>
 		</section>
 		<section id="training_section">
@@ -46,95 +127,107 @@
 			</div>
 			<div id="kanken_container">
 				<div id="kanken_lvl_list">
-					<ul class="kanken_lvl_btns">
-						<li><button class="kanken_lvl_btn" onClick="openKankenDialog()">10級</button></li>
-						<li><button class="kanken_lvl_btn">9級</button></li>
-						<li class="no_border"><button class="kanken_lvl_btn">8級</button></li>
+					<ul class="kanken_lvl_btn_row">
+						<li class="">
+							<button class="kanken_lvl_btn" onClick="openKankenDialog('10',this)">10級</button>
+						</li>
+						<li class="">
+							<button class="kanken_lvl_btn" onClick="openKankenDialog('9',this)">9級</button>
+						</li>
+						<li class="no_border">
+							<button class="kanken_lvl_btn" onClick="openKankenDialog('8',this)">8級</button>
+						</li>
 					</ul>
-					<ul class="kanken_lvl_btns">
-						<li><button class="kanken_lvl_btn">7級</button></li>
-						<li><button class="kanken_lvl_btn">6級</button></li>
-						<li class="no_border"><button class="kanken_lvl_btn">5級</button></li>
+					<ul class="kanken_lvl_btn_row">
+						<li class="">
+							<button class="kanken_lvl_btn" onClick="openKankenDialog('7',this)">7級</button>
+						</li>
+						<li class="">
+							<button class="kanken_lvl_btn" onClick="openKankenDialog('6',this)">6級</button>
+						</li>
+						<li class="no_border">
+							<button class="kanken_lvl_btn" onClick="openKankenDialog('5',this)">5級</button>
+						</li>
 					</ul>
-					<ul class="kanken_lvl_btns">
-						<li><button class="kanken_lvl_btn">4級</button></li>
-						<li><button class="kanken_lvl_btn">3級</button></li>
-						<li class="no_border"><button class="kanken_lvl_btn">準2級</button></li>
+					<ul class="kanken_lvl_btn_row">
+						<li class="">
+							<button class="kanken_lvl_btn" onClick="openKankenDialog('4',this)">4級</button>
+						</li>
+						<li class="">
+							<button class="kanken_lvl_btn" onClick="openKankenDialog('3',this)">3級</button>
+						</li>
+						<li class="no_border">
+							<button class="kanken_lvl_btn" onClick="openKankenDialog('準2',this)">準2級</button>
+						</li>
 					</ul>
-					<ul class="kanken_lvl_btns">
-						<li><button class="kanken_lvl_btn">2級</button></li>
-						<li><button class="kanken_lvl_btn">準1級</button></li>
-						<li class="no_border"><button class="kanken_lvl_btn">1級</button></li>
+					<ul class="kanken_lvl_btn_row">
+						<li class="">
+							<button class="kanken_lvl_btn" onClick="openKankenDialog('2',this)">2級</button>
+						</li>
+						<li class="">
+							<button class="kanken_lvl_btn" onClick="openKankenDialog('準1',this)">準1級</button>
+						</li>
+						<li class="no_border">
+							<button class="kanken_lvl_btn" onClick="openKankenDialog('1',this)">1級</button>
+						</li>
 					</ul>
 				</div>
 			</div>
 			<div id="sonota_container">
-				<input id="sonota_input" type="text">
-				<div>
-					<input id="sonota_order_box" type="checkbox">
-					<label for="sonota_order_box">順番</label>
+				<div id="sonota_1">
+					<input id="sonota_input" placeholder="漢字を入れてください" type="text">
+					<div id="sonota_filter_go">
+						<div>
+							<input id="sonota_order_box" type="checkbox">
+							<label for="sonota_order_box">順番</label>
+						</div>
+						<button id="sonota_start" class="normal_btn" onClick="kanjiStart('sonota', this)">GO</button>
+					</div>
 				</div>
-				<button id="sonota_start" onClick="sonotaStart()">GO</button>
 			</div>
 			<div id="training_continue">
 				<p>練習中</p>
-				<button onClick="deleteTrainingData()">データを消す</button>
-				<button onClick="trainingContinue()">続ける</button>
+				<button class="normal_btn" onClick="deleteTrainingData(this)">データを消す</button>
+				<button class="normal_btn" onClick="trainingContinue(this)">続ける</button>
 			</div>
 			<div id="training_container">
 				<div class="training_header">
-					<button id="training_back_btn" onClick="trainingBackBtn()">
-						<span class="training_back_arrow_1"></span>
-						<span class="training_back_arrow_2"></span>
-						<span class="training_back_arrow_3"></span>
+					<button id="training_back_btn" class="normal_btn" onClick="trainingBackBtn(this)">
+						<span id="training_back_arrow_1"></span>
+						<span id="training_back_arrow_3"></span>
 					</button>
 					<div id="progress_bar_container">
 						<div id="progress_bar"></div>
 					</div>
 					<div id="training_progression">1/200</div>
 				</div>
-				<div id="training_zone">
-					<div id="training_result">
-						<div id="training_mark">
-							<p>150/200</p>
-						</div>
-						<div class="training_wrong_list_container">
-							<div class="training_wrong_title">WRONG</div>
-							<p id="training_wrong_list"></p>
-							<div class="training_btns">
-								<button id="training_copy_btn" class="training_sopy_see_btns"
-									onClick="copyWrongList()">Copy</button>
-								<button id="training_see_btn" class="training_sopy_see_btns"
-									onClick="seeWrongList()">See</button>
-							</div>
-						</div>
-					</div>
-				</div>
+				<div id="training_zone"></div>
 			</div>
-			<dialog id="dialog">
+			<dialog id="dialog" class="dialog">
 				<p class="dialog_text">--- 練習中 ---</p>
 				<p class="">ここまでの進行状況を保存しますか？</p>
 				<div class="dialog_btn_container">
-					<!-- <button class="kanken_dialog_btn" onClick="trainingBack(-1)">キャンセル</button> -->
-					<button class="kanken_dialog_btn" onClick="trainingBack(1)">保存して戻る</button>
-					<button class="kanken_dialog_btn" onClick="trainingBack(0)">保存しないで戻る</button>
-					<button id="kanken_dialog_close_btn" class="kanken_dialog_btn dialog_close_btn"
-						onClick="trainingBack(-1)">
+					<button class="normal_btn dialog_btn" onClick="trainingBack(1, this)">保存して戻る</button>
+					<button class="normal_btn dialog_btn" onClick="trainingBack(0, this)">保存しないで戻る</button>
+					<button id="kanken_dialog_close_btn" class="normal_btn dialog_btn dialog_close_btn"
+						onClick="trainingBack(-1, this)">
 						<span id="cross_left"></span>
 						<span id="cross_right"></span>
 					</button>
 				</div>
 			</dialog>
-			<dialog id="kanken_dialog">
+			<dialog id="kanken_dialog" class="dialog">
 				<p class="kanken_dialog_text">設問を選んでください</p>
 				<div class="kanken_dialog_btn_container">
-					<button id="kd_btn_yomi" class="kanken_dialog_btn" onClick="">読み</button>
-					<button class="kanken_dialog_btn" onClick="">書き取り(単語)</button>
-					<button class="kanken_dialog_btn" onClick="">書き取り(漢字)</button>
-					<button class="kanken_dialog_btn" onClick="">部首</button>
-					<button class="kanken_dialog_btn" onClick="">四字熟語</button>
-					<button id="kanken_dialog_close_btn" class="kanken_dialog_btn dialog_close_btn"
-						onClick="closeKankenDialog()">
+					<button id="kd_btn_yomi" class="normal_btn dialog_btn"
+						onClick="prepareKankenTest(0, this)">読み</button>
+					<button class="normal_btn dialog_btn" onClick="prepareKankenTest(1, this)">書き取り(単語)</button>
+					<button class="normal_btn dialog_btn" onClick="prepareKankenTest(2, this)">書き取り(漢字)</button>
+					<button class="normal_btn dialog_btn" onClick="prepareKankenTest(3, this)">部首</button>
+					<button id="yojijukugo_btn" class="normal_btn dialog_btn"
+						onClick="prepareKankenTest(4, this)">四字熟語</button>
+					<button id="kanken_dialog_close_btn" class="normal_btn dialog_btn dialog_close_btn"
+						onClick="closeKankenDialog(this)">
 						<span id="cross_left"></span>
 						<span id="cross_right"></span>
 					</button>
@@ -142,18 +235,28 @@
 			</dialog>
 		</section>
 	</main>
+	<dialog id="alert_dialog" class="dialog">
+		<div>
+			<p id="alert_dialog_text">Aucun kanji connu détecté</p>
+			<button class="normal_btn dialog_close_btn" onClick="closeAlertDialog(this)">
+				<span id="cross_left"></span>
+				<span id="cross_right"></span>
+			</button>
+		</div>
+	</dialog>
 
+	<!--
 	<section id="n_keyboard_container">
 		<input id="keyboard_input" class="keyboard_input" type="text">
 		<div id="keyboard">
-			<div id="keyboard_plus" class="keyboard_plus"> <!-- kp -->
+			<div id="keyboard_plus" class="keyboard_plus">
 				<div class="kp_row">
 					<div class="void_btn">　</div>
 					<div id="kp_top_btn" class="kp_btn">う</div>
 					<div class="void_btn">　</div>
 				</div>
 				<div class="kp_row">
-					<button id="kp_left_btn" class="kp_btn">い</button>
+					<div id="kp_left_btn" class="kp_btn">い</div>
 					<div id="kp_center_btn" class="kp_btn">あ</div>
 					<div id="kp_right_btn" class="kp_btn">え</div>
 				</div>
@@ -180,7 +283,7 @@
 				<button class="kana_btn" id="btn_ya" onClick="handleKeyboard('ya',event)">や</button>
 				<button class="kana_btn" id="btn_ra" onClick="handleKeyboard('ra',event)">ら</button>
 				<button class="invisible_kana_btn">　</button>
-				<!-- <button class="kana_btn" id="btn_enter" onClick="handleKeyboard('enter',event)">改行</button> -->
+
 			</div>
 			<div class="keyboard_row">
 				<button class="kana_btn" id="btn_modif" onClick="handleKeyboard('modif',event)">
@@ -193,8 +296,8 @@
 				<button class="invisible_kana_btn">　</button>
 			</div>
 		</div>
-		</div>
 	</section>
+-->
 
 	<div id="footer_display_type" onClick="changeDisplayType()">
 		<div id="display_type">
@@ -235,7 +338,9 @@
 	</div>
 	<div id="footer_zone" class="">
 		<div id="footer_open">
-			<button id="footer_kanken" onClick="openKankenLvl()">漢検</button>
+			<button id="footer_minna" class="footer_open_btn" onClick="">みんな</button>
+			<button id="footer_genki" class="footer_open_btn" onClick="changeMainMode(MODE.GENKI)">げんき</button>
+			<button id="footer_kanken" class="footer_open_btn" onClick="openKankenLvl()">漢検</button>
 		</div>
 		<button id="footer_menu_btn" class="" onClick="footerMainBtn()">
 			<span id="span_1"></span>
@@ -246,8 +351,11 @@
 
 	<script src="./class/word.js"></script>
 	<script src="./class/kanji.js"></script>
-	<script src="./main.js"></script>
-	<script src="./trainingSection.js"></script>
+	<script src="./class/genki.js"></script>
+	<script src="./start.js"></script>
+	<script src="./section/main.js"></script>
+	<script src="./section/trainingSection.js"></script>
+	<script src="./section/genki.js"></script>
 	<script src="./keyboard.js"></script>
 </body>
 

@@ -135,7 +135,7 @@ Kana.list["ワ"] = new Kana("ワ");            // "wa"
 Kana.list["ヲ"] = new Kana("ヲ");            // "wo"
 Kana.list["ン"] = new Kana("ン");             // "n"
 
-let keyboard_input = id("keyboard_input");
+
 let kanaList = ["a","ka","sa","ta","na","ha","ma","ya","ra","wa"];
 
 let table_hira = [];
@@ -164,20 +164,68 @@ table_kata["wa"] = ["ワ","ヲ","ン","ー"];
 let currentBtn;
 let current_index = 0;
 let bCurrent = false;
-let timeOutID;
+let timeOutID = null;
 let bHiragana = true;
 let kanaBtnList = [];
 let touchTimeOut;
 let bKP = false;
 
-const keyboard_part = id("keyboard");
-const kp = id("keyboard_plus");
+const keyboard_html = `
+	<section id="n_keyboard_container">
+		<div id="keyboard_result"></div>
+		<div id="keyboard_my_answer"></div>
 
-const kp_left_btn = id("kp_left_btn");
-const kp_right_btn = id("kp_right_btn");
-const kp_center_btn = id("kp_center_btn");
-const kp_top_btn = id("kp_top_btn");
-const kp_bottom_btn = id("kp_bottom_btn");
+		<input id="keyboard_input" class="keyboard_input" disabled type="text">
+		<div id="keyboard">
+			<div id="keyboard_plus" class="keyboard_plus">
+				<div class="kp_row">
+					<div class="void_btn">　</div>
+					<div id="kp_top_btn" class="kp_btn">う</div>
+					<div class="void_btn">　</div>
+				</div>
+				<div class="kp_row">
+					<div id="kp_left_btn" class="kp_btn">い</div>
+					<div id="kp_center_btn" class="kp_btn">あ</div>
+					<div id="kp_right_btn" class="kp_btn">え</div>
+				</div>
+				<div class="kp_row">
+					<div class="void_btn">　</div>
+					<div id="kp_bottom_btn" class="kp_btn">お</div>
+					<div class="void_btn">　</div>
+				</div>
+			</div>
+			<div class="keyboard_row" id="row1Test">
+				<button class="kana_btn" id="btn_a" onClick="handleKeyboard('a',event)">あ</button>
+				<button class="kana_btn" id="btn_ka" onClick="handleKeyboard('ka',event)">か</button>
+				<button class="kana_btn" id="btn_sa" onClick="handleKeyboard('sa',event)">さ</button>
+				<button class="kana_btn" id="btn_return" onClick="handleKeyboard('return',event)">←</button>
+			</div>
+			<div class="keyboard_row">
+				<button class="kana_btn" id="btn_ta" onClick="handleKeyboard('ta',event)">た</button>
+				<button class="kana_btn" id="btn_na" onClick="handleKeyboard('na',event)">な</button>
+				<button class="kana_btn" id="btn_ha" onClick="handleKeyboard('ha',event)">は</button>
+				<button class="invisible_kana_btn">　</button>
+			</div>
+			<div class="keyboard_row">
+				<button class="kana_btn" id="btn_ma" onClick="handleKeyboard('ma',event)">ま</button>
+				<button class="kana_btn" id="btn_ya" onClick="handleKeyboard('ya',event)">や</button>
+				<button class="kana_btn" id="btn_ra" onClick="handleKeyboard('ra',event)">ら</button>
+				<button class="invisible_kana_btn">　</button>
+				
+			</div>
+			<div class="keyboard_row">
+				<button class="kana_btn" id="btn_modif" onClick="handleKeyboard('modif',event)">
+					<span class="btn_modif_content">
+						<span class="small_btn">小</span>゛
+					</span>
+				</button>
+				<button class="kana_btn" id="btn_wa" onClick="handleKeyboard('wa',event)">わ</button>
+				<button class="kana_btn small_btn" id="btn_switch" onClick="switchKana(event)">あア</button>
+				<button class="invisible_kana_btn">　</button>
+			</div>
+		</div>
+	</section>
+`;
 
 const kpbtnSize = { w: 66, h: 54 };
 const kbBtnSize = { w: 60, h: 50 };
@@ -199,7 +247,7 @@ let bBottomHover = false;
 // left: -50px;
 // top: -40px;
 const ichibanLeft = -58; // Entre les btns : 8px
-const ichibanTop = -46; // Entre les btns : 5px
+const ichibanTop = -46; // 50: header's height. Entre les btns : 5px
 const col1 = ichibanLeft + "px";
 const col2 = ichibanLeft + kbBtnSize.w + 8 + "px";
 const col3 = ichibanLeft + (kbBtnSize.w + 8)*2 + "px";
@@ -208,243 +256,273 @@ const line2 = ichibanTop + kbBtnSize.h + 5 + "px";
 const line3 = ichibanTop + (kbBtnSize.h + 5)*2 + "px";
 const line4 = ichibanTop + (kbBtnSize.h + 5)*3 + "px";
 
-const keyboardBtnList = document.getElementsByClassName("kana_btn");
-for (let i = 0; i < keyboardBtnList.length; i++) {
-	const btn = keyboardBtnList[i];
-	btn.addEventListener("touchstart", e => {
-		editClass(btn, "active");
-	});
-	btn.addEventListener("touchend", e => {
-		editClass(btn, "active", false);
-	});
-	btn.addEventListener("click", e => {
-		editClass(btn, "active", false);
-	});
-}
+let keyboard_container = null;
+let keyboard_input = null;
+let keyboard_part = null;
+let kp = null;
 
-kanaList.forEach(k => {
-    kanaBtnList[k] = id("btn_" + k);
-	kanaBtnList[k].addEventListener("touchstart", e => {
-		bCenterHover = true;
-		touchTimeOut = setTimeout(() => {
-			if (bCenterHover) {
-				kp_left_btn.style.visibility = "visible";
-				kp_right_btn.style.visibility = "visible";
-				kp_bottom_btn.style.visibility = "visible";
-				if (k == "ya") {
-					kp_left_btn.innerText = "";
-					kp_right_btn.innerText = "";
-					kp_left_btn.style.visibility = "hidden";
-					kp_right_btn.style.visibility = "hidden";
-				} else if (k == "wa") {
-					kp_bottom_btn.innerText = "";
-					kp_bottom_btn.style.visibility = "hidden";
-				}
-				if (bHiragana) {
+let kp_left_btn = null;
+let kp_right_btn = null;
+let kp_center_btn = null;
+let kp_top_btn = null;
+let kp_bottom_btn = null;
+
+let keyboardBtnList = null;
+
+function activeKeyboard() {
+	keyboard_container = id("n_keyboard_container");
+	keyboard_input = id("keyboard_input");
+	keyboard_part = id("keyboard");
+	kp = id("keyboard_plus");
+
+	kp_left_btn = id("kp_left_btn");
+	kp_right_btn = id("kp_right_btn");
+	kp_center_btn = id("kp_center_btn");
+	kp_top_btn = id("kp_top_btn");
+	kp_bottom_btn = id("kp_bottom_btn");
+
+	keyboardBtnList = document.getElementsByClassName("kana_btn");
+	for (let i = 0; i < keyboardBtnList.length; i++) {
+		const btn = keyboardBtnList[i];
+		btn.addEventListener("touchstart", e => {
+			editClass(btn, "active");
+		});
+		btn.addEventListener("touchend", e => {
+			editClass(btn, "active", false);
+		});
+		btn.addEventListener("click", e => {
+			editClass(btn, "active", false);
+		});
+	}
+
+	kanaList.forEach(k => {
+		kanaBtnList[k] = id("btn_" + k);
+		kanaBtnList[k].addEventListener("touchstart", e => {
+			bCenterHover = true;
+			touchTimeOut = setTimeout(() => {
+				if (bCenterHover) {
+					kp_left_btn.style.visibility = "visible";
+					kp_right_btn.style.visibility = "visible";
+					kp_bottom_btn.style.visibility = "visible";
 					if (k == "ya") {
-						kp_center_btn.innerText = table_hira[k][0];
-						kp_top_btn.innerText = table_hira[k][1];
-						kp_bottom_btn.innerText = table_hira[k][2];
-					} else {
-						kp_left_btn.innerText = table_hira[k][1];
-						kp_right_btn.innerText = table_hira[k][3];
-						kp_center_btn.innerText = table_hira[k][0];
-						kp_top_btn.innerText = table_hira[k][2];
-						if (k != "wa") kp_bottom_btn.innerText = table_hira[k][4];
+						kp_left_btn.innerText = "";
+						kp_right_btn.innerText = "";
+						kp_left_btn.style.visibility = "hidden";
+						kp_right_btn.style.visibility = "hidden";
+					} else if (k == "wa") {
+						kp_bottom_btn.innerText = "";
+						kp_bottom_btn.style.visibility = "hidden";
 					}
-				} else {
-					if (k == "ya") {
-						kp_center_btn.innerText = table_kata[k][0];
-						kp_top_btn.innerText = table_kata[k][1];
-						kp_bottom_btn.innerText = table_kata[k][2];
+					if (bHiragana) {
+						if (k == "ya") {
+							kp_center_btn.innerText = table_hira[k][0];
+							kp_top_btn.innerText = table_hira[k][1];
+							kp_bottom_btn.innerText = table_hira[k][2];
+						} else {
+							kp_left_btn.innerText = table_hira[k][1];
+							kp_right_btn.innerText = table_hira[k][3];
+							kp_center_btn.innerText = table_hira[k][0];
+							kp_top_btn.innerText = table_hira[k][2];
+							if (k != "wa") kp_bottom_btn.innerText = table_hira[k][4];
+						}
 					} else {
-						kp_left_btn.innerText = table_kata[k][1];
-						kp_right_btn.innerText = table_kata[k][3];
-						kp_center_btn.innerText = table_kata[k][0];
-						kp_top_btn.innerText = table_kata[k][2];
-						if (k != "wa") kp_bottom_btn.innerText = table_kata[k][4];
+						if (k == "ya") {
+							kp_center_btn.innerText = table_kata[k][0];
+							kp_top_btn.innerText = table_kata[k][1];
+							kp_bottom_btn.innerText = table_kata[k][2];
+						} else {
+							kp_left_btn.innerText = table_kata[k][1];
+							kp_right_btn.innerText = table_kata[k][3];
+							kp_center_btn.innerText = table_kata[k][0];
+							kp_top_btn.innerText = table_kata[k][2];
+							if (k != "wa") kp_bottom_btn.innerText = table_kata[k][4];
+						}
 					}
-				}
 
-				switch (k) {
-					case "a":
-						kp.style.left = col1;
-						kp.style.top = line1;
-						break;
-					case "ka":
-						kp.style.left = col2;
-						kp.style.top = line1;
-						break;
-					case "sa":
-						kp.style.left = col3;
-						kp.style.top = line1;
-						break;
-					case "ta":
-						kp.style.left = col1;
-						kp.style.top = line2
-						break;
-					case "na":
-						kp.style.left = col2;
-						kp.style.top = line2
-						break;
-					case "ha":
-						kp.style.left = col3;
-						kp.style.top = line2;
-						break;
-					case "ma":
-						kp.style.left = col1;
-						kp.style.top = line3;
-						break;
-					case "ya":
-						kp.style.left = col2;
-						kp.style.top = line3;
-						break;
-					case "ra":
-						kp.style.left = col3;
-						kp.style.top = line3;
-						break;
-					case "wa":
-						kp.style.left = col2;
-						kp.style.top = line4;
-						break;
-				}
+					switch (k) {
+						case "a":
+							kp.style.left = col1;
+							kp.style.top = line1;
+							break;
+						case "ka":
+							kp.style.left = col2;
+							kp.style.top = line1;
+							break;
+						case "sa":
+							kp.style.left = col3;
+							kp.style.top = line1;
+							break;
+						case "ta":
+							kp.style.left = col1;
+							kp.style.top = line2
+							break;
+						case "na":
+							kp.style.left = col2;
+							kp.style.top = line2
+							break;
+						case "ha":
+							kp.style.left = col3;
+							kp.style.top = line2;
+							break;
+						case "ma":
+							kp.style.left = col1;
+							kp.style.top = line3;
+							break;
+						case "ya":
+							kp.style.left = col2;
+							kp.style.top = line3;
+							break;
+						case "ra":
+							kp.style.left = col3;
+							kp.style.top = line3;
+							break;
+						case "wa":
+							kp.style.left = col2;
+							kp.style.top = line4;
+							break;
+					}
 
-				flex(kp);
-				bKP = true;
+					flex(kp);
+					bKP = true;
+					kp_center_btn.style.backgroundColor = hoverColor;
+					kp_center_btn.style.color = WHITE;
+				}
+			}, 100);
+		});
+		kanaBtnList[k].addEventListener("touchmove", e => {
+			const headerHeight = 50;
+			const keyboardScreenX = keyboard_part.offsetLeft + kp.offsetLeft;
+			const keyboardScreenY = keyboard_part.offsetTop + kp.offsetTop + headerHeight;
+			// log("keyboard_container: " + keyboard_container.offsetTop);
+			// log("keyboardScreenY: " + keyboardScreenY);
+
+			const touchX = e.targetTouches[0].clientX;
+			const touchY = e.targetTouches[0].clientY;
+			// log("touchY: " + touchY);
+
+			if (touchX >= (keyboardScreenX + centerBtn.x) && touchX < (keyboardScreenX + centerBtn.x + kpbtnSize.w) 
+			&& touchY >= (keyboardScreenY + centerBtn.y) && touchY < (keyboardScreenY + centerBtn.y + kpbtnSize.h)) {
+			} else {
+				bCenterHover = false;
+			}
+
+		});
+		kanaBtnList[k].addEventListener("touchend", e => {
+			none(id("keyboard_plus"));
+			
+			if (bKP) {
+				if (bLeftHover) {
+					keyboard_input.value += kp_left_btn.innerText;
+				}
+				if (bRightHover) {
+					keyboard_input.value += kp_right_btn.innerText;
+				}
+				if (bCenterHover) {
+					keyboard_input.value += kp_center_btn.innerText;
+				}
+				if (bTopHover) {
+					keyboard_input.value += kp_top_btn.innerText;
+				}
+				if (bBottomHover) {
+					keyboard_input.value += kp_bottom_btn.innerText;
+				}
+			}
+			bLeftHover = false;
+			bRightHover = false;
+			bCenterHover = false;
+			bTopHover = false;
+			bBottomHover = false;
+
+			kp_left_btn.style.backgroundColor = idleColor;
+			kp_right_btn.style.backgroundColor = idleColor;
+			kp_center_btn.style.backgroundColor = idleColor;
+			kp_top_btn.style.backgroundColor = idleColor;
+			kp_bottom_btn.style.backgroundColor = idleColor;
+			kp_left_btn.style.color = BLACK;
+			kp_right_btn.style.color = BLACK;
+			kp_center_btn.style.color = BLACK;
+			kp_top_btn.style.color = BLACK;
+			kp_bottom_btn.style.color = BLACK;
+
+			bKP = false;
+
+		});
+		kanaBtnList[k].addEventListener("click", e => {
+			clearTimeout(touchTimeOut);
+			// none(id("keyboard_plus"));
+		});
+		
+	});
+
+
+	keyboard_container.addEventListener("touchmove", e => {
+		if (bKP) {
+			const headerHeight = 0; //? n_keyboard_container en position "fixed", la hauteur du header doit être prise en compte
+			const keyboardScreenX = keyboard_part.offsetLeft + kp.offsetLeft;
+			const keyboardScreenY = keyboard_container.offsetTop + keyboard_part.offsetTop + kp.offsetTop + headerHeight;
+
+			const touchX = e.targetTouches[0].clientX;
+			const touchY = e.targetTouches[0].clientY;
+
+
+			if (touchX >= (keyboardScreenX + leftBtn.x) && touchX < (keyboardScreenX + leftBtn.x + kpbtnSize.w) 
+			&& touchY >= (keyboardScreenY + leftBtn.y) && touchY < (keyboardScreenY + leftBtn.y + kpbtnSize.h)) {
+				kp_left_btn.style.backgroundColor = hoverColor;
+				kp_left_btn.style.color = WHITE;
+				bLeftHover = true;
+			} else {
+				kp_left_btn.style.backgroundColor = idleColor;
+				kp_left_btn.style.color = BLACK;
+				bLeftHover = false;
+			}
+
+			if (touchX >= (keyboardScreenX + rightBtn.x) && touchX < (keyboardScreenX + rightBtn.x + kpbtnSize.w) 
+			&& touchY >= (keyboardScreenY + rightBtn.y) && touchY < (keyboardScreenY + rightBtn.y + kpbtnSize.h)) {
+				kp_right_btn.style.backgroundColor = hoverColor;
+				kp_right_btn.style.color = WHITE;
+				bRightHover = true;
+			} else {
+				kp_right_btn.style.backgroundColor = idleColor;
+				kp_right_btn.style.color = BLACK;
+				bRightHover = false;
+			}
+
+			if (touchX >= (keyboardScreenX + centerBtn.x) && touchX < (keyboardScreenX + centerBtn.x + kpbtnSize.w) 
+			&& touchY >= (keyboardScreenY + centerBtn.y) && touchY < (keyboardScreenY + centerBtn.y + kpbtnSize.h)) {
 				kp_center_btn.style.backgroundColor = hoverColor;
 				kp_center_btn.style.color = WHITE;
+				bCenterHover = true;
+			} else {
+				kp_center_btn.style.backgroundColor = idleColor;
+				kp_center_btn.style.color = BLACK;
+				bCenterHover = false;
 			}
-		}, 100);
+
+			if (touchX >= (keyboardScreenX + topBtn.x) && touchX < (keyboardScreenX + topBtn.x + kpbtnSize.w) 
+			&& touchY >= (keyboardScreenY + topBtn.y) && touchY < (keyboardScreenY + topBtn.y + kpbtnSize.h)) {
+				kp_top_btn.style.backgroundColor = hoverColor;
+				kp_top_btn.style.color = WHITE;
+				bTopHover = true;
+			} else {
+				kp_top_btn.style.backgroundColor = idleColor;
+				kp_top_btn.style.color = BLACK;
+				bTopHover = false;
+			}
+
+			if (touchX >= (keyboardScreenX + bottomBtn.x) && touchX < (keyboardScreenX + bottomBtn.x + kpbtnSize.w) 
+			&& touchY >= (keyboardScreenY + bottomBtn.y) && touchY < (keyboardScreenY + bottomBtn.y + kpbtnSize.h)) {
+				kp_bottom_btn.style.backgroundColor = hoverColor;
+				kp_bottom_btn.style.color = WHITE;
+				bBottomHover = true;
+			} else {
+				kp_bottom_btn.style.backgroundColor = idleColor;
+				kp_bottom_btn.style.color = BLACK;
+				bBottomHover = false;
+			}
+
+		}
 	});
-	kanaBtnList[k].addEventListener("touchmove", e => {
-		const keyboardScreenX = keyboard_part.offsetLeft + kp.offsetLeft;
-		const keyboardScreenY = keyboard_part.offsetTop + kp.offsetTop;
-
-		const touchX = e.targetTouches[0].clientX;
-		const touchY = e.targetTouches[0].clientY;
-
-		if (touchX >= (keyboardScreenX + centerBtn.x) && touchX < (keyboardScreenX + centerBtn.x + kpbtnSize.w) 
-		&& touchY >= (keyboardScreenY + centerBtn.y) && touchY < (keyboardScreenY + centerBtn.y + kpbtnSize.h)) {
-		} else {
-			bCenterHover = false;
-		}
-
-	});
-	kanaBtnList[k].addEventListener("touchend", e => {
-		none(id("keyboard_plus"));
-		
-		if (bKP) {
-			if (bLeftHover) {
-				keyboard_input.value += kp_left_btn.innerText;
-			}
-			if (bRightHover) {
-				keyboard_input.value += kp_right_btn.innerText;
-			}
-			if (bCenterHover) {
-				keyboard_input.value += kp_center_btn.innerText;
-			}
-			if (bTopHover) {
-				keyboard_input.value += kp_top_btn.innerText;
-			}
-			if (bBottomHover) {
-				keyboard_input.value += kp_bottom_btn.innerText;
-			}
-		}
-		bLeftHover = false;
-		bRightHover = false;
-		bCenterHover = false;
-		bTopHover = false;
-		bBottomHover = false;
-
-		kp_left_btn.style.backgroundColor = idleColor;
-		kp_right_btn.style.backgroundColor = idleColor;
-		kp_center_btn.style.backgroundColor = idleColor;
-		kp_top_btn.style.backgroundColor = idleColor;
-		kp_bottom_btn.style.backgroundColor = idleColor;
-		kp_left_btn.style.color = BLACK;
-		kp_right_btn.style.color = BLACK;
-		kp_center_btn.style.color = BLACK;
-		kp_top_btn.style.color = BLACK;
-		kp_bottom_btn.style.color = BLACK;
-
-		bKP = false;
-
-	});
-	kanaBtnList[k].addEventListener("click", e => {
-		clearTimeout(touchTimeOut);
-		// none(id("keyboard_plus"));
-	});
-	
-});
-
-
-
-const keyboard = id("n_keyboard_container");
-keyboard.addEventListener("touchmove", e => {
-	if (bKP) {
-		const keyboardScreenX = keyboard_part.offsetLeft + kp.offsetLeft;
-		const keyboardScreenY = keyboard_part.offsetTop + kp.offsetTop;
-
-		const touchX = e.targetTouches[0].clientX;
-		const touchY = e.targetTouches[0].clientY;
-
-		if (touchX >= (keyboardScreenX + leftBtn.x) && touchX < (keyboardScreenX + leftBtn.x + kpbtnSize.w) 
-		&& touchY >= (keyboardScreenY + leftBtn.y) && touchY < (keyboardScreenY + leftBtn.y + kpbtnSize.h)) {
-			kp_left_btn.style.backgroundColor = hoverColor;
-			kp_left_btn.style.color = WHITE;
-			bLeftHover = true;
-		} else {
-			kp_left_btn.style.backgroundColor = idleColor;
-			kp_left_btn.style.color = BLACK;
-			bLeftHover = false;
-		}
-
-		if (touchX >= (keyboardScreenX + rightBtn.x) && touchX < (keyboardScreenX + rightBtn.x + kpbtnSize.w) 
-		&& touchY >= (keyboardScreenY + rightBtn.y) && touchY < (keyboardScreenY + rightBtn.y + kpbtnSize.h)) {
-			kp_right_btn.style.backgroundColor = hoverColor;
-			kp_right_btn.style.color = WHITE;
-			bRightHover = true;
-		} else {
-			kp_right_btn.style.backgroundColor = idleColor;
-			kp_right_btn.style.color = BLACK;
-			bRightHover = false;
-		}
-
-		if (touchX >= (keyboardScreenX + centerBtn.x) && touchX < (keyboardScreenX + centerBtn.x + kpbtnSize.w) 
-		&& touchY >= (keyboardScreenY + centerBtn.y) && touchY < (keyboardScreenY + centerBtn.y + kpbtnSize.h)) {
-			kp_center_btn.style.backgroundColor = hoverColor;
-			kp_center_btn.style.color = WHITE;
-			bCenterHover = true;
-		} else {
-			kp_center_btn.style.backgroundColor = idleColor;
-			kp_center_btn.style.color = BLACK;
-			bCenterHover = false;
-		}
-
-		if (touchX >= (keyboardScreenX + topBtn.x) && touchX < (keyboardScreenX + topBtn.x + kpbtnSize.w) 
-		&& touchY >= (keyboardScreenY + topBtn.y) && touchY < (keyboardScreenY + topBtn.y + kpbtnSize.h)) {
-			kp_top_btn.style.backgroundColor = hoverColor;
-			kp_top_btn.style.color = WHITE;
-			bTopHover = true;
-		} else {
-			kp_top_btn.style.backgroundColor = idleColor;
-			kp_top_btn.style.color = BLACK;
-			bTopHover = false;
-		}
-
-		if (touchX >= (keyboardScreenX + bottomBtn.x) && touchX < (keyboardScreenX + bottomBtn.x + kpbtnSize.w) 
-		&& touchY >= (keyboardScreenY + bottomBtn.y) && touchY < (keyboardScreenY + bottomBtn.y + kpbtnSize.h)) {
-			kp_bottom_btn.style.backgroundColor = hoverColor;
-			kp_bottom_btn.style.color = WHITE;
-			bBottomHover = true;
-		} else {
-			kp_bottom_btn.style.backgroundColor = idleColor;
-			kp_bottom_btn.style.color = BLACK;
-			bBottomHover = false;
-		}
-
-	}
-});
+}
 
 
 function handleKeyboard(pKey, event) {
@@ -490,7 +568,7 @@ function handleKeyboard(pKey, event) {
         case "modif":
             bCurrent = false;
             current_index = 0;
-            clearTimeout(timeOutId);            
+            if (timeOutID != null) clearTimeout(timeOutID);            
             let last = keyboard_input.value[keyboard_input.value.length-1];
             let lastIndex = Kana.search(last, bHiragana);
             let kanaToWrite = Kana.list[lastIndex].next(last);
@@ -504,7 +582,7 @@ function handleKeyboard(pKey, event) {
         case "return":
             bCurrent = false;
             current_index = 0;
-            clearTimeout(timeOutId);
+			if (timeOutID != null) clearTimeout(timeOutID);
             if (keyboard_input.value.length <= 1) {
                 keyboard_input.value = "";
             } else {
@@ -519,13 +597,13 @@ function handleKeyboard(pKey, event) {
     if (bClickOnKana) {
         if (!bCurrent) {
             bCurrent = true;
-            timeOutId = setTimeout(() => {
+            timeOutID = setTimeout(() => {
                 bCurrent = false;
                 current_index = 0;
             }, 1000);
         } else {
-            clearTimeout(timeOutId);
-            timeOutId = setTimeout(() => {
+            if (timeOutID != null) clearTimeout(timeOutID);
+            timeOutID = setTimeout(() => {
                 bCurrent = false;
                 current_index = 0;
             }, 1000);

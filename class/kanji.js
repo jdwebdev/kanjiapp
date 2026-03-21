@@ -221,9 +221,9 @@ class Kanji {
 		{ bushu: "龜・亀", yomi: "かめ"},
 		{ bushu: "龠", yomi: "やく"}
 	];
-//?                  A 0     B 1      C 2      D 3       E 4      F 5    G 6     J 9       K 10     L 11       M 12                                    
-//?                  漢字	 異体字    音読み	 訓読み	   画数	     意味   部首    学年       漢検　   辞典ページ  アニメーション
-//?             pId, pKanji, pItaiji, pOnYomi, pKunYomi, pKakusuu, pImi, pBushu, pGakunen, pKanken, pJitenRef, pPath
+	//?              A 0     B 1      C 2      D 3       E 4      F 5    G 6     J 9       K 10     L 11       M 12                                    
+	//?              漢字	 異体字    音読み	 訓読み	   画数	     意味   部首    学年       漢検　   辞典ページ  アニメーション
+	//?         pId, pKanji, pItaiji, pOnYomi, pKunYomi, pKakusuu, pImi, pBushu, pGakunen, pKanken, pJitenRef, pPath
 	constructor(pId, pKanji, pItaiji, pOnYomi, pKunYomi, pKakusuu, pImi, pBushu, pGakunen, pKanken, pJitenRef, pPath) {
 		this.id = pId;
         this.kanji = pKanji;
@@ -265,101 +265,7 @@ class Kanji {
 
 }
 
-readKANJIFile("./tsv/漢字アプリ - 漢字.tsv");
-
-function readKANJIFile(pFile) {
-    let rawFile = new XMLHttpRequest();
-    rawFile.open("GET", pFile, true);
-    rawFile.onreadystatechange = function () {
-        if (rawFile.readyState === 4) {
-            if (rawFile.status === 200 || rawFile.status == 0) {
-                tsvFile = rawFile.responseText;
-                createKanji(tsvFile);
-            }
-        }
-    }
-    rawFile.send(null);    
-}
-
-function createKanji(pFile) {
-
-	Kanji.gakunenList["一"] = [];
-	Kanji.gakunenList["二"] = [];
-	Kanji.gakunenList["三"] = [];
-	Kanji.gakunenList["四"] = [];
-    Kanji.gakunenList["五"] = [];
-	Kanji.gakunenList["六"] = [];
-
-    let row = pFile.split(/\r\n|\n/);
-    let test;
-    for (let i = 0; i < row.length; i++) {
-        row[i] = row[i].split('\t');
-		//?                  A 0       B 1        C 2        D 3        E 4        F 5        G 6        J 9       K 10         L 11        M 12                                    
-        //?                  漢字	   異体字      音読み	   訓読み	  画数	     意味        部首       学年       漢検　       辞典ページ  アニメーション
-        //?             pId, pKanji,   pItaiji,   pOnYomi,   pKunYomi,  pKakusuu,  pImi,      pBushu,    pGakunen,  pKanken,    pJitenRef,  pPath
-        test = new Kanji(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4], row[i][5], row[i][6], row[i][9], row[i][10], row[i][11], row[i][12]);
-    }
-    // console.log(Kanji.list);
-	// log(Kanji.gakunenList);
-
-	readWORDFile("./tsv/漢字アプリ - 語彙.tsv");
-}
-
-function readWORDFile(pFile) {
-    let rawFile = new XMLHttpRequest();
-    rawFile.open("GET", pFile, true);
-    rawFile.onreadystatechange = function () {
-        if (rawFile.readyState === 4) {
-            if (rawFile.status === 200 || rawFile.status == 0) {
-                tsvFile = rawFile.responseText;
-                createWord(tsvFile);
-            }
-        }
-    }
-    rawFile.send(null);    
-}
-
-function createWord(pFile) {
-
-    let row = pFile.split(/\r\n|\n/);
-    let test;
-    for (let i = 0; i < row.length; i++) {
-        row[i] = row[i].split('\t');
-        //?                  語彙	   読み	     意味	 
-        //?             pId, pWord,   pYomi,     pImi,      pInfo,     pKanken
-        test = new Word(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4]);
-    }
-
-	LinkKanjiWords();
-
-	// const kanji_list = id("kanji_list");
-	// let kanji_list_HTML = "";
-	// Kanji.list.forEach(k => {
-	// 	kanji_list_HTML += `<button onClick="test(${k.id})">${k.kanji}</button>`;
-	// });
-	// kanji_list.innerHTML = kanji_list_HTML;
-
-	// displayKanjiUrl();
-
-
-	startApp();
-
-}
-
-function LinkKanjiWords() {
-	Kanji.list.forEach(k => {
-		Word.list.forEach(w => {
-			if (w.word.includes(k.kanji)) {
-				k.setWord(w.id);
-				w.setKanji(k.id);
-			}
-		});
-	});
-}
-
-
 /*
-
 悪衣悪食	あくいあくしょく
 悪因悪果	あくいんあっか
 悪逆無道	あくぎゃくむどう
@@ -395,9 +301,6 @@ function LinkKanjiWords() {
 一字不説	いちじふせつ
 一上一下	いちじょういちげ
 */
-
-
-
 
 /*
 ----- 一 -----
