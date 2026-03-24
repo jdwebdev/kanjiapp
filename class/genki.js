@@ -4,7 +4,7 @@ class GenkiWord {
 	static imiList = [];
 	static categoryList = [];
 	
-	constructor(pId, pWord, pYomi, pImi, pBook, pLesson, pCategory, pLessonSup = "") {
+	constructor(pId, pWord, pYomi, pImi, pBook, pLesson, pCategory, pParticle = "") {
 		this.id = pId;
 		this.word = pWord;
 		GenkiWord.wordList.push(this.word);
@@ -20,7 +20,7 @@ class GenkiWord {
 		this.book = pBook;
 		this.lesson = pLesson;
 		this.category = pCategory;
-		this.lessonSup = pLessonSup;
+		this.particle = pParticle;
 
 		GenkiWord.list.push(this);
 	}

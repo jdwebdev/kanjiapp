@@ -31,9 +31,7 @@ const MODE = Object.freeze({
 
 let currentSection = "main";
 let currentMode = MODE.MAIN;
-//! ---------------------
-//TODO: Local storage : Genki mode
-//! ---------------------
+const kanjiapp_mode = "kanjiapp_mode";
 
 
 
@@ -136,7 +134,12 @@ function startApp() {
 
 	// changeSection("training");
 
-	footerMainBtn();
+	let saveData = localStorage.getItem(kanjiapp_mode);
+	if (saveData == null) return;
+	saveData = JSON.parse(saveData);
+	if (saveData.current == MODE.GENKI) {
+		changeMainMode(MODE.GENKI, false);
+	}
 
 }
 
@@ -461,14 +464,21 @@ stop_search_btn.addEventListener("click", e => {
 });
 
 document.body.addEventListener("click", e => {
-	// log(e.target);
 	// log("click body"); //2
+	log(e);
 	if (bSearching) {
 		// log("go stop searching"); //3
+		bSearching = false;
 		unset(search_btn);
 		none(stop_search_btn);
+		if (currentMode == MODE.GENKI) {
+			checkGenkiFilterContainer(e.target.tagName);
+		}
 	} else {
 		// log("no action");
+		if (currentMode == MODE.GENKI) {
+			checkGenkiFilterContainer(e.target.tagName);
+		}
 	}
 });
 
@@ -648,19 +658,20 @@ function changeSection(pSection) {
 	currentSection = pSection;
 }
 
-function changeMainMode(pMode) {
-	log("mode: " + pMode);
-	let header_title = id("header_title");
-	//! ---------------------
-	//TODO: CHANGE MODE
-	//! ---------------------
-	switch(pMode) {
+function changeMainMode(pNewMode, pbFooter = true) {
+	// log("mode: " + pNewMode);
+	const header_title = id("header_title");
+
+	const obj = { current: pNewMode };
+	localStorage.setItem(kanjiapp_mode, JSON.stringify(obj));
+
+	switch(pNewMode) {
 		case MODE.MAIN:
 			header_title.innerText = "漢字";
 			search_input.placeholder = "検索";
 			if (currentMode == MODE.GENKI) {
 				editClass(header_title,"genki", false);
-				editClass(id("genki_filter_container"), "active", false);
+				closeFilterContainer();
 			}
 			footerMainBtn();
 			break;
@@ -675,15 +686,12 @@ function changeMainMode(pMode) {
 			editClass(header_title,"genki");
 			editClass(id("header"), "genki");
 			editClass(id("genki_filter_container"), "active");
-			footerMainBtn();
 
-			//! ----------
-			//TODO  HERE !!!!!!!!!!!!!!!!!!!!!!!!
-			//! ----------
+			if (pbFooter) footerMainBtn();
 
 			break;
 	}
-	currentMode = pMode;
+	currentMode = pNewMode;
 }
 
 function changeDisplayType() {

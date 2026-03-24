@@ -1,123 +1,813 @@
-大学	だいがく	Faculté; université	1	1	Nom
-高校	こうこう	Lycée	1	1	Nom
-学生	がくせい	Étudiant(e) ; élève	1	1	Nom
-大学生	だいがくせい	Étudiant(e) à l'université	1	1	Nom
-留学生	りゅうがくせい	Étudiant(e) étranger/étrangère	1	1	Nom
-先生	せんせい	Enseignant(e); professeur	1	1	Nom
-～年生	～ねんせい	Étudiant(e) de … année	1	1	
-一年生	いちねんせい	Étudiant(e) de première année	1	1	
-専攻	せんこう	Spécialité	1	1	Nom
-私	わたし	Je ; moi	1	1	
-友達	ともだち	Ami(e)	1	1	Nom
-～さん		M./Mme …	1	1	
-～人	～じん	Personne …	1	1	
-日本人	にほんじん	Personne japonaise ; japonais(e)	1	1	Nom
-今	いま	Maintenant	1	1	
-午前	ごぜん	Matin	1	1	
-午後	ごご	Après-midi	1	1	
-～時	～じ	... heure(s)	1	1	
-一時	いちじ	Une heure	1	1	
-半	はん	Et demie	1	1	
-二時半	にじはん	Deux deures et demie	1	1	
-日本	にほん	Japon	1	1	Nom
-アメリカ		États-Unis	1	1	Nom
-～語	～ご	Langue ...	1	1	
-日本語	にほんご	Langue japonaise	1	1	Nom
-～歳	～さい	... ans	1	1	
-電話	でんわ	Téléphone	1	1	Nom
-～番	～ばん	Numéro ...	1	1	
-番号	ばんごう	Numéro	1	1	Nom
-名前	ままえ	Nom	1	1	いAdj
-何	なん、なに	Quoi	1	1	
-あのう		Hmm...	1	1	
-はい		Oui	1	1	
-そうです		C'est exact	1	1	
-そうですか		Je vois. ; C'est vrai ?	1	1	
-イギリス		Royaume-Uni	1	1	Nom
-オーストラリア		Australie	1	1	Nom
-韓国	かんこく	Corée du Sud	1	1	Nom
-カナダ		Canada	1	1	Nom
-中国	ちゅうごく	Chine	1	1	Nom
-インド		Inde	1	1	Nom
-エジプト		Égypte	1	1	Nom
-フィリピン		Philippines	1	1	Nom
-アジア研究	アジアけんきゅう	Études asiatiques	1	1	Nom
-経済	けいざい	Économie	1	1	Nom
-工学	こうがく	Ingénierie	1	1	Nom
-国際関係	こくさいかんけい	Relations internationales	1	1	Nom
-コンピューター		Informatique	1	1	Nom
-政治	せいじ	Sciences politiques	1	1	Nom
-生物学	せいぶつがく	Biologie	1	1	Nom
-ビジネス		Commerce	1	1	Nom
-文学	ぶんがく	Littérature	1	1	Nom
-歴史	れきし	Histoire	1	1	Nom
-医者	いしゃ	Médecin	1	1	Nom
-会社員	かいしゃいん	Employé(e) de bureau	1	1	Nom
-看護師	かんごし	Infirmier / infirmière	1	1	Nom
-高校生	こうこうせい	Lycéen(ne)	1	1	Nom
-主婦	しゅふ	Femme au foyer	1	1	Nom
-大学院生	だいがくいんせい	Étudiant(e) en doctorat	1	1	Nom
-弁護士	べんごし	Avocat(e)	1	1	Nom
-お母さん	おかあさん	Mère	1	1	
-お父さん	おとうさん	Père	1	1	
-お姉さん	おねえさん	Grande soeur	1	1	
-お兄さん	おにいさん	Grand frère	1	1	
-妹	いもうと	Petite soeur	1	1	
-弟	おとうと	Petit frère	1	1	
-これ		Celui-ci / celle-ci	1	2	
-それ		Celui-là / celle-là	1	2	
-あれ		Celui-là / celle-là (là-bas, plus éloigné)	1	2	
-どれ		Lequel / laquelle	1	2	
-この		Ce... / cette ... (proche)	1	2	
-その		Ce... / cette ... (éloigné)	1	2	
-あの		Ce... / cette ... (encore plus éloigné)	1	2	
-どの		Quel ... / quelle ...	1	2	
-ここ		Ici	1	2	
-そこ		Là	1	2	
-あそこ		Là-bas	1	2	
-どこ		Où	1	2	
-誰	だれ	Qui	1	2	
-美味しい	おいしい	Délicieux	1	2	いAdj
-魚	さかな	Poisson	1	2	Nom
-豚カツ	とんかつ	Escalope de porc	1	2	Nom
-肉	にく	Viande	1	2	Nom
-メニュー		Menu	1	2	Nom
-野菜	やさい	Légume	1	2	Nom
-傘	かさ	Parapluie	1	2	Nom
-かばん		Sac	1	2	Nom
-靴	くつ	Chaussures	1	2	Nom
-財布	さいふ	Portefeuille	1	2	Nom
-ジーンズ		Jean	1	2	Nom
-自転車	じてんしゃ	Vélo	1	2	Nom
-新聞	しんぶん	Journal	1	2	Nom
-スマホ		Smartphone	1	2	Nom
-Tシャツ		T-shirt	1	2	Nom
-時計	とけい	Montre; horloge	1	2	Nom
-ノート		Cahier; ordinateur portable	1	2	Nom
-ペン		Stylo	1	2	Nom
-帽子	ぼうし	Chapeau; casquette	1	2	Nom
-本	ほん	Livre	1	2	Nom
-銀行	ぎんこう	Banque	1	2	Nom
-コンビニ		Épicerie; magasin de proximité	1	2	Nom
-トイレ		Toilettes	1	2	Nom
-図書館	としょかん	Bibliothèque	1	2	Nom
-郵便局	ゆうびんきょく	Bureau de poste	1	2	Nom
-イギリス		Royaume-Uni	1	2	Nom
-韓国	かんこく	Corée du Sud	1	2	Nom
-中国	ちゅうごく	Chine	1	2	Nom
-英語	えいご	Anglais (langue)	1	2	Nom
-経済	けいざい	Économie	1	2	Nom
-コンピューター		Informatique	1	2	Nom
-ビジネス		Commerce	1	2	Nom
-歴史	れきし	Histoire	1	2	Nom
-お母さん	おかあさん	Mère	1	2	
-お父さん	おとうさん	Père	1	2	
-いくら		Combien	1	2	
-～円	～えん	... yens	1	2	
-高い	たかい	Cher; haut	1	2	いAdj
-いらっしゃいませ		Bienvenue (dans notre magasin)	1	2	Exp
-(～を)お願いします	(～を)おねがいします	..., s'il vous plaît.	1	2	Exp
-(～を)ください		Pourriez-vous me donner..., s'il vous plaît.	1	2	Exp
-じゃあ		Alors; dans ce cas	1	2	Exp
-どうぞ		Je vous en prie.; Voilà	1	2	Exp
-どうも		Merci.	1	2	Exp
+大学	だいがく	Faculté; université	1	1	Nom	
+高校	こうこう	Lycée	1	1	Nom	
+学生	がくせい	Étudiant(e) ; élève	1	1	Nom	
+大学生	だいがくせい	Étudiant(e) à l'université	1	1	Nom	
+留学生	りゅうがくせい	Étudiant(e) étranger/étrangère	1	1	Nom	
+先生	せんせい	Enseignant(e); professeur	1	1	Nom	
+～年生	～ねんせい	Étudiant(e) de … année	1	1		
+一年生	いちねんせい	Étudiant(e) de première année	1	1		
+専攻	せんこう	Spécialité	1	1	Nom	
+私	わたし	Je ; moi	1	1		
+友達	ともだち	Ami(e)	1	1	Nom	
+～さん		M./Mme …	1	1		
+～人	～じん	Personne …	1	1		
+日本人	にほんじん	Personne japonaise ; japonais(e)	1	1	Nom	
+今	いま	Maintenant	1	1	Nom	
+午前	ごぜん	Matin	1	1	Nom	
+午後	ごご	Après-midi	1	1	Nom	
+～時	～じ	... heure(s)	1	1		
+一時	いちじ	Une heure	1	1		
+半	はん	Et demie	1	1		
+二時半	にじはん	Deux deures et demie	1	1		
+日本	にほん	Japon	1	1	Nom	
+アメリカ		États-Unis	1	1	Nom	
+～語	～ご	Langue ...	1	1		
+日本語	にほんご	Langue japonaise	1	1	Nom	
+～歳	～さい	... ans	1	1		
+電話	でんわ	Téléphone	1	1	Nom	
+～番	～ばん	Numéro ...	1	1		
+番号	ばんごう	Numéro	1	1	Nom	
+名前	ままえ	Nom	1	1	Nom	
+何	なん、なに	Quoi	1	1		
+あのう		Hmm...	1	1	Exp	
+はい		Oui	1	1	Exp	
+そうです		C'est exact	1	1	Exp	
+そうですか		Je vois. ; C'est vrai ?	1	1	Exp	
+イギリス		Royaume-Uni	1	1	Nom	
+オーストラリア		Australie	1	1	Nom	
+韓国	かんこく	Corée du Sud	1	1	Nom	
+カナダ		Canada	1	1	Nom	
+中国	ちゅうごく	Chine	1	1	Nom	
+インド		Inde	1	1	Nom	
+エジプト		Égypte	1	1	Nom	
+フィリピン		Philippines	1	1	Nom	
+アジア研究	アジアけんきゅう	Études asiatiques	1	1	Nom	
+経済	けいざい	Économie	1	1	Nom	
+工学	こうがく	Ingénierie	1	1	Nom	
+国際関係	こくさいかんけい	Relations internationales	1	1	Nom	
+コンピューター		Informatique	1	1	Nom	
+政治	せいじ	Sciences politiques	1	1	Nom	
+生物学	せいぶつがく	Biologie	1	1	Nom	
+ビジネス		Commerce	1	1	Nom	
+文学	ぶんがく	Littérature	1	1	Nom	
+歴史	れきし	Histoire	1	1	Nom	
+医者	いしゃ	Médecin	1	1	Nom	
+会社員	かいしゃいん	Employé(e) de bureau	1	1	Nom	
+看護師	かんごし	Infirmier / infirmière	1	1	Nom	
+高校生	こうこうせい	Lycéen(ne)	1	1	Nom	
+主婦	しゅふ	Femme au foyer	1	1	Nom	
+大学院生	だいがくいんせい	Étudiant(e) en doctorat	1	1	Nom	
+弁護士	べんごし	Avocat(e)	1	1	Nom	
+お母さん	おかあさん	Mère	1	1	Nom	
+お父さん	おとうさん	Père	1	1	Nom	
+お姉さん	おねえさん	Grande soeur	1	1	Nom	
+お兄さん	おにいさん	Grand frère	1	1	Nom	
+妹	いもうと	Petite soeur	1	1	Nom	
+弟	おとうと	Petit frère	1	1	Nom	
+これ		Celui-ci / celle-ci	1	2		
+それ		Celui-là / celle-là	1	2		
+あれ		Celui-là / celle-là (là-bas, plus éloigné)	1	2		
+どれ		Lequel / laquelle	1	2		
+この		Ce... / cette ... (proche)	1	2		
+その		Ce... / cette ... (éloigné)	1	2		
+あの		Ce... / cette ... (encore plus éloigné)	1	2		
+どの		Quel ... / quelle ...	1	2		
+ここ		Ici	1	2		
+そこ		Là	1	2		
+あそこ		Là-bas	1	2		
+どこ		Où	1	2		
+誰	だれ	Qui	1	2		
+美味しい	おいしい	Délicieux	1	2	いAdj	
+魚	さかな	Poisson	1	2	Nom	
+豚カツ	とんかつ	Escalope de porc	1	2	Nom	
+肉	にく	Viande	1	2	Nom	
+メニュー		Menu	1	2	Nom	
+野菜	やさい	Légume	1	2	Nom	
+傘	かさ	Parapluie	1	2	Nom	
+かばん		Sac	1	2	Nom	
+靴	くつ	Chaussures	1	2	Nom	
+財布	さいふ	Portefeuille	1	2	Nom	
+ジーンズ		Jean	1	2	Nom	
+自転車	じてんしゃ	Vélo	1	2	Nom	
+新聞	しんぶん	Journal	1	2	Nom	
+スマホ		Smartphone	1	2	Nom	
+Tシャツ		T-shirt	1	2	Nom	
+時計	とけい	Montre; horloge	1	2	Nom	
+ノート		Cahier; ordinateur portable	1	2	Nom	
+ペン		Stylo	1	2	Nom	
+帽子	ぼうし	Chapeau; casquette	1	2	Nom	
+本	ほん	Livre	1	2	Nom	
+銀行	ぎんこう	Banque	1	2	Nom	
+コンビニ		Épicerie; magasin de proximité	1	2	Nom	
+トイレ		Toilettes	1	2	Nom	
+図書館	としょかん	Bibliothèque	1	2	Nom	
+郵便局	ゆうびんきょく	Bureau de poste	1	2	Nom	
+イギリス		Royaume-Uni	1	2	Nom	
+韓国	かんこく	Corée du Sud	1	2	Nom	
+中国	ちゅうごく	Chine	1	2	Nom	
+英語	えいご	Anglais (langue)	1	2	Nom	
+経済	けいざい	Économie	1	2	Nom	
+コンピューター		Informatique	1	2	Nom	
+ビジネス		Commerce	1	2	Nom	
+歴史	れきし	Histoire	1	2	Nom	
+お母さん	おかあさん	Mère	1	2	Nom	
+お父さん	おとうさん	Père	1	2	Nom	
+いくら		Combien	1	2		
+～円	～えん	... yens	1	2		
+高い	たかい	Cher; haut	1	2	いAdj	
+いらっしゃいませ		Bienvenue (dans notre magasin)	1	2	Exp	
+(～を)お願いします	(～を)おねがいします	..., s'il vous plaît.	1	2	Exp	
+(～を)ください		Pourriez-vous me donner..., s'il vous plaît.	1	2	Exp	
+じゃあ		Alors; dans ce cas	1	2	Exp	
+どうぞ		Je vous en prie.; Voilà	1	2	Exp	
+どうも		Merci.	1	2	Exp	
+映画	えいが	Film	1	3	Nom	
+音楽	おんがく	Musique	1	3	Nom	
+雑誌	ざっし	Magazine	1	3	Nom	
+スポーツ		Sport	1	3	Nom	
+デート		Rendez-vous (romantique)	1	3	Nom	
+テニス		Tennis	1	3	Nom	
+テレビ		Télévision	1	3	Nom	
+アイスクリーム		Glace	1	3	Nom	
+ハンバーガー		Hamburger	1	3	Nom	
+お酒	おさけ	Saké; boisson alcoolisée	1	3	Nom	
+お茶	おちゃ	Thé vert	1	3	Nom	
+コーヒー		Café	1	3	Nom	
+水	みず	Eau	1	3	Nom	
+朝ご飯	あさごはん	Petit-déjeuner	1	3	Nom	
+昼ご飯	ひるごはん	Déjeuner	1	3	Nom	
+晩ご飯	ばんごはん	Dîner	1	3	Nom	
+家	いえ	Domicile; maison	1	3	Nom	
+うち		Domicile; maison; chez moi	1	3	Nom	
+学校	がっこう	École	1	3	Nom	
+カフェ		Café	1	3	Nom	
+明日	あした	Demain	1	3	Nom	
+今日	きょう	Aujourd'hui	1	3	Nom	
+朝	あさ	Matin	1	3	Nom	
+今晩	こんばん	Ce soir	1	3	Nom	
+毎日	まいにち	Tous les jours; chaque jour	1	3	Nom	
+毎晩	まいばん	Tous les soirs; chaque soir	1	3	Nom	
+週末	しゅうまつ	Week-end	1	3	Nom	
+土曜日	どようび	Samedi	1	3	Nom	
+日曜日	にちようび	Dimanche	1	3	Nom	
+いつ		Quand	1	3	Nom	
+～ごろ		Vers...	1	3	Nom	
+行く	いく	Aller	1	3	U-Vb	destination に/へ
+帰る	かえる	Revenir; rentrer	1	3	U-Vb	destination に/へ
+聞く	きく	Écouter; entendre	1	3	U-Vb	～を
+飲む	のむ	Boire	1	3	U-Vb	～を
+話す	はなす	Discuter; parler	1	3	U-Vb	～を/～で
+読む	よむ	Lire	1	3	U-Vb	～を
+起きる	おきる	Se lever	1	3	Ru-Vb	
+食べる	たべる	Manger	1	3	Ru-Vb	～を
+寝る	ねる	Dormir; aller se coucher	1	3	Ru-Vb	
+見る	みる	Voir; regarder	1	3	Ru-Vb	～を
+来る	くる	Venir	1	3	Irr-Vb	destination に/へ
+する		Faire	1	3	Irr-Vb	～を
+勉強する	べんきょうする	Étudier	1	3	Irr-Vb	～を
+いい		Bon; bien	1	3	いAdj	
+早い	はやい	Tôt	1	3	いAdj	
+あまり＋Négatif		Pas beaucoup	1	3	Adv	
+全然＋Négatif	ぜんぜん	Pas du tout	1	3	Adv	
+たいてい		Généralement	1	3	Adv	
+ちょっと		Un peu	1	3	Adv	
+時々	ときどき	Parfois	1	3	Adv	
+よく		Souvent; beaucoup	1	3	Adv	
+そうですね		C'est ça.; Voyons voir.	1	3	Exp	
+でも		Mais	1	3	Exp	
+どうですか		Que pensez-vous de... ? ; Que diriez-vous de... ?	1	3	Exp	
+ええ		Oui	1	3	Exp	
+ゲーム		Jeu	1	4	Nom	
+アルバイト		Petit boulot (plus familièrement バイト)	1	4	Nom	
+買い物	かいもの	Shopping	1	4	Nom	
+クラス		Classe	1	4	Nom	
+犬	いぬ	Chien	1	4	Nom	
+猫	ねこ	Chat	1	4	Nom	
+人	ひと	Personne	1	4	Nom	
+子供	こども	Enfant	1	4	Nom	
+あなた		Vous ; tu	1	4	Nom	
+いす		Chaise	1	4	Nom	
+机	つくえ	Bureau	1	4	Nom	
+写真	しゃしん	Photographie	1	4	Nom	
+花	はな	Fleur	1	4	Nom	
+レポート		Rapport ; dissertation	1	4	Nom	
+ご飯	ごはん	Riz ; repas	1	4	Nom	
+パン		Pain	1	4	Nom	
+お寺	おてら	Temple	1	4	Nom	
+公園	こうえん	Parc	1	4	Nom	
+スーパー		Supermarché	1	4	Nom	
+バス停	バスてい	Arrêt de bus	1	4	Nom	
+病院	びょういん	Hôpital	1	4	Nom	
+ホテル		Hôtel	1	4	Nom	
+本屋	ほんや	Librairie	1	4	Nom	
+町	まち	Ville	1	4	Nom	
+レストラン		Restaurant	1	4	Nom	
+昨日	きのう	Hier	1	4	Nom	
+～時間	～じかん	... heures	1	4	Nom	
+一時間	いちじかん	Une heure	1	4	Nom	
+先週	せんしゅう	La semaine dernière	1	4	Nom	
+時	とき	Quand... ; au moment de	1	4	Nom	～の
+月曜日	げつようび	Lundi	1	4	Nom	
+火曜日	かようび	Mardi	1	4	Nom	
+水曜日	すいようび	Mercredi	1	4	Nom	
+木曜日	もくようび	Jeudi	1	4	Nom	
+金曜日	きんようび	Vendredi	1	4	Nom	
+会う	あう	Rencontrer; voir (quelqu'un)	1	4	U-Vb	personneに
+ある		Il y a ...	1	4	U-Vb	endroitにchoseが
+買う	かう	Acheter	1	4	U-Vb	～を
+書く	かく	Écrire	1	4	U-Vb	personneにchoseを
+撮る	とる	Prendre (une photo)	1	4	U-Vb	～を
+待つ	まつ	Attendre	1	4	U-Vb	～を
+わかる		Comprendre	1	4	U-Vb	～が
+いる		(Une personne) est à ...; reste à ...	1	4	Ru-Vb	endroitにpersonneが
+～ぐらい		Environ (mesure approximative)	1	4		
+ごめんなさい		Je suis désolé.	1	4	Exp	
+それから		Puis	1	4		
+だから		Donc ; par conséquent	1	4		
+たくさん		Beaucoup; un grand nombre	1	4	Adv	
+～と		Avec (quelqu'un) ; et	1	4		
+どうして		Pourquoi	1	4		
+一人で	ひとりで	Seul	1	4		
+もしもし		Allô ?	1	4	Exp	
+右	みぎ	Droite	1	4	Loc	～の
+左	ひだり	Gauche	1	4	Loc	～の
+前	まえ	Devant	1	4	Loc	～の
+後ろ	うしろ	Derrière	1	4	Loc	～の
+中	なか	Dedans	1	4	Loc	～の
+上	うえ	Dessus	1	4	Loc	～の
+下	した	Dessous	1	4	Loc	～の
+近く	ちかく	Près; à proximité	1	4	Loc	～の
+隣	となり	À côté	1	4	Loc	～の
+間	あいだ	Entre	1	4	Loc	AとBの
+一月	いちがつ	Janvier	1	4	Nom	
+二月	にがつ	Février	1	4	Nom	
+三月	さんがつ	Mars	1	4	Nom	
+四月	しがつ	Avril	1	4	Nom	
+五月	ごがつ	Mai	1	4	Nom	
+六月	ろくがつ	Juin	1	4	Nom	
+七月	しちがつ	Juillet	1	4	Nom	
+八月	はちがつ	Août	1	4	Nom	
+九月	くがつ	Septembre	1	4	Nom	
+十月	じゅうがつ	Octobre	1	4	Nom	
+十一月	じゅういちがつ	Novembre	1	4	Nom	
+十二月	じゅうにがつ	Décembre	1	4	Nom	
+おととい		Avant-hier	1	4	Nom	
+二週間前	にしゅうかんまえ	Il y a deux semaines	1	4	Nom	
+二か月前	にかげつまえ	Il y a deux mois	1	4	Nom	
+おととし		Il y a deux ans	1	4	Nom	
+先月	せんげつ	Le mois dernier	1	4	Nom	
+去年	きょねん	L'année dernière	1	4	Nom	
+今週	こんしゅう	Cette semaine	1	4	Nom	
+今月	こんげつ	Ce mois-ci	1	4	Nom	
+今年	ことし	Cette année	1	4	Nom	
+来週	らいしゅう	La semaine prochaine	1	4	Nom	
+来月	らいげつ	Le mois prochain	1	4	Nom	
+来年	らいねん	L'année prochaine	1	4	Nom	
+あさって		Après-demain	1	4	Nom	
+再来週	さらいしゅう	Dans deux semaines	1	4	Nom	
+再来月	さらいげつ	Dans deux mois	1	4	Nom	
+再来年	さらいねん	Dans deux ans	1	4	Nom	
+食べ物	たべもの	Nourriture	1	5	Nom	
+飲み物	のみもの	Boisson	1	5	Nom	
+果物	くだもの	Fruit	1	5	Nom	
+休み	やすみ	Jour férié; jour de repos; absence	1	5	Nom	
+旅行	りょこう	Voyage	1	5	Nom	
+海	うみ	Mer	1	5	Nom	
+サーフィン		Surf	1	5	Nom	
+お土産	おみやげ	Souvenir	1	5	Nom	
+バス		Bus	1	5	Nom	
+天気	てんき	Temps (météo)	1	5	Nom	
+宿題	しゅくだい	Devoirs	1	5	Nom	
+テスト		Contrôle	1	5	Nom	
+誕生日	たんじょうび	Anniversaire	1	5	Nom	
+部屋	へや	Chambre; pièce	1	5	Nom	
+僕	ぼく	Je (utilisé par les hommes)	1	5	Nom	
+Lサイズ		Taille L	1	5	Nom	
+新しい	あたらしい	Nouveau	1	5	いAdj	
+古い	ふるい	Vieux (objet - ne s'utilise pas pour les personnes)	1	5	いAdj	
+暑い	あつい	Chaud (météo)	1	5	いAdj	
+寒い	さむい	Froid (météo - ne s'utilise pas pour les choses)	1	5	いAdj	
+熱い	あつい	Chaud (objet)	1	5	いAdj	
+忙しい	いそがしい	Occupé (personne/journée)	1	5	いAdj	
+大きい	おおきい	Grand	1	5	いAdj	
+小さい	ちいさい	Petit	1	5	いAdj	
+面白い	おもしろい	Intéressant; drôle	1	5	いAdj	
+つまらない		Ennuyeux	1	5	いAdj	
+やさしい		Facile (problème); gentil (personne)	1	5	いAdj	
+難しい	むずかしい	Difficile	1	5	いAdj	
+かっこいい		Beau (se conjugue comme いい)	1	5	いAdj	
+怖い	こわい	Effrayant	1	5	いAdj	
+楽しい	たのしい	Amusant	1	5	いAdj	
+安い	やすい	Peu coûteux; bon marché (objet)	1	5	いAdj	
+好き	すき	Aimer; apprécier	1	5	なAdj	～が
+嫌い	きらい	Être dégouté; ne pas aimer	1	5	なAdj	～が
+大好き	だいすき	Être très attaché à; adore	1	5	なAdj	～が
+大嫌い	だいきらい	Détester	1	5	なAdj	～が
+きれい		Beau; propre	1	5	なAdj	
+元気	げんき	Sain; énergique	1	5	なAdj	
+静か	しずか	Calme	1	5	なAdj	
+にぎやか		Animé	1	5	なAdj	
+暇	ひま	Disponible; libre (temps)	1	5	なAdj	
+泳ぐ	およぐ	Nager	1	5	U-Vb	
+聞く	きく	Demander	1	5	U-Vb	personneに
+乗る	のる	Monter; embarquer	1	5	U-Vb	～に
+やる		Faire; réaliser	1	5	U-Vb	～を
+出かける	でかける	Sortir	1	5	Ru-Vb	
+一緒に	いっしょに	Ensemble	1	5		
+すごく		Extrêmement	1	5	Adv	
+大丈夫	だいじょうぶ	Ça va. ; Tout va bien. ; Ne t'inquiète pas.	1	5		
+とても		Très	1	5	Adv	
+どんな		Quel genre de ...	1	5		
+～枚	～まい	[Compteur pour les objets plats]	1	5		
+漢字	かんじ	Kanji; caractère chinois	1	6	Nom	
+教科書	きょうかしょ	Manuel	1	6	Nom	
+ページ		Page	1	6	Nom	
+次	つぎ	Suivant	1	6	Nom	
+お金	おかね	Argent	1	6	Nom	
+荷物	にもつ	Bagage	1	6	Nom	
+パソコン		Ordinateur	1	6	Nom	
+シャワー		Douche	1	6	Nom	
+エアコン		Climatiseur	1	6	Nom	
+電気	でんき	Électricité; lumière	1	6	Nom	
+窓	まど	Fenêtre	1	6	Nom	
+電車	でんしゃ	Train	1	6	Nom	
+国	くに	Pays; lieu d'origine	1	6	Nom	
+今週	こんしゅう	Cette semaine	1	6	Nom	
+来週	らいしゅう	La semaine prochaine	1	6	Nom	
+来年	らいねん	L'année prochaine	1	6	Nom	
+夜	よる	Nuit	1	6	Nom	
+大変	たいへん	Difficile (situation)	1	6	なAdj	
+遊ぶ	あそぶ	Jouer; passer le temps de manière agréable	1	6	U-Vb	
+急ぐ	いそぐ	Se dépêcher	1	6	U-Vb	
+返す	かえす	Rendre (quelque chose)	1	6	U-Vb	personneにchoseを
+消す	けす	Éteindre; effacer	1	6	U-Vb	～を
+死ぬ	しぬ	Mourir	1	6	U-Vb	
+座る	すわる	S'asseoir	1	6	U-Vb	～に
+立つ	たつ	Se mettre debout	1	6	U-Vb	
+たばこを吸う	たばこをすう	Fumer	1	6	U-Vb	
+使う	つかう	Utiliser	1	6	U-Vb	～を
+手伝う	てつだう	Aider	1	6	U-Vb	～を
+入る	はいる	Entrer	1	6	U-Vb	～に
+持つ	もつ	Porter; tenir	1	6	U-Vb	～を
+休む	やすむ	Être absent (de...)	1	6	U-Vb	～を
+休む	やすむ	Se reposer	1	6	U-Vb	
+開ける	あける	Ouvrir (quelque chose)	1	6	Ru-Vb	～を
+閉める	しめる	Fermer (quelque chose)	1	6	Ru-Vb	～を
+教える	おしえる	Enseigner; apprendre	1	6	Ru-Vb	personneにchoseを
+忘れる	わすれる	Oublier; laisser derrière soi	1	6	Ru-Vb	～を
+降りる	おりる	Descendre	1	6	Ru-Vb	～を
+借りる	かりる	Emprunter	1	6	Ru-Vb	personneにchoseを
+シャワーを浴びる	シャワーをあびる	Prendre une douche	1	6	Ru-Vb	
+つける		Allumer; mettre en marche	1	6	Ru-Vb	～を
+電話する	でんわする	Téléphoner	1	6	Irr-Vb	～に
+連れてくる	つれてくつ	Amener (quelqu'un)	1	6	Irr-Vb	～を
+持ってくる	のってくる	Apporter (quelque chose)	1	6	Irr-Vb	～を
+後で	あとで	Plus tard	1	6	Adv	
+すぐ		Tout de suite	1	6	Adv	
+ゆっくり		Lentement; tranquillement; sans se presser	1	6	Adv	
+結構です	けっこうです	Ça ira. ; Ce ne sera pas nécessaire.	1	6	Exp	
+本当ですか	ほんとうですか	Vraiment ?	1	6	Exp	
+家族	かぞく	Famille	1	7	Nom	
+おじいさん	おじいさん	Grand-père; vieil homme	1	7	Nom	
+おばあさん	おばあさん	Grand-mère; vieille femme	1	7	Nom	
+お兄さん	おにいさん	Grand frère	1	7	Nom	
+お姉さん	おねえさん	Grande soeur	1	7	Nom	
+父	ちち	(Mon) père	1	7	Nom	
+母	はは	(Ma) mère	1	7	Nom	
+兄	あに	(Mon) grand frère	1	7	Nom	
+姉	あね	(Ma) grande soeur	1	7	Nom	
+妹	いもうと	Petite soeur	1	7	Nom	
+弟	おとうと	Petit frère	1	7	Nom	
+兄弟	きょうだい	Frères et soeurs	1	7	Nom	
+男の人	おとこのひと	Homme	1	7	Nom	
+女の人	おんなのひと	Femme	1	7	Nom	
+会社	かいしゃ	Entreprise	1	7	Nom	
+食堂	しょくどう	Cafétéria; réfectoire	1	7	Nom	
+デパート		Grand magasin	1	7	Nom	
+髪	かみ	Cheveux	1	7	Nom	
+口	くち	Bouche	1	7	Nom	
+目	め	Oeil	1	7	Nom	
+眼鏡	めがね	Lunettes	1	7	Nom	
+歌	うた	Chanson	1	7	Nom	
+サークル		Activité de club	1	7	Nom	
+車	くるま	Voiture	1	7	Nom	
+長い	ながい	Long	1	7	いAdj	
+短い	みじかい	Court (longueur)	1	7	いAdj	
+速い	はやい	Rapide	1	7	いAdj	
+背が高い	せがたかい	Grand (taille)	1	7	いAdj	
+背が低い	せがひくい	Petit (taille)	1	7	いAdj	
+頭がいい	あたまがいい	Brillant; intelligent; malin	1	7	いAdj	
+かわいい		Mignon	1	7	いAdj	
+親切	しんせつ	Gentil	1	7	なAdj	
+便利	べんり	Pratique	1	7	なAdj	
+歌う	うたう	Chanter	1	7	U-Vb	～を
+かぶる		Mettre (un chapeau)	1	7	U-Vb	～を
+はく		Mettre (des vêtements en dessous de la taille)	1	7	U-Vb	～を
+知る	しる	Connaître; savoir	1	7	U-Vb	～を
+知っています	しっています	Je sais	1	7	U-Vb	
+知りません	しりません	Je ne sais pas	1	7	U-Vb	
+住む	すむ	Habiter (～に住んでいます)	1	7	U-Vb	～に
+働く	はたらく	Travailler	1	7	U-Vb	
+太る	ふとる	Prendre du poids	1	7	U-Vb	
+太っています	ふとっています	Être gros; être en surpoids	1	7	U-Vb	
+(眼鏡を)かける	(めがねを)かける	Mettre (des lunettes)	1	7	Ru-Vb	
+着る	きる	Mettre (des vêtements au-dessus de la taille)	1	7	Ru-Vb	～を
+やせる		Perdre du poids	1	7	Ru-Vb	
+やせています		Être mince	1	7	Ru-Vb	
+結婚する	けっこんする	Se marier	1	7	Irr-Vb	～と
+～が		..., mais	1	7		
+何も＋Négatif	なにも	Rien	1	7		
+～人	～にん	[Compteur pour les personnes]	1	7		
+一人	ひとり	Une personne	1	7		
+二人	ふたり	Deux personnes	1	7		
+別に＋Négatif	べつに	Rien en particulier	1	7		
+もちろん		Bien sûr	1	7		
+よかったら		Si cela vous dit	1	7		
+晴れ	はれ	Temps ensoleillé	1	8	Nom	
+雨	あめ	Pluie	1	8	Nom	
+曇り	くもり	Temps nuageux	1	8	Nom	
+雪	ゆき	Neige	1	8	Nom	
+天気予報	てんきよほう	Prévisions météorologiques	1	8	Nom	
+気温	きおん	Température (météo - ne s'utilise pas pour les choses)	1	8	Nom	
+夏	なつ	Été	1	8	Nom	
+冬	ふゆ	Hiver	1	8	Nom	
+今朝	けさ	Ce matin	1	8	Nom	
+あさって		Après-demain	1	8	Nom	
+毎週	まいしゅう	Toutes les semaines; chaque semaine	1	8	Nom	
+今月	こんげつ	Ce mois-ci	1	8	Nom	
+来月	らいげつ	Le mois prochain	1	8	Nom	
+会社員	かいしゃいん	Employé(e) de bureau	1	8	Nom	
+仕事	しごと	Emploi; travail; profession	1	8	Nom	
+カメラ		Appareil photo	1	8	Nom	
+カラオケ		Karaoké	1	8	Nom	
+所	ところ	Lieu	1	8	Nom	
+トマト		Tomate	1	8	Nom	
+箸	はし	Baguettes	1	8	Nom	
+パーティー		Fête	1	8	Nom	
+バーベキュー		Barbecue	1	8	Nom	
+ホームステイ		Séjour chez l'habitant; vivre dans une famille d'accueil	1	8	Nom	
+お風呂	おふろ	Bain	1	8	Nom	
+スペイン		Espagne	1	8	Nom	
+何か	なにか	Quelque chose	1	8	Nom	
+上手	じょうず	Habile; doué pour...	1	8	なAdj	～が
+下手	へた	Maladroitt; pas doué pour...	1	8	なAdj	～が
+有名	ゆうめい	Célèbre	1	8	なAdj	
+洗う	あらう	Laver	1	8	U-Vb	～を
+言う	いう	Dire	1	8	U-Vb	
+要る	いる	Avoir besoin	1	8	U-Vb	～が
+遅くなる	おそくなる	Être en retard	1	8	U-Vb	
+お風呂に入る	おふろにはいる	Prendre un bain	1	8	U-Vb	
+思う	おもう	Penser	1	8	U-Vb	
+切る	きる	Couper	1	8	U-Vb	～を
+作る	つくる	Préparer	1	8	U-Vb	～を
+(雨 / 雪が)降る	(あめ / ゆきが)ふる	Pleuvoir; neiger	1	8	U-Vb	
+持っていく	もっていく	Emporter (quelque chose)	1	8	U-Vb	～を
+捨てる	すてる	Jeter	1	8	Ru-Vb	～を
+始める	はじめる	Commencer	1	8	Ru-Vb	～を
+運転する	うんてんする	Conduire	1	8	Irr-Vb	～を
+洗濯する	せんたくする	Faire la lessive	1	8	Irr-Vb	～を
+掃除する	そうじする	Nettoyer	1	8	Irr-Vb	～を
+料理する	りょうりする	Cuisiner	1	8	Irr-Vb	
+うん		Ouais; oui	1	8	Exp	
+ううん		Hmm; non	1	8	Exp	
+いつも		Toujours	1	8	Adv	
+遅く	おそく	(Faire quelque chose) en retard	1	8	Adv	
+乾杯	かんぱい	À la vôtre ! ; Santé ! (pour porter un toast)	1	8	Exp	
+みんなで		Tous ensemble	1	8	Exp	
+残念(ですね)	ざんねん	C'est dommage.	1	8	Exp	
+まだ＋Négatif		Pas encore	1	8	Exp	
+～について		À propos de... ; concernant ...	1	8		
+～度	～ど	... degrés (température)	1	8		
+どう		Comment	1	8		
+単語	たんご	Mot; vocabulaire	1	9	Nom	
+作文	さくぶん	Rédaction; dissertation	1	9	Nom	
+試験	しけん	Examen	1	9	Nom	
+手紙	てがみ	Lettre	1	9	Nom	
+メール		E-mail	1	9	Nom	
+ギター		Guitare	1	9	Nom	
+ピアノ		Piano	1	9	Nom	
+コンサート		Concert	1	9	Nom	
+チケット		Ticket; billet	1	9	Nom	
+歌舞伎	かぶき	Théâtre kabuki (art théâtral traditionnel japonais)	1	9	Nom	
+スキー		Ski	1	9	Nom	
+お弁当	おべんとう	Panier-repas	1	9	Nom	
+ピザ		Pizza	1	9	Nom	
+病気	びょうき	Maladie; pathologie	1	9	Nom	
+薬	くすり	Médicament	1	9	Nom	
+いい子	いいこ	Enfant sage	1	9	Nom	
+色	いろ	Couleur	1	9	Nom	
+今度	こんど	Futur proche	1	9	Nom	
+先月	せんげつ	Le mois dernier	1	9	Nom	
+去年	きょねん	L'année dernière	1	9	Nom	
+青い	あおい	Bleu	1	9	いAdj	
+赤い	あかい	Rouge	1	9	いAdj	
+黒い	くろい	Noir	1	9	いAdj	
+白い	しろい	Blanc	1	9	いAdj	
+寂しい	さびしい	Solitaire; triste	1	9	いAdj	
+若い	わかい	Jeune	1	9	いAdj	
+意地悪	いじわる	Méchant	1	9	なAdj	
+踊る	おどる	Danser	1	9	U-Vb	
+終わる	おわる	Se terminer	1	9	U-Vb	～が
+薬を飲む	くすりをのむ	Prendre des médicaments	1	9	U-Vb	
+人気がある	にんきがある	Être populaire	1	9	U-Vb	
+始まる	はじまる	Commencer	1	9	U-Vb	～が
+弾く	ひく	Jouer (d'un instrument à cordes ou d'un piano)	1	9	U-Vb	～を
+もらう	もらう	Obtenir (de quelqu'un)	1	9	U-Vb	personneにchoseを
+覚える	おぼえる	Mémoriser	1	9	Ru-Vb	～を
+出る	でる	Apparaître; assister à	1	9	Ru-Vb	～に
+出る	でる	Sortir de	1	9	Ru-Vb	～を
+運動する	うんどうする	Faire de l'exercice	1	9	Irr-Vb	
+散歩する	さんぽする	Se promener	1	9	Irr-Vb	
+そう		(Je suis) d'accord	1	9		
+～から		À partir de ...	1	9		
+～まで		Jusqu'à (lieu/moment)	1	9		
+是非	ぜひ	Absolument	1	9		
+ところで		D'ailleurs	1	9		
+みんな		Tous	1	9		
+もう		Déjà	1	9		
+一つ	ひとつ	Un	1	9	Nb	
+二つ	ふたつ	Deux	1	9	Nb	
+三つ	みっつ	Trois	1	9	Nb	
+四つ	よっつ	Quatre	1	9	Nb	
+五つ	いつつ	Cinq	1	9	Nb	
+六つ	むっつ	Six	1	9	Nb	
+七つ	ななつ	Sept	1	9	Nb	
+八つ	やっつ	Huit	1	9	Nb	
+九つ	ここのつ	Neuf	1	9	Nb	
+とお		Dix	1	9	Nb	
+黄色い	きいろい	Jaune	1	9	いAdj	
+茶色い	ちゃいろい	Marron	1	9	いAdj	
+緑 / グリーン	みどり	Vert	1	9	Nom	
+紺色	こんいろ	Bleu marine	1	9	Nom	
+水色	みずいろ	Bleu clair	1	9	Nom	
+銀色 / シルバー	ぎんいろ	Argent	1	9	Nom	
+オレンジ		Orange	1	9	Nom	
+紫	むらさき	Violet	1	9	Nom	
+灰色 / グレー	はいいろ	Gris	1	9	Nom	
+金色 / ゴールド	きんいろ	Orange	1	9	Nom	
+ピンク		Rose	1	9	Nom	
+ベージュ		Beige	1	9	Nom	
+季節	きせつ	Saison	1	10	Nom	
+春	はる	Printemps	1	10	Nom	
+秋	あき	Automne	1	10	Nom	
+牛乳	ぎゅうにゅう	Lait	1	10	Nom	
+ケーキ		Gâteau	1	10	Nom	
+すし		Sushi	1	10	Nom	
+天ぷら	てんぷら	Tempura	1	10	Nom	
+りんご		Pomme	1	10	Nom	
+料理	りょうり	Cuisine	1	10	Nom	
+サッカー		Football	1	10	Nom	
+野球	やきゅう	Base-ball	1	10	Nom	
+医者	いしゃ	Médecin	1	10	Nom	
+お金持ち	おかねもち	Personne riche	1	10	Nom	
+有名人	ゆうめいじん	Célébrité	1	10	Nom	
+顔	かお	Visage	1	10	Nom	
+年上	としうえ	Personne plus âgée	1	10	Nom	
+駅	えき	Gare	1	10	Nom	
+新幹線	しんかんせん	Shinkansen; train à grande vitesse	1	10	Nom	
+地下鉄	ちかてつ	Métro	1	10	Nom	
+船	ふね	Navire; bateau	1	10	Nom	
+飛行機	ひこうき	Avion	1	10	Nom	
+予約	よやく	Réservation	1	10	Nom	
+ツアー		Visite; circuit	1	10	Nom	
+動物園	どうぶつえん	Zoo	1	10	Nom	
+時間	じかん	Temps	1	10	Nom	
+世界	せかい	Monde	1	10	Nom	
+美容院	びよういん	Salon de beauté	1	10	Nom	
+手袋	てぶくろ	Gants	1	10	Nom	
+生活	せいかつ	Vie; quotidien	1	10	Nom	
+今年	ことし	Cette année	1	10	Nom	
+暖かい	あたたかい	Chaud	1	10	いAdj	
+涼しい	すずしい	Frais (météo - ne s'utilise pas pour les choses)	1	10	いAdj	
+冷たい	つめたい	Froid (choses/personnes)	1	10	いAdj	
+遅い	おそい	Lent; tard	1	10	いAdj	
+眠い	ねむい	Avoir sommeil	1	10	いAdj	
+簡単	かんたん	Facile; simple	1	10	なAdj	
+かかる		Prendre; nécessiter (du temps/de l'argent) (aucune particule)	1	10	U-Vb	
+泊まる	とまる	Séjourner (dans un hôtel, etc.)	1	10	U-Vb	～に
+なる		Devenir	1	10	U-Vb	
+決める	きめる	Décider	1	10	Ru-Vb	～を
+ごろごろする		Se détendre chez soir; rester à la maison et ne rien faire	1	10	Irr-Vb	
+旅行する	りょこうする	Voyager	1	10	Irr-Vb	
+練習する	れんしゅうする	S'entraîner; s'exercer	1	10	Irr-Vb	～を
+一番	いちばん	Meilleur; le plus	1	10		
+どっち / どちら		Lequel; laquelle	1	10		
+早く / 速く	はやく	(Faire quelque chose) tôt; rapidement	1	10	Adv	
+歩いて	あるいて	À pied	1	10		
+～で		En (moyen de transport); avec (un outil)	1	10		
+どうやって		Comment; par quels moyens	1	10		
+どのぐらい		Combien; combien de temps	1	10		
+～週間	しゅうかん	Pendant ... semaines	1	10		
+～か月	かげつ	Pendant ... mois	1	10		
+～年	ねん	... ans	1	10		
+このごろ		Ces jours-ci	1	10		
+～後	ご	Dans ... (durée); après ...	1	10		
+～か～		Ou	1	10		
+普通	ふつう	Local (train)	1	10	Nom	
+急行	きゅうこう	Express (train)	1	10	Nom	
+特急	とっきゅう	Super express (train)	1	10	Nom	
+～行き	いき	À destination de ...	1	10	Nom	
+～方面	ほうめん	Dessert les zones ...	1	10	Nom	
+乗車券	じょうしゃけん	Ticket (d'embarquement)	1	10	Nom	
+定期券	ていきけん	Abonnement	1	10	Nom	
+学割	がくわり	Prix réduit pour les étudiants	1	10	Nom	
+指定席	していせき	Siège réservé	1	10	Nom	
+交通系ICカード	こうつうけいアイシーカード	Carte rechargeable, telle que Suica, ICOCA, PASMO etc.	1	10	Nom	
+自由席	じゆうせき	Siège non réservé	1	10	Nom	
+一号車	いちごうしゃ	Voiture n°1	1	10	Nom	
+往復	おうふく	Aller-retour	1	10	Nom	
+片道	かたみち	Aller simple	1	10	Nom	
+～番線	ばんせん	Voie numéro ...	1	10	Nom	
+切符売り場	きっぷうりば	Guichet de vente de tickets	1	10	Nom	
+改札	かいさつ	Portique	1	10	Nom	
+ホーム		Quai	1	10	Nom	
+売店	ばいてん	Magasin; kiosque	1	10	Nom	
+出口	でぐち	Sortie	1	10	Nom	
+入口	いりぐち	Entrée	1	10	Nom	
+階段	かいだん	Escalier	1	10	Nom	
+乗り換え	のりかえ	Changement	1	10	Nom	
+次は～	つぎは	Prochain (arrêt), ...	1	10	Exp	
+先発	せんぱつ	Départ en premier	1	10	Nom	
+次発	じはつ	Départ en second	1	10	Nom	
+終電	しゅうでん	Dernier train	1	10	Nom	
+外国	がいこく	Pays étranger	1	11	Nom	
+オーストラリア		Australie	1	11	Nom	
+川	かわ	Rivière	1	11	Nom	
+温泉	おんせん	Spa; source thermale	1	11	Nom	
+つり		Pêche	1	11	Nom	
+湖	みずうみ	Lac	1	11	Nom	
+山	やま	Montagne	1	11	Nom	
+キャンプ		Camping	1	11	Nom	
+ドライブ		Balade en voiture	1	11	Nom	
+神社	じんじゃ	Sanctuaire	1	11	Nom	
+美術館	ぶじゅつかん	Musée d'art	1	11	Nom	
+社長	しゃちょう	Président(e) d'entreprise	1	11	Nom	
+歌手	かしゅ	Chanteur / chanteuse	1	11	Nom	
+ルームメイト		Colocataire	1	11	Nom	
+ホストファミリー		Famille d'accueil	1	11	Nom	
+将来	しょうらい	Futur	1	11	Nom	
+夢	ゆめ	Rêve	1	11	Nom	
+お祭り	おまつり	Festival	1	11	Nom	
+お正月	おしょうがう	Le Nouvel An	1	11	Nom	
+お菓子	おかし	En-cas; sucreries	1	11	Nom	
+ビール		Bière	1	11	Nom	
+おもちゃ		Jouet	1	11	Nom	
+今学期	こんがっき	Ce semestre	1	11	Nom	
+来学期	らいがっき	Le semestre prochain	1	11	Nom	
+授業	じゅぎょう	Cours	1	11	Nom	
+こちら		Cette personne (poli)	1	11	Nom	
+うそをつく		Dire un mensonge	1	11	U-Vb	
+おなかがすく		Avoir faim	1	11	U-Vb	
+飼う	かう	Posséder (un animal de compagnie)	1	11	U-Vb	～を
+サボる		Sécher (les cours)	1	11	U-Vb	～を
+取る	とる	Suivre (un cours); obtenir (une note)	1	11	U-Vb	～を
+習う	ならう	Apprendre	1	11	U-Vb	～を
+登る	のぼる	Grimper; faire l'ascension de	1	11	U-Vb	endroitに
+走る	はしる	Courir	1	11	U-Vb	
+疲れる	つかれる	Se fatiguer	1	11	Ru-Vb	
+やめる		Arrêter; abandonner	1	11	Ru-Vb	～を
+けんかする		Se battre; se disputer	1	11	Irr-Vb	
+紹介する	しょうかいする	Présenter quelqu'un à	1	11	Irr-Vb	personneにpersonneを
+ダイエットする		Faire un régime	1	11	Irr-Vb	
+遅刻する	ちこくする	Être en retard (pour un rendez-vous)	1	11	Irr-Vb	～に
+留学する	りゅうがくする	Étudier à l'étranger	1	11	Irr-Vb	endroitに
+出身	しゅっしん	Être originaire de; venir de	1	11		
+久しぶり	ひさしぶり	Cela fait longtemps	1	11		
+まあまあ		Bof; comme ci comme ça	1	11		
+もっと		Plus	1	11		
+後	あと	Après (un évènement)	1	11		évènementの
+そして		Puis	1	11		
+～だけ		Juste ...; seulement ...	1	11		
+～点	てん	... points	1	11		
+職業	しょくぎょう	Profession	1	11	Nom	
+作家	さっか	Écrivain(e)	1	11	Nom	
+ジャーナリスト		Journaliste	1	11	Nom	
+警察官	けいさつかん	Agent de police	1	11	Nom	
+消防士	しょうぼうし	Pompier	1	11	Nom	
+教師	きょうし	Enseignant(e)	1	11	Nom	
+研究者	けんきゅうしゃ	Chercheur / chercheuse	1	11	Nom	
+宇宙飛行士	うちゅうひこうし	Astronaute	1	11	Nom	
+スポーツ選手	スポーツせんしゅ	Athlète	1	11	Nom	
+大統領	だいとうりょう	Président(e) d'un pays	1	11	Nom	
+俳優	はいゆう	Acteur / actrice	1	11	Nom	
+看護師	かんごし	Infirmier / infirmière	1	11	Nom	
+シェフ		Chef cuisinier	1	11	Nom	
+漫画家	まんがか	Auteur de bandes dessinées	1	11	Nom	
+どちらでもいいです。		Les deux conviennent	1	11	Exp	
+同じです。		C'est pareil	1	11	Exp	
+だいたい同じです。		C'est plus ou moins pareil	1	11	Exp	
+ちょっと違います。		C'est un peu différent	1	11	Exp	
+使えません。		On ne peut pas l'utiliser	1	11	Exp	
+だめです。		Ce n'est pas bon	1	11	Exp	
+手をあげてください。		Levez la main	1	11	Exp	
+読んできてください。		Lisez-le avant de venir en cours	1	11	Exp	
+宿題を出してください。		Rendez vos devoirs	1	11	Exp	
+10ページを開いてください。		Ouvrez le livre à la page 10	1	11	Exp	
+教科書を閉じてください。		Fermez le manuel	1	11	Exp	
+となりの人に聞いてください。		Demandez à votre voisin	1	11	Exp	
+やめてください。		Arrêtez, s'il vous plaît	1	11	Exp	
+今日はこれで終わります。		C'est tout pour aujourd'hui	1	11	Exp	
+しめきり		Date limite	1	11	Nom	
+練習	れんしゅう	Exercice	1	11	Nom	
+意味	いみ	Signification; sens	1	11	Nom	
+発音	はつおん	Prononciation	1	11	Nom	
+文法	ぶんぽう	Grammaire	1	11	Nom	
+質問	しうもん	Question	1	11	Nom	
+答	こたえ	Réponse	1	11	Nom	
+例	れい	Exemple	1	11	Nom	
+かっこ		（）(parenthèses)	1	11	Nom	
+まる		〇　(correct)	1	11	Nom	
+ばつ		✕　(faux)	1	11	Nom	
+くだけた言い方	くだけたいいかった	Expression familière	1	11	Exp	
+かたい言い方	かたいいいかた	Expression littéraire	1	11	Exp	
+ていねいな言い方	ていねいないいかた	Expression polie	1	11	Exp	
+方言	ほうげん	Dialecte	1	11	Nom	
+共通語	きょうつうご	Langue commune	1	11	Nom	
+たとえば		Par exemple	1	11		
+ほかに		Autre chose	1	11		
+～番	ばん	Numéro ...	1	11		
+～行目	ぎょうめ	Ligne numéro ...	1	11		
+二人ずつ	ふたりずつ	Deux par deux	1	11		
+おなか		Ventre; estomac	1	12	Nom	
+足	あし	Jambe; pied	1	12	Nom	
+喉	のど	Gorge	1	12	Nom	
+歯	は	Dent	1	12	Nom	
+インフルエンザ		Grippe	1	12	Nom	
+風邪	かぜ	Rhume	1	12	Nom	
+せき		Toux	1	12	Nom	
+二日酔い	ふつかよい	Gueule de bois	1	12	Nom	
+ホームシック		Mal du pays	1	12	Nom	
+アレルギー		Allergie	1	12	Nom	
+ジュース		Jus	1	12	Nom	
+卵	たまご	Oeuf	1	12	Nom	
+服	ふく	Vêtement	1	12	Nom	
+物	もの	Chose (objet matériel)	1	12	Nom	
+プレゼント		Cadeau	1	12	Nom	
+切符	きっぷ	Billet (de train)	1	12	Nom	
+～代	だい	Prix; tarif	1	12	Nom	
+用事	ようじ	Affaires à régler	1	12	Nom	
+お手洗い	おてあらい	Toilettes	1	12	Nom	
+試合	しあい	Match; jeu	1	12	Nom	
+政治	せいじ	Politique	1	12	Nom	
+成績	せいせき	Note (d'un contrôle, etc.)	1	12	Nom	
+彼女	かのじょ	Elle; petite amie	1	12	Nom	
+彼	かれ	Il; petit ami	1	12	Nom	
+彼氏	かれし	Petit ami	1	12	Nom	
+意味	いみ	Signification; sens	1	12	Nom	
+狭い	せまい	Étroit; pas spacieux	1	12	いAdj	
+広い	ひろい	Large; spacieux	1	12	いAdj	
+悪い	わるい	Mauvais	1	12	いAdj	
+痛い	いたい	Qui fait mal; douloureux	1	12	いAdj	
+甘い	あまい	Doux; sucré	1	12	いAdj	
+多い	おおい	Il y a beaucoup de...	1	12	いAdj	
+素敵	すてき	Joli	1	12	なAdj	
+歩く	あるく	Marcher	1	12	U-Vb	
+風邪をひく	かぜをひく	S'enrhumer	1	12	U-Vb	
+熱がある	ねつがある	Avoir de la fièvre	1	12	U-Vb	
+喉が渇く	のどがかわく	Avoir soif	1	12	U-Vb	
+払う	はらう	Payer	1	12	U-Vb	～を
+なくす		Perdre	1	12	U-Vb	～を
+興味がある	きょうみがある	S'intéresser (à...)	1	12	U-Vb	～に
+せきが出る	せきがでる	Tousser	1	12	Ru-Vb	
+別れる	わかれる	Rompre; se séparer de	1	12	Ru-Vb	personneと
+緊張する	きんちょうする	Être tendu	1	12	Irr-Vb	
+心配する	しんぱいする	S'inquiéter	1	12	Irr-Vb	
+お大事に	おだいじに	Bon rétablissement	1	12	Exp	
+元気がない	げんきがない	Ne pas avoir l'air en forme	1	12	Exp	
+できるだけ		Auttant que possible	1	12		
+多分	たぶん	Probablement; peut-être	1	12		
+もうすぐ		Très bientôt; dans quelques instants/jours	1	12	Adv	
+初めて	はじめて	Pour la première fois	1	12		
+二三日	にさんにち	Pendant deux ou trois jours	1	12		
+それに		De plus, ...	1	12		
+同じ	おなじ	Même; identique	1	12		
+下痢です。		J'ai la diarrhée	1	12	Exp	
+便秘です。		Je suis constipé	1	12	Exp	
+生理です。		J'ai mes règles	1	12	Exp	
+花粉症です。		J'ai le rhume des foins	1	12	Exp	
+(～に)アレルギーがあります。		Je suis allergique à ...	1	12	Exp	
+虫歯があります。		J'ai une carie	1	12	Exp	
+くしゃみが出ます。		J'éternue	1	12	Exp	
+鼻水が出ます。		J'ai le nez qui coule	1	12	Exp	
+背中がかゆいです。		Mon dos me démange	1	12	Exp	
+発疹があります。		J'ai des éruptions cutanées	1	12	Exp	
+めまいがします。		J'ai la tête qui tourne	1	12	Exp	
+吐きました。		J'ai vomi	1	12	Exp	
+気分が悪いです。		Je ne me sens pas bien	1	12	Exp	
+やけどをしましった。		Je me suis brûlé	1	12	Exp	
+足を骨折しました。		Je me suis cassé la jambe	1	12	Exp	
+けがをしました。		Je me suis fait mal	1	12	Exp	
+内科	ないか	Médecin généraliste	1	12	Nom	
+皮膚科	ひふか	Dermatologue	1	12	Nom	
+外科	げか	Chirurgien	1	12	Nom	
+産婦人科	さんふじんか	Obstétricien et gynécologue	1	12	Nom	
+整形外科	せいけいげか	Chirurgien orhopédiste	1	12	Nom	
+眼科(目医者)	がんか(めいしゃ)	Ophtalmologue	1	12	Nom	
+歯科(歯医者)	しか(はいしゃ)	Dentiste	1	12	Nom	
+耳鼻科	じびか	Spécialiste ORL (oto-rhino-laryngologue)	1	12	Nom	
+抗生物質	こうせいぶっしつ	Antibiotique	1	12	Nom	
+レントゲン		Rayons X	1	12	Nom	
+手術	しゅじゅつ	Opération	1	12	Nom	
+注射	はっしゃ	Piqûre	1	12	Nom	
+体温計	たいおんけい	Thermomètre	1	12	Nom	
+点滴	てんてき	Perfusion	1	12	Nom	

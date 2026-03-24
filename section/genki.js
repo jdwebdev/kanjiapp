@@ -44,6 +44,10 @@ for (let i = 0; i < 12; i++) {
 	lessonFilters["lesson_"+(i+1)] = 0;
 }
 
+function checkGenkiFilterContainer(pElement) {
+	if (pElement == "BODY") closeFilterContainer();
+}
+
 function changeGenkiFilter(pFilter, pbToZero = false) {
 	switch(pFilter) {
 		case 0:
@@ -138,8 +142,7 @@ function changeGenkiFilter(pFilter, pbToZero = false) {
 }
 
 function searchGenkiMode(pWord) {
-	editClass(id("genki_filter_container"), "active", false);
-	if (bFilters) openFilters();
+	closeFilterContainer();
 
 	let bFullLetter = false;
 
@@ -229,7 +232,7 @@ function displayGenkiResult() {
 				<div class="word_result_yomi_word">
 					<div class="word_result_yomi">${w.yomi}</div>
 					<div class="word_result_word">${w.word}</div>
-					<div class="word_result_imi">${w.imi}</div>
+					<div class="word_result_imi">${w.imi} ${w.particle != "" ? "<span class='genki_word_particle'> ("+w.particle+")</span>" : ""}</div>
 				</div>
 				<div class="genki_word_result_misc">
 					<div class="genki_word_category">${w.category == "" ? "-" : w.category}</div>
@@ -243,7 +246,7 @@ function displayGenkiResult() {
 		// word_result_container.innerHTML = wordHTML;
 	}
 
-	if ((genkiFilter.all == 1 || genkiFilter.gram == 1) && !bSearchByCat && !bSearchByLesson) {
+	if ((genkiFilter.all == 1 || genkiFilter.gram == 1) && !bSearchByCat) {
 		// const word_result_container = id("word_result_container");
 		wordHTML += `<div class="kanji_result_header">文法 ${exactGramArr.length + includingGramArr.length}</div>`;
 		exactGramArr = exactGramArr.concat(includingGramArr);
@@ -264,7 +267,7 @@ function displayGenkiResult() {
 		});
 	}
 
-	if ((genkiFilter.all == 1 || genkiFilter.example == 1) && !bSearchByCat && !bSearchByLesson) {
+	if ((genkiFilter.all == 1 || genkiFilter.example == 1) && !bSearchByCat) {
 		wordHTML += `<div class="kanji_result_header">例文 ${includingExampleArr.length}</div>`;
 		
 		includingExampleArr.forEach((w, index) => {
@@ -290,8 +293,8 @@ function displayGenkiResult() {
 }
 
 function gramInfo(pGramIndex, pElement) {
-	editClass(id("genki_filter_container"), "active", false);
-	if (bFilters) openFilters();
+	closeFilterContainer();
+
 	const gram = GenkiGram.list.find(g => g.id == pGramIndex);
 
 	let html = "";
@@ -315,6 +318,11 @@ function gramInfo(pGramIndex, pElement) {
 
 	openModal();
 
+}
+
+function closeFilterContainer() {
+	editClass(id("genki_filter_container"), "active", false);
+	if (bFilters) openFilters();
 }
 
 //? Category / Lesson -------
@@ -401,8 +409,7 @@ function searchByCat() {
 	});
 	
 
-	editClass(id("genki_filter_container"), "active", false);
-	openFilters();
+	closeFilterContainer();
 
 	displayGenkiResult();
 }
@@ -423,6 +430,8 @@ function searchByLesson() {
 	
 	exactWordArr = [];
 	includingWordArr = [];
+	exactGramArr = [];
+	includingExampleArr = [];
 
 	let lessonToSearch = [];
 	for (let lesson in lessonFilters) {
@@ -437,9 +446,18 @@ function searchByLesson() {
 			exactWordArr.push(w);
 		}
 	});
+	GenkiGram.list.forEach(g => {
+		if (lessonToSearch.includes(g.lesson)) {
+			exactGramArr.push(g);
+		}
+	});
+	GenkiExample.list.forEach(ex => {
+		if (lessonToSearch.includes(ex.lesson)) {
+			includingExampleArr.push(ex);
+		}
+	});
 
-	editClass(id("genki_filter_container"), "active", false);
-	openFilters();
+	closeFilterContainer();
 
 	displayGenkiResult();
 }

@@ -43,6 +43,7 @@ body {
 
 	touch-action: manipulation;
 	background-color: var(--white);
+	min-height: 100vh;
 }
 
 ul {
@@ -1034,7 +1035,9 @@ main {
 	font-size: 18px;
 }
 
-
+.genki_word_particle {
+	color: gray;
+}
 
 .genki_word_result_misc {
 	display: flex;
