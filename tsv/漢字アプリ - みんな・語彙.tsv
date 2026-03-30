@@ -1,0 +1,192 @@
+私	わたし	Je, moi	1	1		Nom	
+あなた		Vous (singulier)	1	1		Nom	
+あの人	あのひと	Cette personne(-là); il, lui, elle	1	1			
+あの方	あのかた	Forme polie de あの人	1	1			
+～さん		M., Mme, Mlle (suffixe ajouté au nom pour exprimer la politesse)	1	1			
+～ちゃん		(Suffixe ajouté au prénom d'un enfant à la place de ～さん)	1	1			
+～人	～じん	(Suffixe ajouté au nom d'un pays, ce qui signifie qu'une personne est de cette nationalité)	1	1			
+先生	せんせい	Professeur, instituteur, maître (ne s'emploie pas pour désigner sa propre profession)	1	1		Nom	
+教師	きょうし	Enseignant	1	1		Nom	
+学生	がくせい	Étudiant	1	1		Nom	
+会社員	かいしゃいん	Employé d'une compagnie	1	1		Nom	
+社員	しゃいん	Employé (utilisé avec le nom de la compagnie)	1	1		Nom	
+銀行員	ぎんこういん	Employé de banque	1	1		Nom	
+医者	いしゃ	Médecin	1	1		Nom	
+研究者	けんきゅうしゃ	Chercheur	1	1		Nom	
+大学	だいがく	Université	1	1		Nom	
+病院	びょういん	Hôpital	1	1		Nom	
+誰	だれ	Qui	1	1			
+どなた		Qui, (forme polie de 誰)	1	1			
+～歳	～さい	-an(s)	1	1			
+何歳	なんさい	Quel âge	1	1			
+おいくつ		Quel âge (forme polie de 何歳)	1	1			
+はい		Oui	1	1			
+いいえ		Non	1	1			
+初めまして	はじめまして	Enchanté (litt. Je vous rencontre pour la première fois. L'expression est utilisée habituellement comme première phrase lors de la présentation de soi)	1	1			
+～から来ました	～からきました	Je viens (je suis venu) de ～	1	1			
+［どうぞ］よろしく［お願いします］	［どうぞ］よろしく［おねがいします］	Très heureux de faire votre connaissance (litt. Merci de votre haute bienveillance. On utilise l'expression à la fin de la présentation de soi)	1	1			
+失礼ですが	しつれいですが	Excusez-moi (l'expression est utilisée lorsqu'on demande une information personnelle à l'interlocuteur telle que son nom ou son adresse)	1	1			
+お名前は？	おなまえは？	Comment vous appelez-vous ? Quel est votre nom ?	1	1			
+こちらは～さんです。		Voici M. (Mme, Mlle) ～	1	1			
+アメリカ		États-Unis	1	1		Nom	
+イギリス		Angleterre	1	1		Nom	
+インド		Inde	1	1		Nom	
+インドネシア		Indonésie	1	1		Nom	
+韓国	かんこく	Corée (du Sud)	1	1		Nom	
+タイ		Thaïlande	1	1		Nom	
+中国	ちゅうごく	Chine	1	1		Nom	
+ドイツ		Allemagne	1	1		Nom	
+日本	にほん	Japon	1	1		Nom	
+ブラジル		Brésil	1	1		Nom	
+これ		Ce, ceci (celui qui se trouve près de locuteur)	1	2			
+それ		Ce, cela (celui qui se trouve près de l'interlocuteur)	1	2			
+あれ		Ce, cela (celui qui se trouve loin du locuteur et de l'interlocuteur)	1	2			
+この～		Ce, cette ～ ci	1	2			
+その～		Ce, cette ～ là	1	2			
+あの～		Ce, cette ～ là-bas	1	2			
+本	ほん	Livre	1	2		Nom	
+辞書	じしょ	Dictionnaire	1	2		Nom	
+雑誌	ざっし	Magazine, revue	1	2		Nom	
+新聞	しんぶん	Journal	1	2		Nom	
+ノート		Cahier	1	2		Nom	
+手帳	てちょう	Agenda, carnet	1	2		Nom	
+名刺	めいし	Carte de visite	1	2		Nom	
+カード		Carte	1	2		Nom	
+鉛筆	えんぴつ	Crayon papier	1	2		Nom	
+ボールペン		Stylo à bille	1	2		Nom	
+シャープペンシル		Porte-mine	1	2		Nom	
+鍵	かぎ	Clé	1	2		Nom	
+時計	とけい	Montre, horloge, réveil	1	2		Nom	
+傘	かさ	Parapluie	1	2		Nom	
+かばん		Sac	1	2		Nom	
+CD		CD	1	2		Nom	
+テレビ		Télévision	1	2		Nom	
+ラジオ		Radio	1	2		Nom	
+カメラ		Appareil-photo	1	2		Nom	
+コンピューター		Ordinateur	1	2		Nom	
+車	くるま	Voiture	1	2		Nom	
+机	つくえ	Table, bureau	1	2		Nom	
+椅子	いす	Chaise	1	2		Nom	
+チョコレート		Chocolat	1	2		Nom	
+コーヒー		Café	1	2		Nom	
+［お］土産	おみやげ	Souvenir, cadeau	1	2		Nom	
+英語	えいご	Anglais	1	2		Nom	
+日本語	にほんご	Japonais	1	2		Nom	
+～語	～ご	Langue ～	1	2			
+何	なん	Que, quoi	1	2			
+そう		C'est cela	1	2			
+あのう		Euh (expression utilisée pour s'adresser avec gêne ou hésitation)	1	2			
+えっ		Ah (émis lorsque l'on a entendu quelque chose d'inattendu)	1	2			
+どうぞ。		Tenez, je vous en prie (s'emploie lorsque l'on offre quelque chose)	1	2			
+［どうも］ありがとう［ございます］。		Merci [beaucoup]	1	2			
+そうですか。		Ah bon / Ah, d'accord	1	2			
+違います。	ちがいます。	Non, ce n'est pas cela / Vous avez tort	1	2			
+あ		Ah (émis lorsque l'on s'est rendu compte de quelque chose)	1	2			
+これからお世話になります。	これからおせわになります。	Je suis heureux de vous connaître (litt. Je suis ravi de pouvoir compter sur vous)	1	2			
+こちらこそ［どうぞ］よろしく［お願いします］	こちらこそ［どうぞ］よろしく［おねがいします］	Réponse à ［どうぞ］よろしく［お願いします］(Très heureux de faire votre connaissance)	1	2			
+ここ		Ici, cet endroit	1	3			
+そこ		Là, là-bas, cet endroit (près de vous)	1	3			
+あそこ		Là-bas	1	3			
+どこ		Où	1	3			
+こちら		Cette direction-ci, ici (expression polie de ここ)	1	3			
+そちら		Cette direction-là, là-bas (expression polie de そこ)	1	3			
+あちら		Cette direction-là, là-bas (expression polie de あそこ)	1	3			
+どちら		Quelle direction, où (expression polie de どこ)	1	3			
+教室	きょうしつ	Salle de cours	1	3		Nom	
+食堂	しょくどう	Restaurant, cantine	1	3		Nom	
+事務所	じむしょ	Bureau	1	3		Nom	
+会議室	かいぎしつ	Salle de réunion	1	3		Nom	
+受付	うけつけ	Accueil	1	3		Nom	
+ロビー		Hall	1	3		Nom	
+部屋	へや	Salle, chambre	1	3		Nom	
+トイレ		Toilettes	1	3		Nom	
+お手洗い	おてあらい	Toilettes	1	3		Nom	
+階段	かいだん	Escalier	1	3		Nom	
+エレベーター		Ascenceur	1	3		Nom	
+エスカレーター		Escalator	1	3		Nom	
+自動販売機	じどうはんばいき	Distributeur automatique	1	3		Nom	
+電話	でんわ	Téléphone	1	3		Nom	
+［お］国	［お］くに	Pays	1	3		Nom	
+会社	かいしゃ	Entreprise, société	1	3		Nom	
+うち		Maison	1	3		Nom	
+靴	くつ	Chaussures	1	3		Nom	
+ネクタイ		Cravate	1	3		Nom	
+ワイン		Vin	1	3		Nom	
+売り場	うりば	Rayon (dans un magasin)	1	3		Nom	
+地下	ちか	Sous-sol	1	3		Nom	
+〜階	〜かい	- étage	1	3			
+何階	なんがい	Quel étage	1	3			
+〜円	〜えん	- yen	1	3			
+いくら		Combien (cela coûte)	1	3			
+百	ひゃく	Cent	1	3			
+千	せん	Mille	1	3			
+万	まん	Dix mille	1	3			
+すみません		Excusez-moi	1	3			
+どうも		Merci	1	3			
+いらっしゃいませ		Bienvenue (salutation adressée au client qui entre dans un magasin)	1	3			
+［〜を］見せてください	［〜を］みせてください	Montrez-moi [〜]. Est-ce que je peux voir [〜] ?	1	3			
+じゃ		Alors. Eh bien	1	3			
+［〜を］ください		Donnez-moi [〜]	1	3			
+イタリア		Italie	1	3		Nom	
+スイス		Suisse	1	3		Nom	
+フランス		France	1	3		Nom	
+ジャカルタ		Jakarta	1	3		Nom	
+バンコク		Bangkok	1	3		Nom	
+ベルリン		Berlin	1	3		Nom	
+起きる	おきる	Se lever, se réveiller	1	4	起きます	Ru-Vb	
+寝る	ねる	Dormir, se coucher	1	4	寝ます	Ru-Vb	
+働く	はたらく	Travailler	1	4	働きます	U-Vb	
+休む	やすむ	Se reposer, prendre un congé	1	4	休みます	U-Vb	
+勉強する	べんきょうする	Étudier	1	4	します	Irr-Vb	～を
+終わる	おわる	Se terminer, finir	1	4	終わります	U-Vb	～が
+デパート		Grand magasin	1	4		Nom	
+銀行	ぎんこう	Banque	1	4		Nom	
+郵便局	ゆうびんきょく	Bureau de poste	1	4		Nom	
+図書館	としょかん	Bibliothèque	1	4		Nom	
+美術館	びじゅつかん	Musée	1	4		Nom	
+今	いま	Maintenant	1	4			
+～時	～じ	-heure(s)	1	4			
+～分	～ふん、～ぷん	-minute(s)	1	4			
+半	はん	Demie (30 minutes)	1	4			
+何時	なんじ	Quelle heure	1	4			
+何分	なんぷん	Combien de minutes	1	4			
+午前	ごぜん	Matin, du matin, matinée	1	4		Nom	
+午後	ごご	Après-midi	1	4		Nom	
+朝	あさ	Matin	1	4		Nom	
+昼	ひる	Midi, jour, journée	1	4		Nom	
+晩	ばん	Soir, nuit	1	4		Nom	
+夜	よる	Soir, nuit	1	4		Nom	
+一昨日	おととい	Avant-hier	1	4		Nom	
+昨日	きのう	Hier	1	4		Nom	
+今日	きょう	Aujourd'hui	1	4		Nom	
+明日	あした	Demain	1	4		Nom	
+明後日	あさって	Après-demain	1	4		Nom	
+今朝	けさ	Ce matin	1	4		Nom	
+今晩	こんばん	Ce soir	1	4		Nom	
+休み	やすみ	Repos, vacances, congé	1	4		Nom	
+昼休み	ひるやすみ	Pause de midi	1	4		Nom	
+試験	しけん	Examen	1	4		Nom	
+会議	かいぎ	Réunion	1	4		Nom	
+会議をする	かいぎをする	Faire une réunion	1	4	します	Irr-Vb	
+映画	えいが	Cinéma, film	1	4		Nom	
+毎朝	まいあさ	Tous les matins	1	4		Nom	
+毎晩	まいばん	Tous les soirs	1	4		Nom	
+毎日	まいにち	Tous les jours	1	4		Nom	
+月曜日	げつようび	Lundi	1	4		Nom	
+火曜日	かようび	Mardi	1	4		Nom	
+水曜日	すいようび	Mercredi	1	4		Nom	
+金曜日	きんようび	Jeudi	1	4		Nom	
+土曜日	どようび	Vendredi	1	4		Nom	
+日曜日	にちようび	Samedi	1	4		Nom	
+何曜日	なんようび	Dimanche	1	4		Nom	
+～から		À partir de ～	1	4			
+～まで		Jusqu'à ～	1	4			
+～と～		～ et ～ (utilisé pour relier deux ou plusieurs noms)	1	4			
+大変ですね。	たいへんですね	C'est dur (pour vous). (utilisé quand on exprime sa sympathie)	1	4			
+番号	ばんごう	Numéro	1	4		Nom	
+何番	なんばん	Quel numéro	1	4			
+そちら		Là-bas, votre côté, vous	1	4			
+ニューヨーク		New York	1	4		Nom	
+ペキン		Pékin	1	4		Nom	
+ロサンゼルス		Los Angeles	1	4		Nom	
+ロンドン		Londres	1	4		Nom	

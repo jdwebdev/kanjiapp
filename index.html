@@ -36,86 +36,87 @@
 					<p id="loading_kanji" class="rotating">漢</p>
 				</div>
 			</div>
-			<div id="genki_filter_container">
-				<ul id="genki_filter_ul">
-					<li class="genki_filter_li"><button id="genki_filter_all" class="genki_filter_btn active"
-							onClick="changeGenkiFilter(0)">全部</button></li>
-					<li class="genki_filter_li"><button id="genki_filter_word" class="genki_filter_btn semi_active"
-							onClick="changeGenkiFilter(1)">単語</button></li>
-					<li class="genki_filter_li"><button id="genki_filter_gram" class="genki_filter_btn semi_active"
-							onClick="changeGenkiFilter(2)">文法</button></li>
-					<li class="genki_filter_li"><button id="genki_filter_example" class="genki_filter_btn semi_active"
-							onClick="changeGenkiFilter(3)">例文</button>
+			<div id="gmFilter_container">
+
+				<ul id="gmFilter_ul">
+					<li class="gmFilter_li"><button id="gmFilter_all" class="gmFilter_btn active"
+							onClick="changeGMFilter(0)">全部</button></li>
+					<li class="gmFilter_li"><button id="gmFilter_word" class="gmFilter_btn semi_active"
+							onClick="changeGMFilter(1)">単語</button></li>
+					<li class="gmFilter_li"><button id="gmFilter_gram" class="gmFilter_btn semi_active"
+							onClick="changeGMFilter(2)">文法</button></li>
+					<li class="gmFilter_li"><button id="gmFilter_example" class="gmFilter_btn semi_active"
+							onClick="changeGMFilter(3)">例文</button>
 					</li>
 				</ul>
 
-				<div id="genki_filters">
-					<div id="genki_filter_cat">
+				<div id="gm_filters">
+					<div id="gmFilter_cat">
 						<div>
-							<button class="genki_filter_cat_btn genki_filter_btn"
+							<button class="gmFilter_cat_btn gmFilter_btn"
 								onClick="pushFilterCat('Nom',this)">Nom</button>
-							<button class="genki_filter_cat_btn genki_filter_btn"
+							<button class="gmFilter_cat_btn gmFilter_btn"
 								onClick="pushFilterCat('いAdj',this)">いAdj</button>
-							<button class="genki_filter_cat_btn genki_filter_btn"
+							<button class="gmFilter_cat_btn gmFilter_btn"
 								onClick="pushFilterCat('なAdj',this)">なAdj</button>
-							<button class="genki_filter_cat_btn genki_filter_btn"
+							<button class="gmFilter_cat_btn gmFilter_btn"
 								onClick="pushFilterCat('U-Vb',this)">U-Vb</button>
-							<button class="genki_filter_cat_btn genki_filter_btn"
+							<button class="gmFilter_cat_btn gmFilter_btn"
 								onClick="pushFilterCat('Ru-Vb',this)">Ru-Vb</button>
 						</div>
 						<div>
-							<button class="genki_filter_cat_btn genki_filter_btn"
+							<button class="gmFilter_cat_btn gmFilter_btn"
 								onClick="pushFilterCat('Irr-Vb',this)">Irr-Vb</button>
-							<button class="genki_filter_cat_btn genki_filter_btn"
+							<button class="gmFilter_cat_btn gmFilter_btn"
 								onClick="pushFilterCat('Adv',this)">Adv</button>
-							<button class="genki_filter_cat_btn genki_filter_btn"
-								onClick="pushFilterCat('Nb',this)">Nb</button>
-							<button class="genki_filter_cat_btn genki_filter_btn"
+							<button class="gmFilter_cat_btn gmFilter_btn" onClick="pushFilterCat('Nb',this)">Nb</button>
+							<button class="gmFilter_cat_btn gmFilter_btn"
 								onClick="pushFilterCat('Loc',this)">Loc</button>
-							<button class="genki_filter_cat_btn genki_filter_btn"
+							<button class="gmFilter_cat_btn gmFilter_btn"
 								onClick="pushFilterCat('Exp',this)">Exp</button>
 						</div>
-						<button id="genki_filter_cat_search_btn" onClick="searchByCat()">検索</button>
+						<button id="gmFilter_cat_search_btn" onClick="searchByCat()">検索</button>
 					</div>
-					<div id="genki_filter_lesson">
+					<div id="gmFilter_lesson">
 						<div>
-							<button class="genki_filter_lesson_btn genki_filter_btn"
+							<button class="gmFilter_lesson_btn gmFilter_btn"
 								onClick="pushFilterLesson('1',this)">1</button>
-							<button class="genki_filter_lesson_btn genki_filter_btn"
+							<button class="gmFilter_lesson_btn gmFilter_btn"
 								onClick="pushFilterLesson('2',this)">2</button>
-							<button class="genki_filter_lesson_btn genki_filter_btn"
+							<button class="gmFilter_lesson_btn gmFilter_btn"
 								onClick="pushFilterLesson('3',this)">3</button>
-							<button class="genki_filter_lesson_btn genki_filter_btn"
+							<button class="gmFilter_lesson_btn gmFilter_btn"
 								onClick="pushFilterLesson('4',this)">4</button>
-							<button class="genki_filter_lesson_btn genki_filter_btn"
+							<button class="gmFilter_lesson_btn gmFilter_btn"
 								onClick="pushFilterLesson('5',this)">5</button>
-							<button class="genki_filter_lesson_btn genki_filter_btn"
+							<button class="gmFilter_lesson_btn gmFilter_btn"
 								onClick="pushFilterLesson('6',this)">6</button>
 						</div>
 						<div>
-							<button class="genki_filter_lesson_btn genki_filter_btn"
+							<button class="gmFilter_lesson_btn gmFilter_btn"
 								onClick="pushFilterLesson('7',this)">7</button>
-							<button class="genki_filter_lesson_btn genki_filter_btn"
+							<button class="gmFilter_lesson_btn gmFilter_btn"
 								onClick="pushFilterLesson('8',this)">8</button>
-							<button class="genki_filter_lesson_btn genki_filter_btn"
+							<button class="gmFilter_lesson_btn gmFilter_btn"
 								onClick="pushFilterLesson('9',this)">9</button>
-							<button class="genki_filter_lesson_btn genki_filter_btn"
+							<button class="gmFilter_lesson_btn gmFilter_btn"
 								onClick="pushFilterLesson('10',this)">10</button>
-							<button class="genki_filter_lesson_btn genki_filter_btn"
+							<button class="gmFilter_lesson_btn gmFilter_btn"
 								onClick="pushFilterLesson('11',this)">11</button>
-							<button class="genki_filter_lesson_btn genki_filter_btn"
+							<button class="gmFilter_lesson_btn gmFilter_btn"
 								onClick="pushFilterLesson('12',this)">12</button>
 						</div>
-						<button id="genki_filter_cat_search_btn" onClick="searchByLesson()">検索</button>
+						<button id="gmFilter_cat_search_btn" onClick="searchByLesson()">検索</button>
 					</div>
 				</div>
-				<div id="genki_open_filters_dots">
-					<button id="genki_open_filters_btn" onClick="openFilters()">
+				<div id="gm_open_filters_dots">
+					<button id="gm_open_filters_btn" onClick="openFilters()">
 						<span id="open_filters_dot_1" class="open_filters_dots"></span>
 						<span id="open_filters_dot_2" class="open_filters_dots"></span>
 						<span id="open_filters_dot_3" class="open_filters_dots"></span>
 					</button>
 				</div>
+
 			</div>
 			<div id="word_result_container"></div>
 		</section>
@@ -338,7 +339,7 @@
 	</div>
 	<div id="footer_zone" class="">
 		<div id="footer_open">
-			<button id="footer_minna" class="footer_open_btn" onClick="">みんな</button>
+			<button id="footer_minna" class="footer_open_btn" onClick="changeMainMode(MODE.MINNA)">みんな</button>
 			<button id="footer_genki" class="footer_open_btn" onClick="changeMainMode(MODE.GENKI)">げんき</button>
 			<button id="footer_kanken" class="footer_open_btn" onClick="openKankenLvl()">漢検</button>
 		</div>
@@ -352,10 +353,11 @@
 	<script src="./class/word.js"></script>
 	<script src="./class/kanji.js"></script>
 	<script src="./class/genki.js"></script>
+	<script src="./class/minna.js"></script>
 	<script src="./start.js"></script>
 	<script src="./section/main.js"></script>
 	<script src="./section/trainingSection.js"></script>
-	<script src="./section/genki.js"></script>
+	<script src="./section/genki_minna.js"></script>
 	<script src="./keyboard.js"></script>
 </body>
 

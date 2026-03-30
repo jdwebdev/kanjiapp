@@ -6,14 +6,20 @@ const STEP = Object.freeze({
 	GENKI_WORD: 2,
 	GENKI_GRAM: 3,
 	GENKI_EXAMPLE: 4,
-	START_APP: 5
+	MINNA_WORD: 5,
+	MINNA_GRAM: 6,
+	MINNA_EXAMPLE: 7,
+	START_APP: 8
 });
 const FILE = Object.freeze({
 	KANJI: tsvPath + "漢字" + tsvExt,
 	WORD: tsvPath + "語彙" + tsvExt,
 	GENKI_WORD: tsvPath + "げんき・語彙" + tsvExt,
 	GENKI_GRAM: tsvPath + "げんき・文法" + tsvExt,
-	GENKI_EXAMPLE: tsvPath + "げんき・例文" + tsvExt
+	GENKI_EXAMPLE: tsvPath + "げんき・例文" + tsvExt,
+	MINNA_WORD: tsvPath + "みんな・語彙" + tsvExt,
+	MINNA_GRAM: tsvPath + "みんな・文法" + tsvExt,
+	MINNA_EXAMPLE: tsvPath + "みんな・例文" + tsvExt
 });
 
 readFile(STEP.KANJI);
@@ -35,6 +41,15 @@ function readFile(pStep) {
 			break;
 		case STEP.GENKI_EXAMPLE:
 			fileToRead = FILE.GENKI_EXAMPLE;
+			break;
+		case STEP.MINNA_WORD:
+			fileToRead = FILE.MINNA_WORD;
+			break;
+		case STEP.MINNA_GRAM:
+			fileToRead = FILE.MINNA_GRAM;
+			break;
+		case STEP.MINNA_EXAMPLE:
+			fileToRead = FILE.MINNA_EXAMPLE;
 			break;
 		case STEP.START_APP:
 			startApp();
@@ -67,6 +82,18 @@ function readFile(pStep) {
 						break;
 					case STEP.GENKI_EXAMPLE:
 						createGenkiExample(row);
+						readFile(STEP.MINNA_WORD);
+						break;
+					case STEP.MINNA_WORD:
+						createMinnaWord(row);
+						readFile(STEP.MINNA_GRAM);
+						break;
+					case STEP.MINNA_GRAM:
+						createMinnaGram(row);
+						readFile(STEP.MINNA_EXAMPLE);
+						break;
+					case STEP.MINNA_EXAMPLE:
+						createMinnaExample(row);
 						readFile(STEP.START_APP);
 						break;
 					default:
@@ -120,7 +147,7 @@ function createGenkiWord(pRow) {
         test = new GenkiWord(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4], row[i][5], row[i][6]);
     }
 
-	log(GenkiWord.list);
+	// log(GenkiWord.list);
 
 	Kanji.list.forEach(k => {
 		GenkiWord.list.forEach(w => {
@@ -139,7 +166,7 @@ function createGenkiGram(pRow) {
         test = new GenkiGram(i, row[i][0], row[i][1], row[i][2], row[i][3]);
     }
 
-	log(GenkiGram.list);
+	// log(GenkiGram.list);
 }
 function createGenkiExample(pRow) {
 	let row = pRow;
@@ -149,10 +176,57 @@ function createGenkiExample(pRow) {
         test = new GenkiExample(i, row[i][3], row[i][0], row[i][1], row[i][2]);
     }
 
-	log(GenkiExample.list);
+	// log(GenkiExample.list);
 	let gram = null;
 	GenkiExample.list.forEach(ex => {
 		gram = GenkiGram.list.find(g => g.gramID == ex.gramID);
+		gram.addExample(ex.content);
+	});
+}
+
+function createMinnaWord(pRow) {
+	let row = pRow;
+    let test;
+    for (let i = 0; i < row.length; i++) {
+        row[i] = row[i].split('\t');
+        //?                  語彙	   読み	     意味	 
+        //?             pId, pWord,   pYomi,     pImi,      
+        test = new MinnaWord(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4], row[i][5], row[i][6], row[i][7]);
+    }
+
+	// log(MinnaWord.list);
+
+	Kanji.list.forEach(k => {
+		MinnaWord.list.forEach(w => {
+			if (w.word.includes(k.kanji)) {
+				k.setWord(w.id);
+				w.setKanji(k.id);
+			}
+		});
+	});
+}
+function createMinnaGram(pRow) {
+	let row = pRow;
+    let test;
+    for (let i = 0; i < row.length; i++) {
+        row[i] = row[i].split('\t');
+        test = new MinnaGram(i, row[i][0], row[i][1], row[i][2], row[i][3]);
+    }
+
+	// log(MinnaGram.list);
+}
+function createMinnaExample(pRow) {
+	let row = pRow;
+    let test;
+    for (let i = 0; i < row.length; i++) {
+        row[i] = row[i].split('\t');
+        test = new MinnaExample(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4]);
+    }
+
+	// log(MinnaExample.list);
+	let gram = null;
+	MinnaExample.list.forEach(ex => {
+		gram = MinnaGram.list.find(g => g.gramID == ex.gramID);
 		gram.addExample(ex.content);
 	});
 }

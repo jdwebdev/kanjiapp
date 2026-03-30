@@ -26,7 +26,8 @@ const SECTION = Object.freeze({
 });
 const MODE = Object.freeze({
 	MAIN: 0,
-	GENKI: 1
+	GENKI: 1,
+	MINNA: 2
 });
 
 let currentSection = "main";
@@ -68,8 +69,8 @@ search_input.addEventListener("click", e => {
 		changeSection("main");
 	}
 
-	if (currentMode == MODE.GENKI) {
-		editClass(id("genki_filter_container"), "active");
+	if (currentMode == MODE.GENKI || currentMode == MODE.MINNA) {
+		editClass(id("gmFilter_container"), "active");
 	}
 
 	e.stopPropagation();
@@ -156,8 +157,10 @@ function search(pWord) {
 		case MODE.MAIN:
 			searchMainMode(pWord);
 		break;
-			case MODE.GENKI:
-			searchGenkiMode(pWord);
+		case MODE.GENKI:
+			searchGMMode(pWord);
+		case MODE.MINNA:
+			searchGMMode(pWord);
 		break;
 	}
 }
@@ -465,19 +468,19 @@ stop_search_btn.addEventListener("click", e => {
 
 document.body.addEventListener("click", e => {
 	// log("click body"); //2
-	log(e);
+	// log(e);
 	if (bSearching) {
 		// log("go stop searching"); //3
 		bSearching = false;
 		unset(search_btn);
 		none(stop_search_btn);
-		if (currentMode == MODE.GENKI) {
-			checkGenkiFilterContainer(e.target.tagName);
+		if (currentMode == MODE.GENKI || currentMode == MODE.MINNA) {
+			checkGMFilterContainer(e.target.tagName);
 		}
 	} else {
 		// log("no action");
-		if (currentMode == MODE.GENKI) {
-			checkGenkiFilterContainer(e.target.tagName);
+		if (currentMode == MODE.GENKI || currentMode == MODE.MINNA) {
+			checkGMFilterContainer(e.target.tagName);
 		}
 	}
 });
@@ -533,10 +536,19 @@ function footerMainBtn() {
 			editClass(id("footer_zone"),"open");
 			setTimeout(() => {
 				flex(id("footer_open"));
-				if (currentMode == MODE.GENKI) {
-					editClass(id("footer_genki"), "active");
-				} else {
-					editClass(id("footer_genki"), "active", false);
+				switch(currentMode) {
+					case MODE.MAIN:
+						editClass(id("footer_genki"), "active", false);
+						editClass(id("footer_minna"), "active", false);
+						break;
+					case MODE.GENKI:
+						editClass(id("footer_genki"), "active");
+						editClass(id("footer_minna"), "active", false);
+						break;
+					case MODE.MINNA:
+						editClass(id("footer_minna"), "active");
+						editClass(id("footer_genki"), "active", false);
+						break;
 				}
 			}, 300);
 			none(footer_display_type);
@@ -669,9 +681,15 @@ function changeMainMode(pNewMode, pbFooter = true) {
 		case MODE.MAIN:
 			header_title.innerText = "漢字";
 			search_input.placeholder = "検索";
-			if (currentMode == MODE.GENKI) {
-				editClass(header_title,"genki", false);
-				closeFilterContainer();
+			switch(currentMode) {
+				case MODE.GENKI:
+					editClass(header_title,"genki", false);
+					closeFilterContainer();
+					break;
+				case MODE.MINNA: 
+					editClass(header_title,"minna", false);
+					closeFilterContainer();
+					break;
 			}
 			footerMainBtn();
 			break;
@@ -680,12 +698,29 @@ function changeMainMode(pNewMode, pbFooter = true) {
 				changeMainMode(MODE.MAIN);
 				return;
 			}
+			editClass(header_title,"minna", false);
 			header_title.innerText = "げんき";
 			search_input.placeholder = "げんき内検索";
 			search_input.focus();
 			editClass(header_title,"genki");
-			editClass(id("header"), "genki");
-			editClass(id("genki_filter_container"), "active");
+			// editClass(id("header"), "genki");
+			editClass(id("gmFilter_container"), "active");
+
+			if (pbFooter) footerMainBtn();
+
+			break;
+		case MODE.MINNA:
+			if (currentMode == MODE.MINNA) {
+				changeMainMode(MODE.MAIN);
+				return;
+			}
+			editClass(header_title,"genki", false);
+			header_title.innerText = "みんな";
+			search_input.placeholder = "みんなの日本語";
+			search_input.focus();
+			editClass(header_title,"minna");
+			// editClass(id("header"), "genki");
+			editClass(id("gmFilter_container"), "active");
 
 			if (pbFooter) footerMainBtn();
 
@@ -838,7 +873,7 @@ function createPath(content) {
 	}
 }
 function toHira(pWord) {
-	log("before: " + pWord);
+	// log("before: " + pWord);
 	let newWord = "";
 	for (let i = 0; i < pWord.length; i++) {
 		if (h.includes(pWord[i])) {

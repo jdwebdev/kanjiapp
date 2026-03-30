@@ -29,6 +29,7 @@
 	--kanken_yellow: rgb(253, 242, 4);
 	--red: rgb(194, 39, 0);
 	--dark_red: rgb(148, 30, 0);
+	--minna_red: rgb(231, 0, 19);
 
 	--black: rgb(50, 50, 50);
 	--white: rgba(230, 230, 230);
@@ -59,10 +60,6 @@ ul {
 	width: 100%;
 	/* margin-bottom: 50px; */
 	z-index: 10;
-}
-
-#header.genki {
-	/* background-color: var(--orange); */
 }
 
 @media (min-width: 601px) {
@@ -145,6 +142,17 @@ button:hover {
 	/* box-shadow: 0px 2px gray; */
 	box-shadow: inset 0px 2px gray, 0px 2px gray;
 
+
+	font-size: 24px;
+	padding: 5px 0px;
+	text-align: center;
+}
+
+#header_title.minna {
+	background-color: var(--minna_red);
+	text-shadow: 0px 1px gray;
+	/* box-shadow: 0px 2px gray; */
+	box-shadow: inset 0px 2px gray, 0px 2px gray;
 
 	font-size: 24px;
 	padding: 5px 0px;
@@ -444,12 +452,6 @@ main {
 	font-weight: bolder;
 	border-radius: 0 0 15px 15px;
 	transition: ease-in 0.2s; */
-}
-
-#footer_genki {}
-
-#footer_minna {
-	color: rgb(160, 160, 160);
 }
 
 .footer_open_btn {
@@ -807,10 +809,10 @@ main {
 	text-align: center;
 }
 
-/* ----- */
-/* GENKI */
-/* ----- */
-#genki_filter_container {
+/* ------------- */
+/* GENKI - MINNA */
+/* ------------- */
+#gmFilter_container {
 	position: fixed;
 	top: 0px;
 	width: 100%;
@@ -824,20 +826,20 @@ main {
 	transition: ease-in 0.3s;
 }
 
-#genki_filter_container.active {
+#gmFilter_container.active {
 	top: 50px;
 	opacity: 1;
 	visibility: visible;
 	transition: ease-in 0.3s;
 }
 
-#genki_filter_ul {
+#gmFilter_ul {
 	display: flex;
 	justify-content: space-around;
 	padding-bottom: 10px;
 }
 
-.genki_filter_btn {
+.gmFilter_btn {
 	width: 60px;
 	height: 30px;
 	background-color: var(--blue);
@@ -849,7 +851,7 @@ main {
 	transition: ease-in 0.3s;
 }
 
-.genki_filter_btn.active {
+.gmFilter_btn.active {
 	border: 2px solid var(--white);
 	color: var(--white);
 	box-shadow: inset 0px 2px 0px var(--dark_blue), 0px 2px 0px var(--dark_blue);
@@ -857,7 +859,7 @@ main {
 	transition: ease-in 0.3s;
 }
 
-.genki_filter_btn.semi_active {
+.gmFilter_btn.semi_active {
 	border: 2px solid rgb(168, 168, 168);
 	color: rgb(168, 168, 168);
 	box-shadow: inset 0px 2px 0px var(--dark_blue), 0px 2px 0px var(--dark_blue);
@@ -865,7 +867,7 @@ main {
 	transition: ease-in 0.3s;
 }
 
-#genki_open_filters_dots {
+#gm_open_filters_dots {
 	/* background-color: red; */
 	position: absolute;
 
@@ -879,7 +881,7 @@ main {
 
 }
 
-#genki_filters {
+#gm_filters {
 	/* display: none; */
 	/* display: flex; */
 	height: 0px;
@@ -888,7 +890,7 @@ main {
 	transition: 0.3s ease-out;
 }
 
-#genki_filters.open {
+#gm_filters.open {
 	/* visibility: visible; */
 	/* display: flex; */
 
@@ -896,7 +898,7 @@ main {
 	transition: 0.1s ease-in;
 }
 
-#genki_open_filters_btn {
+#gm_open_filters_btn {
 	width: 100px;
 	height: 25px;
 	background-color: var(--blue);
@@ -959,7 +961,7 @@ main {
 }
 
 
-#genki_filter_cat {
+#gmFilter_cat {
 	/* display: none; */
 
 	visibility: hidden;
@@ -973,25 +975,25 @@ main {
 	transition: ease-in 0.2s;
 }
 
-#genki_filter_cat.open {
+#gmFilter_cat.open {
 	visibility: visible;
 	opacity: 1;
 	transition: ease-in 0.2s;
 }
 
-.genki_filter_cat_btn {
+.gmFilter_cat_btn {
 	font-size: 18px;
 	width: 65px;
 	margin-bottom: 5px;
 	/* font-family: Arial, Helvetica, sans-serif; */
 }
 
-.genki_filter_cat_btn.active {
+.gmFilter_cat_btn.active {
 	font-size: 18px;
 }
 
 
-#genki_filter_cat_search_btn {
+#gmFilter_cat_search_btn {
 	padding: 5px;
 	width: 70px;
 	font-size: 22px;
@@ -1003,7 +1005,7 @@ main {
 	margin-top: 10px;
 }
 
-#genki_filter_lesson {
+#gmFilter_lesson {
 	/* display: flex; */
 
 	visibility: hidden;
@@ -1017,13 +1019,13 @@ main {
 	transition: ease-in 0.2s;
 }
 
-#genki_filter_lesson.open {
+#gmFilter_lesson.open {
 	visibility: visible;
 	opacity: 1;
 	transition: ease-in 0.2s;
 }
 
-.genki_filter_lesson_btn {
+.gmFilter_lesson_btn {
 	font-size: 18px;
 	width: 50px;
 	margin-bottom: 5px;
@@ -1031,15 +1033,15 @@ main {
 	/* font-family: Arial, Helvetica, sans-serif; */
 }
 
-.genki_filter_lesson_btn.active {
+.gmFilter_lesson_btn.active {
 	font-size: 18px;
 }
 
-.genki_word_particle {
+.gm_word_particle {
 	color: gray;
 }
 
-.genki_word_result_misc {
+.gm_word_result_misc {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -1047,7 +1049,7 @@ main {
 	/* background-color: darkgoldenrod; */
 }
 
-.genki_word_category {
+.gm_word_category {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	/* background-color: red; */
@@ -1060,7 +1062,7 @@ main {
 	color: var(--blue);
 }
 
-.genki_word_lesson {
+.gm_word_lesson {
 	/* border: 1px solid black; */
 	width: 45px;
 	border-radius: 5px 0 0 5px;
@@ -1073,12 +1075,12 @@ main {
 	margin-bottom: 20px;
 }
 
-.genki_word_lesson_nb {
+.gm_word_lesson_nb {
 	font-family: Arial, Helvetica, sans-serif;
 	color: var(--white);
 }
 
-.genki_word_result_separator {
+.gm_word_result_separator {
 	width: 96%;
 	margin: 0 auto;
 	border-top: 1px solid rgba(0, 0, 0, 0.2);
@@ -1087,7 +1089,7 @@ main {
 	z-index: -1;
 }
 
-.genki_example_result {
+.gm_example_result {
 	font-size: 16px;
 }
 
@@ -1113,6 +1115,16 @@ main {
 
 .modal_gram_li {
 	margin-bottom: 5px;
+}
+
+.minna_fr_example {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.minna_masu_form {
+	font-size: 12px;
+	color: gray;
 }
 
 /* ----- */
