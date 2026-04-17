@@ -1,62 +1,28 @@
 const tsvPath = "./tsv/漢字アプリ - ";
 const tsvExt = ".tsv";
 const STEP = Object.freeze({
-	KANJI: 0,
-	WORD: 1,
-	GENKI_WORD: 2,
-	GENKI_GRAM: 3,
-	GENKI_EXAMPLE: 4,
-	MINNA_WORD: 5,
-	MINNA_GRAM: 6,
-	MINNA_EXAMPLE: 7,
-	START_APP: 8
-});
-const FILE = Object.freeze({
-	KANJI: tsvPath + "漢字" + tsvExt,
-	WORD: tsvPath + "語彙" + tsvExt,
-	GENKI_WORD: tsvPath + "げんき・語彙" + tsvExt,
-	GENKI_GRAM: tsvPath + "げんき・文法" + tsvExt,
-	GENKI_EXAMPLE: tsvPath + "げんき・例文" + tsvExt,
-	MINNA_WORD: tsvPath + "みんな・語彙" + tsvExt,
-	MINNA_GRAM: tsvPath + "みんな・文法" + tsvExt,
-	MINNA_EXAMPLE: tsvPath + "みんな・例文" + tsvExt
+	KANJI: "漢字",
+	WORD: "語彙",
+	YOJIJUKUGO: "四字熟語",
+	GENKI_WORD: "げんき・語彙",
+	GENKI_GRAM: "げんき・文法",
+	GENKI_EXAMPLE: "げんき・例文",
+	MINNA_WORD: "みんな・語彙",
+	MINNA_GRAM: "みんな・文法",
+	MINNA_EXAMPLE: "みんな・例文",
+	START_APP: "S"
 });
 
 readFile(STEP.KANJI);
 
 function readFile(pStep) {
-	let fileToRead = "";
-	switch(pStep) {
-		case STEP.KANJI:
-			fileToRead = FILE.KANJI;
-			break;
-		case STEP.WORD:
-			fileToRead = FILE.WORD;
-			break;
-		case STEP.GENKI_WORD:
-			fileToRead = FILE.GENKI_WORD;
-			break;
-		case STEP.GENKI_GRAM:
-			fileToRead = FILE.GENKI_GRAM;
-			break;
-		case STEP.GENKI_EXAMPLE:
-			fileToRead = FILE.GENKI_EXAMPLE;
-			break;
-		case STEP.MINNA_WORD:
-			fileToRead = FILE.MINNA_WORD;
-			break;
-		case STEP.MINNA_GRAM:
-			fileToRead = FILE.MINNA_GRAM;
-			break;
-		case STEP.MINNA_EXAMPLE:
-			fileToRead = FILE.MINNA_EXAMPLE;
-			break;
-		case STEP.START_APP:
-			startApp();
-			return;
+	if (pStep == STEP.START_APP) {
+		startApp()
+		return;
 	}
+	const fileToRead = tsvPath + pStep + tsvExt;
 
-	let rawFile = new XMLHttpRequest();
+	const rawFile = new XMLHttpRequest();
     rawFile.open("GET", fileToRead, true);
     rawFile.onreadystatechange = function () {
         if (rawFile.readyState === 4) {
@@ -70,6 +36,10 @@ function readFile(pStep) {
 						break;
 					case STEP.WORD:
 						createWord(row);
+						readFile(STEP.YOJIJUKUGO);
+						break;
+					case STEP.YOJIJUKUGO:
+						createYojijukugo(row);
 						readFile(STEP.GENKI_WORD);
 						break;
 					case STEP.GENKI_WORD:
@@ -113,7 +83,7 @@ function createKanji(pRow) {
     Kanji.gakunenList["五"] = [];
 	Kanji.gakunenList["六"] = [];
 
-	let row = pRow;
+	const row = pRow;
     let test;
     for (let i = 0; i < row.length; i++) {
         row[i] = row[i].split('\t');
@@ -125,20 +95,34 @@ function createKanji(pRow) {
 }
 
 function createWord(pRow) {
-	let row = pRow;
+	const row = pRow;
     let test;
     for (let i = 0; i < row.length; i++) {
         row[i] = row[i].split('\t');
         //?                  語彙	   読み	     意味	 
-        //?             pId, pWord,   pYomi,     pImi,      pInfo,     pKanken
-        test = new Word(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4]);
+        //?             pId, pWord,   pYomi,     pImi,      pInfo,     pKanken,   pFurigana, pRef
+        test = new Word(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4], row[i][5], row[i][6]);
     }
+}
+
+function createYojijukugo(pRow) {
+	const row = pRow;
+    let test;
+    for (let i = 0; i < row.length; i++) {
+        row[i] = row[i].split('\t');
+		if (i > 0) {
+			//?                   pId, pWord,   pYomi,     pImi,      pKanken,   pPage,     pSynonym,  pAntonym,  pBetsuYomi, pRef,     pPlus
+			test = new Yojijukugo(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4], row[i][5], row[i][6], row[i][7], row[i][8], row[i][9]);
+		}
+    }
+
+	Yojijukugo.linkRef();
 
 	LinkKanjiWords();
 }
 
 function createGenkiWord(pRow) {
-	let row = pRow;
+	const row = pRow;
     let test;
     for (let i = 0; i < row.length; i++) {
         row[i] = row[i].split('\t');
@@ -159,7 +143,7 @@ function createGenkiWord(pRow) {
 	});
 }
 function createGenkiGram(pRow) {
-	let row = pRow;
+	const row = pRow;
     let test;
     for (let i = 0; i < row.length; i++) {
         row[i] = row[i].split('\t');
@@ -169,7 +153,7 @@ function createGenkiGram(pRow) {
 	// log(GenkiGram.list);
 }
 function createGenkiExample(pRow) {
-	let row = pRow;
+	const row = pRow;
     let test;
     for (let i = 0; i < row.length; i++) {
         row[i] = row[i].split('\t');
@@ -185,7 +169,7 @@ function createGenkiExample(pRow) {
 }
 
 function createMinnaWord(pRow) {
-	let row = pRow;
+	const row = pRow;
     let test;
     for (let i = 0; i < row.length; i++) {
         row[i] = row[i].split('\t');
@@ -206,7 +190,7 @@ function createMinnaWord(pRow) {
 	});
 }
 function createMinnaGram(pRow) {
-	let row = pRow;
+	const row = pRow;
     let test;
     for (let i = 0; i < row.length; i++) {
         row[i] = row[i].split('\t');
@@ -216,7 +200,7 @@ function createMinnaGram(pRow) {
 	// log(MinnaGram.list);
 }
 function createMinnaExample(pRow) {
-	let row = pRow;
+	const row = pRow;
     let test;
     for (let i = 0; i < row.length; i++) {
         row[i] = row[i].split('\t');
@@ -239,5 +223,19 @@ function LinkKanjiWords() {
 				w.setKanji(k.id);
 			}
 		});
+	});
+
+	Word.list.forEach(w => {
+		if (w.tmpKanjiList.length > 0) {
+			for (let i = 0; i < w.word.length; i++) {
+				if (!kana.includes(w.word[i]) && !letterList.includes(w.word[i].toLowerCase()) ) {
+					w.tmpKanjiList.forEach(id => {
+						if (Kanji.list[id].kanji == w.word[i] && !w.kanjiList.includes(id)) {
+							w.kanjiList.push(id);
+						}
+					});
+				}
+			}
+		}
 	});
 }

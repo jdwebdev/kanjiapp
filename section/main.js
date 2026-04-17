@@ -18,6 +18,8 @@ let pathList = null;
 const h = "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽゔっゎぁぃぅぇぉゃゅょゐゑ";
 const k = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポヴッヮァィゥェォャュョヰヱー";
 const letterList = "abcdefghijklmnopqrstuvwxyzçàâäéèêëîïôöûüù'- ";
+const numberList = "0123456789０１２３４５６７８９";
+const otherChars = "、（）()";
 const kana = h+k;
 
 const SECTION = Object.freeze({
@@ -50,6 +52,7 @@ let bModalOpened = false;
 const modal_container = id("modal_container");
 modal_container.style.height = (window.innerHeight-50) + "px";
 const alert_dialog = id("alert_dialog");
+let displayList = [];
 
 id("header").addEventListener("click", e => {
 	if (bModal) closeModal();
@@ -125,6 +128,44 @@ function isFullLetter(pWord) {
 	}
 	return bFullLetter;
 }
+function isFullKanji(pWord) {
+	for (let i = 0; i < pWord.length; i++) {
+		if (letterList.includes(pWord[i].toLowerCase())) return false;
+		if (numberList.includes(pWord[i].toLowerCase())) return false;
+		if (otherChars.includes(pWord[i].toLowerCase())) return false;
+		if (kana.includes(pWord[i].toLowerCase())) return false;
+	}
+	return true;
+}
+function lastCharKana(pWord, pLastNumber) {
+	let bOk = true;
+	let bCheck = false;
+	if (pLastNumber == 1) {
+		if (kana.includes(pWord[pWord.length-1]) && (pWord.length > 1 && !kana.includes(pWord[pWord.length-2]))) {
+			bCheck = true; 
+		}
+	} else if (pLastNumber == 2) {
+		if (kana.includes(pWord[pWord.length-1]) && (pWord.length > 1 && kana.includes(pWord[pWord.length-2]) && (pWord.length > 2 && !kana.includes(pWord[pWord.length-3])))) {
+			bCheck = true; 
+		}
+	}
+
+	if (bCheck) {
+		for (let i = 0; i < pWord.length; i++) {
+			if (i < pWord.length-(pLastNumber+1)) {
+				if (letterList.includes(pWord[i].toLowerCase())) bOk = false;
+				if (numberList.includes(pWord[i].toLowerCase())) bOk = false;
+				if (otherChars.includes(pWord[i].toLowerCase())) bOk = false;
+				if (kana.includes(pWord[i].toLowerCase())) bOk = false;
+			}
+		}
+	} else {
+		bOk = false;
+	}
+	// log(pWord + ": " + bOk);
+	// log(pWord.slice(0, -1));
+	return bOk;
+}
 
 function startApp() {
 	none(id("loading_container"));
@@ -153,15 +194,21 @@ function search(pWord) {
 	exactWordArr = [];
 	includingWordArr = [];
 
+	if (pWord.toLowerCase() == "furigana") {
+		furiganaTest();
+		return;
+	}
+
 	switch (currentMode) {
 		case MODE.MAIN:
 			searchMainMode(pWord);
-		break;
+			break;
 		case MODE.GENKI:
 			searchGMMode(pWord);
+			break;
 		case MODE.MINNA:
 			searchGMMode(pWord);
-		break;
+			break;
 	}
 }
 
@@ -253,7 +300,7 @@ function displayResult() {
 
 			kanjiHTML +=
 			`
-			<div class="kanji_result" id="kanji_id_${k}" onClick="kanjiInfo(${k}, this)">
+			<div class="kanji_result" id="kanji_id_${k}" onClick="kanjiInfo(${k}, 'k')">
 				<div class="kanji_result_kanji">${Kanji.list[k].kanji}</div>
 				<div class="kanji_result_yomi_imi">
 					<div class="kanji_result_yomi">${yomi}</div>
@@ -281,7 +328,7 @@ function displayResult() {
 			if (count == 0) {
 				kanjiHTML += `<div class="kr_one_line">`;
 			}
-			kanjiHTML += `<div class="kr_one_kanji" onClick="kanjiInfo(${k})">${Kanji.list[k].kanji}</div>`
+			kanjiHTML += `<div class="kr_one_kanji" onClick="kanjiInfo(${k}, 'k')">${Kanji.list[k].kanji}</div>`
 			count++;
 			if (count == 6) {
 				count = 0;
@@ -304,32 +351,51 @@ function displayResult() {
 	let wordHTML = `<div class="kanji_result_header">単語 ${exactWordArr.length + includingWordArr.length}</div>`;
 	exactWordArr = exactWordArr.concat(includingWordArr);
 	// log(exactWordArr);
-
 	exactWordArr.forEach((w, index) => {
-		wordHTML += 
-		`
-		<div class="word_result" id="word_id_${w.id}">
-			<div class="word_result_yomi_word">
+		wordHTML += `
+			<div class="word_result" id="word_id_${w.id}" onClick="wordInfo(${w.id}, 'w')">
+				<div class="word_result_yomi_word">
+		`;
+
+		if (w instanceof Yojijukugo && w.yRef != null) {
+			wordHTML += `
 				<div class="word_result_yomi">${w.yomi}</div>
 				<div class="word_result_word">${w.word}</div>
-				<div class="word_result_imi">${w.imi}</div>
+				<div class="word_result_imi"><span class="word_result_ref_word">>>> [${w.yRef.word}]</span> ${w.yRef.imi}</div>
+			`;
+		} else {
+			wordHTML += `
+				<div class="word_result_yomi">${w.yomi}</div>
+				<div class="word_result_word">${w.word}</div>
+			`;
+			if (w.wRef != null) {
+				wordHTML += `<div class="word_result_imi"><span class="word_result_ref_word">>>> [${w.wRef.word}]</span> ${w.wRef.imi}</div>`;
+			} else {
+				wordHTML += `<div class="word_result_imi">${w.imi}</div>`;
+			}
+		}
+		wordHTML += `
 			</div>
 			<div class="word_result_misc">
 		`;
 		if (w.yojijukugo) {
-			wordHTML += 
-			`
-				<div class="yojijukugo">四字熟語</div>
+			
+			wordHTML += `
+				<div class="yojijukugo">四</div>
+			`;
+			if (w.kanken != "") {
+				wordHTML += `
 				<div class="kanken_lvl word_kanken">
-					<div class="kanken_left">5</div>
+					<div class="kanken_left">${w.kanken}</div>
 					<div class="kanken_right">級</div>
 				</div>
-			`;
+				`;
+			}
 		}
 		wordHTML += `
 				</div>
 			</div>
-			`;
+		`;
 		if (index < exactWordArr.length-1) wordHTML += `<div class="word_result_separator"></div>`;
 	});
 
@@ -373,7 +439,19 @@ function displayKankenList(pLevel) {
 
 }
 
-function kanjiInfo(pIndex, e) {
+function kanjiInfo(pIndex, pElementFrom = "", pbBack = false) {
+
+	// log("kanjiInfo()");
+	if (pElementFrom != "" && !pbBack) {
+		if (pElementFrom == "w") {
+			displayList.push(Word.list[pIndex]);
+		} else if (pElementFrom == "k") {
+			displayList.push(Kanji.list[pIndex]);
+		}
+	} else if (pbBack) {
+		displayList.pop();
+	}
+
 
 	// log("KANJI INFO: " + pIndex);
 	// log(Kanji.list[pIndex]);
@@ -381,80 +459,315 @@ function kanjiInfo(pIndex, e) {
 	let html = 
 	`
 	<div id="modal">
-		<!--<div class="modal_content">-->
-			<div class="modal_header">
-				<div class="modal_kanji">${Kanji.list[pIndex].kanji}</div>
-				<div class="modal_kanji_info">
-					<div class="modal_stroke_bushu">
-						<p class="modal_stroke">${Kanji.list[pIndex].kakusuu}画</p>
-						<!--<p class="modal_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].bushu}</p>-->
+		<div class="modal_header">
+			<div class="modal_kanji">${Kanji.list[pIndex].kanji}</div>
+			<div class="modal_kanji_info">
+				<div class="modal_stroke_bushu">
+					<p class="modal_stroke">${Kanji.list[pIndex].kakusuu}画</p>
+					<!--<p class="modal_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].bushu}</p>-->
 
-						<span id="modal_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].bushu}<span
-							class="modal_tooltip_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].yomi}</span>
-						</span>
-
-					</div>
-					<div class="modal_plus_alpha">
-						<div class="kanken_lvl word_kanken">
-							<div class="kanken_left">${Kanji.list[pIndex].kanken}</div>
-							<div class="kanken_right">級</div>
-						</div>
-						<p class="modal_kanken_page">(${Kanji.list[pIndex].jitenRef})</p>
-					</div>
-					<div class="modal_itaiji">${Kanji.list[pIndex].itaiji}</div>
+					<span id="modal_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].bushu}<span
+						class="modal_tooltip_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].yomi}</span>
+					</span>
 
 				</div>
-				<div class="modal_anim_container">
-					<div id="kanji_animation">
-						<div id="kai_bg"></div>
-						<div id="kai"></div>
+				<div class="modal_plus_alpha">
+					<div class="kanken_lvl word_kanken">
+						<div class="kanken_left">${Kanji.list[pIndex].kanken}</div>
+						<div class="kanken_right">級</div>
 					</div>
+					<p class="modal_kanken_page">(${Kanji.list[pIndex].jitenRef})</p>
+				</div>
+				<div class="modal_itaiji">${Kanji.list[pIndex].itaiji}</div>
+
+			</div>
+			<div class="modal_anim_container">
+				<div id="kanji_animation">
+					<div id="kai_bg"></div>
+					<div id="kai"></div>
 				</div>
 			</div>
-			<div class="modal_main">
-				<p class="modal_separator">音読み</p>
-				<p class="modal_onyomi">${Kanji.list[pIndex].onYomi != "" ? Kanji.list[pIndex].onYomi : "<span class='no_yomi'>&nbsp-</span>"}</p>
-				<p class="modal_separator">訓読み</p>
-				<p class="modal_kunyomi">${Kanji.list[pIndex].kunYomi != "" ? Kanji.list[pIndex].kunYomi : "<span class='no_yomi'>&nbsp-</span>"}</p>
-				<p class="modal_separator">意味</p>
-				<p class="modal_imi">${Kanji.list[pIndex].imi}</p>
-				<p class="modal_separator">単語・熟語</p>
-				<div class="modal_words">
+		</div>
+		<div class="modal_main">
+			<p class="modal_separator">音読み</p>
+			<p class="modal_onyomi">${Kanji.list[pIndex].onYomi != "" ? Kanji.list[pIndex].onYomi : "<span class='no_yomi'>&nbsp-</span>"}</p>
+			<p class="modal_separator">訓読み</p>
+			<p class="modal_kunyomi">${Kanji.list[pIndex].kunYomi != "" ? Kanji.list[pIndex].kunYomi : "<span class='no_yomi'>&nbsp-</span>"}</p>
+			<p class="modal_separator">意味</p>
+			<p class="modal_imi">${Kanji.list[pIndex].imi}</p>
+			<p class="modal_separator">単語・熟語</p>
+			<div class="modal_words">
 	`;
 
 	let no_border = ""
+	let w = null;
 	Kanji.list[pIndex].wordList.forEach((i,index) => {
-		
-		html +=
-		`
-		<div class="word_result" id="word_id_${i}">
+		w = Word.list[i];
+
+		html += `
+		<div class="word_result" id="word_id_${i}" onClick="wordInfo(${w.id}, 'w')">
 			<div class="word_result_yomi_word">
-				<div class="word_result_yomi">${Word.list[i].yomi}</div>
-				<div class="word_result_word">${Word.list[i].word}</div>
-				<div class="word_result_imi">${Word.list[i].imi}</div>
+		`;
+
+		if (w instanceof Yojijukugo && w.yRef != null) {
+			html += `
+				<div class="word_result_yomi">${w.yomi}</div>
+				<div class="word_result_word">${w.word}</div>
+				<div class="word_result_imi"><span class="word_result_ref_word">>>> [${w.yRef.word}]</span> ${w.yRef.imi}</div>
+			`;
+		} else {
+			html += `
+				<div class="word_result_yomi">${w.yomi}</div>
+				<div class="word_result_word">${w.word}</div>
+			`;
+
+			if (w.wRef != null) {
+				html += `<div class="word_result_imi"><span class="word_result_ref_word">>>> [${w.wRef.word}]</span> ${w.wRef.imi}</div>`;
+			} else {
+				html += `<div class="word_result_imi">${w.imi}</div>`;
+			}
+		}
+
+		html += `
 			</div>
 		</div>
 		`;
+
 		if (index < Kanji.list[pIndex].wordList.length-1) html += `<div class="word_result_separator"></div>`;
 	})
 	html +=
 	`
-					</div>
-				</div>
-			<!--</div>-->
+			</div>
 		</div>
+	`;
+
+	if (displayList.length > 1) { // Au moins 2
+		html += `<div class="modal_back">`;
+		let previousElement = "";
+
+		if (displayList[displayList.length-2] instanceof Kanji) {
+			html += `<button class="modal_back_btn" onClick="kanjiInfo(${displayList[displayList.length-2].id}, '', true)">`;
+			previousElement = displayList[displayList.length-2].kanji;
+		} else if (displayList[displayList.length-2] instanceof Word) {
+			html += `<button class="modal_back_btn" onClick="wordInfo(${displayList[displayList.length-2].id}, '', true)">`;
+			previousElement = displayList[displayList.length-2].word;
+		}
+		html += `
+				<span class="modal_back_arrow_1"></span>
+				<span class="modal_back_arrow_2"></span>
+				<span class="modal_back_arrow_3"></span>
+				<span class="modal_back_element">${previousElement}</span>
+			</button>
+		</div>`;
+	}
+
+	html += `
+		</div>
+	`;
+	modal_container.innerHTML = html;
+
+	id("modal").addEventListener("click", event => {
+		event.stopPropagation();
+	});
+	openModal();
+	test(pIndex);
+}
+
+function wordInfo(pIndex, pElementFrom = "", pbBack = false) {
+
+	// log("wordInfo()");
+	if (pElementFrom != "" && !pbBack) {
+		if (pElementFrom == "w") {
+			displayList.push(Word.list[pIndex]);
+		} else if (pElementFrom == "k") {
+			displayList.push(Kanji.list[pIndex]);
+		}
+	} else if (pbBack) {
+		displayList.pop();
+	}
+
+	const word = Word.list[pIndex];
+
+	let fontSize = "";
+	if (word.word.length > 9) {
+		fontSize = "font_size_furigana";
+		if (word.word.length > 15) {
+			fontSize = "font_size_furigana_tokubetsu";
+		}
+	}
+
+	let html = `
+	<div id="modal">
+	<div class="modal_header modal_header_word">
+		<div class="modal_word_word ${fontSize}">${word.furigana}</div>
+	`;
+
+	if (word.bInfoSup) {
+		html += `<div class="modal_word_infos">`;
+
+		html += word.ateji ? `<div class="word_type modal_word_ateji">当て字</div>` : "";
+
+		html += word.yojijukugo ? `<div class="word_type modal_word_ichimoji">四</div>` : "";
+
+		html += word.kotowaza ? `<div class="word_type modal_word_ichimoji">諺</div>` : "";
+
+		if (word.kanken != "") {
+			html += `
+				<div class="kanken_lvl word_kanken">
+					<div class="kanken_left">${word.kanken}</div>
+					<div class="kanken_right">級</div>
+				</div>
+			`;
+		}
+		html += `</div>`;
+	}
+
+	html += `
+	</div>
+	<div class="modal_main">
+		<p class="modal_separator">意味</p>
+	`;
+
+	if (word instanceof Yojijukugo) {
+		if (word.yRef != null) {
+			html += `<p class="modal_imi modal_ref_imi"><button class="ref_link" onClick="wordInfo(${word.yRef.id}, 'w')">${word.yRef.word} ➤</button> ${word.yRef.imi}</p>`;
+		} else {
+			html += `<p class="modal_imi">${word.imi}</p>`;
+		}
+
+		if (word.betsuYomiList.length > 0) {
+			html += `
+				<p class="modal_separator">別の読み</p>
+				<p class="modal_imi">${word.betsuYomiRaw}</p>
+			`;
+		}
+		if (word.synonymList.length > 0) {
+			html += `
+				<p class="modal_separator">類義語</p>
+				<div class="modal_imi">
+			`;
+	
+			word.synonymList.forEach((s, index) => {
+				const syn = Yojijukugo.list.find(y2 => y2.word == s);
+				if (syn != null) {
+					html += `<button class="ref_link" onClick="wordInfo(${syn.id}, 'w')">${syn.word} ➤</button>`;
+				} else {
+					html += `${s}`;
+				}
+				if (index < word.synonymList.length - 1) {
+					html += "、";
+				}
+			});
+			html += `</div>`;
+		}
+		if (word.antonymList.length > 0) {
+			html += `
+				<p class="modal_separator">対義語</p>
+				<div class="modal_imi">
+			`;
+			word.antonymList.forEach((a, index) => {
+				const ant = Yojijukugo.list.find(y2 => y2.word == a);
+				if (ant != null) {
+					html += `<button class="ref_link" onClick="wordInfo(${ant.id}, 'w')">${ant.word} ➤</button>`;
+				} else {
+					html += `${a}`;
+				}
+				if (index < word.antonymList.length - 1) {
+					html += "、";
+				}
+			});
+			html += `</div>`;
+		}
+	} else {
+		if (word.wRef != null) {
+			html += `<p class="modal_imi modal_ref_imi"><button class="ref_link" onClick="wordInfo(${word.wRef.id}, 'w')">${word.wRef.word} ➤</button> ${word.wRef.imi}</p>`;
+		} else {
+			html += `<p class="modal_imi">${word.imi}</p>`;
+		}
+		html += `
+			<p class="modal_separator">読み</p>
+			<p class="modal_imi">${word.yomi}</p>
+		`;
+	}
+
+	html += `
+		<div class="modal_words">
+	`;
+
+	let no_border = "";
+	if (word.kanjiList.length > 0) html += `<p class="modal_separator">漢字</p>`;
+
+	word.kanjiList.forEach( (k, index) => {
+		let yomi = `${Kanji.list[k].onYomi}${(Kanji.list[k].onYomi.length > 0 && Kanji.list[k].kunYomi.length > 0) ? " | " : ""}${Kanji.list[k].kunYomi}`;
+		if (yomi.length >= 46) {
+			yomi = yomi.slice(0, 45);
+			yomi += "...";
+		}
+		let imi = `${Kanji.list[k].imi}`;
+		if (imi.length >= 106) {
+			imi = imi.slice(0, 104);
+			imi += "...";
+		}
+
+		html +=
+		`
+		<div class="kanji_result" id="kanji_id_${k}" onClick="kanjiInfo(${k},'k')">
+			<div class="kanji_result_kanji">${Kanji.list[k].kanji}</div>
+			<div class="kanji_result_yomi_imi">
+				<div class="kanji_result_yomi">${yomi}</div>
+				<div class="kanji_result_imi">${imi}</div>
+			</div>
+			<div class="kanji_result_misc">
+				<ul class="kanji_result_ul">
+					<li class="kanji_result_itaiji">${Kanji.list[k].itaiji}</li>
+					<li class="kanji_result_kakusuu">${Kanji.list[k].kakusuu}画</li>
+					<li class="kanken_lvl">
+						<div class="kanken_left">${Kanji.list[k].kanken}</div>
+						<div class="kanken_right">級</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		`;
+		if (index < word.kanjiList.length-1) html += `<div class="kanji_result_separator"></div>`;
+	});
+	html += "</div>";
+
+	html += `
+		</div>
+	`;
+
+	if (displayList.length > 1) { // Au moins 2
+
+		html += `<div class="modal_back">`;
+		let previousElement = "";
+
+		if (displayList[displayList.length-2] instanceof Kanji) {
+			html += `<button class="modal_back_btn" onClick="kanjiInfo(${displayList[displayList.length-2].id}, '', true)">`;
+			previousElement = displayList[displayList.length-2].kanji;
+		} else if (displayList[displayList.length-2] instanceof Word) {
+			html += `<button class="modal_back_btn" onClick="wordInfo(${displayList[displayList.length-2].id}, '', true)">`;
+			previousElement = displayList[displayList.length-2].word;
+		}
+		html += `
+				<span class="modal_back_arrow_1"></span>
+				<span class="modal_back_arrow_2"></span>
+				<span class="modal_back_arrow_3"></span>
+				<span class="modal_back_element">${previousElement}</span>
+			</button>
+		</div>`;
+	}
+
+	html += `
+	</div>
 	`;
 
 	modal_container.innerHTML = html;
 
-	
-
-	id("modal").addEventListener("click", e => {
-		e.stopPropagation();
+	id("modal").addEventListener("click", event => {
+		event.stopPropagation();
 	});
 	openModal();
-	test(pIndex);
-
 }
 
 stop_search_btn.addEventListener("click", e => {
@@ -502,6 +815,7 @@ function openModal() {
 	},0.1);
 
 	editClass(id("span_1"), "span_1_arrow");
+	editClass(id("span_2"), "span_2_arrow");
 	editClass(id("span_3"), "span_3_arrow");
 	none(footer_display_type);
 }
@@ -511,8 +825,10 @@ function closeModal() {
 	none(modal_container);
 	editClass(modal_container, "modal_open", false);
 	pathList = null;
+	displayList = [];
 
 	editClass(id("span_1"), "span_1_arrow", false);
+	editClass(id("span_2"), "span_2_arrow", false);
 	editClass(id("span_3"), "span_3_arrow", false);
 	unset(footer_display_type);
 }
@@ -610,6 +926,206 @@ setInterval(() => {
 }, 500);
 
 
+function displayFuriganaWords() {
+	furiganaTest(id("furigana_input_start").value, id("furigana_input_end").value);
+}
+function furiganaTest(pStart = 0, pEnd = 0) {
+	let start = pStart;
+	let end = pEnd;
+	if (start == 0 && end == 0) {
+		start = Word.firstWordWithoutFurigana;
+		end = Word.firstWordWithoutFurigana + 199;
+	}
+
+	let html = "";
+	html = `
+		<div class="furigana_header">
+			<div class="furigana_input_container">
+				<input id="furigana_input_start" class="furigana_input" type="text" placeholder="" value="${start}">
+				<input id="furigana_input_end" class="furigana_input" type="text" placeholder="" value="${end}">
+				<button id="display_furigana_words_btn" class="normal_btn" onClick="displayFuriganaWords()">GO</button>
+				<button class="normal_btn furigana_export_btn" onClick="exportFurigana(${start}, ${end})">EXPORT</button>
+			</div>
+		</div>
+		<div class="furigana_main">
+	`;
+	let checkClass = "";
+	Word.list.forEach((w, index) => {
+		if (index >= start && index <= end) {
+			if (w.bFuriganaCheck) {
+				checkClass = "furigana_check";
+			} else if (w.furigana != "") {
+				checkClass = "furigana_to_check";
+			} else {
+				checkClass = "";
+			}
+			
+			html += `
+			<div id="furigana_word_container_${w.id}" class="furigana_word_container ${checkClass}">
+				<div class="add_furigana_btn_container">
+					<button id="add_btn_${w.id}" class="add_furigana_btn" onClick="setFurigana(${w.id}, this)">+</button>
+				</div>
+				<div class="furigana_word_id">${w.id}</div>
+				<div id="yomi_select_${w.id}" class="furigana_word_yomi_select none">${w.yomi}</div>
+
+				<div class="furigana_word_origin_and_button">
+					<div class="furigana_yomi_word_origin">
+						<p class="furigana_word_yomi">${w.yomi}</p>
+						<p class="furigana_word_word">${w.word}</p>
+					</div>
+					<div class="furigana_button_container">
+						<button class="furigana_btn furigana_delete_btn" onClick="validFurigana(${w.id},'d')">✕</button>
+						<button class="furigana_btn" onClick="validFurigana(${w.id},'b')">✕</button>
+						<button class="furigana_btn" onClick="validFurigana(${w.id},'m')">〇</button>
+					</div>
+				</div>
+				<div id="result_${w.id}" class="furigana_result">➤ ${w.furigana}</div>
+			</div>
+			`;
+		}
+	});
+	html += `</div>`;
+
+	main_section.innerHTML = html;
+}
+
+function setFurigana(pId, pElement) {
+	const selectionText = window.getSelection().toString();
+
+	if (pElement.innerHTML == "F" && selectionText != "") {
+		const yomiRAW = Word.list[pId].yomi;
+
+		if (Word.list[pId].tmpFuriganaArr.length > 0) {
+			let bFirst = true;
+			let indexOfFirst = -1;
+			Word.list[pId].tmpFuriganaArr.forEach((c,index) => {
+				if (c.f == "@") {
+					if (bFirst) {
+						bFirst = false;
+						c.f = selectionText;
+						indexOfFirst = index;
+					} else {
+						c.f = indexOfFirst;
+					}
+				}
+			});
+		}
+		pElement.innerHTML = "+";
+
+		let html = "";
+		let currentIndex = -1;
+		
+		Word.list[pId].tmpFuriganaArr.forEach((c, index) => {
+			if (c.f == "" && !Number.isInteger(c.f)) {
+				if (currentIndex > -1) {
+					html += `<span class="furigana">${Word.list[pId].tmpFuriganaArr[currentIndex].f}</span></span>`;
+					currentIndex = -1;
+				}
+				html += c.c;
+			} else {
+				if (Number.isInteger(c.f)) {
+					html += `${c.c}`;
+				} else {
+					if (currentIndex > -1) {
+						// html += `<span class="furigana">${Word.list[pId].tmpFuriganaArr[currentIndex].f}</span></span>`;
+						// currentIndex = -1;
+					}
+					currentIndex = index;
+					html += `<span class="kanji">${c.c}`;
+				}
+			}
+
+			if (index == Word.list[pId].tmpFuriganaArr.length - 1) {
+				if (currentIndex > -1) {
+					html += `<span class="furigana">${Word.list[pId].tmpFuriganaArr[currentIndex].f}</span></span>`;
+					currentIndex = -1;
+				}
+			}
+		});
+		Word.list[pId].furigana = html;
+		id("result_" + pId).innerHTML = "➤ " + Word.list[pId].furigana;
+		editClass(id("yomi_select_"+pId),"none");
+
+		return;
+	}
+	
+	const wordRAW = Word.list[pId].word;
+
+	if (selectionText != "" && wordRAW.includes(selectionText)) {
+		const range = window.getSelection().getRangeAt(0);
+		let start = range.startOffset;
+		let end = range.endOffset;
+		
+		let bFirst = false;
+		if (Word.list[pId].tmpFuriganaArr.length == 0) bFirst = true;
+
+		for (let i = 0; i < wordRAW.length; i++) {
+			if (bFirst) Word.list[pId].tmpFuriganaArr.push({c: wordRAW[i], f: ""});
+			if (i < start || i >= end) {
+				
+			} else {
+				if (Word.list[pId].tmpFuriganaArr[i].f != "") {
+					alert("NON");
+					return;
+				}
+				Word.list[pId].tmpFuriganaArr[i] = {c: wordRAW[i], f: "@"};
+			}
+		}
+
+		pElement.innerHTML = "F";
+
+		editClass(id("yomi_select_"+pId),"none",false);
+	}
+}
+
+function validFurigana(pId, pType) {
+	switch(pType) {
+		case "d":
+			Word.list[pId].furigana = "";
+			Word.list[pId].tmpFuriganaArr = [];
+			id("result_"+pId).innerHTML = "➤ ";
+			break;
+		case "b":
+			Word.list[pId].furigana = `<span class="kanji">${Word.list[pId].word}</span>`;
+			id("result_"+pId).innerHTML = "➤ " + Word.list[pId].furigana;
+			break;
+		case "m": // そのまま
+			Word.list[pId].bFuriganaCheck = true;
+			editClass(id("furigana_word_container_" + pId), "furigana_check");
+			editClass(id("furigana_word_container_" + pId), "furigana_to_check", false);
+
+			if (Word.list[pId].furigana == "") {
+				Word.list[pId].furigana = `<span class="kanji">${Word.list[pId].word}<span class="furigana">${Word.list[pId].yomi}</span></span>`;
+				id("result_"+pId).innerHTML = "➤ " + Word.list[pId].furigana;
+			}
+
+			break;
+	}
+}
+
+function exportFurigana(pStart, pEnd) {
+
+	let content = "";
+	Word.list.forEach((w, index)=> {
+		if (index >= pStart && index <= pEnd) {
+			content += `${w.furigana}
+`;
+		}
+	});
+	id("furigana_dialog_text").innerHTML = content;
+
+	id("export_furigana_dialog").showModal();
+
+	// alert_dialog.showModal();
+}
+function copyExport() {
+	copyToClipboard(id("furigana_dialog_text").value);
+
+}
+
+function closeFuriganaDialog() {
+	id("export_furigana_dialog").close();
+}
 
 function test(pId) {
 	// log(Kanji.list);

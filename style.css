@@ -379,6 +379,7 @@ main {
 	left: 15px;
 	translate: 0 -50%;
 	border-radius: 5px;
+	transition: all ease 0.31s;
 }
 
 #span_3 {
@@ -392,7 +393,7 @@ main {
 	transition: all ease 0.3s;
 }
 
-#span_1.span_1_arrow {
+/* #span_1.span_1_arrow {
 	transform: rotate(-45deg);
 	width: 30px;
 	left: 10px;
@@ -404,6 +405,27 @@ main {
 	left: 10px;
 	bottom: 24px;
 	width: 30px;
+} */
+
+#span_1.span_1_arrow {
+	transform: rotate(-45deg);
+	width: 75px;
+	left: 0px;
+	top: 35px;
+}
+
+#span_2.span_2_arrow {
+	/* transform: rotate(-45deg); */
+	width: 0px;
+	left: 31px;
+	/* top: 35px; */
+}
+
+#span_3.span_3_arrow {
+	transform: rotate(45deg);
+	left: 0px;
+	top: 35px;
+	width: 75px;
 }
 
 #span_1.span_1_arrow_right {
@@ -517,6 +539,11 @@ main {
 	background-color: transparent;
 	color: var(--white);
 	-webkit-tap-highlight-color: var(--white);
+}
+
+#footer_kanken_lvl div {
+	display: flex;
+	justify-content: space-between;
 }
 
 #footer_display_type {}
@@ -777,13 +804,17 @@ main {
 }
 
 .word_result_yomi {
-	height: 16px;
+	/* height: 16px; */
 	font-size: 14px;
 	color: var(--dark_blue);
 }
 
 .word_result_word {
 	font-size: 22px;
+}
+
+.word_result_ref_word {
+	color: var(--blue);
 }
 
 .word_result_imi {
@@ -800,6 +831,17 @@ main {
 
 .word_kanken {
 	align-self: end;
+}
+
+.yojijukugo {
+	align-self: end;
+	text-align: right;
+	padding: 2px;
+	width: 20px;
+	background-color: var(--dark_blue);
+	color: var(--white);
+	border-radius: 0 0 0 5px;
+
 }
 
 .no_result {
@@ -1180,9 +1222,125 @@ main {
 	height: 78px;
 }
 
-/* TODO !!!! */
+.modal_header_word {
+	flex-direction: column;
+	padding: 10px;
+	padding-top: 22px;
+	height: unset;
+	padding-bottom: 0px;
+	/* text-align: right; */
+}
+
+.modal_word_yomi {
+	font-size: 18px;
+	color: var(--blue);
+}
+
+.modal_word_word {
+	font-size: 30px;
+}
+
+.font_size_furigana {
+	/* font-size: 15px; */
+	font-size: 20px;
+}
+
+.font_size_furigana .kanji {
+	/* font-size: 15px; */
+	font-size: 20px;
+}
+
+.font_size_furigana .furigana {
+	font-size: 12px;
+}
+
+
+.font_size_furigana_tokubetsu {
+	font-size: 15px;
+}
+
+.font_size_furigana_tokubetsu .kanji {
+	font-size: 15px;
+}
+
+.font_size_furigana_tokubetsu .furigana {
+	font-size: 12px;
+}
+
+
+.kanji {
+	position: relative;
+}
+
+.furigana {
+	position: absolute;
+	font-size: 14px;
+
+
+	/* left: 0px; */
+	left: 50%;
+	transform: translate(-50%, 0);
+	top: -18px;
+
+	white-space: nowrap;
+	color: var(--blue);
+}
+
+.furigana_left {
+	left: 0px;
+	transform: translate(0, 0);
+}
+
+.modal_word_kanken {}
+
+
+.modal_word_infos {
+	/* background-color: red; */
+	/* padding-top: 5px; */
+	display: flex;
+	justify-content: flex-end;
+}
+
+.modal_header_word .kanken_lvl {
+	border-radius: 5px;
+	margin-left: 5px;
+}
+
+.word_type {
+	background-color: var(--blue);
+	color: var(--white);
+	border-radius: 5px;
+	text-align: center;
+	padding-top: 2px;
+	padding: 2px;
+}
+
+.modal_word_ichimoji {
+	width: 24px;
+}
+
+.ref_link {
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid var(--black);
+	border-radius: 5px;
+	border-color: var(--blue);
+	color: var(--blue);
+	padding: 0px 5px;
+	font-size: 16px;
+	box-shadow: 0px 2px 0px var(--dark_blue);
+}
+
+.modal_ref_imi {
+	/* display: inline; */
+	line-height: 25px;
+}
+
+.kanji_result_separator {
+	position: unset;
+}
+
 .modal_main {
-	max-height: 470px;
+	max-height: 450px;
 	overflow: auto;
 	border-bottom: 2px solid var(--blue);
 	border-left: 2px solid var(--blue);
@@ -1191,6 +1349,62 @@ main {
 	padding-top: 5px;
 }
 
+.modal_back {}
+
+.modal_back_btn {
+	background-color: transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	/* padding: 10px; */
+	height: 25px;
+	/* padding-bottom: 5px; */
+	width: 100%;
+	font-size: 14px;
+	/* border: 2px solid var(--blue); */
+	border: none;
+	border-radius: 0 0 10px 10px;
+	/* box-shadow: 4px 4px 0px var(--dark_blue); */
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.modal_back_arrow_1 {
+	background-color: var(--blue);
+	height: 5px;
+	width: 15px;
+	bottom: 20px;
+	position: absolute;
+	border-radius: 5px;
+	transform: rotate(-30deg);
+}
+
+.modal_back_arrow_2 {
+	background-color: var(--blue);
+	height: 5px;
+	width: 25px;
+	bottom: 16px;
+	position: absolute;
+	border-radius: 5px;
+}
+
+.modal_back_arrow_3 {
+	background-color: var(--blue);
+	height: 5px;
+	width: 15px;
+	bottom: 12px;
+	position: absolute;
+	border-radius: 5px;
+	transform: rotate(30deg);
+	margin-right: 10px;
+}
+
+.modal_back_element {
+	text-align: left;
+	margin-left: 30px;
+	padding-top: 7px;
+	color: var(--blue);
+}
 
 .modal_kanji {
 	font-size: 60px;
@@ -2308,4 +2522,210 @@ kp_btn:
 
 .small_btn {
 	font-size: 20px;
+}
+
+/* FURIGANA */
+.furigana_header {
+	display: flex;
+	/* width: 600px; */
+}
+
+.furigana_input_container {
+	height: 56px;
+	width: 810px;
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 50px;
+	left: 50%;
+	background-color: var(--white);
+	z-index: 10;
+	transform: translate(-50%, 0);
+	padding: 5px;
+	border-radius: 0 0 20px 20px;
+	border: 2px solid var(--blue);
+	border-top: none;
+	box-shadow: 0px 2px 0px var(--dark_blue);
+}
+
+.furigana_input {
+	width: 100px;
+	height: 40px;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-left: 10px;
+	border-radius: 10px;
+	margin-right: 10px;
+	border: 2px solid var(--blue);
+}
+
+#display_furigana_words_btn {
+	width: 50px;
+	height: 40px;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-right: 10px;
+}
+
+.furigana_export_btn {
+	width: 100px;
+	height: 40px;
+	padding: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	/* border: 2px solid var(--blue);
+	border-radius: 10px;
+	font-size: 16px;
+	font-size: 20px;
+	color: var(--blue); */
+}
+
+.furigana_main {
+	width: 600px;
+	margin-top: 60px;
+	margin-bottom: 50px;
+}
+
+.furigana_word_yomi {
+	font-size: 16px;
+}
+
+.furigana_word_word {
+	font-size: 20px;
+}
+
+.furigana_word_container {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 2px solid black;
+	padding: 10px 0px;
+}
+
+.furigana_check {
+	background-color: rgb(124, 255, 124);
+}
+
+.furigana_to_check {
+	background-color: rgb(255, 194, 194);
+}
+
+.furigana_not_checked {}
+
+.furigana_word_yomi_select {
+	position: absolute;
+	background-color: var(--white);
+	height: 50px;
+	left: 5px;
+	font-size: 30px;
+	border-radius: 10px;
+	z-index: 10;
+	padding: 6px 10px;
+	box-shadow: 0px 3px 0px gray;
+	/* padding-top: 5px; */
+}
+
+.furigana_word_yomi_select.none {
+	display: none;
+}
+
+.furigana_word_origin_and_button {
+	display: flex;
+	justify-content: space-between;
+}
+
+.furigana_yomi_word_origin {}
+
+.furigana_button_container {
+	display: flex;
+	/* width: 110px; */
+}
+
+.furigana_btn {
+	border: 2px solid var(--blue);
+	border-radius: 10px;
+	padding: 5px;
+	font-size: 16px;
+	width: 50px;
+	margin-left: 10px;
+}
+
+.furigana_delete_btn {
+	color: var(--red);
+	border: 2px solid var(--red);
+}
+
+.furigana_result {
+	padding-top: 12px;
+	height: 40px;
+	font-size: 24px;
+
+}
+
+.furigana_result .kanji {
+	/* font-size: 24px; */
+	color: var(--blue);
+}
+
+#export_furigana_dialog {
+	top: 100px;
+	margin: 0 auto;
+	width: 800px;
+	height: 500px;
+
+
+}
+
+#export_furigana_dialog div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#furigana_dialog_text {
+	width: 700px;
+	height: 200px;
+	margin-top: 50px;
+	padding: 10px;
+	box-shadow: 0px 4px 0px white;
+	border: none;
+	border-radius: 20px 0 0 20px;
+	resize: none;
+}
+
+#export_furigana_dialog .dialog_close_btn {
+	width: 300px;
+}
+
+.furigana_dialog_copy_btn {
+	width: 300px;
+	font-size: 30px;
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+.testest {
+	color: var(--blue);
+}
+
+.furigana_result .furigana {
+	font-size: 14px;
+	top: -14px;
+}
+
+.add_furigana_btn_container {
+	position: absolute;
+	left: -40px;
+}
+
+.furigana_word_id {
+	position: absolute;
+	left: -100px;
+}
+
+.add_furigana_btn {
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 10px;
+	border: 2px solid var(--blue);
 }
