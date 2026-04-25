@@ -7,11 +7,12 @@ const TRAINING_TYPE = Object.freeze({
 });
 const KANKEN_CAT = Object.freeze({
 	NONE: -1,
-	YOMI: 0,
-	TANGO: 1,
+	WORD_YOMI: 0,
+	WORD_KAKI: 1,
 	KANJI: 2,
 	BUSHU: 3,
-	YOJI: 4
+	YOJI_YOMI: 4,
+	YOJI_KAKI: 5,
 });
 let kankenCategory = KANKEN_CAT.NONE;
 let currentTraining = TRAINING_TYPE.NONE;
@@ -22,6 +23,8 @@ let wrongList = "";
 let wrongWordList = [];
 let wordTrainingList = [];
 let wordIndexTrainingList = [];
+let kankenRangeStart = 0;
+let kankenRangeEnd = 0;
 let kankenLvl = "";
 let bTrainingEnd = false;
 
@@ -69,12 +72,19 @@ function openCategory(pCategory) {
 function openKankenDialog(pLvl,btn) {
 	kankenLvl = pLvl;
 	if (equal(pLvl, "10", "9", "8","7","6")) {
-		none(id("yojijukugo_btn"));
+		none(id("yojijukugo_kaki_btn"));
+		none(id("yojijukugo_yomi_btn"));
+		id("kanken_dialog").style.height = "420px";
+		id("kanken_dialog").children[1].style.height = "340px";
 	} else {
-		unset(id("yojijukugo_btn"));
+		unset(id("yojijukugo_kaki_btn"));
+		unset(id("yojijukugo_yomi_btn"));
+		id("kanken_dialog").style.height = "470px";
+		id("kanken_dialog").children[1].style.height = "390px";
 	}
 
 	editClass(btn, "active");
+	unset(id("kanken_dialog"));
 	id("kanken_dialog").showModal();
 	setTimeout(() => {
 		editClass(id("kanken_dialog"), "active");
@@ -91,89 +101,206 @@ function closeKankenDialog(btn = null) {
 		}
 	}
 
-	// if (btn != null) editClass(btn, "active", true);
 	if (btn != null) pushBtn(btn);
 
 	editClass(id("kanken_dialog"), "active", false);
 	setTimeout(() => {
 		if (btn != null) pushBtn(btn,false);
 		id("kanken_dialog").close();
-		// if (btn != null) editClass(btn, "active", false);
 	}, 100);
 }
+function closeKankenSettingDialog(btn = null) {
+	if (push(btn, closeKankenSettingDialog)) return;
+
+	kankenRangeStart = 0;
+	kankenRangeEnd = 0;
+	id("kanken_setting_dialog").close();
+}
 function prepareKankenTest(pCategory, btn = null) {
-	if (btn != null) {
-		// editClass(btn, "active");
-		pushBtn(btn);
-		setTimeout(() => {
-			// editClass(btn, "active", false);
-			pushBtn(btn,false);
-			prepareKankenTest(pCategory);
-		}, 100);
-		return;
-	}
+	if (push(btn, prepareKankenTest, pCategory)) return;
 
 	kankenCategory = pCategory;
 	kanjiTrainingList = [];
 	wordTrainingList = [];
+	kanjiIndexTrainingList = [];
+	wordIndexTrainingList = [];
 	switch (kankenCategory) {
-		case KANKEN_CAT.YOMI:
-			wordTrainingList = Word.list.filter(w => w.kanken == kankenLvl);
-			wordTrainingList = randomizeList(wordTrainingList);
-			wordTrainingList.forEach(w => {
-				wordIndexTrainingList.push(w.id);
-			});
-			closeKankenDialog();
+		case KANKEN_CAT.WORD_YOMI:
+		case KANKEN_CAT.WORD_KAKI:
+			wordTrainingList = Word.list.filter(w => (w.kanken == kankenLvl && !(w instanceof Yojijukugo)));
+			break;
+		case KANKEN_CAT.KANJI:
+			kanjiTrainingList = Kanji.list.filter(k => k.kanken == kankenLvl);
+			break;
+		case KANKEN_CAT.YOJI_YOMI:
+		case KANKEN_CAT.YOJI_KAKI:
+			wordTrainingList = Word.list.filter(w => (w.kanken == kankenLvl && w instanceof Yojijukugo));
+			break;
+	}
+	openKankenSettingDialog();
+}
+
+function openKankenSettingDialog() {
+	changeKankenRange();
+
+	if (!equal(kankenCategory, KANKEN_CAT.YOJI_YOMI, KANKEN_CAT.YOJI_KAKI)) {
+		none(id("kanken_yoji_priority"));
+		none(id("kanken_yoji_priority_separator"));
+	} else {
+		unset(id("kanken_yoji_priority"));
+		unset(id("kanken_yoji_priority_separator"));
+	}
+	
+	id("kanken_setting_dialog").showModal();
+	id("kanken_all_btn").blur();
+}
+
+function changeKankenRange() {
+	const kanken_list_possibilities = id("kanken_list_possibilities");
+	kanken_list_possibilities.innerHTML = "";
+
+	let range = id("kanken_range_input").value;
+	if (range == "" || range == 0) {
+		range = 100;
+		id("kanken_range_input").value = 100;
+	}
+	range = Number(range);
+
+	let listHTML = "";
+	
+	let tmpList = [];
+	let bWord = false;
+	if (wordTrainingList.length > 0) {
+		tmpList = wordTrainingList;
+		bWord = true;
+	} else if (kanjiTrainingList.length > 0) {
+		tmpList = kanjiTrainingList;
+	}
+	let nbLines = Math.floor((tmpList.length / range)) + 1;
+	let rest = tmpList.length % range;
+
+	let line = 0;
+	for (let i = 0; i < nbLines; i++) {
+		if (i < nbLines-1) {
+			if (bWord) {
+				listHTML += `<li class="kanken_possibilities" onClick="chooseKankenRange(this, ${line+1}, ${line+range})">${line+1} - ${line+range} (${tmpList[line].word} - ${tmpList[line+(range-1)].word})</li>`;
+			} else {
+				listHTML += `<li class="kanken_possibilities" onClick="chooseKankenRange(this, ${line+1}, ${line+range})">${line+1} - ${line+range} (${tmpList[line].kanji} - ${tmpList[line+(range-1)].kanji})</li>`;
+			}
+			line += range;
+		} else {
+			if (bWord) {
+				listHTML += `<li class="kanken_possibilities" onClick="chooseKankenRange(this, ${line+1}, ${line+rest})">${line+1} - ${line+rest} (${tmpList[line].word} - ${tmpList[line-1+rest].word})</li>`;
+			} else {
+				listHTML += `<li class="kanken_possibilities" onClick="chooseKankenRange(this, ${line+1}, ${line+rest})">${line+1} - ${line+rest} (${tmpList[line].kanji} - ${tmpList[line-1+rest].kanji})</li>`;
+			}
+		}
+	}
+
+	kanken_list_possibilities.innerHTML = listHTML;
+}
+
+function chooseKankenRange(pElement, pStart, pEnd) {
+	kankenRangeStart = pStart;
+	kankenRangeEnd = pEnd;
+	const elements = document.getElementsByClassName("kanken_possibilities");
+	for(let i = 0; i < elements.length; i++) {
+		editClass(elements[i], "active", false);
+	}
+	editClass(pElement, "active");
+
+}
+
+function priorityKankenStart(btn = null) {
+	if (push(btn, priorityKankenStart)) return;
+
+	wordTrainingList = wordTrainingList.filter(w => w.bPriority);
+	wordTrainingList = randomizeList(wordTrainingList);
+	wordTrainingList.forEach(w => wordIndexTrainingList.push(w.id));
+	none(id("kanken_dialog"));
+	closeKankenDialog();
+	closeKankenSettingDialog(id("kanken_yoji_priority"));
+
+	switch(kankenCategory) {
+		case KANKEN_CAT.YOJI_YOMI:
 			yomiStart();
+			break;
+		case KANKEN_CAT.YOJI_KAKI:
+			tangoStart();
+			break;
+	}
+}
+
+function filteredKankenStart(btn = null,bFilter = true) {
+	const bYomi = equal(kankenCategory, KANKEN_CAT.WORD_YOMI, KANKEN_CAT.YOJI_YOMI);
+	if (bFilter && kankenRangeStart == 0 && kankenRangeEnd == 0) return;
+	switch (kankenCategory) {
+		case KANKEN_CAT.WORD_YOMI:
+		case KANKEN_CAT.YOJI_YOMI:
+		case KANKEN_CAT.WORD_KAKI:
+		case KANKEN_CAT.YOJI_KAKI:
+			if (bFilter) wordTrainingList = wordTrainingList.filter((w,index) => (index >= kankenRangeStart-1 && index < kankenRangeEnd));
+			wordTrainingList = randomizeList(wordTrainingList);
+			wordTrainingList.forEach(w => wordIndexTrainingList.push(w.id));
+
+			none(id("kanken_dialog"));
+			closeKankenDialog();
+			closeKankenSettingDialog(btn);
+			if (bYomi) {
+				yomiStart();
+			} else {
+				tangoStart();
+			}
+			break;
+		case KANKEN_CAT.KANJI:
+			if (bFilter) kanjiTrainingList = kanjiTrainingList.filter((k,index) => (index >= kankenRangeStart-1 && index < kankenRangeEnd));
+			kanjiTrainingList = randomizeList(kanjiTrainingList);
+
+			none(id("kanken_dialog"));
+			closeKankenDialog();
+			closeKankenSettingDialog(btn);
+			kanjiStart(TRAINING_TYPE.KANKEN);
 			break;
 	}
 }
 
 function kanjiStart(pType, btn = null) {
-	if (btn != null) {
-		// editClass(btn, "active");
-		pushBtn(btn);
-		setTimeout(() => {
-			// editClass(btn, "active", false);
-			pushBtn(btn,false);
-			kanjiStart(pType);
-		}, 100);
-		return;
+	if (push(btn, kanjiStart, pType)) return;
+
+	switch(pType) {
+		case TRAINING_TYPE.SONOTA:
+			kanjiTrainingList = [];
+			kanjiIndexTrainingList = [];
+
+			currentTraining = TRAINING_TYPE.SONOTA;
+			let trainingList = id("sonota_input").value;
+			
+			let kanji = null;
+			for (let i = 0; i < trainingList.length; i++) {
+				kanji = Kanji.list.find(k => k.kanji == trainingList[i]);
+				if (kanji !== undefined) kanjiTrainingList.push(kanji);
+			}
+			
+			if (trainingList.length == 0) {
+				alertDialog("Liste vide !");
+				currentTraining = TRAINING_TYPE.NONE;
+				return;
+			}
+			if (kanjiTrainingList.length == 0) {
+				alertDialog("Aucun kanji connu détecté !");
+				currentTraining = TRAINING_TYPE.NONE;
+				return;
+			}
+			
+			none(id("sonota_container"));
+			break;
+		case TRAINING_TYPE.KANKEN:
+			currentTraining = TRAINING_TYPE.KANKEN;
+			none(id("kanken_container"));
+			break;
 	}
 
-	kanjiTrainingList = [];
-	kanjiIndexTrainingList = [];
-	
-	//! SONOTA ---------------------
-	if (pType == "sonota") {
-		currentTraining = TRAINING_TYPE.SONOTA;
-		let trainingList = id("sonota_input").value;
-		let bOrder = id("sonota_order_box").checked;
-		
-		let kanji = null;
-		for (let i = 0; i < trainingList.length; i++) {
-			kanji = Kanji.list.find(k => k.kanji == trainingList[i]);
-			if (kanji !== undefined) kanjiTrainingList.push(kanji);
-		}
-		
-		if (trainingList.length == 0) {
-			alertDialog("Liste vide !");
-			currentTraining = TRAINING_TYPE.NONE;
-			return;
-		}
-		if (kanjiTrainingList.length == 0) {
-			alertDialog("Aucun kanji connu détecté !");
-			currentTraining = TRAINING_TYPE.NONE;
-			return;
-		}
-		
-		none(id("sonota_container"));
-	}
-	//! ----------------------------
-
-	kanjiTrainingList.forEach(k => {
-		kanjiIndexTrainingList.push(k.id);
-	});
+	kanjiTrainingList.forEach(k => kanjiIndexTrainingList.push(k.id));
 
 	block(id("training_container"));
 	
@@ -186,17 +313,7 @@ function kanjiStart(pType, btn = null) {
 	next();
 }
 function trainingContinue(btn = null) {
-
-	if (btn != null) {
-		// editClass(btn, "active");
-		pushBtn(btn);
-		setTimeout(() => {
-			// editClass(btn, "active", false);
-			pushBtn(btn,false);
-			trainingContinue();
-		}, 100);
-		return;
-	}
+	if (push(btn, trainingContinue)) return;
 
 	none(id("training_continue"));
 	let saveData = localStorage.getItem(kanjiapp_training);
@@ -208,32 +325,42 @@ function trainingContinue(btn = null) {
 
 	switch(saveData.trainingType) {
 		case TRAINING_TYPE.KANKEN:
-			//? KANKEN START()
-			for (let i = 0; i < saveData.wordList.length; i++) {
-				wordTrainingList.push(Word.list.find(w => w.id == saveData.wordList[i]));
+			switch (saveData.category) {
+				case KANKEN_CAT.WORD_YOMI:
+				case KANKEN_CAT.YOJI_YOMI:
+				case KANKEN_CAT.WORD_KAKI:
+				case KANKEN_CAT.YOJI_KAKI:
+					for (let i = 0; i < saveData.wordList.length; i++) {
+						wordTrainingList.push(Word.list.find(w => w.id == saveData.wordList[i]));
+					}
+					wordTrainingList.forEach(w => wordIndexTrainingList.push(w.id));
+					trainingListLength = wordTrainingList.length;
+					wrongWordList = saveData.wrongList;
+					break;
+				case KANKEN_CAT.KANJI:
+					for (let i = 0; i < saveData.kanjiList.length; i++) {
+						kanjiTrainingList.push(Kanji.list.find(k => k.id == saveData.kanjiList[i]));
+					}
+					kanjiTrainingList.forEach(k => kanjiIndexTrainingList.push(k.id));
+					trainingListLength = kanjiTrainingList.length;
+					wrongList = saveData.wrongList;
+					break;
 			}
-			wordTrainingList.forEach(w => {
-				wordIndexTrainingList.push(w.id);
-			});
-			trainingListLength = wordTrainingList.length;
+			kankenCategory = saveData.category;
 			openCategory("漢検");
 			none(id("kanken_container"));
-			wrongWordList = saveData.wrongList;
 			break;
 		case TRAINING_TYPE.BUSHU:
 			break;
-		case TRAINING_TYPE.SONOTA: 
-			//? SONOTA START()
+		case TRAINING_TYPE.SONOTA:
 			for (let i = 0; i < saveData.kanjiList.length; i++) {
 				kanjiTrainingList.push(Kanji.list.find(k => k.id == saveData.kanjiList[i]));
 			}
-			kanjiTrainingList.forEach(k => {
-				kanjiIndexTrainingList.push(k.id);
-			});
+			kanjiTrainingList.forEach(k => kanjiIndexTrainingList.push(k.id));
 			trainingListLength = kanjiTrainingList.length;
+			wrongList = saveData.wrongList;
 			openCategory("その他");
 			none(id("sonota_container"));
-			wrongList = saveData.wrongList;
 			break;
 	}
 
@@ -248,15 +375,36 @@ function trainingContinue(btn = null) {
 
 	switch(saveData.trainingType) {
 		case TRAINING_TYPE.KANKEN:
-			if (saveData.checkDone) {
-				yomiNext(saveData);
-
-				none(id("check_btn"));
-				block(id("next_btn"));
-
-				yomiCheck(null, true, saveData.correct, saveData.incorrectWord);
-			} else {
-				yomiNext();
+			kankenCategory = saveData.category;
+			switch(saveData.category) {
+				case KANKEN_CAT.WORD_YOMI:
+				case KANKEN_CAT.YOJI_YOMI:
+					if (saveData.checkDone) {
+						yomiNext(saveData);
+						none(id("check_btn"));
+						block(id("next_btn"));
+						yomiCheck(null, true, saveData.correct, saveData.incorrectWord);
+					} else {
+						yomiNext();
+					}
+					break;
+				case KANKEN_CAT.WORD_KAKI:
+				case KANKEN_CAT.YOJI_KAKI:
+					if (saveData.checkDone) {
+						tangoNext(saveData);
+						tangoCheck();
+					} else {
+						tangoNext();
+					}
+					break;
+				case KANKEN_CAT.KANJI:
+					if (saveData.checkDone) {
+						next();
+						check();
+					} else {
+						next();
+					}
+					break;
 			}
 			break;
 		case TRAINING_TYPE.SONOTA: 
@@ -287,7 +435,7 @@ function yomiStart() {
 
 function yomiNext(pSaveData = null) {
 	current++;
-	let obj = {current: current, checkDone: pSaveData?.checkDone, wordList: wordIndexTrainingList, wrongList: wrongWordList, trainingType: currentTraining, category: KANKEN_CAT.YOMI, correct: pSaveData?.correct, incorrectWord: pSaveData?.incorrectWord };
+	let obj = {current: current, checkDone: pSaveData?.checkDone, wordList: wordIndexTrainingList, wrongList: wrongWordList, trainingType: currentTraining, category: kankenCategory, correct: pSaveData?.correct, incorrectWord: pSaveData?.incorrectWord };
 	localStorage.setItem(kanjiapp_training, JSON.stringify(obj));
 
 	const training_zone = id("training_zone");
@@ -299,13 +447,19 @@ function yomiNext(pSaveData = null) {
 	}
 
 	editClass(training_zone, "yomi");
-	
+	const w = wordTrainingList[current];
 	training_zone.innerHTML = "";
 	let html =
 	`
-	<div id="yomi_training_word_${wordTrainingList[current].id}" class="yomi_training_word">${wordTrainingList[current].word}</div>
-	<div id="yomi_training_imi">${wordTrainingList[current].imi}</div>
+	<div id="yomi_training_word_${w.id}" class="yomi_training_word">${w.word}</div>
 	`;
+
+	if (w.wRef != null) {
+		html += `<div id="yomi_training_imi">[${w.wRef.word}] ${w.wRef.imi}</div>`;
+	} else {
+		html += `<div id="yomi_training_imi">${w.imi}</div>`;
+	}
+	
 	html += keyboard_html;
 
 	html += `
@@ -335,10 +489,8 @@ function yomiCheck(btn = null, pbTrainingContinue = false, pbContinueCorrect = f
 
 	if (btn != null) {
 		if (btn.classList.contains("active")) return;
-		// editClass(btn, "active");
 		pushBtn(btn);
 		setTimeout(() => {
-			// editClass(btn, "active", false);
 			pushBtn(btn,false);
 			none(btn);
 			block(id("next_btn"));
@@ -394,10 +546,103 @@ function yomiCheck(btn = null, pbTrainingContinue = false, pbContinueCorrect = f
 	id("progress_bar").style.width = ((current+1) / wordTrainingList.length * 100) + "%";
 
 	if (!pbTrainingContinue) {
-		let obj = {current: current, checkDone: true, wordList: wordIndexTrainingList, wrongList: wrongWordList, trainingType: currentTraining, category: KANKEN_CAT.YOMI, correct: bCorrect, incorrectWord: bCorrect ? "" : keyboard_input.value };
+		let obj = {current: current, checkDone: true, wordList: wordIndexTrainingList, wrongList: wrongWordList, trainingType: currentTraining, category: kankenCategory, correct: bCorrect, incorrectWord: bCorrect ? "" : keyboard_input.value };
 		localStorage.setItem(kanjiapp_training, JSON.stringify(obj))
 	}
 
+}
+
+function tangoStart() {
+	currentTraining = TRAINING_TYPE.KANKEN;
+	none(id("kanken_container"));
+	block(id("training_container"));
+
+	current = -1;
+	wrongWordList = [];
+
+	id("training_progression").innerHTML = (current+1) + "/" + wordTrainingList.length;
+	id("progress_bar").style.width = "0%";
+
+	tangoNext();
+}
+
+function tangoNext(pSaveData = null) {
+	current++;
+	let obj = {current: current, checkDone: pSaveData?.checkDone, wordList: wordIndexTrainingList, wrongList: wrongWordList, trainingType: currentTraining, category: kankenCategory, correct: pSaveData?.correct, incorrectWord: pSaveData?.incorrectWord };
+	localStorage.setItem(kanjiapp_training, JSON.stringify(obj));
+
+	const training_zone = id("training_zone");
+
+	//? End
+	if (current >= wordTrainingList.length) {
+		displayEndTraining();
+		return;
+	}
+
+	editClass(training_zone, "yomi");
+
+	let fontSize = ""; //? 30
+	if (wordTrainingList[current].word.length > 15) fontSize = "tango_training_font_size_tokubetsu"; //? 20
+	
+	training_zone.innerHTML = "";
+	let html = "";
+	html +=
+	`
+	<div id="tango_training_word_${wordTrainingList[current].id}" class="tango_training_word ${fontSize}">${wordTrainingList[current].yomi}</div>
+	<div id="tango_training_imi" class="normal_btn" onClick="showTangoImi(this)">意味確認</div>
+	`;
+
+	html += `
+		<div class="training_check_zone">
+			<div id="check_btn_container">
+				<button id="check_btn" class="normal_btn" onClick="tangoCheck(this)">確認</button>
+			</div>
+			<div id="maru_batsu_btns" style="display:none">
+				<button id="batsu_btn" class="maru_batsu_btn" onClick="maruBatsu(false,this)">
+					<span id="batsu_btn_cross_left"></span>
+					<span id="batsu_btn_cross_right"></span>
+				</button>
+				<button id="maru_btn" class="maru_batsu_btn" onClick="maruBatsu(true,this)">
+					<span id="maru_btn_maru"></span>
+				</button>
+			</div>
+		</div>
+	`;
+
+	training_zone.innerHTML = html;
+}
+
+function tangoCheck(btn = null) {
+	if (push(btn, tangoCheck)) return;
+
+	const word = id("tango_training_word_" + wordTrainingList[current].id);
+	word.innerHTML = wordTrainingList[current].word;
+
+	showTangoImi();
+
+	none(id("check_btn_container"));
+	flex(id("maru_batsu_btns"));
+
+	id("training_progression").innerHTML = (current+1) + "/" + wordTrainingList.length;
+	id("progress_bar").style.width = ((current+1) / wordTrainingList.length * 100) + "%";
+
+	let obj = {current: current, checkDone: true, wordList: wordIndexTrainingList, wrongList: wrongWordList, trainingType: currentTraining, category: kankenCategory };
+	localStorage.setItem(kanjiapp_training, JSON.stringify(obj));
+}
+
+function showTangoImi(btn = null) {
+	if (push(btn, showTangoImi)) return;
+	const w = wordTrainingList[current];
+	const imi = id("tango_training_imi");
+
+	if (w.wRef != null) {
+		tango_training_imi.innerHTML = "["+ w.wRef.word + "] " + w.wRef.imi;
+	} else {
+		tango_training_imi.innerHTML = w.imi;
+	}
+	
+	editClass(tango_training_imi, "normal_btn", false);
+	editClass(tango_training_imi, "display");
 }
 
 function nextBtn(btn) {
@@ -414,11 +659,10 @@ function nextBtn(btn) {
 	}, 100);
 }
 
-//! next() SONOTA == KANKEN_KANJI
 function next() {
 
 	current++;
-	let obj = {current: current, checkDone: false, kanjiList: kanjiIndexTrainingList, wrongList: wrongList, trainingType: currentTraining };
+	let obj = {current: current, checkDone: false, kanjiList: kanjiIndexTrainingList, wrongList: wrongList, trainingType: currentTraining, category: kankenCategory };
 	localStorage.setItem(kanjiapp_training, JSON.stringify(obj));
 
 	const training_zone = id("training_zone");
@@ -474,18 +718,8 @@ function next() {
 
 }
 
-//! check() SONOTA == KANKEN_KANJI
 function check(btn = null) {
-	if (btn != null) {
-		// editClass(btn, "active");
-		pushBtn(btn);
-		setTimeout(() => {
-			// editClass(btn, "active", false);
-			pushBtn(btn,false);
-			check();
-		}, 100);
-		return;
-	}
+	if (push(btn, check)) return;
 
 	const kanji = id("training_kanji_" + kanjiTrainingList[current].id);
 	kanji.innerHTML = `
@@ -510,14 +744,12 @@ function check(btn = null) {
 	id("training_progression").innerHTML = (current+1) + "/" + kanjiTrainingList.length;
 	id("progress_bar").style.width = ((current+1) / kanjiTrainingList.length * 100) + "%";
 
-	let obj = {current: current, checkDone: true, kanjiList: kanjiIndexTrainingList, wrongList: wrongList, trainingType: currentTraining };
+	let obj = {current: current, checkDone: true, kanjiList: kanjiIndexTrainingList, wrongList: wrongList, trainingType: currentTraining, category: kankenCategory };
 	localStorage.setItem(kanjiapp_training, JSON.stringify(obj));
 }
 
-//! maruBatsu() SONOTA == KANKEN_KANJI
 function maruBatsu(pbMaru, btn = null) {
 	if (btn != null) {
-		// editClass(btn, "active");
 		pushBtn(btn);
 		if (pbMaru) {
 			editClass(id("maru_btn_maru"), "active");
@@ -527,7 +759,6 @@ function maruBatsu(pbMaru, btn = null) {
 		}
 		
 		setTimeout(() => {
-			// editClass(btn, "active", false);
 			pushBtn(btn,false);
 			if (pbMaru) {
 				editClass(id("maru_btn_maru"), "active", false);
@@ -540,13 +771,16 @@ function maruBatsu(pbMaru, btn = null) {
 
 		return;
 	}
-	if (pbMaru) {
 
-	} else {
-		wrongList += kanjiTrainingList[current].kanji;
-	}
 	none(id("maru_batsu_btns"));
-	next();
+
+	if (currentTraining == TRAINING_TYPE.SONOTA || (currentTraining == TRAINING_TYPE.KANKEN && kankenCategory == KANKEN_CAT.KANJI)) {
+		if (!pbMaru) wrongList += kanjiTrainingList[current].kanji;
+		next();
+	} else if (currentTraining == TRAINING_TYPE.KANKEN && equal(kankenCategory, KANKEN_CAT.WORD_KAKI, KANKEN_CAT.YOJI_KAKI)) {
+		if (!pbMaru) wrongWordList.push(wordTrainingList[current].id);
+		tangoNext();
+	}
 }
 
 function displayEndTraining() {
@@ -558,10 +792,12 @@ function displayEndTraining() {
 	switch(currentTraining) {
 		case TRAINING_TYPE.KANKEN:
 			switch(kankenCategory) {
-				case KANKEN_CAT.YOMI:
+				case KANKEN_CAT.WORD_YOMI:
+				case KANKEN_CAT.WORD_KAKI:
+				case KANKEN_CAT.YOJI_YOMI:
+				case KANKEN_CAT.YOJI_KAKI:
 					goodLength = wordTrainingList.length-wrongWordList.length;
 					trainingLength = wordTrainingList.length;
-					const copyBtn = `<button id="training_copy_btn" class="normal_btn training_copy_see_btns" onClick="copyWrongList()">Copy</button>`
 					
 					if (wrongWordList.length > 0) {
 						html = `
@@ -577,7 +813,6 @@ function displayEndTraining() {
 									});
 						html += `</ul>
 								<div class="training_btns">`;
-						if (kankenCategory != KANKEN_CAT.YOMI) html += copyBtn; //! Temporaire
 						html += `
 										<button id="training_see_btn" class="normal_btn training_copy_see_btns" onClick="seeWrongList()">See</button>
 									</div>
@@ -595,9 +830,38 @@ function displayEndTraining() {
 						`;
 					}
 					break;
-				case KANKEN_CAT.KANKEN_TANGO:
-					break;
-				case KANKEN_CAT.KANKEN_KANJI:
+				
+				case KANKEN_CAT.KANJI:
+					goodLength = kanjiTrainingList.length-wrongList.length;
+					trainingLength = kanjiTrainingList.length;
+					if (wrongList.length != "") {
+						html = `
+							<div id="training_result">
+								<div id="training_mark">
+									<p>${goodLength}/${trainingLength}</p>
+								</div>
+								<div class="training_wrong_list_container">
+									<div class="training_wrong_title">WRONG</div>
+									<p id="training_wrong_list">${wrongList}</p>
+									<div class="training_btns">
+										<button id="training_copy_btn" class="normal_btn training_copy_see_btns"
+											onClick="copyWrongList()">Copy</button>
+										<button id="training_see_btn" class="normal_btn training_copy_see_btns"
+											onClick="seeWrongList()">See</button>
+									</div>
+								</div>
+							</div>
+						`;
+					} else {
+						html = `
+							<div id="training_result">
+								<div id="training_mark">
+									<p>${goodLength}/${trainingLength}</p>
+								</div>
+								<div class="training_perfect">PERFECT!</div>
+							</div>
+						`;
+					}
 					break;
 			}
 			break;
@@ -662,12 +926,10 @@ function displayEndTraining() {
 
 function trainingBackBtn(btn = null) {
 	if (btn != null) {
-		// editClass(btn, "active");
 		pushBtn(btn);
 		editClass(id("training_back_arrow_1"), "active");
 		editClass(id("training_back_arrow_3"), "active");
 		setTimeout(() => {
-			// editClass(btn, "active", false);
 			pushBtn(btn,false);
 			editClass(id("training_back_arrow_1"), "active", false);
 			editClass(id("training_back_arrow_3"), "active", false);
@@ -683,19 +945,7 @@ function trainingBackBtn(btn = null) {
 }
 
 function trainingBack(pAction, btn = null) {
-	
-	if (btn != null) {
-		// editClass(btn, "active");
-		pushBtn(btn);
-		
-		setTimeout(() => {
-			// editClass(btn, "active", false);
-			pushBtn(btn,false);
-
-			trainingBack(pAction);
-		}, 100);
-		return;
-	}
+	if (push(btn, trainingBack, pAction)) return;
 
 	bTrainingEnd = false;
 	id("dialog").close();
@@ -721,21 +971,28 @@ function trainingBack(pAction, btn = null) {
 	currentTraining = -1;
 }
 
+function push(btn = null, f = null, ...pArgs) {
+	if (btn != null) {
+		pushBtn(btn);
+		setTimeout(() => {
+			pushBtn(btn,false);
+			if (pArgs.length > 0) {
+				f(pArgs[0]);
+			} else {
+				f();
+			}
+		}, 100);
+		return true;
+	}
+	return false;
+}
+
 function localSaveData() {
 	return (localStorage.getItem(kanjiapp_training) != null)
 }
 
 function deleteTrainingData(btn = null) {
-	if (btn != null) {
-		// editClass(btn, "active");
-		pushBtn(btn);
-		setTimeout(() => {
-			// editClass(btn, "active", false);
-			pushBtn(btn,false);
-			deleteTrainingData();
-		}, 100);
-		return;
-	}
+	if (push(btn, deleteTrainingData)) return;
 	localStorage.removeItem(kanjiapp_training);
 	none(id("training_continue"));
 }
@@ -749,18 +1006,27 @@ function seeWrongList() {
 	changeSection("main");
 	switch(currentTraining) {
 		case TRAINING_TYPE.KANKEN:
-			if (kankenCategory == KANKEN_CAT.YOMI) {
-				foundKanjiList = [];
-				includingWordArr = [];
-				exactWordArr = [];
-				wrongWordList.forEach(id => {
-					exactWordArr.push(Word.list[id]);
-				});
-				displayResult();
+			switch(kankenCategory) {
+				case KANKEN_CAT.WORD_YOMI:
+				case KANKEN_CAT.WORD_KAKI:
+				case KANKEN_CAT.YOJI_YOMI:
+				case KANKEN_CAT.YOJI_KAKI:
+					foundKanjiList = [];
+					includingWordArr = [];
+					exactWordArr = [];
+					wrongWordList.forEach(id => {
+						exactWordArr.push(Word.list[id]);
+					});
+					displayResult();
+					break;
+				case KANKEN_CAT.KANJI:
+					const list = id("training_wrong_list").innerText;
+					search(list);
+					break;
 			}
 			break;
 		case TRAINING_TYPE.SONOTA:
-			let list = id("training_wrong_list").innerText;
+			const list = id("training_wrong_list").innerText;
 			search(list);
 			break;
 	}

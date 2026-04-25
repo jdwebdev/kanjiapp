@@ -355,31 +355,24 @@ function displayResult() {
 		wordHTML += `
 			<div class="word_result" id="word_id_${w.id}" onClick="wordInfo(${w.id}, 'w')">
 				<div class="word_result_yomi_word">
+					<div class="word_result_yomi">${w.yomi}</div>
+					<div class="word_result_word">${w.word}</div>
 		`;
 
-		if (w instanceof Yojijukugo && w.yRef != null) {
-			wordHTML += `
-				<div class="word_result_yomi">${w.yomi}</div>
-				<div class="word_result_word">${w.word}</div>
-				<div class="word_result_imi"><span class="word_result_ref_word">>>> [${w.yRef.word}]</span> ${w.yRef.imi}</div>
-			`;
+		if (w.wRef != null) {
+			wordHTML += `<div class="word_result_imi"><span class="word_result_ref_word">>>> [${w.wRef.word}]</span> ${w.wRef.imi}</div>`;
 		} else {
-			wordHTML += `
-				<div class="word_result_yomi">${w.yomi}</div>
-				<div class="word_result_word">${w.word}</div>
-			`;
-			if (w.wRef != null) {
-				wordHTML += `<div class="word_result_imi"><span class="word_result_ref_word">>>> [${w.wRef.word}]</span> ${w.wRef.imi}</div>`;
-			} else {
-				wordHTML += `<div class="word_result_imi">${w.imi}</div>`;
-			}
+			wordHTML += `<div class="word_result_imi">${w.imi}</div>`;
 		}
+		
 		wordHTML += `
 			</div>
 			<div class="word_result_misc">
 		`;
 		if (w.yojijukugo) {
-			
+			if (w.bPriority) {
+				wordHTML += `<span class="word_priority">・</span>`;
+			}
 			wordHTML += `
 				<div class="yojijukugo">四</div>
 			`;
@@ -507,25 +500,14 @@ function kanjiInfo(pIndex, pElementFrom = "", pbBack = false) {
 		html += `
 		<div class="word_result" id="word_id_${i}" onClick="wordInfo(${w.id}, 'w')">
 			<div class="word_result_yomi_word">
+				<div class="word_result_yomi">${w.yomi}</div>
+				<div class="word_result_word">${w.word}</div>
 		`;
 
-		if (w instanceof Yojijukugo && w.yRef != null) {
-			html += `
-				<div class="word_result_yomi">${w.yomi}</div>
-				<div class="word_result_word">${w.word}</div>
-				<div class="word_result_imi"><span class="word_result_ref_word">>>> [${w.yRef.word}]</span> ${w.yRef.imi}</div>
-			`;
+		if (w.wRef != null) {
+			html += `<div class="word_result_imi"><span class="word_result_ref_word">>>> [${w.wRef.word}]</span> ${w.wRef.imi}</div>`;
 		} else {
-			html += `
-				<div class="word_result_yomi">${w.yomi}</div>
-				<div class="word_result_word">${w.word}</div>
-			`;
-
-			if (w.wRef != null) {
-				html += `<div class="word_result_imi"><span class="word_result_ref_word">>>> [${w.wRef.word}]</span> ${w.wRef.imi}</div>`;
-			} else {
-				html += `<div class="word_result_imi">${w.imi}</div>`;
-			}
+			html += `<div class="word_result_imi">${w.imi}</div>`;
 		}
 
 		html += `
@@ -534,7 +516,7 @@ function kanjiInfo(pIndex, pElementFrom = "", pbBack = false) {
 		`;
 
 		if (index < Kanji.list[pIndex].wordList.length-1) html += `<div class="word_result_separator"></div>`;
-	})
+	});
 	html +=
 	`
 			</div>
@@ -607,7 +589,9 @@ function wordInfo(pIndex, pElementFrom = "", pbBack = false) {
 
 		html += word.ateji ? `<div class="word_type modal_word_ateji">当て字</div>` : "";
 
-		html += word.yojijukugo ? `<div class="word_type modal_word_ichimoji">四</div>` : "";
+		let priority = "";
+		if (word.bPriority) priority = "yoji_priority";
+		html += word.yojijukugo ? `<div class="word_type modal_word_ichimoji ${priority}">四</div>` : "";
 
 		html += word.kotowaza ? `<div class="word_type modal_word_ichimoji">諺</div>` : "";
 
@@ -628,13 +612,13 @@ function wordInfo(pIndex, pElementFrom = "", pbBack = false) {
 		<p class="modal_separator">意味</p>
 	`;
 
-	if (word instanceof Yojijukugo) {
-		if (word.yRef != null) {
-			html += `<p class="modal_imi modal_ref_imi"><button class="ref_link" onClick="wordInfo(${word.yRef.id}, 'w')">${word.yRef.word} ➤</button> ${word.yRef.imi}</p>`;
-		} else {
-			html += `<p class="modal_imi">${word.imi}</p>`;
-		}
+	if (word.wRef != null) {
+		html += `<p class="modal_imi modal_ref_imi"><button class="ref_link" onClick="wordInfo(${word.wRef.id}, 'w')">${word.wRef.word} ➤</button> ${word.wRef.imi}</p>`;
+	} else {
+		html += `<p class="modal_imi">${word.imi}</p>`;
+	}
 
+	if (word instanceof Yojijukugo) {
 		if (word.betsuYomiList.length > 0) {
 			html += `
 				<p class="modal_separator">別の読み</p>
@@ -679,20 +663,13 @@ function wordInfo(pIndex, pElementFrom = "", pbBack = false) {
 			html += `</div>`;
 		}
 	} else {
-		if (word.wRef != null) {
-			html += `<p class="modal_imi modal_ref_imi"><button class="ref_link" onClick="wordInfo(${word.wRef.id}, 'w')">${word.wRef.word} ➤</button> ${word.wRef.imi}</p>`;
-		} else {
-			html += `<p class="modal_imi">${word.imi}</p>`;
-		}
 		html += `
 			<p class="modal_separator">読み</p>
 			<p class="modal_imi">${word.yomi}</p>
 		`;
 	}
 
-	html += `
-		<div class="modal_words">
-	`;
+	html += `<div class="modal_words">`;
 
 	let no_border = "";
 	if (word.kanjiList.length > 0) html += `<p class="modal_separator">漢字</p>`;
@@ -1276,14 +1253,7 @@ function alertDialog(pText) {
 	}, 100);
 }
 function closeAlertDialog(btn = null) {
-	if (btn != null) {
-		editClass(btn, "active");
-		setTimeout(() => {
-			editClass(btn, "active", false);
-			closeAlertDialog();
-		}, 100);
-		return;
-	}
+	if (push(btn, closeAlertDialog)) return;
 	alert_dialog.close();
 }
 

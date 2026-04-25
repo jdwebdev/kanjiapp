@@ -47,7 +47,8 @@ body {
 	min-height: 100vh;
 }
 
-ul {
+ul,
+ol {
 	list-style: none;
 }
 
@@ -829,6 +830,14 @@ main {
 	/* background-color: red; */
 }
 
+.word_priority {
+	position: absolute;
+	left: -6px;
+	margin-top: 16px;
+	font-size: 30px;
+	color: var(--red);
+}
+
 .word_kanken {
 	align-self: end;
 }
@@ -1319,6 +1328,10 @@ main {
 	width: 24px;
 }
 
+.yoji_priority {
+	background-color: var(--red);
+}
+
 .ref_link {
 	font-family: Arial, Helvetica, sans-serif;
 	border: 1px solid var(--black);
@@ -1681,7 +1694,7 @@ main {
 #sonota_filter_go {
 	width: 80%;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 }
 
 #sonota_start {
@@ -1689,6 +1702,7 @@ main {
 	width: 60px;
 	font-size: 18px;
 	font-family: Arial, Helvetica, sans-serif;
+	align-self: end;
 }
 
 #training_continue {
@@ -2135,6 +2149,42 @@ main {
 	/* background-color: yellow; */
 }
 
+.tango_training_word {
+	min-height: 50px;
+	padding: 5px;
+	text-align: center;
+	font-size: 30px;
+	border: 2px solid var(--blue);
+	border-radius: 10px;
+}
+
+.tango_training_word .tango_training_font_size_tokubetsu {
+	font-size: 20px;
+}
+
+.tango_training_font_size_tokubetsu {
+	font-size: 20px !important;
+}
+
+#tango_training_imi {
+	margin: 10px auto;
+	width: 200px;
+	font-family: "kyokasho";
+	min-height: 20px;
+	font-size: 25px;
+	text-align: center;
+	padding: 5px;
+	/* box-shadow: 0px 2px 0px var(--dark_blue); */
+}
+
+#tango_training_imi.display {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	font-size: 20px;
+	width: unset;
+}
+
+
 #next_btn {
 	width: 100%;
 	height: 50px;
@@ -2194,12 +2244,6 @@ main {
 	margin: 70px auto;
 	height: 420px;
 
-	/* width: 100%;
-	background-color: var(--light_blue);
-	border: 2px solid var(--blue);
-	border-radius: 10px;
-	box-shadow: 0px 4px 0px var(--dark_blue); */
-
 	transition: ease-in 0.2s;
 }
 
@@ -2222,10 +2266,81 @@ main {
 	width: 90%;
 	height: 340px;
 	margin: 0 auto;
-	/* background-color: red; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+}
+
+#kanken_setting_dialog {
+	margin: 70px auto;
+	height: 530px;
+}
+
+.kanken_setting_main_container {
+	width: 90%;
+	height: 450px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.kanken_setting_separator {
+	height: 2px;
+	background-color: var(--blue);
+	/* margin-top: 5px; */
+}
+
+.kanken_setting_list_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 250px;
+}
+
+.kanken_input_div {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	width: 150px;
+	/* background-color: red; */
+	align-items: center;
+}
+
+.kanken_input_div button {
+	padding: 5px 10px;
+	font-size: 18px;
+}
+
+.kanken_range_input {
+	border-radius: 5px;
+	height: 30px;
+	width: 70px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	border-color: var(--blue);
+	box-shadow: inset 0px 2px 0px var(--dark_blue);
+}
+
+.kanken_list_possibilities {
+	height: 150px;
+	overflow-y: scroll;
+	border-radius: 5px;
+	padding: 5px;
+	padding-top: 10px;
+	background-color: var(--white);
+	border: 2px solid var(--blue);
+	box-shadow: inset 0px 3px 0px var(--dark_blue);
+}
+
+.kanken_possibilities {
+	border-radius: 3px;
+	padding: 0px 4px;
+}
+
+.kanken_possibilities.active {
+	background-color: var(--blue);
+	color: var(--white);
 }
 
 .dialog_close_btn {

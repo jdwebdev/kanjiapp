@@ -178,11 +178,8 @@
 				<div id="sonota_1">
 					<input id="sonota_input" placeholder="漢字を入れてください" type="text">
 					<div id="sonota_filter_go">
-						<div>
-							<input id="sonota_order_box" type="checkbox">
-							<label for="sonota_order_box">順番</label>
-						</div>
-						<button id="sonota_start" class="normal_btn" onClick="kanjiStart('sonota', this)">GO</button>
+						<button id="sonota_start" class="normal_btn"
+							onClick="kanjiStart(TRAINING_TYPE.SONOTA, this)">GO</button>
 					</div>
 				</div>
 			</div>
@@ -221,14 +218,46 @@
 				<p class="kanken_dialog_text">設問を選んでください</p>
 				<div class="kanken_dialog_btn_container">
 					<button id="kd_btn_yomi" class="normal_btn dialog_btn"
-						onClick="prepareKankenTest(0, this)">読み</button>
-					<button class="normal_btn dialog_btn" onClick="prepareKankenTest(1, this)">書き取り(単語)</button>
-					<button class="normal_btn dialog_btn" onClick="prepareKankenTest(2, this)">書き取り(漢字)</button>
-					<button class="normal_btn dialog_btn" onClick="prepareKankenTest(3, this)">部首</button>
-					<button id="yojijukugo_btn" class="normal_btn dialog_btn"
-						onClick="prepareKankenTest(4, this)">四字熟語</button>
+						onClick="prepareKankenTest(KANKEN_CAT.WORD_YOMI, this)">読み</button>
+					<button class="normal_btn dialog_btn"
+						onClick="prepareKankenTest(KANKEN_CAT.WORD_KAKI, this)">書き取り(単語)</button>
+					<button class="normal_btn dialog_btn"
+						onClick="prepareKankenTest(KANKEN_CAT.KANJI, this)">書き取り(漢字)</button>
+					<button class="normal_btn dialog_btn"
+						onClick="prepareKankenTest(KANKEN_CAT.BUSHU, this)">部首</button>
+					<button id="yojijukugo_yomi_btn" class="normal_btn dialog_btn"
+						onClick="prepareKankenTest(KANKEN_CAT.YOJI_YOMI, this)">四字熟語(読み)</button>
+					<button id="yojijukugo_kaki_btn" class="normal_btn dialog_btn"
+						onClick="prepareKankenTest(KANKEN_CAT.YOJI_KAKI, this)">四字熟語(書き)</button>
 					<button id="kanken_dialog_close_btn" class="normal_btn dialog_btn dialog_close_btn"
 						onClick="closeKankenDialog(this)">
+						<span id="cross_left"></span>
+						<span id="cross_right"></span>
+					</button>
+				</div>
+			</dialog>
+			<dialog id="kanken_setting_dialog" class="dialog">
+				<p class="kanken_dialog_text">練習設定</p>
+				<div class="kanken_setting_main_container">
+					<button id="kanken_all_btn" class="normal_btn dialog_btn"
+						onClick="filteredKankenStart(this,0)">全部</button>
+					<div class="kanken_setting_separator"></div>
+					<div class="kanken_setting_list_container">
+						<div class="kanken_input_div">
+							<label for="kanken_range_input">数</label>
+							<input id="kanken_range_input" class="kanken_range_input" value="100" type="number">
+							<button class="normal_btn" onClick="changeKankenRange()">OK</button>
+						</div>
+						<ol id="kanken_list_possibilities" class="kanken_list_possibilities"></ol>
+						<button id="kanken_range_btn" class="normal_btn dialog_btn"
+							onClick="filteredKankenStart(this)">GO</button>
+					</div>
+					<div id="kanken_yoji_priority_separator" class="kanken_setting_separator"></div>
+					<button id="kanken_yoji_priority" class="normal_btn dialog_btn"
+						onClick="priorityKankenStart(this)">優先</button>
+					<div class="kanken_setting_separator"></div>
+					<button id="kanken_dialog_close_btn" class="normal_btn dialog_btn dialog_close_btn"
+						onClick="closeKankenSettingDialog(this)">
 						<span id="cross_left"></span>
 						<span id="cross_right"></span>
 					</button>

@@ -82,7 +82,7 @@ class Yojijukugo extends Word {
 	static wordList = [];
 	static imiList = [];
 
-	constructor(pId, pWord, pYomi, pImi, pKanken, pPage, pSynonym, pAntonym, pBetsuYomi, pRef, pPlus) {
+	constructor(pId, pWord, pYomi, pImi, pKanken, pPage, pSynonym, pAntonym, pBetsuYomi, pRef, pPlus, pPriority) {
 
 		super(Word.ID, pWord, pYomi, pImi, 4, pKanken);
 
@@ -111,19 +111,16 @@ class Yojijukugo extends Word {
 		}
 
 		this.ref = pRef;
-		this.yRef = null;
+		this.wRef = null;
 		this.page = pPage;
 		this.plus = pPlus;
-		
-		
+		this.bPriority = pPriority;
 		
 		if (this.yomi.length > this.word.length*2+1) {
 			this.furigana = `<span class="kanji">${this.word}<span class="furigana furigana_left">${this.yomi}</span></span>`;
 		} else {
 			this.furigana = `<span class="kanji">${this.word}<span class="furigana">${this.yomi}</span></span>`;
 		}
-
-		
 
 		Yojijukugo.list.push(this);
 	}
@@ -132,13 +129,8 @@ class Yojijukugo extends Word {
 		Yojijukugo.list.forEach(y => {
 			if (y.ref != "") {
 				const yoji = Yojijukugo.list.find(y2 => y2.word == y.ref);
-				if (yoji != null) y.yRef = yoji;
+				if (yoji != null) y.wRef = yoji;
 			}
-			// if (y.synonymList.length > 0) {
-			// 	y.synonym.forEach(s => {
-			// 		const syn = Yojijukugo.list.find(y2 => y2.word == s);
-			// 	});
-			// }
 		});
 	}
 }

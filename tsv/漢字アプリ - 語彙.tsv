@@ -3426,7 +3426,7 @@
 雑音	ざつおん	Bruits, parasites, friture			<span class="kanji">雑音<span class="furigana">ざつおん</span></span>			
 雑感	ざっかん	Pensées / impressions diverses			<span class="kanji">雑感<span class="furigana">ざっかん</span></span>			
 雑草	ざっそう	Herbes folles, mauvais herbe			<span class="kanji">雑草<span class="furigana">ざっそう</span></span>			
-雑木林	ぞうきばやし	Taillis, bois en taillis, petit bois			<span class="kanji">雑木林<span class="furigana">ぞうきばやし</span></span>			
+雑木林	ぞうきばやし	Taillis, bois en taillis, petit bois		6	<span class="kanji">雑木林<span class="furigana">ぞうきばやし</span></span>			
 殺す	ころす	Tuer, assassiner			<span class="kanji">殺<span class="furigana">ころ</span></span>す			
 自殺	じさつ	Suicide			<span class="kanji">自殺<span class="furigana">じさつ</span></span>			
 暗殺	あんさつ	Assassinat			<span class="kanji">暗殺<span class="furigana">あんさつ</span></span>			
@@ -6275,8 +6275,8 @@
 累計	るいけい	(Montant) total			<span class="kanji">累計<span class="furigana">るいけい</span></span>			
 係累	けいるい	Famille, personnes à charge			<span class="kanji">係累<span class="furigana">けいるい</span></span>			
 累進	るいしん	Promotion graduelle / successive			<span class="kanji">累進<span class="furigana">るいしん</span></span>			
-異なる	ことなる	Différent			<span class="kanji">異<span class="furigana">こと</span></span>なる			
-異常	いじょう	Anormal, inhabituel			<span class="kanji">異常<span class="furigana">いじょう</span></span>			
+異なる	ことなる	Différent		5	<span class="kanji">異<span class="furigana">こと</span></span>なる			
+異常	いじょう	Anormal, inhabituel		5	<span class="kanji">異常<span class="furigana">いじょう</span></span>			
 異質	いしつ	Hétérogénéité			<span class="kanji">異質<span class="furigana">いしつ</span></span>			
 異国	いこく	Pays étranger			<span class="kanji">異国<span class="furigana">いこく</span></span>			
 異議	いぎ	Objection			<span class="kanji">異議<span class="furigana">いぎ</span></span>			
@@ -11458,7 +11458,7 @@
 判読	はんどく	Déchiffrement		6	<span class="kanji">判読<span class="furigana">はんどく</span></span>			
 大判	おおばん	De grande taille (papier, cahier, livre); Pièce d'or ovale		6	<span class="kanji">大判<span class="furigana">おおばん</span></span>		〜の画用紙	
 液状化	えきじょうか	Liquéfaction		6	<span class="kanji">液状化<span class="furigana">えきじょうか</span></span>			
-二酸化炭素	にさんかたんそ	Bioxyde de carbone		6	<span class="kanji">二酸化炭素<span class="furigana">にさんかたんそ</span></span>			
+二酸化炭素	にさんかたんそ	Dioxyde de carbone		6	<span class="kanji">二酸化炭素<span class="furigana">にさんかたんそ</span></span>			
 安置	あんち	Placer avec soin		6	<span class="kanji">安置<span class="furigana">あんち</span></span>			
 目に余る	めにあまる	Être intolérable, insupportable	慣用句	6	<span class="kanji">目<span class="furigana">め</span></span>に<span class="kanji">余<span class="furigana">あま</span></span>る			
 検温	けんおん	Prendre la température de qqn		6	<span class="kanji">検温<span class="furigana">けんおん</span></span>			
@@ -11508,3 +11508,5 @@
 要領	ようりょう	Point essentiel; truc; manière		6	<span class="kanji">要領<span class="furigana">ようりょう</span></span>			
 謝恩会	しゃおんかい	Réunion de remerciement		6	<span class="kanji">謝恩会<span class="furigana">しゃおんかい</span></span>			
 備えあれば憂いなし	そなえあればうれいなし	Il faut être prêt à tout, alors on n'a pas de surprise		6	<span class="kanji">備<span class="furigana">そな</span></span>えあれば<span class="kanji">憂<span class="furigana">うれ</span></span>いなし			
+常備	じょうび	De réserve; garder en réserve		6	<span class="kanji">常備<span class="furigana">じょうび</span></span>			
+製糸	せいし	Filature, fabrication du fil		6	<span class="kanji">製糸<span class="furigana">せいし</span></span>			

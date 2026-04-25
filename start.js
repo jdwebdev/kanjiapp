@@ -111,8 +111,8 @@ function createYojijukugo(pRow) {
     for (let i = 0; i < row.length; i++) {
         row[i] = row[i].split('\t');
 		if (i > 0) {
-			//?                   pId, pWord,   pYomi,     pImi,      pKanken,   pPage,     pSynonym,  pAntonym,  pBetsuYomi, pRef,     pPlus
-			test = new Yojijukugo(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4], row[i][5], row[i][6], row[i][7], row[i][8], row[i][9]);
+			//?                   pId, pWord,   pYomi,     pImi,      pKanken,   pPage,     pSynonym,  pAntonym,  pBetsuYomi, pRef,     pPlus,     pPriority
+			test = new Yojijukugo(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4], row[i][5], row[i][6], row[i][7], row[i][8], row[i][9], row[i][10]);
 		}
     }
 
@@ -136,7 +136,6 @@ function createGenkiWord(pRow) {
 	Kanji.list.forEach(k => {
 		GenkiWord.list.forEach(w => {
 			if (w.word.includes(k.kanji)) {
-				k.setWord(w.id);
 				w.setKanji(k.id);
 			}
 		});
@@ -183,7 +182,6 @@ function createMinnaWord(pRow) {
 	Kanji.list.forEach(k => {
 		MinnaWord.list.forEach(w => {
 			if (w.word.includes(k.kanji)) {
-				k.setWord(w.id);
 				w.setKanji(k.id);
 			}
 		});
