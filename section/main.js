@@ -818,14 +818,17 @@ function footerMainBtn() {
 		// log("menu filter");
 		
 		if (bFooterOpen) {
+			// editClass(id("filter_panel"), "open", false);
 			editClass(id("footer_zone"),"open", false);
 			none(id("footer_open"));
-			editClass(id("span_1"), "span_1_arrow_right", false);
-			editClass(id("span_2"), "span_2_arrow_right", false);
-			editClass(id("span_3"), "span_3_arrow_right", false);
+
+			editClass(id("span_1"), "span_1_arrow", false);
+			editClass(id("span_2"), "span_2_arrow", false);
+			editClass(id("span_3"), "span_3_arrow", false);
 
 			openKankenLvl(false);
 		} else {
+			// editClass(id("filter_panel"), "open");
 			editClass(id("footer_zone"),"open");
 			setTimeout(() => {
 				flex(id("footer_open"));
@@ -845,9 +848,10 @@ function footerMainBtn() {
 				}
 			}, 300);
 			none(footer_display_type);
-			editClass(id("span_1"), "span_1_arrow_right");
-			editClass(id("span_2"), "span_2_arrow_right");
-			editClass(id("span_3"), "span_3_arrow_right");
+			
+			editClass(id("span_1"), "span_1_arrow");
+			editClass(id("span_2"), "span_2_arrow");
+			editClass(id("span_3"), "span_3_arrow");
 		}
 		bFooterOpen = !bFooterOpen;
 	}
@@ -1137,10 +1141,6 @@ function test(pId) {
 	}
 }
 
-
-//! ---------------------
-//TODO: SECTION.MAIN / SECTION.TRAINING
-//! ---------------------
 function changeSection(pSection) {
 	switch(pSection) {
 		case "main":

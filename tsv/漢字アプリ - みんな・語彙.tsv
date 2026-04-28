@@ -190,3 +190,62 @@ CD		CD	1	2		Nom
 ペキン		Pékin	1	4		Nom	
 ロサンゼルス		Los Angeles	1	4		Nom	
 ロンドン		Londres	1	4		Nom	
+行く	いく	Aller	1	5	いきます	U-Vb	
+来る	くる	Venir	1	5	きます	Irr-Vb	
+帰る	かえる	Rentrer (chez soi), retourner	1	5	かえります	U-Vb	
+学校	がっこう	École	1	5		Nom	
+スーパー		Supermarché	1	5		Nom	
+駅	えき	Gare, station	1	5		Nom	
+飛行機	ひこうき	Avion	1	5		Nom	
+船	ふね	Bateau	1	5		Nom	
+電車	でんしゃ	Train	1	5		Nom	
+地下鉄	ちかてつ	Métro	1	5		Nom	
+新幹線	しんかんせん	Shinkansen	1	5		Nom	
+バス		Bus	1	5		Nom	
+タクシー		Taxi	1	5		Nom	
+自転車	じてんしゃ	Bicyclette	1	5		Nom	
+歩いて	あるいて	À pied	1	5			
+人	ひと	Personne, gens	1	5		Nom	
+友達	ともだち	Ami(e)	1	5		Nom	
+彼	かれ	Lui, il, petit ami	1	5		Nom	
+彼女	かのじょ	Elle, petite amie	1	5		Nom	
+家族	かぞく	Famille	1	5		Nom	
+一人で	ひとりで	Seul(e), par soi-même	1	5			
+先週	せんしゅう	La semaine dernière	1	5		Nom	
+今週	こんしゅう	Cette semaine	1	5		Nom	
+来週	らいしゅう	La semaine prochaine	1	5		Nom	
+先月	せんげつ	Le mois dernier	1	5		Nom	
+今月	こんげつ	Ce mois	1	5		Nom	
+来月	らいげつ	Le mois prochain	1	5		Nom	
+去年	きょねん	L'année dernière	1	5		Nom	
+今年	ことし	Cette année	1	5		Nom	
+来年	らいねん	L'année prochaine	1	5		Nom	
+～年	～ねん	(l'année) ～	1	5			
+何年	なんねん	Quelle année	1	5			
+～月	～がつ	(le mois de) ～	1	5			
+何月	なんがつ	Quel mois	1	5			
+１日	ういたち	Le 1er du mois	1	5			
+２日	ふつか	Le 2 du mois, 2 jours	1	5			
+３日	みっか	Le 3 du mois, 3 jours	1	5			
+４日	よっか	Le 4 du mois, 4 jours	1	5			
+５日	いつか	Le 5 du mois, 5 jours	1	5			
+６日	むいか	Le 6 du mois, 6 jours	1	5			
+７日	なのか	Le 7 du mois, 7 jours	1	5			
+８日	ようか	Le 8 du mois, 8 jours	1	5			
+９日	ここのか	Le 9 du mois, 9 jours	1	5			
+１０日	とおか	Le 10 du mois, 10 jours	1	5			
+１４日	じゅうよっか	Le 14 du mois, 14 jours	1	5			
+２０日	はつか	Le 20 du mois, 20 jours	1	5			
+２４日	にじゅうよっか	Le 24 du mois, 24 jours	1	5			
+～日	～にち	Le ～ (du mois), ～ jour(s)	1	5			
+何日	なんにち	Quel jour du mois, combien de jours	1	5			
+いつ		Quand	1	5			
+誕生日	たんじょうび	Anniversaire	1	5		Nom	
+そうですね		C'est cela.	1	5			
+［どうも］ありがとうございました		Merci [beaucoup]	1	5			
+どういたしまして		Je vous en prie. / De rien.	1	5			
+～番線	～ばんせん	Quai ～, voie ～	1	5			
+次の	つぎの	Prochain	1	5			
+普通	ふつう	(Train) omnibus	1	5		Nom	
+急行	きゅうこう	(Train) Express	1	5		Nom	
+特急	とっきゅう	(Train) Spécial express	1	5		Nom	
