@@ -92,6 +92,7 @@ function createKanji(pRow) {
         //?             pId, pKanji,   pItaiji,   pOnYomi,   pKunYomi,  pKakusuu,  pImi,      pBushu,    pGakunen,  pKanken,    pJitenRef,  pPath
         test = new Kanji(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4], row[i][5], row[i][6], row[i][9], row[i][10], row[i][11], row[i][12]);
     }
+	Kanji.setKanjibyList();
 }
 
 function createWord(pRow) {
@@ -131,8 +132,6 @@ function createGenkiWord(pRow) {
         test = new GenkiWord(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4], row[i][5], row[i][6]);
     }
 
-	// log(GenkiWord.list);
-
 	Kanji.list.forEach(k => {
 		GenkiWord.list.forEach(w => {
 			if (w.word.includes(k.kanji)) {
@@ -148,8 +147,6 @@ function createGenkiGram(pRow) {
         row[i] = row[i].split('\t');
         test = new GenkiGram(i, row[i][0], row[i][1], row[i][2], row[i][3]);
     }
-
-	// log(GenkiGram.list);
 }
 function createGenkiExample(pRow) {
 	const row = pRow;
@@ -159,7 +156,6 @@ function createGenkiExample(pRow) {
         test = new GenkiExample(i, row[i][3], row[i][0], row[i][1], row[i][2]);
     }
 
-	// log(GenkiExample.list);
 	let gram = null;
 	GenkiExample.list.forEach(ex => {
 		gram = GenkiGram.list.find(g => g.gramID == ex.gramID);
@@ -177,8 +173,6 @@ function createMinnaWord(pRow) {
         test = new MinnaWord(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4], row[i][5], row[i][6], row[i][7]);
     }
 
-	// log(MinnaWord.list);
-
 	Kanji.list.forEach(k => {
 		MinnaWord.list.forEach(w => {
 			if (w.word.includes(k.kanji)) {
@@ -194,8 +188,6 @@ function createMinnaGram(pRow) {
         row[i] = row[i].split('\t');
         test = new MinnaGram(i, row[i][0], row[i][1], row[i][2], row[i][3]);
     }
-
-	// log(MinnaGram.list);
 }
 function createMinnaExample(pRow) {
 	const row = pRow;
@@ -205,7 +197,6 @@ function createMinnaExample(pRow) {
         test = new MinnaExample(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4]);
     }
 
-	// log(MinnaExample.list);
 	let gram = null;
 	MinnaExample.list.forEach(ex => {
 		gram = MinnaGram.list.find(g => g.gramID == ex.gramID);

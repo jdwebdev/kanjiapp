@@ -393,12 +393,9 @@ function activeKeyboard() {
 			const headerHeight = 50;
 			const keyboardScreenX = keyboard_part.offsetLeft + kp.offsetLeft;
 			const keyboardScreenY = keyboard_part.offsetTop + kp.offsetTop + headerHeight;
-			// log("keyboard_container: " + keyboard_container.offsetTop);
-			// log("keyboardScreenY: " + keyboardScreenY);
 
 			const touchX = e.targetTouches[0].clientX;
 			const touchY = e.targetTouches[0].clientY;
-			// log("touchY: " + touchY);
 
 			if (touchX >= (keyboardScreenX + centerBtn.x) && touchX < (keyboardScreenX + centerBtn.x + kpbtnSize.w) 
 			&& touchY >= (keyboardScreenY + centerBtn.y) && touchY < (keyboardScreenY + centerBtn.y + kpbtnSize.h)) {

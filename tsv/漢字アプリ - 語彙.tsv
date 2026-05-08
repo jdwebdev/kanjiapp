@@ -5271,7 +5271,7 @@
 逮捕状	たいほじょう	Mandat d'arrêt			<span class="kanji">逮捕状<span class="furigana">たいほじょう</span></span>			
 建てる	たてる	Construire			<span class="kanji">建<span class="furigana">た</span></span>てる			
 建つ	たつ	Être construit			<span class="kanji">建<span class="furigana">た</span></span>つ			
-建設	けんせつ	Construction			<span class="kanji">建設<span class="furigana">けんせつ</span></span>			
+建設	けんせつ	Construction		6	<span class="kanji">建設<span class="furigana">けんせつ</span></span>			
 建立	こんりゅう	Construire, bâtir			<span class="kanji">建立<span class="furigana">こんりゅう</span></span>			
 建物	たてもの	Bâtiment			<span class="kanji">建物<span class="furigana">たてもの</span></span>			
 二階建て	にかいだて	À deux étages			<span class="kanji">二階建<span class="furigana">にかいだ</span></span>て			
@@ -11226,6 +11226,7 @@
 軽鴨	カルガモ	Canard de Chine		10	<span class="kanji">軽鴨<span class="furigana">カルガモ</span></span>			
 図工（図画工作）	ずこう(ずがこうさく)	Peinture et travaux manuels		10	<span class="kanji">図工<span class="furigana">ずこう</span></span>（<span class="kanji">図画工作<span class="furigana">ずがこうさく</span></span>）			
 虫メガネ	むしメガネ	Loupe		10	<span class="kanji">虫<span class="furigana">むし</span></span>メガネ			
+夕立	ゆうだち	Averse, pluie d'orage		10	<span class="kanji">夕立<span class="furigana">ゆうだち</span></span>			
 雪合戦	ゆきがっせん	Bataille de boules de neige		9	<span class="kanji">雪合戦<span class="furigana">ゆきがっせん</span></span>			
 岩場	いわば	Rocher, paroi rocheuse		9	<span class="kanji">岩場<span class="furigana">いわば</span></span>			
 風車	かざぐるま	Moulin à vent		9	<span class="kanji">風車<span class="furigana">かざぐるま</span></span>			
@@ -11406,9 +11407,9 @@
 軽快な	けいかいな	Agile, léger		6	<span class="kanji">軽快<span class="furigana">けいかい</span></span>な			
 仏の顔も三度まで	ほとけのかおもさんどまで	どんなに慈悲深い人でも、無法なことを度々されると怒ること		6	<span class="kanji">仏<span class="furigana">ほとけ</span></span>の<span class="kanji">顔<span class="furigana">かお</span></span>も<span class="kanji">三度<span class="furigana">さんど</span></span>まで			
 天は人の上に人を造らず人の下に人を造らず	てんはひとのうえにひとをつくらずひとのしたにひとをつくらず	生来、人間は平等であり、貴賤・貧富の差別は初めからあるものではない		6	<span class="kanji">天<span class="furigana">てん</span></span>は<span class="kanji">人<span class="furigana">ひと</span></span>の<span class="kanji">上<span class="furigana">うえ</span></span>に<span class="kanji">人<span class="furigana">ひと</span></span>を<span class="kanji">造<span class="furigana">つく</span></span>らず<span class="kanji">人<span class="furigana">ひと</span></span>の<span class="kanji">下<span class="furigana">した</span></span>に<span class="kanji">人<span class="furigana">ひと</span></span>を<span class="kanji">造<span class="furigana">つく</span></span>らず			
-三人寄れば文殊の知恵	さんにんよればもんじゅのちえ	Deux avis valent mieux qu'un		6	<span class="kanji">三人寄<span class="furigana">さんにんよ</span></span>れば<span class="kanji">文殊<span class="furigana">もんじゅ</span></span>の<span class="kanji">知恵<span class="furigana">ちえ</span></span>			
+三人寄れば文殊の知恵	さんにんよればもんじゅのちえ	Deux avis valent mieux qu'un	諺	6	<span class="kanji">三人寄<span class="furigana">さんにんよ</span></span>れば<span class="kanji">文殊<span class="furigana">もんじゅ</span></span>の<span class="kanji">知恵<span class="furigana">ちえ</span></span>			
 寄港	きこう	Escale		6	<span class="kanji">寄港<span class="furigana">きこう</span></span>			
-仮分数	かぶんすう	Expression fractionnaire		6	6			
+仮分数	かぶんすう	Expression fractionnaire		6	<span class="kanji">仮分数<span class="furigana">かぶんすう</span></span>			
 桜草	さくらそう	Primevère		6	<span class="kanji">桜草<span class="furigana">さくらそう</span></span>			
 綿雲	わたぐも	Nuage cotonneux		6	<span class="kanji">綿雲<span class="furigana">わたぐも</span></span>			
 野草	やそう、のぐさ	山野に自生する草。野の草		6	<span class="kanji">野草<span class="furigana">やそう、のぐさ</span></span>			
@@ -11417,9 +11418,9 @@
 不始末	ふしまつ	Négligence, inattention, bévue		6	<span class="kanji">不始末<span class="furigana">ふしまつ</span></span>		火の	
 知らぬが仏	しらぬがほとけ	Qui ne sait rien, de rien ne doute		6	<span class="kanji">知<span class="furigana">し</span></span>らぬが<span class="kanji">仏<span class="furigana">ほとけ</span></span>			
 紫陽花	あじさい	Hortensia		6	<span class="kanji">紫陽花<span class="furigana">あじさい</span></span>			
-情けは人の為ならず	なさけはひとのためならず	他人に情けをかけることは、巡り巡ってやがて自分に帰ってくる。人に親切にしておけば、必ずよい報いがあるという教え		6	<span class="kanji">情<span class="furigana">なさ</span></span>けは<span class="kanji">人<span class="furigana">ひと</span></span>の<span class="kanji">為<span class="furigana">ため</span></span>ならず			
-能ある鷹は爪を隠す	のうあるたかはつめをかくす	Le vrai mérite est modeste		6	<span class="kanji">能<span class="furigana">のう</span></span>ある<span class="kanji">鷹<span class="furigana">たか</span></span>は<span class="kanji">爪<span class="furigana">つめ</span></span>を<span class="kanji">隠<span class="furigana">かく</span></span>す			
-損して得取れ	そんしてとくとれ	Il faut savoir perdre pour gagner		6	<span class="kanji">損<span class="furigana">そん</span></span>して<span class="kanji">得取<span class="furigana">とくと</span></span>れ			
+情けは人の為ならず	なさけはひとのためならず	他人に情けをかけることは、巡り巡ってやがて自分に帰ってくる。人に親切にしておけば、必ずよい報いがあるという教え	諺	6	<span class="kanji">情<span class="furigana">なさ</span></span>けは<span class="kanji">人<span class="furigana">ひと</span></span>の<span class="kanji">為<span class="furigana">ため</span></span>ならず			
+能ある鷹は爪を隠す	のうあるたかはつめをかくす	Le vrai mérite est modeste	諺	6	<span class="kanji">能<span class="furigana">のう</span></span>ある<span class="kanji">鷹<span class="furigana">たか</span></span>は<span class="kanji">爪<span class="furigana">つめ</span></span>を<span class="kanji">隠<span class="furigana">かく</span></span>す			
+損して得取れ	そんしてとくとれ	Il faut savoir perdre pour gagner	諺	6	<span class="kanji">損<span class="furigana">そん</span></span>して<span class="kanji">得取<span class="furigana">とくと</span></span>れ			
 水鳥	みずどり	Oiseau aquatique		6	<span class="kanji">水鳥<span class="furigana">みずどり</span></span>			
 句点	くてん	Point de fin de phrase		6	<span class="kanji">句点<span class="furigana">くてん</span></span>			
 読点	とうてん	Virgule		6	<span class="kanji">読点<span class="furigana">とうてん</span></span>			
@@ -11431,7 +11432,7 @@
 不統一	ふとういつ	Incohérence, manque d'unité, divergence		6	<span class="kanji">不統一<span class="furigana">ふとういつ</span></span>			
 四股を踏む	しこをふむ	Mouvement de levée de jambe typique effectué par un Sumo		6	<span class="kanji">四股<span class="furigana">しこ</span></span>を<span class="kanji">踏<span class="furigana">ふ</span></span>む		土俵の上で力士が	
 舌は禍の根	したはわざわいのね	言葉は災難を招くもとであるということ。口は禍の門(かど)		6	<span class="kanji">舌<span class="furigana">した</span></span>は<span class="kanji">禍<span class="furigana">わざわい</span></span>の<span class="kanji">根<span class="furigana">ね</span></span>			
-口は災いの元	くちはわざわいのもと	Qui parle trop s'attire des ennuis		6	<span class="kanji">口<span class="furigana">くち</span></span>は<span class="kanji">災<span class="furigana">わざわ</span></span>いの<span class="kanji">元<span class="furigana">もと</span></span>			
+口は災いの元	くちはわざわいのもと	Qui parle trop s'attire des ennuis	諺	6	<span class="kanji">口<span class="furigana">くち</span></span>は<span class="kanji">災<span class="furigana">わざわ</span></span>いの<span class="kanji">元<span class="furigana">もと</span></span>			
 造園	ぞうえん	Construction d'un jardin		6	<span class="kanji">造園<span class="furigana">ぞうえん</span></span>			
 断熱	だんねつ	Isolation thermique		6	<span class="kanji">断熱<span class="furigana">だんねつ</span></span>			
 舌鼓	したつづみ	Clappement de langue		6	<span class="kanji">舌鼓<span class="furigana">したつづみ</span></span>			
@@ -11449,7 +11450,7 @@
 鰙・若鷺・公魚	わかさぎ	Hypomesus nipponensis (poisson)		6	<span class="kanji">鰙・若鷺・公魚<span class="furigana">わかさぎ</span></span>			
 術語	じゅつご	Prédicat		6	<span class="kanji">術語<span class="furigana">じゅつご</span></span>			
 増水	ぞうすい	Montée des eaux, crue		6	<span class="kanji">増水<span class="furigana">ぞうすい</span></span>		大雨のため、川が〜した	
-短気は損気	たんきはそんき	短気を起こすと、結局は自分の損になる		6	<span class="kanji">短気<span class="furigana">たんき</span></span>は<span class="kanji">損気<span class="furigana">そんき</span></span>			
+短気は損気	たんきはそんき	短気を起こすと、結局は自分の損になる	諺	6	<span class="kanji">短気<span class="furigana">たんき</span></span>は<span class="kanji">損気<span class="furigana">そんき</span></span>			
 余り物に福がある	あまりものにふくがある	-		6	<span class="kanji">余<span class="furigana">あま</span></span>り<span class="kanji">物<span class="furigana">もの</span></span>に<span class="kanji">福<span class="furigana">ふく</span></span>がある	1_1		
 目白・繍眼児	めじろ	Oiseau à lunettes; zostérops		6	<span class="kanji">目白・繍眼児<span class="furigana">めじろ</span></span>			
 総出	そうで	Tous ensemble		6	<span class="kanji">総出<span class="furigana">そうで</span></span>			
@@ -11507,6 +11508,14 @@
 新興国	しんこうこく	Nation émergente		6	<span class="kanji">新興国<span class="furigana">しんこうこく</span></span>			
 要領	ようりょう	Point essentiel; truc; manière		6	<span class="kanji">要領<span class="furigana">ようりょう</span></span>			
 謝恩会	しゃおんかい	Réunion de remerciement		6	<span class="kanji">謝恩会<span class="furigana">しゃおんかい</span></span>			
-備えあれば憂いなし	そなえあればうれいなし	Il faut être prêt à tout, alors on n'a pas de surprise		6	<span class="kanji">備<span class="furigana">そな</span></span>えあれば<span class="kanji">憂<span class="furigana">うれ</span></span>いなし			
+備えあれば憂いなし	そなえあればうれいなし	Il faut être prêt à tout, alors on n'a pas de surprise	諺	6	<span class="kanji">備<span class="furigana">そな</span></span>えあれば<span class="kanji">憂<span class="furigana">うれ</span></span>いなし			
 常備	じょうび	De réserve; garder en réserve		6	<span class="kanji">常備<span class="furigana">じょうび</span></span>			
 製糸	せいし	Filature, fabrication du fil		6	<span class="kanji">製糸<span class="furigana">せいし</span></span>			
+門戸	もんこ	Porte. Famille, foyer		6	<span class="kanji">門戸<span class="furigana">もんこ</span></span>			
+芸術は長く人生は短し	げいじゅつはながくじんせいはみじかし	L'art est long, la vie est brève	諺	6	<span class="kanji">芸術<span class="furigana">げいじゅつ</span></span>は<span class="kanji">長<span class="furigana">なが</span></span>く<span class="kanji">人生<span class="furigana">じんせい</span></span>は<span class="kanji">短<span class="furigana">みじ</span></span>し			
+後世	こうせい	Postérité		6	<span class="kanji">後世<span class="furigana">こうせい</span></span>		後世に残る作品	
+声量	せいりょう	Volume, ampleur de la voix		6	<span class="kanji">声量<span class="furigana">せいりょう</span></span>			
+規制	きせい	Contrôle; réglementation; régulation		6	<span class="kanji">規制<span class="furigana">きせい</span></span>			
+国境	こっきょう、くにざかい	Frontière		6	<span class="kanji">国境<span class="furigana">こっきょう</span></span>			
+欅	ケヤキ	Zelkova du Japon (木)		6	<span class="kanji">欅<span class="furigana">ケヤキ</span></span>			
+白バイ	しろバイ	Moto de police blanche		6	<span class="kanji">白<span class="furigana">しろ</span></span>バイ			

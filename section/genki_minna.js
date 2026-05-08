@@ -147,9 +147,7 @@ function changeGMFilter(pFilter, pbToZero = false) {
 	}
 }
 
-function searchGMMode(pWord) {
-	// log("Search gm mode")
-	
+function searchGMMode(pWord) {	
 	closeFilterContainer();
 
 	bgmFullLetter = false;
@@ -187,7 +185,6 @@ function searchGMMode(pWord) {
 }
 
 function searchGenkiMode(pWord) {
-	// log("sarch genki mode")
 	if (!bgmFullLetter && !bgmFullKana) {
 		if (gmFilter.all == 1 || gmFilter.word == 1) {
 			if (GenkiWord.wordList.includes(pWord)) {
@@ -232,7 +229,6 @@ function searchGenkiMode(pWord) {
 	
 }
 function searchMinnaMode(pWord) {
-	// log("search minna mode")
 	if (!bgmFullLetter && !bgmFullKana) {
 		if (gmFilter.all == 1 || gmFilter.word == 1) {
 			if (MinnaWord.wordList.includes(pWord)) {
@@ -282,7 +278,6 @@ function displayGMResult() {
 	const word_result_container = id("word_result_container");
 	const kanji_result_container = id("kanji_result_container");
 	kanji_result_container.innerHTML = "";
-	// word_result_container.innerHTML = "";
 	let wordHTML = "";
 
 	if ((gmFilter.all == 1 || gmFilter.word == 1) || bSearchByCat || bSearchByLesson) {
@@ -314,11 +309,9 @@ function displayGMResult() {
 			if (index < exactWordArr.length-1) wordHTML += `<div class="gm_word_result_separator"></div>`;
 		});
 
-		// word_result_container.innerHTML = wordHTML;
 	}
 
 	if ((gmFilter.all == 1 || gmFilter.gram == 1) && !bSearchByCat) {
-		// const word_result_container = id("word_result_container");
 		wordHTML += `<div class="kanji_result_header">文法 ${exactGramArr.length + includingGramArr.length}</div>`;
 		exactGramArr = exactGramArr.concat(includingGramArr);
 

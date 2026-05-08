@@ -23,6 +23,7 @@ class Word {
 		this.kanjiList = [];
 		this.tmpKanjiList = [];
 		
+		this.info = pInfo;
 		this.yojijukugo = (pInfo == 4);
 		this.ateji = (pInfo == "当て字");
 		this.kotowaza = (pInfo == "諺");
@@ -81,6 +82,8 @@ class Yojijukugo extends Word {
 	static list = [];
 	static wordList = [];
 	static imiList = [];
+	static bPrio = false;
+	static bPrioTraining = false;
 
 	constructor(pId, pWord, pYomi, pImi, pKanken, pPage, pSynonym, pAntonym, pBetsuYomi, pRef, pPlus, pPriority) {
 

@@ -31,12 +31,15 @@ const MODE = Object.freeze({
 	GENKI: 1,
 	MINNA: 2
 });
+const KANJI_BY = Object.freeze({
+	STROKE: 0,
+	BUSHU: 1,
+	KANKEN: 2
+});
 
 let currentSection = "main";
 let currentMode = MODE.MAIN;
 const kanjiapp_mode = "kanjiapp_mode";
-
-
 
 
 let bSearching = false;
@@ -60,6 +63,7 @@ id("header").addEventListener("click", e => {
 search_input.addEventListener("click", e => {
 	// log("input click");
 	bSearching = true;
+	if (bFooterOpen) footerMainBtn();
 	// e.preventDefault();
 	none(search_btn);
 	unset(stop_search_btn);
@@ -85,8 +89,6 @@ search_btn.addEventListener("click", e => {
 		bSearching = false;
 		none(stop_search_btn);
 		unset(search_btn);
-		// search_input.value = "";
-		// log(search_input.value);
 		search(search_input.value);
 		e.preventDefault();
 		e.stopPropagation();
@@ -162,8 +164,6 @@ function lastCharKana(pWord, pLastNumber) {
 	} else {
 		bOk = false;
 	}
-	// log(pWord + ": " + bOk);
-	// log(pWord.slice(0, -1));
 	return bOk;
 }
 
@@ -173,8 +173,6 @@ function startApp() {
 	id("search_btn").disabled = false;
 	training_button.disabled = false;
 	unset(id("main_background"));
-
-	// changeSection("training");
 
 	let saveData = localStorage.getItem(kanjiapp_mode);
 	if (saveData == null) return;
@@ -188,7 +186,7 @@ function startApp() {
 let foundKanjiList = [];
 let exactWordArr = [];
 let includingWordArr = [];
-function search(pWord) {
+function search(pWord,pType = "") {
 	if (bModal) closeModal();
 	foundKanjiList = [];
 	exactWordArr = [];
@@ -201,7 +199,7 @@ function search(pWord) {
 
 	switch (currentMode) {
 		case MODE.MAIN:
-			searchMainMode(pWord);
+			searchMainMode(pWord,pType);
 			break;
 		case MODE.GENKI:
 			searchGMMode(pWord);
@@ -212,7 +210,7 @@ function search(pWord) {
 	}
 }
 
-function searchMainMode(pWord) {
+function searchMainMode(pWord,pType) {
 	let bFullLetter = false;
 	let bFullKana = false;
 	pWord = pWord.trim();
@@ -221,14 +219,10 @@ function searchMainMode(pWord) {
 
 		if (isFullLetter(pWord)) {
 			bFullLetter = true;
-		} else {
-			// log("NOT FULL LETTER");
 		}
 
 		if (isFullKana(pWord)) {
 			bFullKana = true;
-		} else {
-			// log("NOT FULL KANA");
 		}
 
 		if (!bFullLetter && !bFullKana) {
@@ -251,30 +245,28 @@ function searchMainMode(pWord) {
 			tempArr.forEach(k => {
 				foundKanjiList.push(k.id);
 			});
-			// log("found kanji list: ");
-			// log(foundKanjiList);
-			// if (Word.imiList.includes(pWord)) {
-				// log("imiList includes pWord: " + pWord);
-				exactWordArr = Word.list.filter(w => w.imi.toLowerCase() == pWord);
-				includingWordArr = Word.list.filter(w => (w.imi.toLowerCase().includes(pWord) && w.imi.toLowerCase() != pWord));
-			// }
+			
+			exactWordArr = Word.list.filter(w => w.imi.toLowerCase() == pWord);
+			includingWordArr = Word.list.filter(w => (w.imi.toLowerCase().includes(pWord) && w.imi.toLowerCase() != pWord));
 		} else if (bFullKana) {
 			let tempArr = Kanji.list.filter(k => k.kunYomiRaw.includes(pWord));
 			tempArr.forEach(k => {
 				foundKanjiList.push(k.id);
 			});
-			// log("found kanji list: ");
-			// log(foundKanjiList);
-			// if (Word.imiList.includes(pWord)) {
-				// log("imiList includes pWord: " + pWord);
-				exactWordArr = Word.list.filter(w => w.yomiRaw == pWord);
-				includingWordArr = Word.list.filter(w => (w.yomiRaw.includes(pWord) && w.yomiRaw != pWord));
-			// }
+			
+			exactWordArr = Word.list.filter(w => w.yomiRaw == pWord);
+			includingWordArr = Word.list.filter(w => (w.yomiRaw.includes(pWord) && w.yomiRaw != pWord));
 		}
 
 		displayResult();
 	} else {
-		displayNoResult();
+		if (pType != "") {
+			footerMainBtn();
+			exactWordArr = Word.list.filter(w => w.info == pType);
+			displayResult();
+		} else {
+			displayNoResult();
+		}
 	}
 }
 
@@ -343,14 +335,11 @@ function displayResult() {
 		kanjiHTML += `</div>`;
 	}
 	kanji_result_container.innerHTML = kanjiHTML;
-
-	// log(exactWordArr);
-	// log(includingWordArr);
+	id("loading_dialog").close();
 	
 	const word_result_container = id("word_result_container");
 	let wordHTML = `<div class="kanji_result_header">単語 ${exactWordArr.length + includingWordArr.length}</div>`;
 	exactWordArr = exactWordArr.concat(includingWordArr);
-	// log(exactWordArr);
 	exactWordArr.forEach((w, index) => {
 		wordHTML += `
 			<div class="word_result" id="word_id_${w.id}" onClick="wordInfo(${w.id}, 'w')">
@@ -418,10 +407,7 @@ function displayKankenList(pLevel) {
 		if (k.kanken == pLevel) foundKanjiList.push(k.id);
 	});
 	exactWordArr = Word.list.filter(w => w.kanken == pLevel);
-	// Word.list.forEach(w => {
-	// 	if (w.kanken == pLevel) exactWordArr.push(w)
-	// });
-	// foundKanjiList = Kanji.list.filter(k => k.kanken == pLevel);
+
 	if (currentMode != MODE.MAIN) {
 		changeMainMode(MODE.MAIN);
 	} else {
@@ -432,9 +418,187 @@ function displayKankenList(pLevel) {
 
 }
 
+function displayKanjiBy(pType) {
+	const kanji_result_container = id("kanji_result_container");
+	const word_result_container = id("word_result_container");
+	let html = "";
+	let list = [];
+	switch(pType) {
+		case KANJI_BY.STROKE:
+			list = Kanji.kanjiByStrokeList;
+			break;
+		case KANJI_BY.BUSHU:
+			list = Kanji.kanjiByBushuList;
+			break;
+		case KANJI_BY.KANKEN:
+			list = Kanji.kanjiByKankenList;
+			break;
+	}
+
+	list.forEach((s,index)=> {
+		html += `<div class="kanji_by_category">`;
+
+		if (pType == KANJI_BY.BUSHU) {
+			html += `<button class="kanji_by_category_btn" onClick="openKanjiByCat(${index})">${Kanji.bushuList[index].bushu} (${s.kanjiList.length}字)</button>`;
+		} else {
+			html += `<button class="kanji_by_category_btn" onClick="openKanjiByCat(${index})">${s.by} (${s.kanjiList.length}字)</button>`;
+		}
+		
+		
+		html += `<div id="kanji_by_category_content_${index}" class="kanji_by_category_content">`;
+		
+		if (pType == KANJI_BY.BUSHU) {
+			html += `<div class="kanji_by_category_bushu">${Kanji.bushuList[index].yomi}</div>`;
+		}
+
+		let count = 0;
+		s.kanjiList.forEach((k, index) => {
+			if (count == 0) {
+				html += `<div class="kr_one_line">`;
+			}
+			html += `<div class="kr_one_kanji" onClick="kanjiInfo(${k.id}, 'k')">${k.kanji}</div>`;
+			count++;
+			if (count == 6) {
+				count = 0;
+				html += `</div>`;
+			} else if (count < 6 && index == s.kanjiList.length-1) {
+				let nb = 6 - count;
+				for (let i = 0; i < nb; i++) {
+					html += `<div class="kr_one_kanji none" onClick="">　</div>`;
+				}
+			}
+		});
+		html += `
+					</div>
+				</div>
+			</div>
+		`;
+	});
+	
+	kanji_result_container.innerHTML = html;
+	word_result_container.innerHTML = "";
+	footerMainBtn();
+}
+
+function displayAllKanji() {
+	id("loading_dialog").showModal();
+	id("loading_dialog").blur();
+	foundKanjiList = [];
+	Kanji.list.forEach(k => foundKanjiList.push(k.id));
+	footerMainBtn();
+	setTimeout(() => {
+		displayResult();
+	}, 100);
+}
+
+function displayYojijukugo(pbFromSwitchBtn = false) {
+	const word_result_container = id("word_result_container");
+	let html = "";
+	let activeClass = "";
+	let disableClass = "";
+	if (Yojijukugo.bPrio) activeClass = "active";
+	if (pbFromSwitchBtn && !Yojijukugo.bPrio) {
+		disableClass = "disable";
+	}
+
+	html += `
+		<div id="yoji_priority_btn_container" class="switch_btn_container ${activeClass}" onClick="switchBtn(this, yojiPriority)">
+			<div id="yoji_priority_btn" class="switch_btn ${activeClass} ${disableClass}"></div>
+			<p class="switch_btn_label ${activeClass}">優先</p>
+		</div>
+	`;
+
+	let yojijukugoByKankenList = [];
+
+	let tmpArr = [];
+	for (let i = 5; i < Kanji.kankenList.length; i++) {
+		tmpArr = [];
+		tmpArr = Yojijukugo.list.filter(y => {
+			if (y.kanken == Kanji.kankenList[i]) {
+				if (Yojijukugo.bPrio && y.bPriority) {
+					return true;
+				} else if (!Yojijukugo.bPrio) {
+					return true;
+				}
+			}
+		});
+		yojijukugoByKankenList.push({kanken: Kanji.kankenList[i]+"級", yojiList: tmpArr});
+	}
+
+	for (let i = 0; i < yojijukugoByKankenList.length; i++) {
+		html += `
+			<div class="kanji_by_category">
+				<button  class="kanji_by_category_btn" onClick="openKanjiByCat(${i})">${yojijukugoByKankenList[i].kanken} (${yojijukugoByKankenList[i].yojiList.length})</button>
+			</div>
+			<div id="kanji_by_category_content_${i}" class="kanji_by_category_content">
+		`;
+		yojijukugoByKankenList[i].yojiList.forEach((w,index)=> {
+
+			html += `
+				<div class="word_result" id="word_id_${w.id}" onClick="wordInfo(${w.id}, 'w')">
+					<div class="word_result_yomi_word">
+						<div class="word_result_yomi">${w.yomi}</div>
+						<div class="word_result_word">${w.word}</div>
+			`;
+
+			if (w.wRef != null) {
+				html += `<div class="word_result_imi"><span class="word_result_ref_word">>>> [${w.wRef.word}]</span> ${w.wRef.imi}</div>`;
+			} else {
+				html += `<div class="word_result_imi">${w.imi}</div>`;
+			}
+			
+			html += `
+				</div>
+				<div class="word_result_misc">
+			`;
+			
+			if (w.bPriority) {
+				html += `<span class="word_priority">・</span>`;
+			}
+			html += `
+				<div class="yojijukugo">四</div>
+			`;
+			if (w.kanken != "") {
+				html += `
+				<div class="kanken_lvl word_kanken">
+					<div class="kanken_left">${w.kanken}</div>
+					<div class="kanken_right">級</div>
+				</div>
+				`;
+			}
+			
+			html += `
+					</div>
+				</div>
+			`;
+			if (index < yojijukugoByKankenList[i].yojiList.length-1) html += `<div class="word_result_separator"></div>`;
+
+		});
+		html += `</div>`;
+	}
+
+
+	id("kanji_result_container").innerHTML = "";
+	word_result_container.innerHTML = html;
+
+	setTimeout(() => {
+		editClass(id("yoji_priority_btn"), "disable", false);
+	}, 300);
+
+	if (!pbFromSwitchBtn) footerMainBtn();
+}
+
+function openKanjiByCat(pId) {
+	const kanji_by_category_content = id("kanji_by_category_content_"+pId);
+	if (kanji_by_category_content.classList[1] == "open") {
+		editClass(kanji_by_category_content, "open", false);
+	} else {
+		editClass(kanji_by_category_content, "open");
+	}
+}
+
 function kanjiInfo(pIndex, pElementFrom = "", pbBack = false) {
 
-	// log("kanjiInfo()");
 	if (pElementFrom != "" && !pbBack) {
 		if (pElementFrom == "w") {
 			displayList.push(Word.list[pIndex]);
@@ -444,10 +608,6 @@ function kanjiInfo(pIndex, pElementFrom = "", pbBack = false) {
 	} else if (pbBack) {
 		displayList.pop();
 	}
-
-
-	// log("KANJI INFO: " + pIndex);
-	// log(Kanji.list[pIndex]);
 
 	let html = 
 	`
@@ -557,7 +717,6 @@ function kanjiInfo(pIndex, pElementFrom = "", pbBack = false) {
 
 function wordInfo(pIndex, pElementFrom = "", pbBack = false) {
 
-	// log("wordInfo()");
 	if (pElementFrom != "" && !pbBack) {
 		if (pElementFrom == "w") {
 			displayList.push(Word.list[pIndex]);
@@ -814,13 +973,26 @@ function footerMainBtn() {
 	if (bModal) {
 		closeModal();
 	} else {
-		//TODO
-		// log("menu filter");
-		
 		if (bFooterOpen) {
-			// editClass(id("filter_panel"), "open", false);
-			editClass(id("footer_zone"),"open", false);
-			none(id("footer_open"));
+			editClass(id("filter_panel"), "open", false);
+
+			setTimeout(() => {
+				switch(currentMode) {
+					case MODE.MAIN:
+						editClass(id("filter_section_genki"), "active", false);
+						editClass(id("footer_genki"), "active", false);
+						editClass(id("filter_section_minna"), "active", false);
+						break;
+					case MODE.GENKI:
+						editClass(id("filter_section_genki"), "active");
+						editClass(id("filter_section_minna"), "active", false);
+						break;
+					case MODE.MINNA:
+						editClass(id("filter_section_minna"), "active");
+						editClass(id("filter_section_genki"), "active", false);
+						break;
+				}
+			}, 300);
 
 			editClass(id("span_1"), "span_1_arrow", false);
 			editClass(id("span_2"), "span_2_arrow", false);
@@ -828,22 +1000,21 @@ function footerMainBtn() {
 
 			openKankenLvl(false);
 		} else {
-			// editClass(id("filter_panel"), "open");
-			editClass(id("footer_zone"),"open");
+
+			editClass(id("filter_panel"), "open");
 			setTimeout(() => {
-				flex(id("footer_open"));
 				switch(currentMode) {
 					case MODE.MAIN:
-						editClass(id("footer_genki"), "active", false);
-						editClass(id("footer_minna"), "active", false);
+						editClass(id("filter_section_genki"), "active", false);
+						editClass(id("filter_section_minna"), "active", false);
 						break;
 					case MODE.GENKI:
-						editClass(id("footer_genki"), "active");
-						editClass(id("footer_minna"), "active", false);
+						editClass(id("filter_section_genki"), "active");
+						editClass(id("filter_section_minna"), "active", false);
 						break;
 					case MODE.MINNA:
-						editClass(id("footer_minna"), "active");
-						editClass(id("footer_genki"), "active", false);
+						editClass(id("filter_section_minna"), "active");
+						editClass(id("filter_section_genki"), "active", false);
 						break;
 				}
 			}, 300);
@@ -859,17 +1030,28 @@ function footerMainBtn() {
 
 function openKankenLvl(pbOpen = true) {
 	if (pbOpen) {
-		// log(id("footer_kanken_lvl").classList[0]);
-		if (id("footer_kanken_lvl").classList[0] == "open") {
-			editClass(id("footer_kanken_lvl"), "open", false);
-			editClass(id("footer_kanken"), "active", false);
+		if (id("filter_section_kanken").classList[0] == "open") {
+			editClass(id("filter_section_kanken"), "open", false);
+			editClass(id("kanken_lvl_btn"), "bottom", false);
+			editClass(id("span_arrow_down_1_1"), "open", false);
+			editClass(id("span_arrow_down_1_2"), "open", false);
+			editClass(id("span_arrow_down_2_1"), "open", false);
+			editClass(id("span_arrow_down_2_2"), "open", false);
 		} else {
-			editClass(id("footer_kanken_lvl"), "open");
-			editClass(id("footer_kanken"), "active");
+			editClass(id("filter_section_kanken"), "open");
+			editClass(id("kanken_lvl_btn"), "bottom");
+			editClass(id("span_arrow_down_1_1"), "open");
+			editClass(id("span_arrow_down_1_2"), "open");
+			editClass(id("span_arrow_down_2_1"), "open");
+			editClass(id("span_arrow_down_2_2"), "open");
 		}
-	} else {
-		editClass(id("footer_kanken_lvl"), "open", false);
-		editClass(id("footer_kanken"), "active", false);
+	} else {		
+		editClass(id("kanken_lvl_btn"), "bottom", false);
+		editClass(id("filter_section_kanken"), "open", false);
+		editClass(id("span_arrow_down_1_1"), "open", false);
+		editClass(id("span_arrow_down_1_2"), "open", false);
+		editClass(id("span_arrow_down_2_1"), "open", false);
+		editClass(id("span_arrow_down_2_2"), "open", false);
 	}
 }
 
@@ -1007,10 +1189,6 @@ function setFurigana(pId, pElement) {
 				if (Number.isInteger(c.f)) {
 					html += `${c.c}`;
 				} else {
-					if (currentIndex > -1) {
-						// html += `<span class="furigana">${Word.list[pId].tmpFuriganaArr[currentIndex].f}</span></span>`;
-						// currentIndex = -1;
-					}
 					currentIndex = index;
 					html += `<span class="kanji">${c.c}`;
 				}
@@ -1097,7 +1275,6 @@ function exportFurigana(pStart, pEnd) {
 
 	id("export_furigana_dialog").showModal();
 
-	// alert_dialog.showModal();
 }
 function copyExport() {
 	copyToClipboard(id("furigana_dialog_text").value);
@@ -1109,9 +1286,6 @@ function closeFuriganaDialog() {
 }
 
 function test(pId) {
-	// log(Kanji.list);
-	// log(Kanji.list[pId]);
-	
 	if (Kanji.list.length > 0 && Kanji.list[pId].pathList.length > 0) {
 		let innerHTML = `<svg width="75" height="75" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" baseProfile="full">`;
 		Kanji.list[pId].pathList.forEach(p => {
@@ -1164,7 +1338,6 @@ function changeSection(pSection) {
 }
 
 function changeMainMode(pNewMode, pbFooter = true) {
-	// log("mode: " + pNewMode);
 	const header_title = id("header_title");
 
 	const obj = { current: pNewMode };
@@ -1196,7 +1369,6 @@ function changeMainMode(pNewMode, pbFooter = true) {
 			search_input.placeholder = "げんき内検索";
 			search_input.focus();
 			editClass(header_title,"genki");
-			// editClass(id("header"), "genki");
 			editClass(id("gmFilter_container"), "active");
 
 			if (pbFooter) footerMainBtn();
@@ -1212,7 +1384,6 @@ function changeMainMode(pNewMode, pbFooter = true) {
 			search_input.placeholder = "みんなの日本語";
 			search_input.focus();
 			editClass(header_title,"minna");
-			// editClass(id("header"), "genki");
 			editClass(id("gmFilter_container"), "active");
 
 			if (pbFooter) footerMainBtn();
@@ -1223,7 +1394,6 @@ function changeMainMode(pNewMode, pbFooter = true) {
 }
 
 function changeDisplayType() {
-	// log(bDisplayType1);
 	if (bDisplayType1) {
 		editClass(id("sdt_1_2"), "type2");
 		editClass(id("sdt_2_2"), "type2");
@@ -1359,7 +1529,6 @@ function createPath(content) {
 	}
 }
 function toHira(pWord) {
-	// log("before: " + pWord);
 	let newWord = "";
 	for (let i = 0; i < pWord.length; i++) {
 		if (h.includes(pWord[i])) {
@@ -1385,18 +1554,30 @@ function randomizeList(pList) {
 	return pList;
 }
 
+function switchBtn(e, func) {
+	let bActive = false;
+	if (e.classList.length > 1) {
+		for (let i = 0; i < e.classList.length; i++) {
+			if (e.classList[i] == "active") {
+				editClass(e,"active", false);
+				editClass(e.children[0],"active", false);
+				editClass(e.children[0],"disable");
+				editClass(e.children[1],"active", false);
+				bActive = true;
+			}
+		}
+	} 
+	if (!bActive) {
+		editClass(e,"active");
+		editClass(e.children[0],"active");
+		editClass(e.children[0],"disable", false);
+		editClass(e.children[1],"active");
+	}
+	if (func != null) func();
+}
 
 
-// function addPath() {
-// 	let test = content.split("\n");
-// 	log(test);
-// 	let final = "";
-// 	Kanji.list.forEach(k => {
-// 		test.forEach(t => {
-// 			if (t[0] == k.kanji) {
-// 				final += t.slice(1, t.length) + "\n";
-// 			}
-// 		});
-// 	});
-// 	log(final);
-// }
+function yojiPriority() {
+	Yojijukugo.bPrio = !Yojijukugo.bPrio;
+	displayYojijukugo(true);
+}
