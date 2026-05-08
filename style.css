@@ -3131,6 +3131,7 @@ kp_btn:
 	width: 700px;
 	height: 200px;
 	margin-top: 50px;
+	margin-bottom: 20px;
 	padding: 10px;
 	box-shadow: 0px 4px 0px white;
 	border: none;
@@ -3146,7 +3147,7 @@ kp_btn:
 	width: 300px;
 	font-size: 30px;
 	padding: 10px;
-	margin-top: 20px;
+	/* margin-top: 20px; */
 	margin-bottom: 20px;
 }
 

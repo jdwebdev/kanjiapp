@@ -710,7 +710,7 @@
 地下	ちか	Souterrain, sous-sol			<span class="kanji">地下<span class="furigana">ちか</span></span>			
 地方	ちほう	Région, province			<span class="kanji">地方<span class="furigana">ちほう</span></span>			
 地名	ちめい	Nom de lieu, toponyme			<span class="kanji">地名<span class="furigana">ちめい</span></span>			
-生地	きじ	Étoffe brute; vraie nature			<span class="kanji">生地<span class="furigana">きじ</span></span>			
+生地	きじ	Étoffe brute; vraie nature; pâte (pain, pizza...)			<span class="kanji">生地<span class="furigana">きじ</span></span>			
 生地	せいち	Lieu de naissance			<span class="kanji">生地<span class="furigana">せいち</span></span>			
 池	いけ	Étang, pièce d'eau			<span class="kanji">池<span class="furigana">いけ</span></span>			
 用水地	ようすいち	Réservoir d'eau			<span class="kanji">用水地<span class="furigana">ようすいち</span></span>			
@@ -2093,13 +2093,14 @@
 中央部	ちゅうおうぶ	Partie centrale, milieu			<span class="kanji">中央部<span class="furigana">ちゅうおうぶ</span></span>			
 中央線	ちゅうおうせん	Ligne Chûô (train)			<span class="kanji">中央線<span class="furigana">ちゅうおうせん</span></span>			
 中央区	ちゅうおうく	Arrondissement Chûô (Tôkyô)			<span class="kanji">中央区<span class="furigana">ちゅうおうく</span></span>			
-映す	うつす	Réfléchir, refléter, projeter			<span class="kanji">映<span class="furigana">うつ</span></span>す			
-映る	うつる	Se refléter, se réfléchir, se projeter			<span class="kanji">映<span class="furigana">うつ</span></span>る			
-映える	はえる	Briller, miroiter			<span class="kanji">映<span class="furigana">は</span></span>える			
-映画	えいが	Film			<span class="kanji">映画<span class="furigana">えいが</span></span>			
-反映	はんえい	Reflet, réflexion			<span class="kanji">反映<span class="furigana">はんえい</span></span>			
-上映	じょうえい	Projection (d'un film)			<span class="kanji">上映<span class="furigana">じょうえい</span></span>			
-夕映え	ゆうばえ	Embrasement du ciel au couchant			<span class="kanji">夕映<span class="furigana">ゆうば</span></span>え			
+映す	うつす	Réfléchir, refléter, projeter		5	<span class="kanji">映<span class="furigana">うつ</span></span>す			
+映る	うつる	Se refléter, se réfléchir, se projeter		5	<span class="kanji">映<span class="furigana">うつ</span></span>る	鏡・画面などに姿や形が現れる。		
+湖面に映る	こめんにうつる	Se refléter sur le lac		5	<span class="kanji">湖面<span class="furigana">こめん</span></span>に<span class="kanji">映<span class="furigana">うつ</span></span>る			
+映える	はえる	Briller, miroiter		5	<span class="kanji">映<span class="furigana">は</span></span>える			
+映画	えいが	Film		5	<span class="kanji">映画<span class="furigana">えいが</span></span>			
+反映	はんえい	Reflet, réflexion		5	<span class="kanji">反映<span class="furigana">はんえい</span></span>			
+上映	じょうえい	Projection (d'un film)		5	<span class="kanji">上映<span class="furigana">じょうえい</span></span>			
+夕映え	ゆうばえ	Embrasement du ciel au couchant		5	<span class="kanji">夕映<span class="furigana">ゆうば</span></span>え			
 英気	えいき	Énergie/force (mentale), enthousiasme			<span class="kanji">英気<span class="furigana">えいき</span></span>			
 石英	せきえい	Quartz			<span class="kanji">石英<span class="furigana">せきえい</span></span>			
 英語	えいご	Langue anglaise			<span class="kanji">英語<span class="furigana">えいご</span></span>			
@@ -3225,8 +3226,9 @@
 付与	ふよ	Attribuer, accorder, octroyer			<span class="kanji">付与<span class="furigana">ふよ</span></span>			
 賞与	しょうよ	Gratification, prime			<span class="kanji">賞与<span class="furigana">しょうよ</span></span>			
 写す	うつす	Recopier, copier; limiter; décrire; photographier			<span class="kanji">写<span class="furigana">うつ</span></span>す			
-写る	うつる	Être pris (photo)			<span class="kanji">写<span class="furigana">うつ</span></span>る			
+写る	うつる	Être pris (photo)			<span class="kanji">写<span class="furigana">うつ</span></span>る	写真に姿などが現れる。		
 写真	しゃしん	Photographie			<span class="kanji">写真<span class="furigana">しゃしん</span></span>			
+映写	えいしゃ	Projection		5	<span class="kanji">映写<span class="furigana">えいしゃ</span></span>			
 映写機	えいしゃき	Projecteur			<span class="kanji">映写機<span class="furigana">えいしゃき</span></span>			
 写生	しゃせい	Esquisse; peindre/dessiner d'après nature			<span class="kanji">写生<span class="furigana">しゃせい</span></span>			
 写実的	しゃじつてき	Réaliste			<span class="kanji">写実的<span class="furigana">しゃじつてき</span></span>			
@@ -5749,10 +5751,10 @@
 思惑	おもわく	Opinion, intention; attente, conjecture			<span class="kanji">思惑<span class="furigana">おもわく</span></span>			
 惑星	わくせい	Planète			<span class="kanji">惑星<span class="furigana">わくせい</span></span>			
 戸惑い	とまどい	Se tromper (porte), être désorienté / déconcerté			<span class="kanji">戸惑<span class="furigana">とまど</span></span>い			
-地域	ちいき	Région, zone, quartier			<span class="kanji">地域<span class="furigana">ちいき</span></span>			
-区域	くいき	District, secteur, zone			<span class="kanji">区域<span class="furigana">くいき</span></span>			
-領域	りょういき	Territoire, domaine, zone, sphère			<span class="kanji">領域<span class="furigana">りょういき</span></span>			
-流域	りゅういき	Bassin fluvial, vallée (d'un fleuve)			<span class="kanji">流域<span class="furigana">りゅういき</span></span>			
+地域	ちいき	Région, zone, quartier		5	<span class="kanji">地域<span class="furigana">ちいき</span></span>			
+区域	くいき	District, secteur, zone		5	<span class="kanji">区域<span class="furigana">くいき</span></span>			
+領域	りょういき	Territoire, domaine, zone, sphère		5	<span class="kanji">領域<span class="furigana">りょういき</span></span>			
+流域	りゅういき	Bassin fluvial, vallée (d'un fleuve)		5	<span class="kanji">流域<span class="furigana">りゅういき</span></span>			
 聖域	せいいき	Lieu / endroit sacré			<span class="kanji">聖域<span class="furigana">せいいき</span></span>			
 償う	つぐなう	Compenser, dédommager, indemniser, expier			<span class="kanji">償<span class="furigana">つぐな</span></span>う			
 補償	ほしょう	Indemnisation, compensation, réparation			<span class="kanji">補償<span class="furigana">ほしょう</span></span>			
@@ -5876,9 +5878,10 @@
 気宇広大	きうこうだい	Magnanime			<span class="kanji">気宇広大<span class="furigana">きうこうだい</span></span>			
 宇都宮	うつのみや	Utsunomiya (capitale de la préfecture de Tochigi)			<span class="kanji">宇都宮<span class="furigana">うつのみや</span></span>			
 宙	ちゅう	En l'air, espace, ciel			<span class="kanji">宙<span class="furigana">ちゅう</span></span>			
-宇宙	うちゅう	Cosmos, univers			<span class="kanji">宇宙<span class="furigana">うちゅう</span></span>			
+宇宙	うちゅう	Cosmos, univers		5	<span class="kanji">宇宙<span class="furigana">うちゅう</span></span>			
 宇宙旅行	うちゅうりょこう	Voyage spatial			<span class="kanji">宇宙旅行<span class="furigana">うちゅうりょこう</span></span>			
 宇宙飛行士	うちゅうひこうし	Astronaute, cosmonaute			<span class="kanji">宇宙飛行士<span class="furigana">うちゅうひこうし</span></span>			
+宇宙遊泳	うちゅうゆうえい	Marche (d'un cosmonaute) dans l'espace		5	<span class="kanji">宇宙遊泳<span class="furigana">うちゅうゆうえい</span></span>			
 大宇宙	だいうちゅう	Macrocosme, univers			<span class="kanji">大宇宙<span class="furigana">だいうちゅう</span></span>			
 宙返り	ちゅうがえり	Saut périlleux, looping			<span class="kanji">宙返<span class="furigana">ちゅうがえ</span></span>り			
 届く	とどく	Atteindre, arriver			<span class="kanji">届<span class="furigana">とど</span></span>く			
@@ -6276,10 +6279,11 @@
 係累	けいるい	Famille, personnes à charge			<span class="kanji">係累<span class="furigana">けいるい</span></span>			
 累進	るいしん	Promotion graduelle / successive			<span class="kanji">累進<span class="furigana">るいしん</span></span>			
 異なる	ことなる	Différent		5	<span class="kanji">異<span class="furigana">こと</span></span>なる			
+異にする	ことにする	別にする。Mettre de côté, séparer (une opinion)		5	<span class="kanji">異<span class="furigana">こと</span></span>にする		兄とは意見・考えを異にする Avoir un avis différent	
 異常	いじょう	Anormal, inhabituel		5	<span class="kanji">異常<span class="furigana">いじょう</span></span>			
 異質	いしつ	Hétérogénéité			<span class="kanji">異質<span class="furigana">いしつ</span></span>			
-異国	いこく	Pays étranger			<span class="kanji">異国<span class="furigana">いこく</span></span>			
-異議	いぎ	Objection			<span class="kanji">異議<span class="furigana">いぎ</span></span>			
+異国	いこく	Pays étranger		5	<span class="kanji">異国<span class="furigana">いこく</span></span>			
+異議	いぎ	Objection, contestation, opposition, protestation		5	<span class="kanji">異議<span class="furigana">いぎ</span></span>	0_3		
 変異	へんい	Changement (évènement) inattendu; variation, mutation			<span class="kanji">変異<span class="furigana">へんい</span></span>			
 翼	つばさ	Aile			<span class="kanji">翼<span class="furigana">つばさ</span></span>			
 左翼	さよく	Aile gauche, (de) gauche			<span class="kanji">左翼<span class="furigana">さよく</span></span>			
@@ -6535,7 +6539,7 @@
 感冒	かんぼう	Rhume, coup de froid, refroidissement			<span class="kanji">感冒<span class="furigana">かんぼう</span></span>			
 冒瀆	ぼうとく	Sacrilège, blasphème, profanation			<span class="kanji">冒瀆<span class="furigana">ぼうとく</span></span>			
 帽子	ぼうし	Chapeau, casquette, bonnet			<span class="kanji">帽子<span class="furigana">ぼうし</span></span>			
-宇宙棒	うちゅうぼう	Casque d'astronaute			<span class="kanji">宇宙棒<span class="furigana">うちゅうぼう</span></span>			
+宇宙帽	うちゅうぼう	Casque d'astronaute			<span class="kanji">宇宙帽<span class="furigana">うちゅうぼう</span></span>			
 赤帽	あかぼう	Casquette rouge; porteur (de bagages)			<span class="kanji">赤帽<span class="furigana">あかぼう</span></span>			
 無帽	むぼう	Nu-tête			<span class="kanji">無帽<span class="furigana">むぼう</span></span>			
 帽章	ぼうしょう	Insigne porté sur un couvre-chef)			<span class="kanji">帽章<span class="furigana">ぼうしょう</span></span>			
@@ -6590,11 +6594,13 @@
 出征	しゅっせい	Départ pour le front			<span class="kanji">出征<span class="furigana">しゅっせい</span></span>			
 遠征	えんせい	Expédition (militaire); tournée (sportive)			<span class="kanji">遠征<span class="furigana">えんせい</span></span>			
 長征	ちょうせい	La Longue Marche (Chine)			<span class="kanji">長征<span class="furigana">ちょうせい</span></span>			
-延ばす	のばす	Prolonger, différer, repousser			<span class="kanji">延<span class="furigana">の</span></span>ばす			
-延べる	のべる	Prolonger, différer, repousser			<span class="kanji">延<span class="furigana">の</span></span>べる			
-延びる	のびる	Être différé / repoussé / prolongé			<span class="kanji">延<span class="furigana">の</span></span>びる			
-延長	えんちょう	Prolongement			<span class="kanji">延長<span class="furigana">えんちょう</span></span>			
-延期	えんき	Ajournement, remise, report			<span class="kanji">延期<span class="furigana">えんき</span></span>			
+延ばす	のばす	Prolonger, différer, repousser		5	<span class="kanji">延<span class="furigana">の</span></span>ばす			
+出発を延ばす	しゅっぱつをのばす	Remettre, retarder le départ		5	<span class="kanji">出発<span class="furigana">しゅっぱつ</span></span>を<span class="kanji">延<span class="furigana">の</span></span>ばす			
+延べる	のべる	Prolonger, différer, repousser		5	<span class="kanji">延<span class="furigana">の</span></span>べる			
+延びる	のびる	Être différé / repoussé / prolongé		5	<span class="kanji">延<span class="furigana">の</span></span>びる			
+延長	えんちょう	Prolongement		5	<span class="kanji">延長<span class="furigana">えんちょう</span></span>			
+延長戦	えんちょうせん	Prolongation		5	<span class="kanji">延長戦<span class="furigana">えんちょうせん</span></span>			
+延期	えんき	Ajournement, remise, report		5	<span class="kanji">延期<span class="furigana">えんき</span></span>			
 遅延	ちえん	Retard, délai			<span class="kanji">遅延<span class="furigana">ちえん</span></span>			
 引き延ばす	ひきのばす	Allonger, prolonger, agrandir (photo)			<span class="kanji">引<span class="furigana">ひ</span></span>き<span class="kanji">延<span class="furigana">の</span></span>ばす			
 誕生	たんじょう	Naissance			<span class="kanji">誕生<span class="furigana">たんじょう</span></span>			
@@ -6620,7 +6626,7 @@
 草稿	そうこう	Brouillon, ébauche, esquisse, premier jet			<span class="kanji">草稿<span class="furigana">そうこう</span></span>			
 投稿	とうこう	Envoyer un article (à un journal / périodique)			<span class="kanji">投稿<span class="furigana">とうこう</span></span>			
 稿料	こうりょう	Honoraires pour un article / manuscrit			<span class="kanji">稿料<span class="furigana">こうりょう</span></span>			
-移る	うつる	Déménager, se déplacer, changer; attraper (maladie)			<span class="kanji">移<span class="furigana">うつ</span></span>る			
+移る	うつる	Déménager, se déplacer, changer; attraper (maladie)			<span class="kanji">移<span class="furigana">うつ</span></span>る	場所・位置などが変わる。		
 移す	うつす	Déplacer, transférer (personnel); infecter			<span class="kanji">移<span class="furigana">うつ</span></span>す			
 移動	いどう	Déplacement, migration			<span class="kanji">移動<span class="furigana">いどう</span></span>			
 移転	いてん	Déménager, transfert		6	<span class="kanji">移転<span class="furigana">いてん</span></span>			
@@ -6914,11 +6920,11 @@
 潰れる	つぶれる	Se briser, se rompre, s'effondrer			<span class="kanji">潰<span class="furigana">つぶ</span></span>れる			
 崩潰	ほうかい	Écroulement, effondrement			<span class="kanji">崩潰<span class="furigana">ほうかい</span></span>			
 噛み潰す	かみつぶす	Broyer avec les dents			<span class="kanji">噛<span class="furigana">か</span></span>み<span class="kanji">潰<span class="furigana">つぶ</span></span>す			
-遺伝	いでん	Héridité			<span class="kanji">遺伝<span class="furigana">いでん</span></span>			
+遺伝	いでん	Hérédité			<span class="kanji">遺伝<span class="furigana">いでん</span></span>			
 遺体	いたい	Corps, dépouille (mortelle)			<span class="kanji">遺体<span class="furigana">いたい</span></span>			
-遺産	いさん	Héritage, biens, succession			<span class="kanji">遺産<span class="furigana">いさん</span></span>			
+遺産	いさん	Héritage, biens, succession		5	<span class="kanji">遺産<span class="furigana">いさん</span></span>			
 遺族	いぞく	Famille d'un défunt			<span class="kanji">遺族<span class="furigana">いぞく</span></span>			
-遺言	ゆいごん、いごん	Testament, dernières volontés			<span class="kanji">遺言<span class="furigana">ゆいごん</span></span>			
+遺言	ゆいごん、いごん	Testament, dernières volontés		5	<span class="kanji">遺言<span class="furigana">ゆいごん</span></span>			
 遣わす	つかわす	Envoyer quelqu'un; donner			<span class="kanji">遣<span class="furigana">つか</span></span>わす			
 遣う	つかう	Utiliser			<span class="kanji">遣<span class="furigana">つか</span></span>う			
 派遣	はけん	Envoyer en mission, détacher			<span class="kanji">派遣<span class="furigana">はけん</span></span>			
@@ -7484,17 +7490,17 @@
 滑稽	こっけい	Amusant, humoristique, comique			<span class="kanji">滑稽<span class="furigana">こっけい</span></span>			
 円滑	えんかつ	Régulier, doux, harmonieux, sans à-coups			<span class="kanji">円滑<span class="furigana">えんかつ</span></span>			
 滑り台	すべりだい	Toboggan			<span class="kanji">滑<span class="furigana">すべ</span></span>り<span class="kanji">台<span class="furigana">だい</span></span>			
-胃	い	Estomac			<span class="kanji">胃<span class="furigana">い</span></span>			
+胃	い	Estomac		5	<span class="kanji">胃<span class="furigana">い</span></span>			
 胃病	いびょう	Embarras gastrique, maladie d'estomac			<span class="kanji">胃病<span class="furigana">いびょう</span></span>			
-胃酸	いさん	Suc gastrique			<span class="kanji">胃酸<span class="furigana">いさん</span></span>			
+胃酸	いさん	Chlorhydrie		5	<span class="kanji">胃酸<span class="furigana">いさん</span></span>			
 胃癌	いがん	Cancer de l'estomac			<span class="kanji">胃癌<span class="furigana">いがん</span></span>			
-胃下垂	いかすい	Ptôse gastrique			<span class="kanji">胃下垂<span class="furigana">いかすい</span></span>			
-胃弱	いじゃく	Mauvaise digestion, faiblesse d'estomac			<span class="kanji">胃弱<span class="furigana">いじゃく</span></span>			
+胃下垂	いかすい	Ptôse gastrique, position anormalement basse de l'estomac		5	<span class="kanji">胃下垂<span class="furigana">いかすい</span></span>			
+胃弱	いじゃく	Mauvaise digestion, faiblesse d'estomac		5	<span class="kanji">胃弱<span class="furigana">いじゃく</span></span>			
 皮膚	ひふ	Peau			<span class="kanji">皮膚<span class="furigana">ひふ</span></span>			
 皮膚病	ひふびょう	Maladie de la peau			<span class="kanji">皮膚病<span class="furigana">ひふびょう</span></span>			
 皮膚移植	いふいしょく	Greffe de la peau			<span class="kanji">皮膚移植<span class="furigana">いふいしょく</span></span>			
 完膚なきまで	かんぷなきまで	Parfaitement, complètement			<span class="kanji">完膚<span class="furigana">かんぷ</span></span>なきまで			
-胃腸	いちょう	Estomac et intestins			<span class="kanji">胃腸<span class="furigana">いちょう</span></span>			
+胃腸	いちょう	Estomac et intestins		5	<span class="kanji">胃腸<span class="furigana">いちょう</span></span>			
 大腸	だいちょう	Gros intestin			<span class="kanji">大腸<span class="furigana">だいちょう</span></span>			
 腸閉塞	ちょうへいそく	Occlusion intestinale			<span class="kanji">腸閉塞<span class="furigana">ちょうへいそく</span></span>			
 断腸の思い	だんちょうのおもい	Déchirement de coeur, coeur brisé			<span class="kanji">断腸<span class="furigana">だんちょう</span></span>の<span class="kanji">思<span class="furigana">おも</span></span>い			
@@ -9111,7 +9117,7 @@
 便箋	びんせん	Papier à lettres			<span class="kanji">便箋<span class="furigana">びんせん</span></span>			
 処方箋	しょほうせん	Feuille d'ordonnance médicale, ordonnance; recette (pour solutionner un problème)			<span class="kanji">処方箋<span class="furigana">しょほうせん</span></span>			
 跡	あと	Marque, trace, vestiges, restes, ruine			<span class="kanji">跡<span class="furigana">あと</span></span>			
-遺跡	いせき	Ruines, vestiges			<span class="kanji">遺跡<span class="furigana">いせき</span></span>			
+遺跡	いせき	Ruines, vestiges		5	<span class="kanji">遺跡<span class="furigana">いせき</span></span>			
 史跡	しせき	Monument / lieu historique, vestiges			<span class="kanji">史跡<span class="furigana">しせき</span></span>			
 足跡	あしあと、そくせき	Traces de pas			<span class="kanji">足跡<span class="furigana">あしあと</span></span>			
 傷跡	きずあと	Cicatrice			<span class="kanji">傷跡<span class="furigana">きずあと</span></span>			
@@ -9319,12 +9325,15 @@
 鉛版	えんばん	Stéréotype, cliché (d'imprimerie)			<span class="kanji">鉛版<span class="furigana">えんばん</span></span>			
 鉛毒	えんどく	Empoisonnement par le plomb			<span class="kanji">鉛毒<span class="furigana">えんどく</span></span>			
 鉛色	なまりいろ	Couleur plomb, gris			<span class="kanji">鉛色<span class="furigana">なまりいろ</span></span>			
-沿う	そう	Longer, border, le long de			<span class="kanji">沿<span class="furigana">そ</span></span>う			
-沿岸	えんがん	Littoral, côtes			<span class="kanji">沿岸<span class="furigana">えんがん</span></span>			
-沿海	えんかい	Littoral, mer littorale, eaux côtières			<span class="kanji">沿海<span class="furigana">えんかい</span></span>			
-沿線	えんせん	Le long d'une ligne (de chemin de fer)			<span class="kanji">沿線<span class="furigana">えんせん</span></span>			
-沿革	えんかく	Histoire, développement			<span class="kanji">沿革<span class="furigana">えんかく</span></span>			
-川沿い	かわぞい	Le long de la rivière			<span class="kanji">川沿<span class="furigana">かわぞ</span></span>い			
+沿う	そう	Longer, border, le long de		5	<span class="kanji">沿<span class="furigana">そ</span></span>う			
+沿岸	えんがん	Littoral, côtes		5	<span class="kanji">沿岸<span class="furigana">えんがん</span></span>			
+沿岸漁業	えんがんぎょぎょう	Pêche côtière		5	<span class="kanji">沿岸漁業<span class="furigana">えんがんぎょぎょう</span></span>			
+沿海	えんかい	Littoral, mer littorale, eaux côtières		5	<span class="kanji">沿海<span class="furigana">えんかい</span></span>			
+沿線	えんせん	Le long d'une ligne (de chemin de fer)		5	<span class="kanji">沿線<span class="furigana">えんせん</span></span>			
+沿革	えんかく	Histoire, développement, historique, évolution		5	<span class="kanji">沿革<span class="furigana">えんかく</span></span>			
+沿道	えんどう	Au bord du chemin, le long de la route		5	<span class="kanji">沿道<span class="furigana">えんどう</span></span>			
+川沿い	かわぞい	Le long de la rivière		5	<span class="kanji">川沿<span class="furigana">かわぞ</span></span>い			
+海沿い	うみぞい	Au bord, le long de la mer		5	<span class="kanji">海沿<span class="furigana">うみぞ</span></span>い			
 鋼	はがね	Acier			<span class="kanji">鋼<span class="furigana">はがね</span></span>			
 鋼鉄	こうてつ	Acier			<span class="kanji">鋼鉄<span class="furigana">こうてつ</span></span>			
 特殊鋼	とくしゅこう	Acier spécial			<span class="kanji">特殊鋼<span class="furigana">とくしゅこう</span></span>			
@@ -9596,7 +9605,8 @@
 繰る	くる	Dévider, débobiner, embobiner, filer; tourner (pages), consulter (livre); compter; ouvrir et fermer (volet)			<span class="kanji">繰<span class="furigana">く</span></span>る			
 繰り返す	くりかえす	Répéter, recommencer			<span class="kanji">繰<span class="furigana">く</span></span>り<span class="kanji">返<span class="furigana">かえ</span></span>す			
 繰り言	くりごと	Tabâchage, radotage, plainte			<span class="kanji">繰<span class="furigana">く</span></span>り<span class="kanji">言<span class="furigana">ごと</span></span>			
-繰り延べ	くりのべ	Ajournement, report			<span class="kanji">繰<span class="furigana">く</span></span>り<span class="kanji">延<span class="furigana">の</span></span>べ			
+繰り延べ	くりのべ	Ajournement, report		5	<span class="kanji">繰<span class="furigana">く</span></span>り<span class="kanji">延<span class="furigana">の</span></span>べ			
+繰り延べる	くりのべる	Reporter; différer; remettre		5	<span class="kanji">繰<span class="furigana">く</span></span>り<span class="kanji">延<span class="furigana">の</span></span>べる			
 繰り上げる	くりあげる	Avancer l'heure / la date			<span class="kanji">繰<span class="furigana">く</span></span>り<span class="kanji">上<span class="furigana">あ</span></span>げる			
 操る	あやつる	Manoeuvrer, manipuler, faire marcher, diriger			<span class="kanji">操<span class="furigana">あやつ</span></span>る			
 操	みさお	Chasteté, pureté, innocence, constance, fidélité, honneur			<span class="kanji">操<span class="furigana">みさお</span></span>			
@@ -11519,3 +11529,20 @@
 国境	こっきょう、くにざかい	Frontière		6	<span class="kanji">国境<span class="furigana">こっきょう</span></span>			
 欅	ケヤキ	Zelkova du Japon (木)		6	<span class="kanji">欅<span class="furigana">ケヤキ</span></span>			
 白バイ	しろバイ	Moto de police blanche		6	<span class="kanji">白<span class="furigana">しろ</span></span>バイ			
+胃液	いえき	Suc gastrique		5	<span class="kanji">胃液<span class="furigana">いえき</span></span>			
+異論	いろん	-		5	<span class="kanji">異論<span class="furigana">いろん</span></span>	1_3		
+遺棄	いき	Abandon, délaissement		5	<span class="kanji">遺棄<span class="furigana">いき</span></span>			
+遺失	いしつ	Perte		5	<span class="kanji">遺失<span class="furigana">いしつ</span></span>			
+遺失物	いしつぶつ	Objet perdu (ex : objets trouvés)		5	<span class="kanji">遺失物<span class="furigana">いしつぶつ</span></span>			
+遺品	いひん	Objet laissé par un défunt		5	<span class="kanji">遺品<span class="furigana">いひん</span></span>			
+域内	いきない	一定の区域のなか。範囲のうち。		5	<span class="kanji">域内<span class="furigana">いきない</span></span>			
+域外	いきがい	ある一定の範囲の外。区域の外。		5	<span class="kanji">域外<span class="furigana">いきがい</span></span>			
+音域	おんいき	Diapason, registre		5	<span class="kanji">音域<span class="furigana">おんいき</span></span>			
+高音域	こうおんいき	Registre aigu		5	<span class="kanji">高音域<span class="furigana">こうおんいき</span></span>			
+中音域	ちゅうおんいき	Registre moyen		5	<span class="kanji">中音域<span class="furigana">ちゅうおんいき</span></span>			
+低音域	ていおんいき	Registre grave		5	<span class="kanji">低音域<span class="furigana">ていおんいき</span></span>			
+広域	こういき	Grande étendue		5	<span class="kanji">広域<span class="furigana">こういき</span></span>			
+堂宇	どうう	堂の軒(のき)。堂の建物。		5	<span class="kanji">堂宇<span class="furigana">どうう</span></span>			
+映像	えいぞう	Image		5	<span class="kanji">映像<span class="furigana">えいぞう</span></span>			
+延命	えんめい	寿命を延ばすこと。		5	<span class="kanji">延命<span class="furigana">えんめい</span></span>			
+順延	じゅんえん	Remettre au jour suivant		5	<span class="kanji">順延<span class="furigana">じゅんえん</span></span>			

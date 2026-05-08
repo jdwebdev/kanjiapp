@@ -980,7 +980,6 @@ function footerMainBtn() {
 				switch(currentMode) {
 					case MODE.MAIN:
 						editClass(id("filter_section_genki"), "active", false);
-						editClass(id("footer_genki"), "active", false);
 						editClass(id("filter_section_minna"), "active", false);
 						break;
 					case MODE.GENKI:
@@ -1276,12 +1275,13 @@ function exportFurigana(pStart, pEnd) {
 	id("export_furigana_dialog").showModal();
 
 }
-function copyExport() {
+function copyExport(btn = null) {
+	if (push(btn, copyExport)) return;
 	copyToClipboard(id("furigana_dialog_text").value);
-
 }
 
-function closeFuriganaDialog() {
+function closeFuriganaDialog(btn = null) {
+	if (push(btn, closeFuriganaDialog)) return;
 	id("export_furigana_dialog").close();
 }
 
