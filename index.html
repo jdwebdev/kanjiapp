@@ -186,10 +186,15 @@
 				<button id="training_kotowaza_btn" class="sonota_btn normal_btn" onClick="prepareSonotaTraining('kotowaza', this)">諺</button>
 				<button id="training_ateji_btn" class="sonota_btn normal_btn" onClick="prepareSonotaTraining('ateji', this)">当て字</button>
 				<button id="training_ijitai_btn" class="sonota_btn normal_btn" onClick="kanjiStart(TRAINING_TYPE.SONOTA, SONOTA_CAT.ITAIJI, this)">異体字</button>
-				<div id="sonota_kanji">
-					<input id="sonota_input" class="normal_input" placeholder="漢字を入れてください" type="text">
+				<div class="sonota_kanji_word">
+					<input id="sonota_word_input" class="normal_input sonota_input" placeholder="単語１;単語２;単語３…" type="text">
 					<button id="sonota_start" class="sonota_btn normal_btn"
-						onClick="kanjiStart(TRAINING_TYPE.SONOTA, SONOTA_CAT.KANJI, this)">漢字</button>
+						onClick="prepareSonotaTraining('word', this)">単語練習</button>
+				</div>
+				<div class="sonota_kanji_word">
+					<input id="sonota_kanji_input" class="normal_input sonota_input" placeholder="漢字を入れてください" type="text">
+					<button id="sonota_start" class="sonota_btn normal_btn"
+						onClick="kanjiStart(TRAINING_TYPE.SONOTA, SONOTA_CAT.KANJI, this)">漢字練習</button>
 				</div>
 			</div>
 			<div id="training_continue">

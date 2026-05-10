@@ -92,21 +92,21 @@ class Yojijukugo extends Word {
 		Yojijukugo.wordList.push(this.word);
 		Yojijukugo.imiList.push(this.imi);
 
-		this.synonymRaw = ""
+		this.synonymRaw = "";
 		this.synonymList = [];
 		if (pSynonym != "" && pSynonym != "-") {
 			this.synonymRaw = pSynonym;
 			this.synonymList = pSynonym.split("、");
 		}
 
-		this.antonymRaw = ""
+		this.antonymRaw = "";
 		this.antonymList = [];
 		if (pAntonym != "" && pAntonym != "-") {
 			this.antonymRaw = pAntonym;
 			this.antonymList = pAntonym.split("、");
 		}
 
-		this.betsuYomiRaw = ""
+		this.betsuYomiRaw = "";
 		this.betsuYomiList = [];
 		if (pBetsuYomi != "" && pBetsuYomi != "-") {
 			this.betsuYomiRaw = pBetsuYomi;

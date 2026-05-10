@@ -26,7 +26,9 @@ const SONOTA_CAT = Object.freeze({
 	KOTOWAZA_KAKI: 2,
 	ATEJI_YOMI: 3,
 	ATEJI_KAKI: 4,
-	ITAIJI: 5
+	ITAIJI: 5,
+	WORD_YOMI: 6,
+	WORD_KAKI: 7
 });
 let kankenCategory = KANKEN_CAT.NONE;
 let bushuCategory = BUSHU_CAT.NONE;
@@ -315,13 +317,23 @@ function prepareSonotaTraining(pType, btn) {
 	let html = ""
 	if (pType == "ateji") {
 		html = `
-			<button class="normal_btn dialog_btn" onClick="sonotaTraining(SONOTA_CAT.ATEJI_YOMI)">当て字・読み</button>
-			<button class="normal_btn dialog_btn" onClick="sonotaTraining(SONOTA_CAT.ATEJI_KAKI)">当て字・書き</button>
+			<button class="normal_btn dialog_btn" onClick="sonotaTraining(SONOTA_CAT.ATEJI_YOMI,this)">当て字・読み</button>
+			<button class="normal_btn dialog_btn" onClick="sonotaTraining(SONOTA_CAT.ATEJI_KAKI,this)">当て字・書き</button>
 		`;
 	} else if (pType == "kotowaza") {
 		html = `
-			<button class="normal_btn dialog_btn" onClick="sonotaTraining(SONOTA_CAT.KOTOWAZA_YOMI)">諺・読み</button>
-			<button class="normal_btn dialog_btn" onClick="sonotaTraining(SONOTA_CAT.KOTOWAZA_KAKI)">諺・書き</button>
+			<button class="normal_btn dialog_btn" onClick="sonotaTraining(SONOTA_CAT.KOTOWAZA_YOMI,this)">諺・読み</button>
+			<button class="normal_btn dialog_btn" onClick="sonotaTraining(SONOTA_CAT.KOTOWAZA_KAKI,this)">諺・書き</button>
+		`;
+	} else if (pType == "word") {
+		let value = id("sonota_word_input").value;
+		if (value == "") {
+			alertDialog("リスト空っぽです！");
+			return;
+		}
+		html = `
+			<button class="normal_btn dialog_btn" onClick="sonotaTraining(SONOTA_CAT.WORD_YOMI,this)">単語・読み</button>
+			<button class="normal_btn dialog_btn" onClick="sonotaTraining(SONOTA_CAT.WORD_KAKI,this)">単語・書き</button>
 		`;
 	}
 	id("sonota_dialog_btn_container").innerHTML = html
@@ -346,6 +358,29 @@ function sonotaTraining(pCat, btn = null) {
 		wordTrainingList = Word.list.filter(w => w.ateji);
 	} else if (equal(sonotaCategory, SONOTA_CAT.KOTOWAZA_YOMI, SONOTA_CAT.KOTOWAZA_KAKI)) {
 		wordTrainingList = Word.list.filter(w => w.kotowaza);
+	} else if (equal(sonotaCategory, SONOTA_CAT.WORD_YOMI, SONOTA_CAT.WORD_KAKI)) {
+		let trainingList = id("sonota_word_input").value;
+		trainingList = trainingList.split(";");
+		
+		let word = null;
+		for (let i = 0; i < trainingList.length; i++) {
+			word = Word.list.find(w => w.word == trainingList[i]);
+			if (word !== undefined) wordTrainingList.push(word);
+		}
+
+		if (trainingList.length == 0) {
+			alertDialog("リスト空っぽです！");
+			currentTraining = TRAINING_TYPE.NONE;
+			sonotaCategory = SONOTA_CAT.NONE;
+			return;
+		}
+		if (wordTrainingList.length == 0) {
+			alertDialog("単語が見つかりませんでした！");
+			currentTraining = TRAINING_TYPE.NONE;
+			sonotaCategory = SONOTA_CAT.NONE;
+			return;
+		}
+
 	}
 
 	wordTrainingList = randomizeList(wordTrainingList);
@@ -354,10 +389,12 @@ function sonotaTraining(pCat, btn = null) {
 	switch (pCat) {
 		case SONOTA_CAT.ATEJI_YOMI:
 		case SONOTA_CAT.KOTOWAZA_YOMI:
+		case SONOTA_CAT.WORD_YOMI:
 			yomiStart(true);
 			break;
 		case SONOTA_CAT.ATEJI_KAKI:
 		case SONOTA_CAT.KOTOWAZA_KAKI:
+		case SONOTA_CAT.WORD_KAKI:
 			tangoStart(true);
 			break;
 	}
@@ -378,7 +415,7 @@ function kanjiStart(pType, pCat, btn = null) {
 
 			switch(sonotaCategory) {
 				case SONOTA_CAT.KANJI:
-					let trainingList = id("sonota_input").value;
+					let trainingList = id("sonota_kanji_input").value;
 					
 					let kanji = null;
 					for (let i = 0; i < trainingList.length; i++) {
@@ -501,6 +538,8 @@ function trainingContinue(btn = null) {
 					break;
 				case SONOTA_CAT.KOTOWAZA_YOMI:
 				case SONOTA_CAT.KOTOWAZA_KAKI:
+				case SONOTA_CAT.WORD_YOMI:
+				case SONOTA_CAT.WORD_KAKI:
 				case SONOTA_CAT.ATEJI_YOMI:
 				case SONOTA_CAT.ATEJI_KAKI:
 					wordTrainingList = [];
@@ -580,6 +619,7 @@ function trainingContinue(btn = null) {
 						yomiNext();
 					}
 					break;
+				case SONOTA_CAT.WORD_YOMI:
 				case SONOTA_CAT.ATEJI_YOMI:
 					if (saveData.checkDone) {
 						yomiNext(saveData);
@@ -591,6 +631,7 @@ function trainingContinue(btn = null) {
 					}
 					break;
 				case SONOTA_CAT.KOTOWAZA_KAKI:
+				case SONOTA_CAT.WORD_KAKI:
 				case SONOTA_CAT.ATEJI_KAKI:
 					if (saveData.checkDone) {
 						tangoNext(saveData);
@@ -1028,7 +1069,7 @@ function maruBatsu(pbMaru, btn = null) {
 	} else if (currentTraining == TRAINING_TYPE.KANKEN && kankenCategory == KANKEN_CAT.BUSHU) {
 		if (!pbMaru) wrongList += kanjiTrainingList[current].kanji;
 		kanjiBushuNext();
-	} else if ((currentTraining == TRAINING_TYPE.SONOTA && equal(sonotaCategory, SONOTA_CAT.ATEJI_KAKI, SONOTA_CAT.KOTOWAZA_KAKI)) 
+	} else if ((currentTraining == TRAINING_TYPE.SONOTA && equal(sonotaCategory, SONOTA_CAT.ATEJI_KAKI, SONOTA_CAT.KOTOWAZA_KAKI, SONOTA_CAT.WORD_KAKI)) 
 		|| (currentTraining == TRAINING_TYPE.KANKEN && equal(kankenCategory, KANKEN_CAT.WORD_KAKI, KANKEN_CAT.YOJI_KAKI))) {
 		if (!pbMaru) wrongWordList.push(wordTrainingList[current].id);
 		tangoNext();
@@ -1104,7 +1145,7 @@ function displayEndTraining() {
 		case TRAINING_TYPE.SONOTA: 
 			if (equal(sonotaCategory, SONOTA_CAT.KANJI, SONOTA_CAT.ITAIJI)) {
 				bEndTypeKanji = true;
-			} else if (equal(sonotaCategory, SONOTA_CAT.ATEJI_KAKI, SONOTA_CAT.ATEJI_YOMI, SONOTA_CAT.KOTOWAZA_KAKI, SONOTA_CAT.KOTOWAZA_YOMI)) {
+			} else if (equal(sonotaCategory, SONOTA_CAT.ATEJI_KAKI, SONOTA_CAT.ATEJI_YOMI, SONOTA_CAT.KOTOWAZA_KAKI, SONOTA_CAT.KOTOWAZA_YOMI, SONOTA_CAT.WORD_KAKI, SONOTA_CAT.WORD_YOMI)) {
 				bEndTypeWord = true;
 			}
 			break;
@@ -1312,7 +1353,7 @@ function seeWrongList(btn = null) {
 			break;
 		case TRAINING_TYPE.SONOTA:
 			bTypeKanji = equal(sonotaCategory, SONOTA_CAT.KANJI, SONOTA_CAT.ITAIJI);
-			bTypeWord = equal(sonotaCategory, SONOTA_CAT.ATEJI_KAKI, SONOTA_CAT.ATEJI_YOMI, SONOTA_CAT.KOTOWAZA_KAKI, SONOTA_CAT.KOTOWAZA_YOMI);
+			bTypeWord = equal(sonotaCategory, SONOTA_CAT.ATEJI_KAKI, SONOTA_CAT.ATEJI_YOMI, SONOTA_CAT.KOTOWAZA_KAKI, SONOTA_CAT.KOTOWAZA_YOMI, SONOTA_CAT.WORD_KAKI, SONOTA_CAT.WORD_YOMI);
 			break;
 	}
 	if (bTypeKanji) {
