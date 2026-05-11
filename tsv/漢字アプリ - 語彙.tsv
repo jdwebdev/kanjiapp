@@ -1158,11 +1158,11 @@
 共通	きょうつう	(En) commun			<span class="kanji">共通<span class="furigana">きょうつう</span></span>			
 公共	こうきょう	Public, commun			<span class="kanji">公共<span class="furigana">こうきょう</span></span>			
 共和国	きょうわこく	République			<span class="kanji">共和国<span class="furigana">きょうわこく</span></span>			
-供える	そなえる	Faire une offrande, dédier			<span class="kanji">供<span class="furigana">そな</span></span>える			
+供える	そなえる	Faire une offrande, dédier		5	<span class="kanji">供<span class="furigana">そな</span></span>える			
 供出	きょうしゅつ	Livraison, remise			<span class="kanji">供出<span class="furigana">きょうしゅつ</span></span>			
 自供	じきょう	Aveu			<span class="kanji">自供<span class="furigana">じきょう</span></span>			
-供物	くもつ	Offrande rituelle			<span class="kanji">供物<span class="furigana">くもつ</span></span>			
-子供	こども	Enfant			<span class="kanji">子供<span class="furigana">こども</span></span>			
+供物	くもつ	Offrande rituelle		5	<span class="kanji">供物<span class="furigana">くもつ</span></span>			
+子供	こども	Enfant		5	<span class="kanji">子供<span class="furigana">こども</span></span>			
 同じ	おなじ	Même, pareil, identique			<span class="kanji">同<span class="furigana">おな</span></span>じ			
 同時に	どうじに	En même temps; simultanément			<span class="kanji">同時<span class="furigana">どうじ</span></span>に			
 共同	きょうどう	Commun, collectif; coopération			<span class="kanji">共同<span class="furigana">きょうどう</span></span>			
@@ -2057,7 +2057,7 @@
 給料	きゅうりょう	Paie, salaire			<span class="kanji">給料<span class="furigana">きゅうりょう</span></span>			
 月給	げっきゅう	Salaire mensuel			<span class="kanji">月給<span class="furigana">げっきゅう</span></span>			
 支給	しきゅう	Allocation, distribution			<span class="kanji">支給<span class="furigana">しきゅう</span></span>			
-供給	きょうきゅう	Approvisionnement, fourniture, offre			<span class="kanji">供給<span class="furigana">きょうきゅう</span></span>			
+供給	きょうきゅう	Approvisionnement, fourniture, offre		5	<span class="kanji">供給<span class="furigana">きょうきゅう</span></span>			
 給水	きゅうすい	Distribution/alimentation d'eau			<span class="kanji">給水<span class="furigana">きゅうすい</span></span>			
 音	おと	Son, bruit			<span class="kanji">音<span class="furigana">おと</span></span>			
 音	ね	Son, bruit			<span class="kanji">音<span class="furigana">ね</span></span>			
@@ -3338,12 +3338,12 @@
 困苦	こんく	Détresse, épreuves, difficultés			<span class="kanji">困苦<span class="furigana">こんく</span></span>			
 困りきる	こまりきる	Être dans l'embarras, ne pas savoir quoi faire			<span class="kanji">困<span class="furigana">こま</span></span>りきる			
 困り果てる	こまりはてる	Être dans un grand embarras / perplexe			<span class="kanji">困<span class="furigana">こま</span></span>り<span class="kanji">果<span class="furigana">は</span></span>てる			
-勤める	つとめる	Être employé			<span class="kanji">勤<span class="furigana">つと</span></span>める			
-勤まる	つとまる	Convenir, être capable/apte			<span class="kanji">勤<span class="furigana">つと</span></span>まる			
-勤労	きんろう	Travail, labeur; travail physique			<span class="kanji">勤労<span class="furigana">きんろう</span></span>			
-勤務	きんむ	Service, travail			<span class="kanji">勤務<span class="furigana">きんむ</span></span>			
+勤める	つとめる	Être employé		5	<span class="kanji">勤<span class="furigana">つと</span></span>める			
+勤まる	つとまる	Convenir, être capable/apte		5	<span class="kanji">勤<span class="furigana">つと</span></span>まる			
+勤労	きんろう	Travail, labeur; travail physique		5	<span class="kanji">勤労<span class="furigana">きんろう</span></span>			
+勤務	きんむ	Service, travail		5	<span class="kanji">勤務<span class="furigana">きんむ</span></span>			
 通勤	つうきん	Aller au travail			<span class="kanji">通勤<span class="furigana">つうきん</span></span>			
-勤め先	つとめさき	Bureau/lieu de travail			<span class="kanji">勤<span class="furigana">つと</span></span>め<span class="kanji">先<span class="furigana">さき</span></span>			
+勤め先	つとめさき	Bureau/lieu de travail		5	<span class="kanji">勤<span class="furigana">つと</span></span>め<span class="kanji">先<span class="furigana">さき</span></span>			
 抵当	ていとう	Hypothèque, gage, garantie			<span class="kanji">抵当<span class="furigana">ていとう</span></span>			
 大抵	たいてい	Habituellement, la plupart du temps			<span class="kanji">大抵<span class="furigana">たいてい</span></span>			
 低い	ひくい	Bas			<span class="kanji">低<span class="furigana">ひく</span></span>い			
@@ -3497,7 +3497,7 @@
 河岸	かわぎし、かがん	Rive / berge d'une rivière			<span class="kanji">河岸<span class="furigana">かわぎし、かがん</span></span>			
 川岸	かわぎし	Rive / berge d'une rivière			<span class="kanji">川岸<span class="furigana">かわぎし</span></span>			
 皆済	かいさい	Paiement intégral			<span class="kanji">皆済<span class="furigana">かいさい</span></span>			
-皆勤	かいきん	Présence assidue (travail, école)			<span class="kanji">皆勤<span class="furigana">かいきん</span></span>			
+皆勤	かいきん	Présence assidue (travail, école)		5	<span class="kanji">皆勤<span class="furigana">かいきん</span></span>			
 皆無	かいむ	Rien, rien du tout			<span class="kanji">皆無<span class="furigana">かいむ</span></span>			
 皆目	かいもく	Entièrement; pas du tout			<span class="kanji">皆目<span class="furigana">かいもく</span></span>			
 皆さん	みなさん	Tous; Mesdames et Messieurs !			<span class="kanji">皆<span class="furigana">みな</span></span>さん			
@@ -3725,7 +3725,7 @@
 主将	しゅしょう	Capitaine (d'une équipe)			<span class="kanji">主将<span class="furigana">しゅしょう</span></span>			
 提げる	さげる	Porter (à la main)			<span class="kanji">提<span class="furigana">さ</span></span>げる			
 提案	ていあん	Proposition, suggestion, offre			<span class="kanji">提案<span class="furigana">ていあん</span></span>			
-提供	ていきょう	Offre			<span class="kanji">提供<span class="furigana">ていきょう</span></span>			
+提供	ていきょう	Offre		5	<span class="kanji">提供<span class="furigana">ていきょう</span></span>			
 提議	ていぎ	Proposition, suggestion			<span class="kanji">提議<span class="furigana">ていぎ</span></span>			
 提出	ていしゅつ	Présentation, remise (d'un dossier)			<span class="kanji">提出<span class="furigana">ていしゅつ</span></span>			
 前提	ぜんてい	Condition préalable, prémisse			<span class="kanji">前提<span class="furigana">ぜんてい</span></span>			
@@ -4362,7 +4362,7 @@
 勉強	べんきょう	Étude; rabais			<span class="kanji">勉強<span class="furigana">べんきょう</span></span>			
 勉強家	べんきょうか	Travailleur, bûcheur			<span class="kanji">勉強家<span class="furigana">べんきょうか</span></span>			
 勉学	べんがく	Étudier			<span class="kanji">勉学<span class="furigana">べんがく</span></span>			
-勤勉	きんべん	Application, diligence, assiduité			<span class="kanji">勤勉<span class="furigana">きんべん</span></span>			
+勤勉	きんべん	Application, diligence, assiduité		5	<span class="kanji">勤勉<span class="furigana">きんべん</span></span>			
 今晩	こんばん	Ce soir, cette nuit			<span class="kanji">今晩<span class="furigana">こんばん</span></span>			
 毎晩	まいばん	Tous les soirs			<span class="kanji">毎晩<span class="furigana">まいばん</span></span>			
 一晩	ひとばん	Une nuit; toute la nuit			<span class="kanji">一晩<span class="furigana">ひとばん</span></span>			
@@ -5062,11 +5062,13 @@
 影法師	かげぼうし	Ombre d'une personne, silhouette			<span class="kanji">影法師<span class="furigana">かげぼうし</span></span>			
 影絵	かげえ	Ombre chinoise, silhouette			<span class="kanji">影絵<span class="furigana">かげえ</span></span>			
 面影	おもかげ	Physionomie, traits, trace, vestiges			<span class="kanji">面影<span class="furigana">おもかげ</span></span>			
-故郷	こきょう	Pays/ville natal(e)			<span class="kanji">故郷<span class="furigana">こきょう</span></span>			
-郷里	きょうり	Pays/ville natal(e)			<span class="kanji">郷里<span class="furigana">きょうり</span></span>			
-郷土	きょうど	Pays natal			<span class="kanji">郷土<span class="furigana">きょうど</span></span>			
-望郷の念	ぼうきょうのねん	Mal du pays, nostalgie			<span class="kanji">望郷<span class="furigana">ぼうきょう</span></span>の<span class="kanji">念<span class="furigana">ねん</span></span>			
-近郷	きんごう	Alentours, voisinage, (proche) banlieue			<span class="kanji">近郷<span class="furigana">きんごう</span></span>			
+故郷	こきょう	Pays/ville natal(e)		5	<span class="kanji">故郷<span class="furigana">こきょう</span></span>			
+郷里	きょうり	Pays/ville natal(e)		5	<span class="kanji">郷里<span class="furigana">きょうり</span></span>			
+郷土	きょうど	Pays natal		5	<span class="kanji">郷土<span class="furigana">きょうど</span></span>			
+郷土料理	きょうどりょうり	Cuisine régionale		5	<span class="kanji">郷土料理<span class="furigana">きょうどりょうり</span></span>			
+望郷	ぼうきょう	Nostalgie		5	<span class="kanji">望郷<span class="furigana">ぼうきょう</span></span>			
+望郷の念	ぼうきょうのねん	Mal du pays, nostalgie		5	<span class="kanji">望郷<span class="furigana">ぼうきょう</span></span>の<span class="kanji">念<span class="furigana">ねん</span></span>			
+近郷	きんごう	Alentours, voisinage, (proche) banlieue		5	<span class="kanji">近郷<span class="furigana">きんごう</span></span>			
 響く	ひびく	Résonner, retentir, se répercuter; affecter, influer			<span class="kanji">響<span class="furigana">ひび</span></span>く			
 影響	えいきょう	Influence, effet			<span class="kanji">影響<span class="furigana">えいきょう</span></span>			
 反響	はんきょう	Écho, répercussion, retentissement			<span class="kanji">反響<span class="furigana">はんきょう</span></span>			
@@ -6911,13 +6913,13 @@
 露顕	ろけん	Découverte, révélation, dévoilement			<span class="kanji">露顕<span class="furigana">ろけん</span></span>			
 顕著	けんちょ	Remarquable, frappant			<span class="kanji">顕著<span class="furigana">けんちょ</span></span>			
 顕花植物	けんかしょくぶつ	Plante phanérogame			<span class="kanji">顕花植物<span class="furigana">けんかしょくぶつ</span></span>			
-貴い	たっとい	Précieux, respectable, noble			<span class="kanji">貴<span class="furigana">たっと</span></span>い			
-貴い	とうとい	Précieux, respectable, noble			<span class="kanji">貴<span class="furigana">とうと</span></span>い			
-貴ぶ	たっとぶ	Apprécier / estimer grandement, respecter			<span class="kanji">貴<span class="furigana">たっと</span></span>ぶ			
-貴ぶ	とうとぶ	Apprécier / estimer grandement, respecter			<span class="kanji">貴<span class="furigana">とうと</span></span>ぶ			
-貴重	きちょう	Précieux, de valeur			<span class="kanji">貴重<span class="furigana">きちょう</span></span>			
-貴重品	きちょうひん	Objets de valeur			<span class="kanji">貴重品<span class="furigana">きちょうひん</span></span>			
-貴族	きぞく	Noblesse, aristocratie; noble			<span class="kanji">貴族<span class="furigana">きぞく</span></span>			
+貴い	たっとい	Précieux, respectable, noble		5	<span class="kanji">貴<span class="furigana">たっと</span></span>い			
+貴い	とうとい	Précieux, respectable, noble		5	<span class="kanji">貴<span class="furigana">とうと</span></span>い			
+貴ぶ	たっとぶ	Apprécier / estimer grandement, respecter		5	<span class="kanji">貴<span class="furigana">たっと</span></span>ぶ			
+貴ぶ	とうとぶ	Apprécier / estimer grandement, respecter		5	<span class="kanji">貴<span class="furigana">とうと</span></span>ぶ			
+貴重	きちょう	Précieux, de valeur		5	<span class="kanji">貴重<span class="furigana">きちょう</span></span>			
+貴重品	きちょうひん	Objets de valeur		5	<span class="kanji">貴重品<span class="furigana">きちょうひん</span></span>			
+貴族	きぞく	Noblesse, aristocratie; noble		5	<span class="kanji">貴族<span class="furigana">きぞく</span></span>			
 潰す	つぶす	Écraser, démolir, abattre (animal); tuer (temps)			<span class="kanji">潰<span class="furigana">つぶ</span></span>す			
 潰れる	つぶれる	Se briser, se rompre, s'effondrer			<span class="kanji">潰<span class="furigana">つぶ</span></span>れる			
 崩潰	ほうかい	Écroulement, effondrement			<span class="kanji">崩潰<span class="furigana">ほうかい</span></span>			
@@ -7417,11 +7419,11 @@
 吹き出し	ふきだし	Bulle (B.D.); se lever (vent); laisser échapper (air)			<span class="kanji">吹<span class="furigana">ふ</span></span>き<span class="kanji">出<span class="furigana">だ</span></span>し			
 吹き飛ばす	ふきとばす	Emporter (vent); dissiper (doute)			<span class="kanji">吹<span class="furigana">ふ</span></span>き<span class="kanji">飛<span class="furigana">と</span></span>ばす			
 吹き出物	ふきでもの	Bouton, eczéma, acné, furoncle			<span class="kanji">吹<span class="furigana">ふ</span></span>き<span class="kanji">出物<span class="furigana">でもの</span></span>			
-吸う	すう	Aspirer, respirer, sucer; fumer			<span class="kanji">吸<span class="furigana">す</span></span>う			
-呼吸	こきゅう	Respiration			<span class="kanji">呼吸<span class="furigana">こきゅう</span></span>			
-吸入	きゅうにゅう	Inhaler			<span class="kanji">吸入<span class="furigana">きゅうにゅう</span></span>			
-吸引	きゅういん	Absorber (par succion / aspiration)			<span class="kanji">吸引<span class="furigana">きゅういん</span></span>			
-吸収	きゅうしゅう	Absorber, assimiler			<span class="kanji">吸収<span class="furigana">きゅうしゅう</span></span>			
+吸う	すう	Aspirer, respirer, sucer; fumer		5	<span class="kanji">吸<span class="furigana">す</span></span>う			
+呼吸	こきゅう	Respiration		5	<span class="kanji">呼吸<span class="furigana">こきゅう</span></span>			
+吸入	きゅうにゅう	Inhaler		5	<span class="kanji">吸入<span class="furigana">きゅうにゅう</span></span>			
+吸引	きゅういん	Absorber (par succion / aspiration)		5	<span class="kanji">吸引<span class="furigana">きゅういん</span></span>			
+吸収	きゅうしゅう	Absorber, assimiler		5	<span class="kanji">吸収<span class="furigana">きゅうしゅう</span></span>			
 吸い取り紙	すいとりがみ	Papier buvard			<span class="kanji">吸<span class="furigana">す</span></span>い<span class="kanji">取<span class="furigana">と</span></span>り<span class="kanji">紙<span class="furigana">がみ</span></span>			
 及ぶ	およぶ	Atteindre / s'étendre à, concerner; égaler			<span class="kanji">及<span class="furigana">およ</span></span>ぶ			
 及ぼす	およぼす	Exercer			<span class="kanji">及<span class="furigana">およ</span></span>ぼす			
@@ -7574,12 +7576,13 @@
 刈り取る	かりとる	Moissonner, faucher			<span class="kanji">刈<span class="furigana">か</span></span>り<span class="kanji">取<span class="furigana">と</span></span>る			
 刈り込む	かりこむ	Tailler, tondre			<span class="kanji">刈<span class="furigana">か</span></span>り<span class="kanji">込<span class="furigana">こ</span></span>む			
 芝刈り機	しばかりき	Tondeuse à gazon			<span class="kanji">芝刈<span class="furigana">しばか</span></span>り<span class="kanji">機<span class="furigana">き</span></span>			
-胸	むね	Poitrine			<span class="kanji">胸<span class="furigana">むね</span></span>			
+胸	むね	Poitrine		5	<span class="kanji">胸<span class="furigana">むね</span></span>			
 胸像	きょうぞう	Buste (sculpté)			<span class="kanji">胸像<span class="furigana">きょうぞう</span></span>			
 胸部	きょうぶ	Poitrine, thorax			<span class="kanji">胸部<span class="furigana">きょうぶ</span></span>			
-胸囲	きょうい	Tour de poitrine			<span class="kanji">胸囲<span class="furigana">きょうい</span></span>			
-胸中	きょうちゅう	Sein, coeur, sentiments, pensée			<span class="kanji">胸中<span class="furigana">きょうちゅう</span></span>			
-度胸	どきょう	Courage, audace, hardiesse			<span class="kanji">度胸<span class="furigana">どきょう</span></span>			
+胸囲	きょうい	Tour de poitrine		5	<span class="kanji">胸囲<span class="furigana">きょうい</span></span>			
+胸中	きょうちゅう	Sein, coeur, sentiments, pensée		5	<span class="kanji">胸中<span class="furigana">きょうちゅう</span></span>			
+度胸	どきょう	Courage, audace, hardiesse		5	<span class="kanji">度胸<span class="furigana">どきょう</span></span>			
+度胸がすわっている	どきょうがすわっている	Avoir des nerfs à toute épreuve		5	<span class="kanji">度胸<span class="furigana">どきょう</span></span>がすわっている			
 細胞	さいぼう	Cellule			<span class="kanji">細胞<span class="furigana">さいぼう</span></span>			
 単細胞	たんさいぼう	Une (seule) cellule			<span class="kanji">単細胞<span class="furigana">たんさいぼう</span></span>			
 脳細胞	のうさいぼう	Cellule du cerveau			<span class="kanji">脳細胞<span class="furigana">のうさいぼう</span></span>			
@@ -8301,7 +8304,7 @@
 耐久	たいきゅう	Endurance, résistance			<span class="kanji">耐久<span class="furigana">たいきゅう</span></span>			
 耐乏生活	たいぼうせいかつ	Vie austère			<span class="kanji">耐乏生活<span class="furigana">たいぼうせいかつ</span></span>			
 需要	じゅよう	La demande			<span class="kanji">需要<span class="furigana">じゅよう</span></span>			 
-需要供給	じゅようきょうきゅう	A			<span class="kanji">需要供給<span class="furigana">じゅようきょうきゅう</span></span>			
+需要供給	じゅようきょうきゅう	L'offre et la demande			<span class="kanji">需要供給<span class="furigana">じゅようきょうきゅう</span></span>			
 需給	じゅきゅう	L'offre et la demande			<span class="kanji">需給<span class="furigana">じゅきゅう</span></span>			 
 特需	とくじゅ	Demande spéciale (en temps de guerre)			<span class="kanji">特需<span class="furigana">とくじゅ</span></span>			
 軍需品	ぐんじゅひん	Matériel de guerre, munitions			<span class="kanji">軍需品<span class="furigana">ぐんじゅひん</span></span>			
@@ -8836,10 +8839,11 @@
 基礎知識	きそちしき	Connaissances de base / élémentaires			<span class="kanji">基礎知識<span class="furigana">きそちしき</span></span>			
 礎石	そせき	Première pierre			<span class="kanji">礎石<span class="furigana">そせき</span></span>			
 定礎式	ていそしき	Pose de la première pierre			<span class="kanji">定礎式<span class="furigana">ていそしき</span></span>			
-疑う	うたがう	Douter; suspecter, se méfier, soupçonner			<span class="kanji">疑<span class="furigana">うたが</span></span>う			
-疑問	ぎもん	Question, doute, problème			<span class="kanji">疑問<span class="furigana">ぎもん</span></span>			
-疑惑	ぎわく	Soupçon, doute, méfiance			<span class="kanji">疑惑<span class="furigana">ぎわく</span></span>			
+疑う	うたがう	Douter; suspecter, se méfier, soupçonner		5	<span class="kanji">疑<span class="furigana">うたが</span></span>う			
+疑問	ぎもん	Question, doute, problème		5	<span class="kanji">疑問<span class="furigana">ぎもん</span></span>			
+疑惑	ぎわく	Soupçon, doute, méfiance		5	<span class="kanji">疑惑<span class="furigana">ぎわく</span></span>			
 疑獄	ぎごく	Scandale			<span class="kanji">疑獄<span class="furigana">ぎごく</span></span>			
+質疑	しつぎ	Question, interrogation; débats, interpellations		5	<span class="kanji">質疑<span class="furigana">しつぎ</span></span>			
 質疑応答	しつぎおうとう	(Échange de) questions et réponses			<span class="kanji">質疑応答<span class="furigana">しつぎおうとう</span></span>			
 容疑者	ようぎしゃ	Personne inculpée / suspecte			<span class="kanji">容疑者<span class="furigana">ようぎしゃ</span></span>			
 擬人	ぎじん	Personnification			<span class="kanji">擬人<span class="furigana">ぎじん</span></span>			
@@ -9300,7 +9304,7 @@
 愁える	うれえる	Se désoler, s'affliger, se faire du souci, être inquiet			<span class="kanji">愁<span class="furigana">うれ</span></span>える			
 旅愁	りょしゅう	Se sentir seul pendant un voyage			<span class="kanji">旅愁<span class="furigana">りょしゅう</span></span>			
 憂愁	ゆうしゅう	Mélancolie, tristesse, inquiétude			<span class="kanji">憂愁<span class="furigana">ゆうしゅう</span></span>			
-郷愁	きょうしゅう	Nostalgie, mal du pays			<span class="kanji">郷愁<span class="furigana">きょうしゅう</span></span>			
+郷愁	きょうしゅう	Nostalgie, mal du pays		5	<span class="kanji">郷愁<span class="furigana">きょうしゅう</span></span>			
 ご愁傷様	ごしゅうしょうさま	"Je vous présente mes condoléances"			ご<span class="kanji">愁傷様<span class="furigana">しゅうしょうさま</span></span>			
 恐れる	おそれる	Avoir peur, craindre			<span class="kanji">恐<span class="furigana">おそ</span></span>れる			
 恐ろしい	おそろしい	Terrible, terrifiant, épouvantable			<span class="kanji">恐<span class="furigana">おそ</span></span>ろしい			
@@ -10301,8 +10305,8 @@
 謄写器	とうしゃき	Imprimante de miméographie, polycopieuse			<span class="kanji">謄写器<span class="furigana">とうしゃき</span></span>			
 謄写版	とうしゃばん	Miméographe			<span class="kanji">謄写版<span class="furigana">とうしゃばん</span></span>			
 謄本	とうほん	Copie conforme; duplicata			<span class="kanji">謄本<span class="furigana">とうほん</span></span>			
-騰貴	とうき	Hausse			<span class="kanji">騰貴<span class="furigana">とうき</span></span>			
-物価騰貴	ぶっかとうき	Hausse des prix			<span class="kanji">物価騰貴<span class="furigana">ぶっかとうき</span></span>			
+騰貴	とうき	Hausse, augmentation		5	<span class="kanji">騰貴<span class="furigana">とうき</span></span>			
+物価騰貴	ぶっかとうき	Hausse des prix		5	<span class="kanji">物価騰貴<span class="furigana">ぶっかとうき</span></span>			
 暴騰	ぼうとう	Croissance soudaine, augmentation brusque			<span class="kanji">暴騰<span class="furigana">ぼうとう</span></span>			
 高騰	こうとう	Augmentation soudaine (des prix)			<span class="kanji">高騰<span class="furigana">こうとう</span></span>			
 騰勢	とうせい	Tendance à la hausse / ascendante			<span class="kanji">騰勢<span class="furigana">とうせい</span></span>			
@@ -10723,7 +10727,8 @@
 寡黙	かもく	Taciturne, silencieux			<span class="kanji">寡黙<span class="furigana">かもく</span></span>			
 寡占	かせん	Oligole			<span class="kanji">寡占<span class="furigana">かせん</span></span>			
 賓客	ひんかく、ひんきゃく	Invité, hôte			<span class="kanji">賓客<span class="furigana">ひんかく、ひんきゃく</span></span>			
-貴賓	きひん	Hôte de marque			<span class="kanji">貴賓<span class="furigana">きひん</span></span>			
+貴賓	きひん	Hôte de marque		5	<span class="kanji">貴賓<span class="furigana">きひん</span></span>			
+貴賓室	きひんしつ	Suite réservée aux hôtes de marque		5	<span class="kanji">貴賓室<span class="furigana">きひんしつ</span></span>			
 主賓	しゅひん	Invité d'honneur			<span class="kanji">主賓<span class="furigana">しゅひん</span></span>			
 来賓	らいひん	Invité, hôte, visiteur			<span class="kanji">来賓<span class="furigana">らいひん</span></span>			
 迎賓館	げいひんかん	Hall de réception; maison d'hôtes			<span class="kanji">迎賓館<span class="furigana">げいひんかん</span></span>			
@@ -11595,3 +11600,21 @@
 不作	ふさく	Mauvaise récolte; mauvaise moisson		5	<span class="kanji">不作<span class="furigana">ふさく</span></span>			
 間食	かんしょく	Manger entre les repas		5	<span class="kanji">間食<span class="furigana">かんしょく</span></span>			
 危ない橋を渡る	あぶないはしをわたる	Marcher sur des oeufs; Se mettre dans la gueule du loup　危険な手段をとる。特に承知で法律に違反するような行為を行う。	慣用句	5	<span class="kanji">危<span class="furigana">あぶ</span></span>ない<span class="kanji">橋<span class="furigana">はし</span></span>を<span class="kanji">渡<span class="furigana">わた</span></span>る			
+高貴な	こうきな	Noble, élevé		5	<span class="kanji">高貴<span class="furigana">こうき</span></span>な			
+富貴	ふうき、ふっき	金持で、かつ地位や身分が高いこと。		5	<span class="kanji">富貴<span class="furigana">ふうき</span></span>		(な/の)生まれ	
+疑念	ぎねん	Doute		5	<span class="kanji">疑念<span class="furigana">ぎねん</span></span>		疑念を抱く	
+耳を疑う	みみをうたがう	Ne pas en croire ses oreilles	慣用句	5	<span class="kanji">耳<span class="furigana">みみ</span></span>を<span class="kanji">疑<span class="furigana">うたが</span></span>う			
+吸水	きゅうすい	Aspiration de l'eau		5	<span class="kanji">吸水<span class="furigana">きゅうすい</span></span>			
+吸い物	すいもの	Suimono, soupe claire japonaise		5	<span class="kanji">吸<span class="furigana">す</span></span>い<span class="kanji">物<span class="furigana">もの</span></span>			
+息を吸う	いきをすう	Inspirer		5	<span class="kanji">息<span class="furigana">いき</span></span>を<span class="kanji">吸<span class="furigana">す</span></span>う			
+試供品	しきょうひん	Échantillon gratuit		5	<span class="kanji">試供品<span class="furigana">しきょうひん</span></span>			
+供え物	そなえもの	Offrande aux dieux, aux Bouddhas		5	<span class="kanji">供<span class="furigana">そな</span></span>え<span class="kanji">物<span class="furigana">もの</span></span>			
+お供	おとも	Suite, escorte		5	お<span class="kanji">供<span class="furigana">とも</span></span>			
+胸騒ぎ	むねさわぎ	胸が騒ぐ Se sentir mal à l'aise, inquet		5	<span class="kanji">胸騒<span class="furigana">むねさわ</span></span>ぎ			
+胸元	むなもと	Poitrine		5	<span class="kanji">胸元<span class="furigana">むなもと</span></span>			
+胸を打つ	むねをうつ	Émouvant, touchant, saisissant	慣用句	5	<span class="kanji">胸<span class="furigana">むね</span></span>を<span class="kanji">打<span class="furigana">う</span></span>つ			
+胸を膨らませる	むねをふくらませる	Avoir le coeur plein de ～	慣用句	5	<span class="kanji">胸<span class="furigana">むね</span></span>を<span class="kanji">膨<span class="furigana">ふく</span></span>らませる		～に胸を膨らませる	
+帰郷	ききょう	Retour au pays natal		5	<span class="kanji">帰郷<span class="furigana">ききょう</span></span>			
+郷士	ごうし	江戸時代、武士の身分のまま農業に従事した者。また、武士の待遇を受けていた農民。平時は農業、戦時には軍事に従った。郷侍(ごうざむらい)		5	<span class="kanji">郷士<span class="furigana">ごうし</span></span>			
+出勤	しゅっきん	Aller au travail		5	<span class="kanji">出勤<span class="furigana">しゅっきん</span></span>			
+勤行	ごんぎょう	仏道を修行すること。		5	<span class="kanji">勤行<span class="furigana">ごんぎょう</span></span>			

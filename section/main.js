@@ -196,6 +196,10 @@ function search(pWord,pType = "") {
 		furiganaTest();
 		return;
 	}
+	if (pWord.toLowerCase() == "check()") {
+		displayCheckNewWords();
+		return;
+	}
 
 	switch (currentMode) {
 		case MODE.MAIN:
@@ -1113,7 +1117,7 @@ function furiganaTest(pStart = 0, pEnd = 0) {
 	`;
 	let checkClass = "";
 	Word.list.forEach((w, index) => {
-		if (index >= start && index <= end) {
+		if (!(w instanceof Yojijukugo) && index >= start && index <= end) {
 			if (w.bFuriganaCheck) {
 				checkClass = "furigana_check";
 			} else if (w.furigana != "") {
@@ -1150,6 +1154,57 @@ function furiganaTest(pStart = 0, pEnd = 0) {
 
 	main_section.innerHTML = html;
 }
+function displayCheckNewWords() {
+	let html = "";
+	html = `
+		<div class="check_new_words_input_cont">
+			<input id="new_words_input" class="normal_input" placeholder="単語１;単語２;単語３" type="text" />
+			<button id="check_new_words_btn" class="normal_btn" onClick="checkNewWords()">確認</button>
+		</div>
+	`;
+	main_section.innerHTML = html;
+}
+function checkNewWords() {
+	let words = id("new_words_input").value;
+	log(words);
+	words = words.split(";");
+	log(words);
+	let foundWord = null;
+	let foundWordList = [];
+	words.forEach(wrd => {
+		foundWord = Word.list.find(w => w.word == wrd);
+		if (foundWord == undefined) foundWordList.push(wrd);
+	});
+	log(foundWordList);
+
+	let content = `<div class="new_words_list_container">
+	<textarea id="new_words_list" class="normal_input">`;
+
+	foundWordList.forEach((w, index)=> {
+			content += `${w}
+`;
+	});
+	
+	content += `</textarea>`;
+	content += `
+		<button id="copy_new_words_btn" class="normal_btn" onClick="copyNewWords(this)">コピー</button>
+		</div>
+	`;
+
+	main_section.innerHTML = content;
+}
+
+/*
+１
+胃液;胃下垂;胃酸;胃弱;胃腸;異議;異口同音;異国;異常;異論;遺棄;遺産;遺失;遺跡;遺品;世界遺産;遺言;域外;域内;音域;区域;広域;地域;流域;領域;宇宙;宇宙遊泳;気宇壮大;堂宇;映画;映写;映像;上映;反映;夕映え;延期;延長;延命;順延;繰り延べる;沿海;沿革;沿岸漁業;沿線;沿道;海沿い
+２
+恩返し;恩義;恩恵;恩師;恩人;洪恩;謝恩;我田引水;我流;忘我;我慢;我に返る;我が家;灰白色;石灰;灰色;灰皿;灰墨;火山灰;粉灰;拡散;拡声器;拡充;拡大;拡張;拡幅;軍拡;革新;革命;改革;改革;皮革;変革;革靴;閣議;閣僚;組閣;天守閣;内閣;仏閣;楼閣;割愛;割拠;分割;割合;割引;役割;時間を割く;株式;株式会社;株主;株分け;切り株
+３
+干害;干潮;干満;若干;干物;潮干狩り;干し草;巻末;圧巻;巻き尺;巻紙;巻物;舌を巻く;看過;看護;看守;寒波;看板;看病;簡易;簡潔;簡素;簡単;簡便;簡略;書簡;危機;危急;危険;安危;危うく助かる;机上;机辺;事務机;勉強机;揮発;指揮;実力発揮
+４
+貴族;貴重;貴賓室;高貴;騰貴;富貴;疑念;疑問;疑惑;質疑;半信半疑;耳を疑う;吸引;吸収;吸水;吸入;呼吸;吸い物;息を吸う;供給;試供品;提供;供物;供え物;お供;子供;胸囲;胸中;度胸;胸騒ぎ;胸元;胸を打つ;郷愁;郷土;郷里;帰郷;故郷;望郷;郷士;近郷;勤勉;勤務;勤労;皆勤;出勤;勤行;勤め先
+*/
+
 
 function setFurigana(pId, pElement) {
 	const selectionText = window.getSelection().toString();
@@ -1265,7 +1320,7 @@ function exportFurigana(pStart, pEnd) {
 
 	let content = "";
 	Word.list.forEach((w, index)=> {
-		if (index >= pStart && index <= pEnd) {
+		if (!(w instanceof Yojijukugo) && index >= pStart && index <= pEnd) {
 			content += `${w.furigana}
 `;
 		}
@@ -1278,6 +1333,10 @@ function exportFurigana(pStart, pEnd) {
 function copyExport(btn = null) {
 	if (push(btn, copyExport)) return;
 	copyToClipboard(id("furigana_dialog_text").value);
+}
+function copyNewWords(btn = null) {
+	if (push(btn, copyNewWords)) return;
+	copyToClipboard(id("new_words_list").value);
 }
 
 function closeFuriganaDialog(btn = null) {
