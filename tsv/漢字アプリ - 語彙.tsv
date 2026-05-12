@@ -3015,10 +3015,10 @@
 音符	おんぷ	Note (musique)			<span class="kanji">音符<span class="furigana">おんぷ</span></span>			
 符号	きごう	Signe, marque, symbole			<span class="kanji">符号<span class="furigana">きごう</span></span>			
 符合	きごう	Coïcidence, concordance			<span class="kanji">符合<span class="furigana">きごう</span></span>			
-入場券	にゅうじょうけん	Billet d'entrée			<span class="kanji">入場券<span class="furigana">にゅうじょうけん</span></span>			
-旅券	りょけん	Passeport			<span class="kanji">旅券<span class="furigana">りょけん</span></span>			
+入場券	にゅうじょうけん	Billet d'entrée		5	<span class="kanji">入場券<span class="furigana">にゅうじょうけん</span></span>			
+旅券	りょけん	Passeport		5	<span class="kanji">旅券<span class="furigana">りょけん</span></span>			
 回数券	かいすうけん	Carnet de tickets			<span class="kanji">回数券<span class="furigana">かいすうけん</span></span>			
-定期券	ていきけん	Carte d'abonnement (transports)			<span class="kanji">定期券<span class="furigana">ていきけん</span></span>			
+定期券	ていきけん	Carte d'abonnement (transports)		5	<span class="kanji">定期券<span class="furigana">ていきけん</span></span>			
 (有価)証券	(ゆうか)しょうけん	Valeurs (mobilières), titres (financiers)			(<span class="kanji">有価<span class="furigana">ゆうか</span></span>)<span class="kanji">証券<span class="furigana">しょうけん</span></span>			
 巻き	まき	Rouleau, volume			<span class="kanji">巻<span class="furigana">ま</span></span>き			
 巻く	まく	Enrouler, rouler			<span class="kanji">巻<span class="furigana">ま</span></span>く			
@@ -3124,7 +3124,7 @@
 乗る	のる	Monter (en train, à cheval); être dupé/trompé			<span class="kanji">乗<span class="furigana">の</span></span>る			
 乗せる	のせる	Faire partir; charger, embarquer; tromper, mystifier			<span class="kanji">乗<span class="furigana">の</span></span>せる			
 乗用車	じょうようしゃ	Automobile, voiture particulière			<span class="kanji">乗用車<span class="furigana">じょうようしゃ</span></span>			
-乗車券	じょうしゃけん	Titre de transport, billet, ticket			<span class="kanji">乗車券<span class="furigana">じょうしゃけん</span></span>			
+乗車券	じょうしゃけん	Titre de transport, billet, ticket		5	<span class="kanji">乗車券<span class="furigana">じょうしゃけん</span></span>			
 乗組員	のりくみいん	Équipage (bateau, avion)			<span class="kanji">乗組員<span class="furigana">のりくみいん</span></span>			
 乗っ取る	のっとる	S'emparer, détourner (avion), capturer			<span class="kanji">乗<span class="furigana">の</span></span>っ<span class="kanji">取<span class="furigana">と</span></span>る			
 郵便局	ゆうびんきょく	Bureau de poste			<span class="kanji">郵便局<span class="furigana">ゆうびんきょく</span></span>			
@@ -4200,16 +4200,16 @@
 自尊(心)	じそん(しん)	Amour-propre, fierté			<span class="kanji">自尊<span class="furigana">じそん</span></span>(<span class="kanji">心<span class="furigana">しん</span></span>)			
 尊大	そんだい	Hautain, arrogant			<span class="kanji">尊大<span class="furigana">そんだい</span></span>			
 本尊	ほんぞん	Bouddha; objet du culte; elle/lui-même			<span class="kanji">本尊<span class="furigana">ほんぞん</span></span>			
-敬う	うやまう	Respecter, vénérer			<span class="kanji">敬<span class="furigana">うやま</span></span>う			
-尊敬	そんけい	Respect, admiration, considération			<span class="kanji">尊敬<span class="furigana">そんけい</span></span>			
+敬う	うやまう	Respecter, vénérer		5	<span class="kanji">敬<span class="furigana">うやま</span></span>う			
+尊敬	そんけい	Respect, admiration, considération		5	<span class="kanji">尊敬<span class="furigana">そんけい</span></span>			
 敬意	けいい	Respect, hommage			<span class="kanji">敬意<span class="furigana">けいい</span></span>			
-敬老	けいろう	Respect pour la vieillesse			<span class="kanji">敬老<span class="furigana">けいろう</span></span>			
+敬老	けいろう	Respect pour la vieillesse		5	<span class="kanji">敬老<span class="furigana">けいろう</span></span>			
 敬遠	けいえん	Distance respectueuse			<span class="kanji">敬遠<span class="furigana">けいえん</span></span>			
-敬語	けいご	Terme respectueux/poli, langage respectueux			<span class="kanji">敬語<span class="furigana">けいご</span></span>			
-警察	けいさつ	Police			<span class="kanji">警察<span class="furigana">けいさつ</span></span>			
-警官	けいかん	Policier, agent de police			<span class="kanji">警官<span class="furigana">けいかん</span></span>			
+敬語	けいご	Terme respectueux/poli, langage respectueux		5	<span class="kanji">敬語<span class="furigana">けいご</span></span>			
+警察	けいさつ	Police		5	<span class="kanji">警察<span class="furigana">けいさつ</span></span>			
+警官	けいかん	Policier, agent de police		5	<span class="kanji">警官<span class="furigana">けいかん</span></span>			
 警視	けいし	Commissaire de police			<span class="kanji">警視<span class="furigana">けいし</span></span>			
-警告	けいこく	Avertissement, alarme, alerte			<span class="kanji">警告<span class="furigana">けいこく</span></span>			
+警告	けいこく	Avertissement, alarme, alerte		5	<span class="kanji">警告<span class="furigana">けいこく</span></span>			
 警報	けいほう	(Signal d')alarme, alerte			<span class="kanji">警報<span class="furigana">けいほう</span></span>			
 卸す	おろす	Vendre en gros			<span class="kanji">卸<span class="furigana">おろ</span></span>す			
 卸	おろし	Vente en gros			<span class="kanji">卸<span class="furigana">おろし</span></span>			
@@ -4708,11 +4708,12 @@
 豚カツ	とんカツ	Côtelette de porc			<span class="kanji">豚<span class="furigana">とん</span></span>カツ			
 豚肉	ぶたにく	(Viande de) porc			<span class="kanji">豚肉<span class="furigana">ぶたにく</span></span>			
 豚小屋	ぶたごや	Porcherie			<span class="kanji">豚小屋<span class="furigana">ぶたごや</span></span>			
-劇場	げきじょう	Théâtre, salle de spectacle			<span class="kanji">劇場<span class="furigana">げきじょう</span></span>			
-演劇	えんげき	Pièce de théâtre, art dramatique			<span class="kanji">演劇<span class="furigana">えんげき</span></span>			
-歌劇	かげき	Opéra			<span class="kanji">歌劇<span class="furigana">かげき</span></span>			
+劇	げき	Théâtre, pièce de théâtre		5	<span class="kanji">劇<span class="furigana">げき</span></span>			
+劇場	げきじょう	Théâtre, salle de spectacle		5	<span class="kanji">劇場<span class="furigana">げきじょう</span></span>			
+演劇	えんげき	Pièce de théâtre, art dramatique		5	<span class="kanji">演劇<span class="furigana">えんげき</span></span>			
+歌劇	かげき	Opéra		5	<span class="kanji">歌劇<span class="furigana">かげき</span></span>			
 劇的	げきてき	Dramatique			<span class="kanji">劇的<span class="furigana">げきてき</span></span>			
-劇薬	げきやく	Médicament puissant; poison violent			<span class="kanji">劇薬<span class="furigana">げきやく</span></span>			
+劇薬	げきやく	Médicament puissant; poison violent		5	<span class="kanji">劇薬<span class="furigana">げきやく</span></span>			
 比べる	くらべる	Comparer			<span class="kanji">比<span class="furigana">くら</span></span>べる			
 比率	ひりつ	Ratio, proportion			<span class="kanji">比率<span class="furigana">ひりつ</span></span>			
 比例	ひれい	Proportion			<span class="kanji">比例<span class="furigana">ひれい</span></span>			
@@ -5315,8 +5316,9 @@
 突入	とつにゅう	Faire irruption, entrer de force / brusquement			<span class="kanji">突入<span class="furigana">とつにゅう</span></span>			
 羽根突き	はねつき	Jeu de badminton japonais			<span class="kanji">羽根突<span class="furigana">はねつ</span></span>き			
 突き当たる	つきあたる	Se heurter, ne plus pouvoir continuer			<span class="kanji">突<span class="furigana">つ</span></span>き<span class="kanji">当<span class="furigana">あ</span></span>たる			
-穴	あな	Trou			<span class="kanji">穴<span class="furigana">あな</span></span>			
-穴居人	けっきょじん	Homme des cavernes			<span class="kanji">穴居人<span class="furigana">けっきょじん</span></span>			
+穴	あな	Trou		5	<span class="kanji">穴<span class="furigana">あな</span></span>			
+穴居	けっきょ	Caverne		5	<span class="kanji">穴居<span class="furigana">けっきょ</span></span>			
+穴居人	けっきょじん	Homme des cavernes		5	<span class="kanji">穴居人<span class="furigana">けっきょじん</span></span>			
 落とし穴	おとしあな	Trappe, piège			<span class="kanji">落<span class="furigana">お</span></span>とし<span class="kanji">穴<span class="furigana">あな</span></span>			
 穴あけ器	あなあけき	Poinçon, perforatrice			<span class="kanji">穴<span class="furigana">あな</span></span>あけ<span class="kanji">器<span class="furigana">き</span></span>			
 鍵穴	かぎあな	Trou de serrure			<span class="kanji">鍵穴<span class="furigana">かぎあな</span></span>			
@@ -5369,10 +5371,10 @@
 互選	ごせん	Élection mutuelle			<span class="kanji">互選<span class="furigana">ごせん</span></span>			
 互い違いに	たがいちがいに	Alternativement			<span class="kanji">互<span class="furigana">たが</span></span>い<span class="kanji">違<span class="furigana">ちが</span></span>いに			
 体系	たいけい	Système			<span class="kanji">体系<span class="furigana">たいけい</span></span>			
-系統	けいとう	Lignée; système			<span class="kanji">系統<span class="furigana">けいとう</span></span>			
+系統	けいとう	Lignée; système		5	<span class="kanji">系統<span class="furigana">けいとう</span></span>			
 日系	にっけい	D'ascendance japonaise			<span class="kanji">日系<span class="furigana">にっけい</span></span>			
-直系	ちょっけい	Filiation / ligne directe			<span class="kanji">直系<span class="furigana">ちょっけい</span></span>			
-系図	けいず	Généalogie			<span class="kanji">系図<span class="furigana">けいず</span></span>			
+直系	ちょっけい	Filiation / ligne directe		5	<span class="kanji">直系<span class="furigana">ちょっけい</span></span>			
+系図	けいず	Généalogie		5	<span class="kanji">系図<span class="furigana">けいず</span></span>			
 係る	かかる	Avoir rapport à, concerner			<span class="kanji">係<span class="furigana">かか</span></span>る			
 係	かかり	Personne en charge / compétente, préposé			<span class="kanji">係<span class="furigana">かかり</span></span>			
 関係	かんけい	Rapport, relation, liaison			<span class="kanji">関係<span class="furigana">かんけい</span></span>			
@@ -6034,9 +6036,9 @@
 股関節	こかんせつ	Articulation de la hanche			<span class="kanji">股関節<span class="furigana">こかんせつ</span></span>			
 内股	うちまた	Partie intérieure des cuisses			<span class="kanji">内股<span class="furigana">うちまた</span></span>			
 二股	ふたまた	Bifurcation; indécision, être assis entre deux chaises			<span class="kanji">二股<span class="furigana">ふたまた</span></span>			
-激しい	はげしい	Violent, furieux, fort, intense			<span class="kanji">激<span class="furigana">はげ</span></span>しい			
+激しい	はげしい	Violent, furieux, fort, intense		5	<span class="kanji">激<span class="furigana">はげ</span></span>しい			
 過激派	かげきは	Groupe extrémiste			<span class="kanji">過激派<span class="furigana">かげきは</span></span>			
-感激	かんげき	Être profondément ému, être enthousiasmé			<span class="kanji">感激<span class="furigana">かんげき</span></span>			
+感激	かんげき	Être profondément ému, être enthousiasmé		5	<span class="kanji">感激<span class="furigana">かんげき</span></span>			
 激情	げきじょう	Passion, émotion violente			<span class="kanji">激情<span class="furigana">げきじょう</span></span>			
 激動	げきどう	Mouvement violet, bouleversement, agitation			<span class="kanji">激動<span class="furigana">げきどう</span></span>			
 激流	げきりゅう	Torrent impétueux, rapides			<span class="kanji">激流<span class="furigana">げきりゅう</span></span>			
@@ -6132,7 +6134,7 @@
 女優	じょゆう	Actrice			<span class="kanji">女優<span class="furigana">じょゆう</span></span>			
 悲しい	かなしい	Triste			<span class="kanji">悲<span class="furigana">かな</span></span>しい			
 悲しむ	かなしむ	Regretter, déplorer, éprouver de la tristesse			<span class="kanji">悲<span class="furigana">かな</span></span>しむ			
-悲劇	ひげき	Tragédie			<span class="kanji">悲劇<span class="furigana">ひげき</span></span>			
+悲劇	ひげき	Tragédie		5	<span class="kanji">悲劇<span class="furigana">ひげき</span></span>			
 悲恋	ひれん	Amour malheureux / déçu			<span class="kanji">悲恋<span class="furigana">ひれん</span></span>			
 悲鳴	ひめい	Cri (douleur, angoisse), hurlement			<span class="kanji">悲鳴<span class="furigana">ひめい</span></span>			
 悲観	ひかん	Pessimisme			<span class="kanji">悲観<span class="furigana">ひかん</span></span>			
@@ -6463,12 +6465,13 @@
 緩やか	ゆるやか	Peu tendu, peu sévère, doux, lent, léger, généreux			<span class="kanji">緩<span class="furigana">ゆる</span></span>やか			
 緩和	かんわ	Adoucissement, modération			<span class="kanji">緩和<span class="furigana">かんわ</span></span>			
 緩急	かんきゅう	Lenteur et rapidité; urgence			<span class="kanji">緩急<span class="furigana">かんきゅう</span></span>			
-筋	すじ	Tendon; vaisseau sanguin, muscle; filament; ligne; logique, raison; sujet (d'un roman); source d'une information			<span class="kanji">筋<span class="furigana">すじ</span></span>			
-筋肉	きんにく	Muscle			<span class="kanji">筋肉<span class="furigana">きんにく</span></span>			
-筋道	すじみち	Raison, logique, cohérence			<span class="kanji">筋道<span class="furigana">すじみち</span></span>			
+筋	すじ	Tendon; vaisseau sanguin, muscle; filament; ligne; logique, raison; sujet (d'un roman); source d'une information		5	<span class="kanji">筋<span class="furigana">すじ</span></span>			
+筋肉	きんにく	Muscle		5	<span class="kanji">筋肉<span class="furigana">きんにく</span></span>			
+筋肉質	きんにくしつ	Qualité musculaire		5	<span class="kanji">筋肉質<span class="furigana">きんにくしつ</span></span>			
+筋道	すじみち	Raison, logique, cohérence		5	<span class="kanji">筋道<span class="furigana">すじみち</span></span>			
 筋違い	すじかい、すじちがい	Crampe; illogique, faux, absurde			<span class="kanji">筋違<span class="furigana">すじかい、すじちが</span></span>い			
 筋交い	すじかい	Crampe; illogique, faux, absurde			<span class="kanji">筋交<span class="furigana">すじか</span></span>い			
-筋書き	すじがき	Grandes lignes, synopsis, exposé bref			<span class="kanji">筋書<span class="furigana">すじが</span></span>き			
+筋書き	すじがき	Grandes lignes, synopsis, exposé bref		5	<span class="kanji">筋書<span class="furigana">すじが</span></span>き			
 箱	はこ	Boîte			<span class="kanji">箱<span class="furigana">はこ</span></span>			
 本箱	ほんばこ	Bibliothèque, étagère à livres			<span class="kanji">本箱<span class="furigana">ほんばこ</span></span>			
 貯金箱	ちょきんばこ	Tirelire			<span class="kanji">貯金箱<span class="furigana">ちょきんばこ</span></span>			
@@ -6748,7 +6751,7 @@
 詰め込む	つめこむ	Bourrer à craquer			<span class="kanji">詰<span class="furigana">つ</span></span>め<span class="kanji">込<span class="furigana">こ</span></span>む			
 気詰まり	きづまり	Être gêné, mal à l'aise			<span class="kanji">気詰<span class="furigana">きづ</span></span>まり			
 喜ぶ	よろこぶ	Être joyeux, se réjouir			<span class="kanji">喜<span class="furigana">よろこ</span></span>ぶ			
-喜劇	きげき	Comédie			<span class="kanji">喜劇<span class="furigana">きげき</span></span>			
+喜劇	きげき	Comédie		5	<span class="kanji">喜劇<span class="furigana">きげき</span></span>			
 歓喜	かんき	Joie, allégresse			<span class="kanji">歓喜<span class="furigana">かんき</span></span>			
 狂喜	きょうき	Joie délirante, exultation, extase			<span class="kanji">狂喜<span class="furigana">きょうき</span></span>			
 一喜一憂	いっきいちゆう	Joie et peine alternées			<span class="kanji">一喜一憂<span class="furigana">いっきいちゆう</span></span>			
@@ -6897,7 +6900,7 @@
 譜面	ふめん	Partition (musique)			<span class="kanji">譜面<span class="furigana">ふめん</span></span>			
 暗譜	あんぷ	Apprendre une partition par coeur			<span class="kanji">暗譜<span class="furigana">あんぷ</span></span>			
 年譜	ねんぷ	Chronique			<span class="kanji">年譜<span class="furigana">ねんぷ</span></span>			
-系譜	けいふ	Généalogie, arbre généalogique			<span class="kanji">系譜<span class="furigana">けいふ</span></span>			
+系譜	けいふ	Généalogie, arbre généalogique		5	<span class="kanji">系譜<span class="furigana">けいふ</span></span>			
 霊	たま	Esprit, âme			<span class="kanji">霊<span class="furigana">たま</span></span>			
 霊肉	れいにく	Esprit / âme et corps			<span class="kanji">霊肉<span class="furigana">れいにく</span></span>			
 亡霊	ぼうれい	Âme / esprit d'un mort; fantôme, revenant			<span class="kanji">亡霊<span class="furigana">ぼうれい</span></span>			
@@ -8346,7 +8349,7 @@
 撤廃	てっぱい	Abolition, suppression			<span class="kanji">撤廃<span class="furigana">てっぱい</span></span>			
 崇拝	すうはい	Culte, adoration			<span class="kanji">崇拝<span class="furigana">すうはい</span></span>			
 祖先崇拝	そせんすうはい	Culte des ancêtres			<span class="kanji">祖先崇拝<span class="furigana">そせんすうはい</span></span>			
-崇敬	すうけい	Profond respect, vénération			<span class="kanji">崇敬<span class="furigana">すうけい</span></span>			
+崇敬	すうけい	Profond respect, vénération		5	<span class="kanji">崇敬<span class="furigana">すうけい</span></span>			
 崇高	すうこう	Sublime, noble			<span class="kanji">崇高<span class="furigana">すうこう</span></span>			
 模様	もよう	Dessin, motif, apparence, état			<span class="kanji">模様<span class="furigana">もよう</span></span>			
 模範	もはん	Exemple, modèle			<span class="kanji">模範<span class="furigana">もはん</span></span>			
@@ -8372,7 +8375,7 @@
 墓地	ぼち	Cimetière			<span class="kanji">墓地<span class="furigana">ぼち</span></span>			
 墓標	ぼひょう	Stèle funéraire, épitaphe			<span class="kanji">墓標<span class="furigana">ぼひょう</span></span>			
 墓石	ぼせき	Pierre tombale			<span class="kanji">墓石<span class="furigana">ぼせき</span></span>			
-墓穴	ぼけつ	Fosse, tombe			<span class="kanji">墓穴<span class="furigana">ぼけつ</span></span>			
+墓穴	ぼけつ	Fosse, tombe		5	<span class="kanji">墓穴<span class="furigana">ぼけつ</span></span>			
 墓参り	はかまいり	Visite à une tombe			<span class="kanji">墓参<span class="furigana">はかまい</span></span>り			
 募る	つのる	Collecter (dons); embaucher, recruter; s'intensifier			<span class="kanji">募<span class="furigana">つの</span></span>る			
 募集	ぼしゅう	Recrutement, embauche			<span class="kanji">募集<span class="furigana">ぼしゅう</span></span>			
@@ -8382,7 +8385,7 @@
 慕う	したう	Aimer tendrement, éprouver de la nostalgie, manquer			<span class="kanji">慕<span class="furigana">した</span></span>う			
 慕情	ぼじょう	Inclination, affection			<span class="kanji">慕情<span class="furigana">ぼじょう</span></span>			
 思慕	しぼ	Attachement, affection			<span class="kanji">思慕<span class="furigana">しぼ</span></span>			
-敬慕	けいぼ	Amour et respect, estime, vénération			<span class="kanji">敬慕<span class="furigana">けいぼ</span></span>			
+敬慕	けいぼ	Amour et respect, estime, vénération		5	<span class="kanji">敬慕<span class="furigana">けいぼ</span></span>			
 恋慕	れんぼ	Amour, affection			<span class="kanji">恋慕<span class="furigana">れんぼ</span></span>			
 追慕	ついぼ	Chérir la mémoire de quelqu'un			<span class="kanji">追慕<span class="furigana">ついぼ</span></span>			
 開幕	かいまく	Lever de rideau			<span class="kanji">開幕<span class="furigana">かいまく</span></span>			
@@ -11492,7 +11495,7 @@
 百分率	ひゃくぶんりつ	Pourcentage		6	<span class="kanji">百分率<span class="furigana">ひゃくぶんりつ</span></span>			
 習うより慣れろ	ならうよりなれろ	C'est en forgeant qu'on devient forgeron		6	<span class="kanji">習<span class="furigana">なら</span></span>うより<span class="kanji">慣<span class="furigana">な</span></span>れろ			
 余す所なく	あますところなく	Sans rien laisser		6	<span class="kanji">余<span class="furigana">あま</span></span>す<span class="kanji">所<span class="furigana">ところ</span></span>なく			
-券売機	けんばいき	Distributeur de billet		6	<span class="kanji">券売機<span class="furigana">けんばいき</span></span>			
+券売機	けんばいき	Distributeur de billet		5	<span class="kanji">券売機<span class="furigana">けんばいき</span></span>			
 非行	ひこう	Délinquance juvénile, mauvaise conduite		6	<span class="kanji">非行<span class="furigana">ひこう</span></span>			
 非行に走る	ひこうにはしる	Être délinquant		6	<span class="kanji">非行<span class="furigana">ひこう</span></span>に<span class="kanji">走<span class="furigana">はし</span></span>る			
 性急な	せいきゅうな	Précipité, hâtif		6	<span class="kanji">性急<span class="furigana">せいきゅう</span></span>な		性急な判断	
@@ -11618,3 +11621,28 @@
 郷士	ごうし	江戸時代、武士の身分のまま農業に従事した者。また、武士の待遇を受けていた農民。平時は農業、戦時には軍事に従った。郷侍(ごうざむらい)		5	<span class="kanji">郷士<span class="furigana">ごうし</span></span>			
 出勤	しゅっきん	Aller au travail		5	<span class="kanji">出勤<span class="furigana">しゅっきん</span></span>			
 勤行	ごんぎょう	仏道を修行すること。		5	<span class="kanji">勤行<span class="furigana">ごんぎょう</span></span>			
+鉄筋	てっきん	鉄筋コンクリート Béton armé		5	<span class="kanji">鉄筋<span class="furigana">てっきん</span></span>			
+首筋	くびすじ	Nuque		5	<span class="kanji">首筋<span class="furigana">くびすじ</span></span>			
+背筋	せすじ、はいきん	Muscle du dos		5	<span class="kanji">背筋<span class="furigana">せすじ</span></span>			
+本筋	ほんすじ	Essentiel, coeur		5	<span class="kanji">本筋<span class="furigana">ほんすじ</span></span>			
+系列	けいれつ	Lignée, groupe, affiliation		5	<span class="kanji">系列<span class="furigana">けいれつ</span></span>			
+家系	かけい	Lignée, généralogie		5	<span class="kanji">家系<span class="furigana">かけい</span></span>			
+太陽系	たいようけい	Système solaire		5	<span class="kanji">太陽系<span class="furigana">たいようけい</span></span>			
+敬服	けいふく	Admirer, respecter		5	<span class="kanji">敬服<span class="furigana">けいふく</span></span>			
+警護	けいご	Garde, escorte		5	<span class="kanji">警護<span class="furigana">けいご</span></span>			
+警備	けいび	Garde, surveillance		5	<span class="kanji">警備<span class="furigana">けいび</span></span>			
+暴風警報	ぼうふうけいほう	Alerte à la tempête; annonce d'un ouragan		5	<span class="kanji">暴風警報<span class="furigana">ぼうふうけいほう</span></span>			
+自警	じけい	Autodéfense		5	<span class="kanji">自警<span class="furigana">じけい</span></span>			
+劇痛	げきつう	激しい痛み		5	<span class="kanji">劇痛<span class="furigana">げきつう</span></span>			
+観劇	かんげき	Voir une représentation théâtrale		5	<span class="kanji">観劇<span class="furigana">かんげき</span></span>			
+激減	げきげん	Diminuer considérablement, rapidement		5	<span class="kanji">激減<span class="furigana">げきげん</span></span>			
+激戦	げきせん	Bataille, lutte acharnée		5	<span class="kanji">激戦<span class="furigana">げきせん</span></span>			
+激突	げきとつ	Coup, choc violent		5	<span class="kanji">激突<span class="furigana">げきとつ</span></span>			
+過激	かげき	Excès		5	<span class="kanji">過激<span class="furigana">かげき</span></span>			
+刺激	しげき	Stimulation, excitation		5	<span class="kanji">刺激<span class="furigana">しげき</span></span>			
+虎穴	こけつ	虎の住んでいる洞穴		5	<span class="kanji">虎穴<span class="furigana">こけつ</span></span>			
+虎穴に入らずんば虎子を得ず	こけつにいらずんばこじをえず	Qui ne risque rien n'a rien		5	<span class="kanji">虎穴<span class="furigana">こけつ</span></span>に<span class="kanji">入<span class="furigana">い</span></span>らずんば<span class="kanji">虎子<span class="furigana">こじ</span></span>を<span class="kanji">得<span class="furigana">え</span></span>ず			
+穴埋め	あなうめ	Bouchage, remplacement; bouche-trou		5	<span class="kanji">穴埋<span class="furigana">あなう</span></span>め			
+穴場	あなば	一般の人にあまり知られていない、いいところ。		5	<span class="kanji">穴場<span class="furigana">あなば</span></span>			
+節穴	ふしあな	Noeud évidé (trou dans le bois). 		5	<span class="kanji">節穴<span class="furigana">ふしあな</span></span>			
+お前の目は節穴か	おまえのめはふしあなか	T'es aveugle ou quoi ?		5	お<span class="kanji">前<span class="furigana">まえ</span></span>の<span class="kanji">目<span class="furigana">め</span></span>は<span class="kanji">節穴<span class="furigana">ふしあな</span></span>か			
