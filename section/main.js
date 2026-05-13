@@ -1316,11 +1316,6 @@ function validFurigana(pId, pType) {
 	}
 }
 
-
-/*
-\
-*/
-
 function exportFurigana(pStart, pEnd) {
 
 	let content = "";
