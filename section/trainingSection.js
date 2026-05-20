@@ -718,7 +718,7 @@ function yomiNext(pSaveData = null) {
 		<div class="training_check_zone">
 			<div id="check_btn_container">
 				<button id="check_btn" class="normal_btn" onClick="${yomiCheckFunc}">確認</button>
-				<button id="next_btn" class="normal_btn" onClick="nextBtn(this)">NEXT</button>
+				<button id="next_btn" class="normal_btn" onClick="nextBtn(this)">次へ</button>
 			</div>
 			<div id="maru_batsu_btns" style="display:none">
 				<button id="batsu_btn" class="maru_batsu_btn" onClick="maruBatsu(false,this)">
@@ -1454,7 +1454,7 @@ function bushuNext() {
 		<div class="training_check_zone">
 			<div id="check_btn_container">
 				<button id="check_btn" class="normal_btn" onClick="bushuCheck()">確認</button>
-				<button id="next_btn" class="normal_btn" onClick="nextBtn(this)">NEXT</button>
+				<button id="next_btn" class="normal_btn" onClick="nextBtn(this)">次へ</button>
 			</div>
 			<div id="maru_batsu_btns" style="display:none">
 				<button id="batsu_btn" class="maru_batsu_btn" onClick="maruBatsu(false,this)">

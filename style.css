@@ -36,6 +36,16 @@
 	--dark_white: rgba(200, 200, 200);
 }
 
+#DEBUG {
+	position: fixed;
+	bottom: 0px;
+	height: 30px;
+	background-color: red;
+	color: white;
+	width: 100%;
+	font-size: 20px;
+}
+
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -44,7 +54,7 @@ body {
 
 	touch-action: manipulation;
 	background-color: var(--white);
-	min-height: 100vh;
+	/* min-height: 100vh; */
 }
 
 ul,
@@ -341,7 +351,10 @@ main {
 	right: 0px;
 	opacity: 1;
 	transition: all ease 0.3s;
-
+}
+.filter_panel_main_container {
+	height: 550px;
+	overflow-y: scroll;
 }
 
 .filter_section {
@@ -383,7 +396,7 @@ main {
 	color: var(--blue);
 }
 #filter_section_minna {
-	margin-bottom: 90px;
+	/* margin-bottom: 90px; */
 }
 #filter_section_kanken {
 	background-color: var(--dark_blue);
@@ -414,6 +427,10 @@ main {
 }
 .filter_section_kanken_btn.bottom {
 	border-bottom: none;
+}
+.filter_section_footer {
+	/* background-color: gray; */
+	height: 50px;
 }
 #kanken_lvl_btn {
 	position: relative;
@@ -496,6 +513,14 @@ main {
 	/* box-shadow: inset 0px 4px 0px var(--dark_blue), 0px 2px 0px var(--dark_blue); */
 	box-shadow: inset 0px 4px 0px var(--dark_blue);
 }
+#footer_zone.filter_open {
+	/* background-color: red; */
+	/* width: 200px; */
+	bottom: 0px;
+	right: 0px;
+	height: 50px;
+	/* width: 100px; */
+}
 
 #footer_menu_btn {
 	width: 75px;
@@ -567,6 +592,31 @@ main {
 	bottom: 24px;
 	width: 30px;
 } */
+
+#span_1.span_1_arrow_filter {
+	transform: rotate(35deg);
+	width: 30px;
+	left: 23px;
+	/* background-color: greenyellow; */
+	top: 14px;
+}
+
+#span_2.span_2_arrow_filter {
+	/* transform: rotate(-45deg); */
+	/* width: 0px; */
+	left: 5px;
+	/* background-color: blue; */
+	/* top: 35px; */
+}
+
+#span_3.span_3_arrow_filter {
+	transform: rotate(-35deg);
+	width: 30px;
+	left: 23px;
+	/* background-color: red; */
+	/* top: 25px; */
+}
+
 
 #span_1.span_1_arrow {
 	transform: rotate(-45deg);
@@ -768,7 +818,12 @@ main {
 
 
 #main_section {
-	/* margin-top: 50px; */
+	overflow-y: auto;
+	position: fixed;
+	top:50px;
+	width:100%;
+	left: 50%;
+	translate: -50% 0px;
 }
 
 .kanji_result_header {
@@ -1062,7 +1117,7 @@ main {
 /* ------------- */
 #gmFilter_container {
 	position: fixed;
-	top: 0px;
+	top: -50px;
 	width: 100%;
 	background-color: var(--blue);
 	border-radius: 0 0 10px 10px;
@@ -1075,7 +1130,7 @@ main {
 }
 
 #gmFilter_container.active {
-	top: 50px;
+	top: 0px;
 	opacity: 1;
 	visibility: visible;
 	transition: ease-in 0.3s;

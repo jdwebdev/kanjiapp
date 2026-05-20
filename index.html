@@ -22,12 +22,7 @@
 
 	<div id="main_background">漢</div>
 
-	<section id="modal_container" class="">
-		<div class="modal">
-			<div class="modal_content">
-			</div>
-		</div>
-	</section>
+	<section id="modal_container" class=""></section>
 	<main>
 		<section id="main_section">
 			<div id="kanji_result_container">
@@ -119,6 +114,9 @@
 
 			</div>
 			<div id="word_result_container"></div>
+		</section>
+		<section id="furigana_section">
+
 		</section>
 		<section id="training_section">
 			<div class="training_type_container">
@@ -293,7 +291,7 @@
 	</main>
 	<dialog id="alert_dialog" class="dialog">
 		<div>
-			<p id="alert_dialog_text">Aucun kanji connu détecté</p>
+			<p id="alert_dialog_text"></p>
 			<button class="normal_btn dialog_close_btn" onClick="closeAlertDialog(this)">
 				<span id="cross_left"></span>
 				<span id="cross_right"></span>
@@ -313,56 +311,60 @@
 	</dialog>
 
 	<div id="filter_panel">
-		<div class="filter_section">
-			<h2 class="filter_section_title top">漢字検索</h2>
-			<button class="filter_section_btn" onClick="displayAllKanji()">全部</button>
-			<button class="filter_section_btn" onClick="displayKanjiBy(KANJI_BY.STROKE)">画数</button>
-			<button class="filter_section_btn" onClick="displayKanjiBy(KANJI_BY.BUSHU)">部首</button>
-			<button class="filter_section_btn" onClick="displayKanjiBy(KANJI_BY.KANKEN)">漢検</button>
-			<button class="filter_section_btn bottom"><span class="disabled_yomi">読み</span></button>
-		</div>
-		<div class="filter_section">
-			<h2 class="filter_section_title">カテゴリー</h2>
-			<button id="kanken_lvl_btn" class="filter_section_btn" onClick="openKankenLvl()">
-				<span id="span_arrow_down_1_1" class="kanken_lvl_span_arrow"></span>
-				<span id="span_arrow_down_1_2" class="kanken_lvl_span_arrow"></span>
-				漢検
-				<span id="span_arrow_down_2_1" class="kanken_lvl_span_arrow"></span>
-				<span id="span_arrow_down_2_2" class="kanken_lvl_span_arrow"></span>
-			</button>
-			<div id="filter_section_kanken">
-				<ul class="filter_section_kanken_btn_line">
-					<li><button class="filter_section_kanken_btn" onClick="displayKankenList('10')">10級</button></li>
-					<li><button class="filter_section_kanken_btn" onClick="displayKankenList('9')">9級</button></li>
-					<li><button class="filter_section_kanken_btn right" onClick="displayKankenList('8')">8級</button></li>
-				</ul>
-				<ul class="filter_section_kanken_btn_line">
-					<li><button class="filter_section_kanken_btn" onClick="displayKankenList('7')">7級</button></li>
-					<li><button class="filter_section_kanken_btn" onClick="displayKankenList('6')">6級</button></li>
-					<li><button class="filter_section_kanken_btn right" onClick="displayKankenList('5')">5級</button></li>
-				</ul>
-				<ul class="filter_section_kanken_btn_line">
-					<li><button class="filter_section_kanken_btn" onClick="displayKankenList('4')">4級</button></li>
-					<li><button class="filter_section_kanken_btn" onClick="displayKankenList('3')">3級</button></li>
-					<li><button class="filter_section_kanken_btn right" onClick="displayKankenList('準2')">準2級</button></li>
-				</ul>
-				<ul class="filter_section_kanken_btn_line">
-					<li><button class="filter_section_kanken_btn bottom" onClick="displayKankenList('2')">2級</button></li>
-					<li><button class="filter_section_kanken_btn bottom" onClick="displayKankenList('準1')">準1級</button></li>
-					<li><button class="filter_section_kanken_btn bottom right" onClick="displayKankenList('1')">1級</button></li>
-				</ul>
+		<div class="filter_panel_main_container">
+			<div class="filter_section">
+				<h2 class="filter_section_title top">漢字検索</h2>
+				<button class="filter_section_btn" onClick="displayAllKanji()">全部</button>
+				<button class="filter_section_btn" onClick="displayKanjiBy(KANJI_BY.STROKE)">画数</button>
+				<button class="filter_section_btn" onClick="displayKanjiBy(KANJI_BY.BUSHU)">部首</button>
+				<button class="filter_section_btn" onClick="displayKanjiBy(KANJI_BY.KANKEN)">漢検</button>
+				<button class="filter_section_btn bottom"><span class="disabled_yomi">読み</span></button>
 			</div>
-			<button class="filter_section_btn" onClick="displayYojijukugo()">四字熟語</button>
-			<button class="filter_section_btn" onClick="search('','諺')">諺</button>
-			<button class="filter_section_btn bottom" onClick="search('','当て字')">当て字</button>
+			<div class="filter_section">
+				<h2 class="filter_section_title">カテゴリー</h2>
+				<button id="kanken_lvl_btn" class="filter_section_btn" onClick="openKankenLvl()">
+					<span id="span_arrow_down_1_1" class="kanken_lvl_span_arrow"></span>
+					<span id="span_arrow_down_1_2" class="kanken_lvl_span_arrow"></span>
+					漢検
+					<span id="span_arrow_down_2_1" class="kanken_lvl_span_arrow"></span>
+					<span id="span_arrow_down_2_2" class="kanken_lvl_span_arrow"></span>
+				</button>
+				<div id="filter_section_kanken">
+					<ul class="filter_section_kanken_btn_line">
+						<li><button class="filter_section_kanken_btn" onClick="displayKankenList('10')">10級</button></li>
+						<li><button class="filter_section_kanken_btn" onClick="displayKankenList('9')">9級</button></li>
+						<li><button class="filter_section_kanken_btn right" onClick="displayKankenList('8')">8級</button></li>
+					</ul>
+					<ul class="filter_section_kanken_btn_line">
+						<li><button class="filter_section_kanken_btn" onClick="displayKankenList('7')">7級</button></li>
+						<li><button class="filter_section_kanken_btn" onClick="displayKankenList('6')">6級</button></li>
+						<li><button class="filter_section_kanken_btn right" onClick="displayKankenList('5')">5級</button></li>
+					</ul>
+					<ul class="filter_section_kanken_btn_line">
+						<li><button class="filter_section_kanken_btn" onClick="displayKankenList('4')">4級</button></li>
+						<li><button class="filter_section_kanken_btn" onClick="displayKankenList('3')">3級</button></li>
+						<li><button class="filter_section_kanken_btn right" onClick="displayKankenList('準2')">準2級</button></li>
+					</ul>
+					<ul class="filter_section_kanken_btn_line">
+						<li><button class="filter_section_kanken_btn bottom" onClick="displayKankenList('2')">2級</button></li>
+						<li><button class="filter_section_kanken_btn bottom" onClick="displayKankenList('準1')">準1級</button></li>
+						<li><button class="filter_section_kanken_btn bottom right" onClick="displayKankenList('1')">1級</button></li>
+					</ul>
+				</div>
+				<button class="filter_section_btn" onClick="displayYojijukugo()">四字熟語</button>
+				<button class="filter_section_btn" onClick="search('','諺')">諺</button>
+				<button class="filter_section_btn" onClick="search('','慣用句')">慣用句</button>
+				<button class="filter_section_btn bottom" onClick="search('','当て字')">当て字</button>
+			</div>
+			<div class="filter_section">
+				<h2 class="filter_section_title">モード</h2>
+				<button id="filter_section_genki" class="filter_section_btn"
+					onClick="changeMainMode(MODE.GENKI)">げんき</button>
+				<button id="filter_section_minna" class="filter_section_btn"
+					onClick="changeMainMode(MODE.MINNA)">みんな</button>
+			</div>
 		</div>
-		<div class="filter_section">
-			<h2 class="filter_section_title">モード</h2>
-			<button id="filter_section_genki" class="filter_section_btn"
-				onClick="changeMainMode(MODE.GENKI)">げんき</button>
-			<button id="filter_section_minna" class="filter_section_btn"
-				onClick="changeMainMode(MODE.MINNA)">みんな</button>
-		</div>
+		<div class="filter_section_footer"></div>
 	</div>
 	<dialog id="loading_dialog">
 		<div class="loading_text">
@@ -396,6 +398,7 @@
 			<span id="span_3"></span>
 		</button>
 	</div>
+	<!-- <p id="DEBUG"></p> -->
 
 	<script src="./class/word.js"></script>
 	<script src="./class/kanji.js"></script>

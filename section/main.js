@@ -3,6 +3,7 @@ let log = console.log.bind();
 
 const main_section = id("main_section");
 const training_section = id("training_section");
+const furigana_section = id("furigana_section");
 const main_button = id("main_button");
 const training_button = id("training_button");
 const BLUE = "rgb(0,118,188)";
@@ -54,6 +55,8 @@ let bModal = false;
 let bModalOpened = false;
 const modal_container = id("modal_container");
 modal_container.style.height = (window.innerHeight-50) + "px";
+main_section.style.height = (window.innerHeight-50) + "px";
+
 const alert_dialog = id("alert_dialog");
 let displayList = [];
 
@@ -192,7 +195,7 @@ function search(pWord,pType = "") {
 	exactWordArr = [];
 	includingWordArr = [];
 
-	if (pWord.toLowerCase() == "furigana") {
+	if (pWord.toLowerCase() == "furigana()") {
 		furiganaTest();
 		return;
 	}
@@ -950,7 +953,7 @@ function openModal() {
 	bModalOpened = true;
 	flex(modal_container);
 	setTimeout(() => {
-		editClass(id("modal_container"), "modal_open");
+		editClass(modal_container, "modal_open");
 		editClass(id("modal"), "modal_open");
 	},0.1);
 
@@ -979,6 +982,7 @@ function footerMainBtn() {
 	} else {
 		if (bFooterOpen) {
 			editClass(id("filter_panel"), "open", false);
+			editClass(id("footer_zone"), "filter_open", false);
 
 			setTimeout(() => {
 				switch(currentMode) {
@@ -997,14 +1001,16 @@ function footerMainBtn() {
 				}
 			}, 300);
 
-			editClass(id("span_1"), "span_1_arrow", false);
-			editClass(id("span_2"), "span_2_arrow", false);
-			editClass(id("span_3"), "span_3_arrow", false);
+			editClass(id("span_1"), "span_1_arrow_filter", false);
+			editClass(id("span_2"), "span_2_arrow_filter", false);
+			editClass(id("span_3"), "span_3_arrow_filter", false);
 
 			openKankenLvl(false);
 		} else {
 
 			editClass(id("filter_panel"), "open");
+			editClass(id("footer_zone"), "filter_open");
+			
 			setTimeout(() => {
 				switch(currentMode) {
 					case MODE.MAIN:
@@ -1023,9 +1029,9 @@ function footerMainBtn() {
 			}, 300);
 			none(footer_display_type);
 			
-			editClass(id("span_1"), "span_1_arrow");
-			editClass(id("span_2"), "span_2_arrow");
-			editClass(id("span_3"), "span_3_arrow");
+			editClass(id("span_1"), "span_1_arrow_filter");
+			editClass(id("span_2"), "span_2_arrow_filter");
+			editClass(id("span_3"), "span_3_arrow_filter");
 		}
 		bFooterOpen = !bFooterOpen;
 	}
@@ -1152,7 +1158,8 @@ function furiganaTest(pStart = 0, pEnd = 0) {
 	});
 	html += `</div>`;
 
-	main_section.innerHTML = html;
+	none(main_section);
+	furigana_section.innerHTML = html;
 }
 function displayCheckNewWords() {
 	let html = "";
@@ -1627,4 +1634,11 @@ function switchBtn(e, func) {
 function yojiPriority() {
 	Yojijukugo.bPrio = !Yojijukugo.bPrio;
 	displayYojijukugo(true);
+}
+
+function debug(pContent) {
+	id("DEBUG").innerHTML = pContent;
+	setTimeout(() => {
+		id("DEBUG").innerHTML = "";
+	},500);
 }
