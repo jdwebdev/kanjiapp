@@ -12,7 +12,6 @@ class MinnaWord {
 		this.yomiRaw = this.yomi.replaceAll("(", "");
 		this.yomiRaw = this.yomiRaw.replaceAll(")", "");
 		this.yomiRaw = this.yomiRaw.replaceAll("～", "");
-
 		this.imi = pImi;
 		MinnaWord.imiList.push(this.imi.toLowerCase());
 		this.kanjiList = [];

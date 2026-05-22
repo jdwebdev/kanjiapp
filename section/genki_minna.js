@@ -288,7 +288,7 @@ function displayGMResult() {
 		exactWordArr.forEach((w, index) => {
 			wordHTML += 
 			`
-			<div class="word_result" id="word_id_${w.id}">
+			<div class="word_result" id="word_id_${w.id}" onClick="minnaWordInfo(${w.id})">
 				<div class="word_result_yomi_word">
 					<div class="word_result_yomi">${w.yomi}</div>
 					`;
@@ -398,6 +398,103 @@ function gramInfo(pGramIndex, pElement) {
 
 	openModal();
 
+}
+
+function minnaWordInfo(pWordId) {
+	log("minnaWordInfo: " + pWordId);
+	log(MinnaWord.list[pWordId]);
+	wordInfo(pWordId);
+
+	const word = MinnaWord.list[pWordId];
+	let html = `
+	<div id="modal">
+	<div class="modal_header modal_header_word">
+		<div class="modal_word_word">${word.word}</div>
+	`;
+
+	html += `<div class="modal_word_infos">`;
+	if (word.masuForm != "") {
+		html += `<div>${word.masuForm}</div>`;
+	}
+	html += `</div>`;
+
+	html += `
+	</div>
+	<div class="modal_main">
+	`;
+
+	if (word.yomi != "") {
+		html += `
+			<p class="modal_separator">読み</p>
+			<p class="modal_imi">${word.yomi}</p>
+		`;
+	}
+	
+	html += `
+		<p class="modal_separator">意味</p>
+		<p class="modal_imi">${word.imi}</p>
+	`;
+
+
+
+	html += `<div class="modal_words">`;
+
+	if (word.kanjiList.length > 0) html += `<p class="modal_separator">漢字</p>`;
+
+	word.kanjiList.forEach( (k, index) => {
+		let yomi = `${Kanji.list[k].onYomi}${(Kanji.list[k].onYomi.length > 0 && Kanji.list[k].kunYomi.length > 0) ? " | " : ""}${Kanji.list[k].kunYomi}`;
+		if (yomi.length >= 46) {
+			yomi = yomi.slice(0, 45);
+			yomi += "...";
+		}
+		let imi = `${Kanji.list[k].imi}`;
+		if (imi.length >= 106) {
+			imi = imi.slice(0, 104);
+			imi += "...";
+		}
+
+		html +=
+		`
+		<div class="kanji_result" id="kanji_id_${k}" onClick="kanjiInfo(${k},'k')">
+			<div class="kanji_result_kanji">${Kanji.list[k].kanji}</div>
+			<div class="kanji_result_yomi_imi">
+				<div class="kanji_result_yomi">${yomi}</div>
+				<div class="kanji_result_imi">${imi}</div>
+			</div>
+			<div class="kanji_result_misc">
+				<ul class="kanji_result_ul">
+					<li class="kanji_result_itaiji">${Kanji.list[k].itaiji}</li>
+					<li class="kanji_result_kakusuu">${Kanji.list[k].kakusuu}画</li>
+					<li class="kanken_lvl">
+						<div class="kanken_left">${Kanji.list[k].kanken}</div>
+						<div class="kanken_right">級</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		`;
+		if (index < word.kanjiList.length-1) html += `<div class="kanji_result_separator"></div>`;
+	});
+	html += "</div>";
+
+	html += `
+		</div>
+	`;
+
+	html += `
+	</div>
+	`;
+
+	modal_container.innerHTML = html;
+
+	id("modal").addEventListener("click", event => {
+		event.stopPropagation();
+	});
+	openModal();
+}
+
+function minnaKanjiInfo(pKanjiId) {
+	
 }
 
 function closeFilterContainer() {

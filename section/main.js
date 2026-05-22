@@ -624,7 +624,6 @@ function kanjiInfo(pIndex, pElementFrom = "", pbBack = false) {
 			<div class="modal_kanji_info">
 				<div class="modal_stroke_bushu">
 					<p class="modal_stroke">${Kanji.list[pIndex].kakusuu}画</p>
-					<!--<p class="modal_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].bushu}</p>-->
 
 					<span id="modal_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].bushu}<span
 						class="modal_tooltip_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].yomi}</span>
