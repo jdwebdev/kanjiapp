@@ -172,11 +172,16 @@ function createMinnaWord(pRow) {
         //?             pId, pWord,   pYomi,     pImi,      
         test = new MinnaWord(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4], row[i][5], row[i][6], row[i][7]);
     }
-
+	const tmpList = [];
 	Kanji.list.forEach(k => {
 		MinnaWord.list.forEach(w => {
 			if (w.word.includes(k.kanji)) {
+				k.setMinnaWord(w.id);
 				w.setKanji(k.id);
+				if (!tmpList.includes(k.id)) {
+					tmpList.push(k.id);
+					Kanji.minnaList.push(k);
+				}
 			}
 		});
 	});

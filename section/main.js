@@ -195,6 +195,8 @@ function search(pWord,pType = "") {
 	exactWordArr = [];
 	includingWordArr = [];
 
+	main_section.scrollTo(0,0);
+
 	if (pWord.toLowerCase() == "furigana()") {
 		furiganaTest();
 		return;
@@ -283,6 +285,7 @@ function displayResult() {
 	let kanjiHTML = `<div class="kanji_result_header">漢字 ${foundKanjiList.length}</div>`;
 	const kanji_result_container = id("kanji_result_container");
 	
+	main_section.scrollTo(0,0);
 
 	if (bDisplayType1) {
 		foundKanjiList.forEach( (k, index) => {
@@ -410,6 +413,8 @@ function displayKankenList(pLevel) {
 	exactWordArr = [];
 	includingWordArr = [];
 
+	main_section.scrollTo(0,0);
+
 	Kanji.list.forEach(k => {
 		if (k.kanken == pLevel) foundKanjiList.push(k.id);
 	});
@@ -482,6 +487,8 @@ function displayKanjiBy(pType) {
 		`;
 	});
 	
+	main_section.scrollTo(0,0);
+
 	kanji_result_container.innerHTML = html;
 	word_result_container.innerHTML = "";
 	footerMainBtn();
@@ -624,11 +631,17 @@ function kanjiInfo(pIndex, pElementFrom = "", pbBack = false) {
 			<div class="modal_kanji_info">
 				<div class="modal_stroke_bushu">
 					<p class="modal_stroke">${Kanji.list[pIndex].kakusuu}画</p>
+	`;
 
-					<span id="modal_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].bushu}<span
-						class="modal_tooltip_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].yomi}</span>
-					</span>
+	if (Kanji.list[pIndex].bushu != "") {
+		html += `
+							<span id="modal_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].bushu}<span
+								class="modal_tooltip_bushu">${Kanji.bushuList[Kanji.list[pIndex].bushu-1].yomi}</span>
+							</span>
+		`;
 
+	}
+	html += `
 				</div>
 				<div class="modal_plus_alpha">
 					<div class="kanken_lvl word_kanken">
@@ -658,7 +671,7 @@ function kanjiInfo(pIndex, pElementFrom = "", pbBack = false) {
 			<div class="modal_words">
 	`;
 
-	let no_border = ""
+	let no_border = "";
 	let w = null;
 	Kanji.list[pIndex].wordList.forEach((i,index) => {
 		w = Word.list[i];

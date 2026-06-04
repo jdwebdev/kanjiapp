@@ -401,8 +401,8 @@ function gramInfo(pGramIndex, pElement) {
 }
 
 function minnaWordInfo(pWordId) {
-	log("minnaWordInfo: " + pWordId);
-	log(MinnaWord.list[pWordId]);
+	// log("minnaWordInfo: " + pWordId);
+	// log(MinnaWord.list[pWordId]);
 	wordInfo(pWordId);
 
 	const word = MinnaWord.list[pWordId];
@@ -455,7 +455,7 @@ function minnaWordInfo(pWordId) {
 
 		html +=
 		`
-		<div class="kanji_result" id="kanji_id_${k}" onClick="kanjiInfo(${k},'k')">
+		<div class="kanji_result" id="kanji_id_${k}" onClick="minnaKanjiInfo(${k},'k')">
 			<div class="kanji_result_kanji">${Kanji.list[k].kanji}</div>
 			<div class="kanji_result_yomi_imi">
 				<div class="kanji_result_yomi">${yomi}</div>
@@ -493,8 +493,129 @@ function minnaWordInfo(pWordId) {
 	openModal();
 }
 
-function minnaKanjiInfo(pKanjiId) {
-	
+function minnaKanjiInfo(pIndex) {
+	// if (pElementFrom != "" && !pbBack) {
+	// 	if (pElementFrom == "w") {
+	// 		displayList.push(Word.list[pIndex]);
+	// 	} else if (pElementFrom == "k") {
+	// 		displayList.push(Kanji.list[pIndex]);
+	// 	}
+	// } else if (pbBack) {
+	// 	displayList.pop();
+	// }
+
+	const kanji = Kanji.list[pIndex];
+	// log(kanji);
+
+	let html = 
+	`
+	<div id="modal">
+		<div class="modal_header">
+			<div class="modal_kanji">${kanji.kanji}</div>
+			<div class="modal_kanji_info">
+				<div class="modal_stroke_bushu">
+					<p class="modal_stroke">${kanji.kakusuu}画</p>
+	`;
+
+	if (kanji.bushu != "") {
+		html += `
+			<span id="modal_bushu">${Kanji.bushuList[kanji.bushu-1].bushu}<span
+				class="modal_tooltip_bushu">${Kanji.bushuList[kanji.bushu-1].yomi}</span>
+			</span>
+		`;
+
+	}
+	html += `
+				</div>
+				<div class="modal_plus_alpha">
+					<div class="kanken_lvl word_kanken">
+						<div class="kanken_left">${kanji.kanken}</div>
+						<div class="kanken_right">級</div>
+					</div>
+					<p class="modal_kanken_page">(${kanji.jitenRef})</p>
+				</div>
+				<div class="modal_itaiji">${kanji.itaiji}</div>
+
+			</div>
+			<div class="modal_anim_container">
+				<div id="kanji_animation">
+					<div id="kai_bg"></div>
+					<div id="kai"></div>
+				</div>
+			</div>
+		</div>
+		<div class="modal_main">
+			<p class="modal_separator">音読み</p>
+			<p class="modal_onyomi">${kanji.onYomi != "" ? kanji.onYomi : "<span class='no_yomi'>&nbsp-</span>"}</p>
+			<p class="modal_separator">訓読み</p>
+			<p class="modal_kunyomi">${kanji.kunYomi != "" ? kanji.kunYomi : "<span class='no_yomi'>&nbsp-</span>"}</p>
+			<p class="modal_separator">意味</p>
+			<p class="modal_imi">${kanji.imi}</p>
+			<p class="modal_separator">単語・熟語</p>
+			<div class="modal_words">
+	`;
+
+	let no_border = "";
+	let w = null;
+	kanji.minnaWordList.forEach((i,index) => {
+		w = MinnaWord.list[i];
+
+		html += `
+		<div class="word_result" id="word_id_${i}" onClick="minnaWordInfo(${w.id}, 'w')">
+			<div class="word_result_yomi_word">
+				<div class="word_result_yomi">${w.yomi}</div>
+				<div class="word_result_word">${w.word}</div>
+		`;
+
+		if (w.wRef != null) {
+			html += `<div class="word_result_imi"><span class="word_result_ref_word">>>> [${w.wRef.word}]</span> ${w.wRef.imi}</div>`;
+		} else {
+			html += `<div class="word_result_imi">${w.imi}</div>`;
+		}
+
+		html += `
+			</div>
+		</div>
+		`;
+
+		if (index < kanji.wordList.length-1) html += `<div class="word_result_separator"></div>`;
+	});
+	html +=
+	`
+			</div>
+		</div>
+	`;
+
+	if (displayList.length > 1) { // Au moins 2
+		html += `<div class="modal_back">`;
+		let previousElement = "";
+
+		if (displayList[displayList.length-2] instanceof Kanji) {
+			html += `<button class="modal_back_btn" onClick="kanjiInfo(${displayList[displayList.length-2].id}, '', true)">`;
+			previousElement = displayList[displayList.length-2].kanji;
+		} else if (displayList[displayList.length-2] instanceof Word) {
+			html += `<button class="modal_back_btn" onClick="wordInfo(${displayList[displayList.length-2].id}, '', true)">`;
+			previousElement = displayList[displayList.length-2].word;
+		}
+		html += `
+				<span class="modal_back_arrow_1"></span>
+				<span class="modal_back_arrow_2"></span>
+				<span class="modal_back_arrow_3"></span>
+				<span class="modal_back_element">${previousElement}</span>
+			</button>
+		</div>`;
+	}
+
+	html += `
+		</div>
+	`;
+	modal_container.innerHTML = html;
+
+	id("modal").addEventListener("click", event => {
+		event.stopPropagation();
+	});
+	openModal();
+	test(pIndex);
 }
 
 function closeFilterContainer() {

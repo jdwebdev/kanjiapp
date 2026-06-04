@@ -225,6 +225,7 @@ class Kanji {
 		{ id: 213, bushu: "龜・亀", yomi: "かめ"},
 		{ id: 214, bushu: "龠", yomi: "やく"}
 	];
+	static minnaList = [];
 	//?              A 0     B 1      C 2      D 3       E 4      F 5    G 6     J 9       K 10     L 11       M 12                                    
 	//?              漢字	 異体字    音読み	 訓読み	   画数	     意味   部首    学年       漢検　   辞典ページ  アニメーション
 	//?         pId, pKanji, pItaiji, pOnYomi, pKunYomi, pKakusuu, pImi, pBushu, pGakunen, pKanken, pJitenRef, pPath
@@ -252,6 +253,7 @@ class Kanji {
 		this.pathList = pPath.split(";");
 		this.pathList.pop();
 		this.wordList = [];
+		this.minnaWordList = [];
 
 		if (this.gakunen !== "") {
 			Kanji.gakunenList[this.gakunen].push(this);
@@ -262,6 +264,9 @@ class Kanji {
 
 	setWord(pWord) {
 		this.wordList.push(pWord);
+	}
+	setMinnaWord(pWord) {
+		this.minnaWordList.push(pWord);
 	}
 
 	static setKanjibyList() {
