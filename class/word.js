@@ -27,6 +27,9 @@ class Word {
 		this.yojijukugo = (pInfo == 4);
 		this.ateji = (pInfo == "当て字");
 		this.kotowaza = (pInfo == "諺");
+		this.kanyoku = (pInfo == "慣用句");
+		this.nandoku = (pInfo == "難読");
+		this.kotowaza = (pInfo == "諺");
 		this.kanken = pKanken;
 		this.furigana = pFurigana;
 		this.bFuriganaCheck = (this.furigana != "");

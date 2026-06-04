@@ -772,6 +772,8 @@ function wordInfo(pIndex, pElementFrom = "", pbBack = false) {
 		html += word.yojijukugo ? `<div class="word_type modal_word_ichimoji ${priority}">四</div>` : "";
 
 		html += word.kotowaza ? `<div class="word_type modal_word_ichimoji">諺</div>` : "";
+		html += word.kanyoku ? `<div class="word_type modal_word_ichimoji">慣</div>` : "";
+		html += word.nandoku ? `<div class="word_type modal_word_ateji">難読</div>` : "";
 
 		if (word.kanken != "") {
 			html += `
