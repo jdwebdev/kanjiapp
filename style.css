@@ -34,6 +34,56 @@
 	--black: rgb(50, 50, 50);
 	--white: rgba(230, 230, 230);
 	--dark_white: rgba(200, 200, 200);
+
+	--kyu1:rgb(0,65,41);
+	--kyu1j:rgb(105,2,19);
+	--kyu2:rgb(0,66,124);
+	--kyu2j:rgb(233,56,14);
+	--kyu3:rgb(0,138,107);
+	--kyu4:rgb(181,20,72);
+	--kyu5:rgb(247,171,0);
+	--kyu6:rgb(91,31,103);
+	--kyu7:rgb(0,150,187);
+	--kyu8:rgb(196,215,1);
+	--kyu9:rgb(109,112,179);
+	--kyu10:rgb(224,0,132);
+}
+
+.kyu1 {
+	background-color:var(--kyu1);
+}
+.kyu1j {
+	background-color:var(--kyu1j);
+}
+.kyu2 {
+	background-color:var(--kyu2);
+}
+.kyu2j {
+	background-color:var(--kyu2j);
+}
+.kyu3 {
+	background-color:var(--kyu3);
+}
+.kyu4 {
+	background-color:var(--kyu4);
+}
+.kyu5 {
+	background-color:var(--kyu5);
+}
+.kyu6 {
+	background-color:var(--kyu6);
+}
+.kyu7 {
+	background-color:var(--kyu7);
+}
+.kyu8 {
+	background-color:var(--kyu8);
+}
+.kyu9 {
+	background-color:var(--kyu9);
+}
+.kyu10 {
+	background-color:var(--kyu10);
 }
 
 #DEBUG {
@@ -412,7 +462,7 @@ main {
 	justify-content: space-between;
 }
 .filter_section_kanken_btn {
-	background-color: var(--dark_blue);
+	/* background-color: var(--dark_blue); */
 	color: var(--white);
 	padding: 5px;
 	border: none;
