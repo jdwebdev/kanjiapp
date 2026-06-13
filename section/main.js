@@ -279,7 +279,7 @@ function searchMainMode(pWord,pType) {
 	}
 }
 
-function displayResult() {
+function displayResult(bFromDisplayTypeBtn = false) {
 
 	unset(footer_display_type);
 	let kanjiHTML = `<div class="kanji_result_header">漢字 ${foundKanjiList.length}</div>`;
@@ -347,51 +347,53 @@ function displayResult() {
 	kanji_result_container.innerHTML = kanjiHTML;
 	id("loading_dialog").close();
 	
-	const word_result_container = id("word_result_container");
-	let wordHTML = `<div class="kanji_result_header">単語 ${exactWordArr.length + includingWordArr.length}</div>`;
-	exactWordArr = exactWordArr.concat(includingWordArr);
-	exactWordArr.forEach((w, index) => {
-		wordHTML += `
-			<div class="word_result" id="word_id_${w.id}" onClick="wordInfo(${w.id}, 'w')">
-				<div class="word_result_yomi_word">
-					<div class="word_result_yomi">${w.yomi}</div>
-					<div class="word_result_word">${w.word}</div>
-		`;
-
-		if (w.wRef != null) {
-			wordHTML += `<div class="word_result_imi"><span class="word_result_ref_word">>>> [${w.wRef.word}]</span> ${w.wRef.imi}</div>`;
-		} else {
-			wordHTML += `<div class="word_result_imi">${w.imi}</div>`;
-		}
-		
-		wordHTML += `
-			</div>
-			<div class="word_result_misc">
-		`;
-		if (w.yojijukugo) {
-			if (w.bPriority) {
-				wordHTML += `<span class="word_priority">・</span>`;
+	if (!bFromDisplayTypeBtn) {
+		const word_result_container = id("word_result_container");
+		let wordHTML = `<div class="kanji_result_header">単語 ${exactWordArr.length + includingWordArr.length}</div>`;
+		exactWordArr = exactWordArr.concat(includingWordArr);
+		exactWordArr.forEach((w, index) => {
+			wordHTML += `
+				<div class="word_result" id="word_id_${w.id}" onClick="wordInfo(${w.id}, 'w')">
+					<div class="word_result_yomi_word">
+						<div class="word_result_yomi">${w.yomi}</div>
+						<div class="word_result_word">${w.word}</div>
+			`;
+	
+			if (w.wRef != null) {
+				wordHTML += `<div class="word_result_imi"><span class="word_result_ref_word">>>> [${w.wRef.word}]</span> ${w.wRef.imi}</div>`;
+			} else {
+				wordHTML += `<div class="word_result_imi">${w.imi}</div>`;
+			}
+			
+			wordHTML += `
+				</div>
+				<div class="word_result_misc">
+			`;
+			if (w.yojijukugo) {
+				if (w.bPriority) {
+					wordHTML += `<span class="word_priority">・</span>`;
+				}
+				wordHTML += `
+					<div class="yojijukugo">四</div>
+				`;
+				if (w.kanken != "") {
+					wordHTML += `
+					<div class="kanken_lvl word_kanken">
+						<div class="kanken_left">${w.kanken}</div>
+						<div class="kanken_right">級</div>
+					</div>
+					`;
+				}
 			}
 			wordHTML += `
-				<div class="yojijukugo">四</div>
+					</div>
+				</div>
 			`;
-			if (w.kanken != "") {
-				wordHTML += `
-				<div class="kanken_lvl word_kanken">
-					<div class="kanken_left">${w.kanken}</div>
-					<div class="kanken_right">級</div>
-				</div>
-				`;
-			}
-		}
-		wordHTML += `
-				</div>
-			</div>
-		`;
-		if (index < exactWordArr.length-1) wordHTML += `<div class="word_result_separator"></div>`;
-	});
-
-	word_result_container.innerHTML = wordHTML;
+			if (index < exactWordArr.length-1) wordHTML += `<div class="word_result_separator"></div>`;
+		});
+	
+		word_result_container.innerHTML = wordHTML;
+	}
 }
 
 function displayNoResult() {
@@ -1473,7 +1475,7 @@ function changeDisplayType() {
 		editClass(id("sdt_3_2"), "type2", false);
 		bDisplayType1 = true;
 	}
-	displayResult();
+	displayResult(true);
 }
 
 function displayKanjiUrl() {
