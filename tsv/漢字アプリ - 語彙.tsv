@@ -1803,7 +1803,7 @@
 急用	きゅうよう	Affaire urgente			<span class="kanji">急用<span class="furigana">きゅうよう</span></span>				
 急性	きゅうせい	(Maladie) aiguë			<span class="kanji">急性<span class="furigana">きゅうせい</span></span>				
 悪い	わるい	Mauvais, grave, méchant			<span class="kanji">悪<span class="furigana">わる</span></span>い				
-悪化	あっか	Détérioration, aggravation			<span class="kanji">悪化<span class="furigana">あっか</span></span>				
+悪化	あっか	Détérioration, aggravation			<span class="kanji">悪化<span class="furigana">あっか</span></span>			好転	
 悪性	あくせい	Pernicieux, malin, dangereux			<span class="kanji">悪性<span class="furigana">あくせい</span></span>				
 悪事	あくじ	Méfait, mauvaise action			<span class="kanji">悪事<span class="furigana">あくじ</span></span>				
 最悪	さいあく	Le pire, au pire			<span class="kanji">最悪<span class="furigana">さいあく</span></span>				
@@ -4206,7 +4206,7 @@
 尊重	そんちょう	Respecter, estimer		5	<span class="kanji">尊重<span class="furigana">そんちょう</span></span>				
 自尊(心)	じそん(しん)	Amour-propre, fierté			<span class="kanji">自尊<span class="furigana">じそん</span></span>(<span class="kanji">心<span class="furigana">しん</span></span>)				
 尊大	そんだい	Hautain, arrogant		5	<span class="kanji">尊大<span class="furigana">そんだい</span></span>				
-本尊	ほんぞん	Bouddha; objet du culte; elle/lui-même			<span class="kanji">本尊<span class="furigana">ほんぞん</span></span>				
+本尊	ほんぞん	Bouddha; objet du culte; elle/lui-même		5	<span class="kanji">本尊<span class="furigana">ほんぞん</span></span>				
 敬う	うやまう	Respecter, vénérer		5	<span class="kanji">敬<span class="furigana">うやま</span></span>う				
 尊敬	そんけい	Respect, admiration, considération		5	<span class="kanji">尊敬<span class="furigana">そんけい</span></span>				
 敬意	けいい	Respect, hommage			<span class="kanji">敬意<span class="furigana">けいい</span></span>				
@@ -6740,11 +6740,11 @@
 処理	しょり	Traiter, arranger, gérer		5	<span class="kanji">処理<span class="furigana">しょり</span></span>				
 対処	たいしょ	Faire face à, prendre des mesures		5	<span class="kanji">対処<span class="furigana">たいしょ</span></span>				
 処女	しょじょ	Vierge			<span class="kanji">処女<span class="furigana">しょじょ</span></span>				
-根拠	こんきょ	Base, fondements			<span class="kanji">根拠<span class="furigana">こんきょ</span></span>		理由		
-拠点	きょてん	Base, position (militaire)			<span class="kanji">拠点<span class="furigana">きょてん</span></span>				
-準拠	じゅんきょ	Se fonder sur, se conformer à			<span class="kanji">準拠<span class="furigana">じゅんきょ</span></span>				
-論拠	ろんきょ	Base d'un argument			<span class="kanji">論拠<span class="furigana">ろんきょ</span></span>				
-証拠	しょうこ	Preuve (juridique)			<span class="kanji">証拠<span class="furigana">しょうこ</span></span>				
+根拠	こんきょ	Base, fondements		4	<span class="kanji">根拠<span class="furigana">こんきょ</span></span>		理由		
+拠点	きょてん	Base, position (militaire)		4	<span class="kanji">拠点<span class="furigana">きょてん</span></span>				
+準拠	じゅんきょ	Se fonder sur, se conformer à		4	<span class="kanji">準拠<span class="furigana">じゅんきょ</span></span>				
+論拠	ろんきょ	Base d'un argument		4	<span class="kanji">論拠<span class="furigana">ろんきょ</span></span>				
+証拠	しょうこ	Preuve (juridique)		4	<span class="kanji">証拠<span class="furigana">しょうこ</span></span>				
 善い	よい	Bien		5	<span class="kanji">善<span class="furigana">よ</span></span>い				
 善悪	ぜんあく	Bien et mal; qualité (bonne ou mauvaise)		5	<span class="kanji">善悪<span class="furigana">ぜんあく</span></span>				
 善良	ぜんりょう	Bonté, vertu, honnêteté		5	<span class="kanji">善良<span class="furigana">ぜんりょう</span></span>				
@@ -6763,11 +6763,11 @@
 不吉	ふきつ	Mauvais présage			<span class="kanji">不吉<span class="furigana">ふきつ</span></span>				
 石部金吉	いしべきんきち	Homme de stricte morale, parangon de vertu			<span class="kanji">石部金吉<span class="furigana">いしべきんきち</span></span>				
 吉田	よしだ	Yoshida (nom de famille)			<span class="kanji">吉田<span class="furigana">よしだ</span></span>				
-詰める	つめる	Remplir, fourrer, bourrer; (se) serrer			<span class="kanji">詰<span class="furigana">つ</span></span>める				
-詰まる	つまる	Être bouché / plein; rétrécir; être acculé			<span class="kanji">詰<span class="furigana">つ</span></span>まる				
-詰む	つむ	Être échec et mat; être étroit / serré			<span class="kanji">詰<span class="furigana">つ</span></span>む				
-詰問	きつもん	Contre-interrogatoire, interrogatoire serré			<span class="kanji">詰問<span class="furigana">きつもん</span></span>				
-詰め込む	つめこむ	Bourrer à craquer			<span class="kanji">詰<span class="furigana">つ</span></span>め<span class="kanji">込<span class="furigana">こ</span></span>む				
+詰める	つめる	Remplir, fourrer, bourrer; (se) serrer		4	<span class="kanji">詰<span class="furigana">つ</span></span>める				
+詰まる	つまる	Être bouché / plein; rétrécir; être acculé		4	<span class="kanji">詰<span class="furigana">つ</span></span>まる				
+詰む	つむ	Être échec et mat; être étroit / serré		4	<span class="kanji">詰<span class="furigana">つ</span></span>む				
+詰問	きつもん	Contre-interrogatoire, interrogatoire serré		4	<span class="kanji">詰問<span class="furigana">きつもん</span></span>				
+詰め込む	つめこむ	Bourrer à craquer		4	<span class="kanji">詰<span class="furigana">つ</span></span>め<span class="kanji">込<span class="furigana">こ</span></span>む				
 気詰まり	きづまり	Être gêné, mal à l'aise			<span class="kanji">気詰<span class="furigana">きづ</span></span>まり				
 喜ぶ	よろこぶ	Être joyeux, se réjouir			<span class="kanji">喜<span class="furigana">よろこ</span></span>ぶ				
 喜劇	きげき	Comédie		5	<span class="kanji">喜劇<span class="furigana">きげき</span></span>				
@@ -6963,7 +6963,7 @@
 心遣い	こころづかい	Attentions, sollicitude			<span class="kanji">心遣<span class="furigana">こころづか</span></span>い				
 追う	おう	Poursuivre, courir après, expulser			<span class="kanji">追<span class="furigana">お</span></span>う				
 追放	ついほう	Exil, expulsion, bannissement			<span class="kanji">追放<span class="furigana">ついほう</span></span>				
-追求	ついきゅう	Poursuite (d'un but / voleur); rechercher			<span class="kanji">追求<span class="furigana">ついきゅう</span></span>				
+追求	ついきゅう	Poursuite (d'un but / voleur); rechercher　追い求める			<span class="kanji">追求<span class="furigana">ついきゅう</span></span>				利益の、幸福の
 追加	ついか	Supplément, addition			<span class="kanji">追加<span class="furigana">ついか</span></span>				
 追い風	おいかぜ	Vent arrière, vent favorable			<span class="kanji">追<span class="furigana">お</span></span>い<span class="kanji">風<span class="furigana">かぜ</span></span>				
 追い越す	おいこす	Dépasser, doubler			<span class="kanji">追<span class="furigana">お</span></span>い<span class="kanji">越<span class="furigana">こ</span></span>す				
@@ -7452,12 +7452,12 @@
 吸引	きゅういん	Absorber (par succion / aspiration)		5	<span class="kanji">吸引<span class="furigana">きゅういん</span></span>				
 吸収	きゅうしゅう	Absorber, assimiler		5	<span class="kanji">吸収<span class="furigana">きゅうしゅう</span></span>				
 吸い取り紙	すいとりがみ	Papier buvard			<span class="kanji">吸<span class="furigana">す</span></span>い<span class="kanji">取<span class="furigana">と</span></span>り<span class="kanji">紙<span class="furigana">がみ</span></span>				
-及ぶ	およぶ	Atteindre / s'étendre à, concerner; égaler			<span class="kanji">及<span class="furigana">およ</span></span>ぶ				
-及ぼす	およぼす	Exercer			<span class="kanji">及<span class="furigana">およ</span></span>ぼす				
-及び	および	Et, ainsi que			<span class="kanji">及<span class="furigana">およ</span></span>び				
-普及	ふきゅう	Diffuser, propager			<span class="kanji">普及<span class="furigana">ふきゅう</span></span>				
-及第点	きゅうだいてん	Note minimale requise (pour avoir un examen)			<span class="kanji">及第点<span class="furigana">きゅうだいてん</span></span>				
-言及	げんきゅう	Mentionner, faire référence à			<span class="kanji">言及<span class="furigana">げんきゅう</span></span>				
+及ぶ	およぶ	Atteindre / s'étendre à, concerner; égaler		4	<span class="kanji">及<span class="furigana">およ</span></span>ぶ				
+及ぼす	およぼす	Exercer		4	<span class="kanji">及<span class="furigana">およ</span></span>ぼす				
+及び	および	Et, ainsi que		4	<span class="kanji">及<span class="furigana">およ</span></span>び				
+普及	ふきゅう	Diffuser, propager		4	<span class="kanji">普及<span class="furigana">ふきゅう</span></span>				
+及第点	きゅうだいてん	Note minimale requise (pour avoir un examen)		4	<span class="kanji">及第点<span class="furigana">きゅうだいてん</span></span>				
+言及	げんきゅう	Mentionner, faire référence à		4	<span class="kanji">言及<span class="furigana">げんきゅう</span></span>				
 言い及ぶ	いいおよぶ	Mentionner, effleurer (un sujet)			<span class="kanji">言<span class="furigana">い</span></span>い<span class="kanji">及<span class="furigana">およ</span></span>ぶ				
 扱う	あつかう	Traiter, s'occuper de, manier		4	<span class="kanji">扱<span class="furigana">あつか</span></span>う				
 取り扱う	とりあつかう	Traiter, utiliser, manier		4	<span class="kanji">取<span class="furigana">と</span></span>り<span class="kanji">扱<span class="furigana">あつか</span></span>う				
@@ -7662,12 +7662,12 @@
 繁栄	はんえい	Prospérité			<span class="kanji">繁栄<span class="furigana">はんえい</span></span>				
 繁盛	はんじょう	Prospérité; réussite			<span class="kanji">繁盛<span class="furigana">はんじょう</span></span>				
 繁華街	はんかがい	Quartier (commerçant) animé			<span class="kanji">繁華街<span class="furigana">はんかがい</span></span>				
-巨大	きょだい	Énorme, gigantesque			<span class="kanji">巨大<span class="furigana">きょだい</span></span>			微小	
-巨人	きょじん	Géant			<span class="kanji">巨人<span class="furigana">きょじん</span></span>				
-巨漢	きょかん	Colosse, géant			<span class="kanji">巨漢<span class="furigana">きょかん</span></span>				
+巨大	きょだい	Énorme, gigantesque		4	<span class="kanji">巨大<span class="furigana">きょだい</span></span>			微小	
+巨人	きょじん	Géant		4	<span class="kanji">巨人<span class="furigana">きょじん</span></span>				
+巨漢	きょかん	Colosse, géant		4	<span class="kanji">巨漢<span class="furigana">きょかん</span></span>				
 巨星	きょせい	Étoile géante; grande personnalité, géant			<span class="kanji">巨星<span class="furigana">きょせい</span></span>				
-巨万	きょまん	Immense fortune, milliardaire			<span class="kanji">巨万<span class="furigana">きょまん</span></span>				
-距離	きょり	Distance			<span class="kanji">距離<span class="furigana">きょり</span></span>				
+巨万	きょまん	Immense fortune, milliardaire		4	<span class="kanji">巨万<span class="furigana">きょまん</span></span>				
+距離	きょり	Distance		4	<span class="kanji">距離<span class="furigana">きょり</span></span>				
 短距離	たんきょり	Courte distance			<span class="kanji">短距離<span class="furigana">たんきょり</span></span>				
 近距離	きんきょり	Courte distance			<span class="kanji">近距離<span class="furigana">きんきょり</span></span>				
 長距離	ちょうきょり	Longue distance			<span class="kanji">長距離<span class="furigana">ちょうきょり</span></span>				
@@ -8033,14 +8033,14 @@
 岡山	おかやま	Okayama (ville; préfecture)			<span class="kanji">岡山<span class="furigana">おかやま</span></span>				
 長岡	ながおか	Nagaoka (ville; nom de famille)			<span class="kanji">長岡<span class="furigana">ながおか</span></span>				
 岡本	おかもと	Okamoto (nom de famille)			<span class="kanji">岡本<span class="furigana">おかもと</span></span>				
-丘	おか	Colline			<span class="kanji">丘<span class="furigana">おか</span></span>				
+丘	おか	Colline		4	<span class="kanji">丘<span class="furigana">おか</span></span>				
 砂丘	さきゅう	Dune de sable		4	<span class="kanji">砂丘<span class="furigana">さきゅう</span></span>				
 岳	たけ	Montagne, sommet, pic			<span class="kanji">岳<span class="furigana">たけ</span></span>				
 山岳	さんがく	Montagnes			<span class="kanji">山岳<span class="furigana">さんがく</span></span>				
 山岳部	さんがくぶ	Club d'alpinisme			<span class="kanji">山岳部<span class="furigana">さんがくぶ</span></span>				
 岳父	がくふ	Beau-père			<span class="kanji">岳父<span class="furigana">がくふ</span></span>				
 谷川岳	たにがわだけ	(Montagne à 150 km au nord de Tôkyô)			<span class="kanji">谷川岳<span class="furigana">たにがわだけ</span></span>				
-巨匠	きょしょう	Grand maître, virtuose, spécialiste			<span class="kanji">巨匠<span class="furigana">きょしょう</span></span>				
+巨匠	きょしょう	Grand maître, virtuose, spécialiste		4	<span class="kanji">巨匠<span class="furigana">きょしょう</span></span>				
 名匠	めいしょう	Grand maître (artisan), maître illustre			<span class="kanji">名匠<span class="furigana">めいしょう</span></span>				
 師匠	ししょう	Maître (d'apprentissage)			<span class="kanji">師匠<span class="furigana">ししょう</span></span>				
 宗匠	そうしょう	Maître (de haïkaï, de cérémonie du thé)	難読	5	<span class="kanji">宗匠<span class="furigana">そうしょう</span></span>				
@@ -9493,12 +9493,12 @@
 巧者	こうしゃ	Habile, adroit, astucieux			<span class="kanji">巧者<span class="furigana">こうしゃ</span></span>				
 精巧	せいこう	Précis, fin, délicat, sophistiqué			<span class="kanji">精巧<span class="furigana">せいこう</span></span>				
 老巧	ろうこう	Expérimenté, expert, chevronné			<span class="kanji">老巧<span class="furigana">ろうこう</span></span>				
-朽ちる	くちる	Se gâter, pourrir, se délabrer			<span class="kanji">朽<span class="furigana">く</span></span>ちる				
-不朽	ふきゅう	Éternel, impérissable, indestructible			<span class="kanji">不朽<span class="furigana">ふきゅう</span></span>		永遠		
-不朽の名作	ふきゅうのめいさく	Chef-d'oeuvre immortel			<span class="kanji">不朽<span class="furigana">ふきゅう</span></span>の<span class="kanji">名作<span class="furigana">めいさく</span></span>				
-腐朽	ふきゅう	Se détériorer, pourrir			<span class="kanji">腐朽<span class="furigana">ふきゅう</span></span>				
-老朽	ろうきゅう	Vieillissement, décrépitude, sénescence			<span class="kanji">老朽<span class="furigana">ろうきゅう</span></span>				
-朽ち葉	くちば	Feuilles mortes			<span class="kanji">朽<span class="furigana">く</span></span>ち<span class="kanji">葉<span class="furigana">ば</span></span>				
+朽ちる	くちる	Se gâter, pourrir, se délabrer		4	<span class="kanji">朽<span class="furigana">く</span></span>ちる				
+不朽	ふきゅう	Éternel, impérissable, indestructible		4	<span class="kanji">不朽<span class="furigana">ふきゅう</span></span>		永遠		
+不朽の名作	ふきゅうのめいさく	Chef-d'oeuvre immortel		4	<span class="kanji">不朽<span class="furigana">ふきゅう</span></span>の<span class="kanji">名作<span class="furigana">めいさく</span></span>				
+腐朽	ふきゅう	Se détériorer, pourrir		4	<span class="kanji">腐朽<span class="furigana">ふきゅう</span></span>				
+老朽	ろうきゅう	Vieillissement, décrépitude, sénescence		4	<span class="kanji">老朽<span class="furigana">ろうきゅう</span></span>				
+朽ち葉	くちば	Feuilles mortes		4	<span class="kanji">朽<span class="furigana">く</span></span>ち<span class="kanji">葉<span class="furigana">ば</span></span>				
 誇る	ほこる	Être fier, s'enorgueillir			<span class="kanji">誇<span class="furigana">ほこ</span></span>る				
 誇張	こちょう	Exagération			<span class="kanji">誇張<span class="furigana">こちょう</span></span>				
 誇大	こだい	Exagération			<span class="kanji">誇大<span class="furigana">こだい</span></span>				
@@ -10355,16 +10355,16 @@
 疲弊	ひへい	Affaiblissement, épuisement, apauvrissement			<span class="kanji">疲弊<span class="furigana">ひへい</span></span>				
 旧弊	きゅうへい	Abus ancien; coutume vétuste			<span class="kanji">旧弊<span class="furigana">きゅうへい</span></span>				
 弊社	へいしゃ	Notre société, nous			<span class="kanji">弊社<span class="furigana">へいしゃ</span></span>				
-却下	きゃっか	Rejet			<span class="kanji">却下<span class="furigana">きゃっか</span></span>			受理	
-返却	へんきゃく	Rendre, restituer, rembourser			<span class="kanji">返却<span class="furigana">へんきゃく</span></span>				
-退却	たいきゃく	Retraite			<span class="kanji">退却<span class="furigana">たいきゃく</span></span>				
-売却	ばいきゃく	Vente, mise en vente			<span class="kanji">売却<span class="furigana">ばいきゃく</span></span>				
+却下	きゃっか	Rejet; rejeter (une demande, requête)		4	<span class="kanji">却下<span class="furigana">きゃっか</span></span>			受理	申請を、請求を
+返却	へんきゃく	Rendre, restituer, rembourser		4	<span class="kanji">返却<span class="furigana">へんきゃく</span></span>				
+退却	たいきゃく	Retraite		4	<span class="kanji">退却<span class="furigana">たいきゃく</span></span>				
+売却	ばいきゃく	Vente, mise en vente		4	<span class="kanji">売却<span class="furigana">ばいきゃく</span></span>				
 忘却	ぼうきゃく	Oublier		5	<span class="kanji">忘却<span class="furigana">ぼうきゃく</span></span>				
-脚	あし	Jambe			<span class="kanji">脚<span class="furigana">あし</span></span>				
+脚	あし	Jambe		4	<span class="kanji">脚<span class="furigana">あし</span></span>				
 橋脚	きょうきゃく	Pile de pont			<span class="kanji">橋脚<span class="furigana">きょうきゃく</span></span>				
-失脚	しっきゃく	Perte (d'un poste / d'une position)			<span class="kanji">失脚<span class="furigana">しっきゃく</span></span>				
-脚注	きゃくちゅう	Note au bas d'une page			<span class="kanji">脚注<span class="furigana">きゃくちゅう</span></span>				
-脚本	きゃくほん	Pièce (de théâtre), scénario, livret, script			<span class="kanji">脚本<span class="furigana">きゃくほん</span></span>				
+失脚	しっきゃく	Perte (d'un poste / d'une position)		4	<span class="kanji">失脚<span class="furigana">しっきゃく</span></span>				
+脚注	きゃくちゅう	Note au bas d'une page		4	<span class="kanji">脚注<span class="furigana">きゃくちゅう</span></span>				
+脚本	きゃくほん	Pièce (de théâtre), scénario, livret, script		4	<span class="kanji">脚本<span class="furigana">きゃくほん</span></span>				
 脚色	きゃくしょく	Adaptation (pour la scène / le cinéma)			<span class="kanji">脚色<span class="furigana">きゃくしょく</span></span>				
 膝	ひざ	Genou(x)			<span class="kanji">膝<span class="furigana">ひざ</span></span>				
 膝掛け	ひざかけ	Plaid, couverture de voyage			<span class="kanji">膝掛<span class="furigana">ひざか</span></span>け				
@@ -10717,7 +10717,7 @@
 附録	ふろく	Supplément, appendice			<span class="kanji">附録<span class="furigana">ふろく</span></span>				
 附随	ふずい	Accessoire, annexe, accompagnant			<span class="kanji">附随<span class="furigana">ふずい</span></span>				
 陵	みささぎ	Tombe impériale, mausolée			<span class="kanji">陵<span class="furigana">みささぎ</span></span>				
-丘陵	きゅうりょう	Colline, hauteur, coteau, butte			<span class="kanji">丘陵<span class="furigana">きゅうりょう</span></span>				
+丘陵	きゅうりょう	Colline, hauteur, coteau, butte		4	<span class="kanji">丘陵<span class="furigana">きゅうりょう</span></span>				
 丘陵地帯	きゅうりょうちたい	Région de collines			<span class="kanji">丘陵地帯<span class="furigana">きゅうりょうちたい</span></span>				
 御陵	ごりょう	Tombe de l'empereur / l'impératrice			<span class="kanji">御陵<span class="furigana">ごりょう</span></span>				
 俊才	しゅんさい	Génie, très grand talent			<span class="kanji">俊才<span class="furigana">しゅんさい</span></span>				
@@ -12717,6 +12717,7 @@
 大詰め	おおづめ	Dénouement, terme		4	<span class="kanji">大詰<span class="furigana">おおづ</span></span>め				
 箱詰め	はこづめ	Emboîtage; mettre dans une boîte		4	<span class="kanji">箱詰<span class="furigana">はこづ</span></span>め				
 膝詰め	ひざづめ	膝と膝とを突き合わせること。相手に強く詰め寄ること tête à tête; face à face		4	<span class="kanji">膝詰<span class="furigana">ひざづ</span></span>め				
+問い詰める	といつめる	Presser, harceler qqn de questions		4	<span class="kanji">問<span class="furigana">と</span></span>い<span class="kanji">詰<span class="furigana">つ</span></span>める				
 焼却	しょうきゃく	Incinération; incinérer		4	<span class="kanji">焼却<span class="furigana">しょうきゃく</span></span>				
 脱却	だっきゃく	Se libérer; se dégager de		4	<span class="kanji">脱却<span class="furigana">だっきゃく</span></span>				
 冷却	れいきゃく	Réfrigération; refroidissement; réfrigérer; frigorifier; refroidir		4	<span class="kanji">冷却<span class="furigana">れいきゃく</span></span>			加熱	
@@ -12727,7 +12728,8 @@
 及第	きゅうだい	①試験や審査に合格すること　②一定の基準に達していること		4	<span class="kanji">及第<span class="furigana">きゅうだい</span></span>				
 及第点	きゅうだいてん	Note requise à l'examen; passable		4	<span class="kanji">及第点<span class="furigana">きゅうだいてん</span></span>				
 及落	きゅうらく	及第と落第。合格と不合格		4	<span class="kanji">及落<span class="furigana">きゅうらく</span></span>				
-追及	ついきゅう	Poursuite; poursuivre; serrer de près		4	<span class="kanji">追及<span class="furigana">ついきゅう</span></span>				
+追及	ついきゅう	Poursuite; poursuivre; serrer de près　追い詰める		4	<span class="kanji">追及<span class="furigana">ついきゅう</span></span>				責任の、余罪の
+追い詰める	おいつめる	Acculer qqn; traquer qqn		4	<span class="kanji">追<span class="furigana">お</span></span>い<span class="kanji">詰<span class="furigana">つ</span></span>める				
 波及	はきゅう	Se propager, se répandre, s'étendre; influencer		4	<span class="kanji">波及<span class="furigana">はきゅう</span></span>				
 及び腰	およびごし	Posture instable; attitude hésitante		4	<span class="kanji">及<span class="furigana">およ</span></span>び<span class="kanji">腰<span class="furigana">ごし</span></span>				
 丘陵地	きゅうりょうち	Colline; hauteur		4	<span class="kanji">丘陵地<span class="furigana">きゅうりょうち</span></span>				
@@ -12750,7 +12752,7 @@
 目減り	めべり	Perte, diminution			<span class="kanji">目減<span class="furigana">めべ</span></span>り				
 序の口	じょのくち	Ce n'est que le début			<span class="kanji">序<span class="furigana">じょ</span></span>の<span class="kanji">口<span class="furigana">くち</span></span>				
 強度	きょうど	Intensité, force; résistance; dureté; solidité			<span class="kanji">強度<span class="furigana">きょうど</span></span>				
-円満	えんまん	Heureux; satisfaisant; harmonieux			<span class="kanji">円満<span class="furigana">えんまん</span></span>				
+円満	えんまん	Heureux; satisfaisant; harmonieux			<span class="kanji">円満<span class="furigana">えんまん</span></span>			不和	
 酒席	しゅせき	酒宴の席。酒盛りの場			<span class="kanji">酒席<span class="furigana">しゅせき</span></span>				
 ざっくばらん	ざっくばらん	Franc; ouvert; franchement; ouvertement			ざっくばらん				
 祝勝	しゅくしょう	勝利を祝うこと			<span class="kanji">祝勝<span class="furigana">しゅくしょう</span></span>				
@@ -12758,3 +12760,44 @@
 熱暑	ねっしょ	日差しが強くあついこと。暑熱			<span class="kanji">熱暑<span class="furigana">ねっしょ</span></span>				
 昼下がり	ひるさがり	Au commencement, au début de l'après-midi			<span class="kanji">昼下<span class="furigana">ひるさ</span></span>がり				
 興味本位	きょうみほんい	Par curiosité; par jeu; pour s'amuser			<span class="kanji">興味本位<span class="furigana">きょうみほんい</span></span>				
+常人	じょうじん	才能や考え方などが普通の人。並みの人			<span class="kanji">常人<span class="furigana">じょうじん</span></span>				
+横たわる	よこたわる	Se coucher, s'étendre, s'allonger			<span class="kanji">横<span class="furigana">よこ</span></span>たわる				
+門出	かどで	Départ (dans la vie)			<span class="kanji">門出<span class="furigana">かどで</span></span>				
+門出を祝う	かどでをいわう	Fêter le départ de qqn			<span class="kanji">門出<span class="furigana">かどで</span></span>を<span class="kanji">祝<span class="furigana">い</span></span>う				
+到底	とうてい	(Adverbe, négation) Absolument pas; loin de; aucun; pas du tout			<span class="kanji">到底<span class="furigana">とうてい</span></span>				
+難解	なんかい	Difficile, obscur			<span class="kanji">難解<span class="furigana">なんかい</span></span>			平易	
+不和	ふわ	Désaccord, discorde, brouille			<span class="kanji">不和<span class="furigana">ふわ</span></span>			円満	
+家臣	かしん	Vassal			<span class="kanji">家臣<span class="furigana">かしん</span></span>			主君	
+主君	しゅくん	Seigneur; souverain			<span class="kanji">主君<span class="furigana">しゅくん</span></span>			家臣	
+好転	こうてん	Amélioration; s'améliorer			<span class="kanji">好転<span class="furigana">こうてん</span></span>			悪化	
+早熟	そうじゅく	Précoce, de maturité précoce			<span class="kanji">早熟<span class="furigana">そうじゅく</span></span>			晩成	
+一切	いっさい	Tout; tout à fait; ne... pas du tout			<span class="kanji">一切<span class="furigana">いっさい</span></span>				
+追究	ついきゅう	Recherche; rechercher　きわめる			<span class="kanji">追究<span class="furigana">ついきゅう</span></span>				真理の、学問の
+余罪	よざい	Autres crimes			<span class="kanji">余罪<span class="furigana">よざい</span></span>				
+極意	ごくい	Quintessence; secret			<span class="kanji">極意<span class="furigana">ごくい</span></span>				
+棄却	ききゃく	Rejet (un appel en justice)			<span class="kanji">棄却<span class="furigana">ききゃく</span></span>				
+御者	ぎょしゃ	Cocher　馬車の前部に乗って馬を操り、馬車を走らせる人		4	<span class="kanji">御者<span class="furigana">ぎょしゃ</span></span>				
+防御	ぼうぎょ	Défense, protection; défendre, protéger		4	<span class="kanji">防御<span class="furigana">ぼうぎょ</span></span>			攻撃	
+御用	ごよう	ある人を敬って、その用事・入用などをいう語。また、用事・入用などを丁寧にいう語		4	<span class="kanji">御用<span class="furigana">ごよう</span></span>				
+御用になる	ごようになる	逮捕される　être arrêté par la police		4	<span class="kanji">御用<span class="furigana">ごよう</span></span>になる				
+凶	きょう	Mauvais, mauvaise augure		4	<span class="kanji">凶<span class="furigana">きょう</span></span>				
+凶事	きょうじ	縁起の悪い出来事。不吉な事		4	<span class="kanji">凶事<span class="furigana">きょうじ</span></span>				吉事
+凶刃	きょうじん	人を殺傷するために用いる刃物		4	<span class="kanji">凶刃<span class="furigana">きょうじん</span></span>				
+凶暴	きょうぼう	Brutal; féroce; cruel		4	<span class="kanji">凶暴<span class="furigana">きょうぼう</span></span>				
+元凶	げんきょう	Auteur; source		4	<span class="kanji">元凶<span class="furigana">げんきょう</span></span>				
+物好きな	ものずきな	Curieux			<span class="kanji">物好<span class="furigana">ものず</span></span>きな	0_9			
+酔狂	すいきょう	-		4	<span class="kanji">酔狂<span class="furigana">すいきょう</span></span>	1_9			
+熱狂	ねっきょう	Enthousiasme; exaltation; passion		4	<span class="kanji">熱狂<span class="furigana">ねっきょう</span></span>				
+活況	かっきょう	Activité; animation		4	<span class="kanji">活況<span class="furigana">かっきょう</span></span>				
+近況	きんきょう	Nouvelles		4	<span class="kanji">近況<span class="furigana">きんきょう</span></span>				
+好況	こうきょう	Prospérité		4	<span class="kanji">好況<span class="furigana">こうきょう</span></span>				
+盛況	せいきょう	催し物に多くの人が集まって、盛んなようす		4	<span class="kanji">盛況<span class="furigana">せいきょう</span></span>				
+狭義	きょうぎ	Sens étroit (du terme)		4	<span class="kanji">狭義<span class="furigana">きょうぎ</span></span>				
+広狭	こうきょう	広いことと狭いこと。また、広さ		4	<span class="kanji">広狭<span class="furigana">こうきょう</span></span>				
+手狭	てぜま	Petit; étroit	難読	4	<span class="kanji">手狭<span class="furigana">てぜま</span></span>				
+恐悦	きょうえつ	①相手の好意などを、もったいなく思って喜ぶこと。多く、感謝の意を表すときに用いる語　②非常に喜ぶこと		4	<span class="kanji">恐悦<span class="furigana">きょうえつ</span></span>				
+末恐ろしい	すえおそろしい	将来どうなることか、恐ろしく思われる		4	<span class="kanji">末恐<span class="furigana">すえおそ</span></span>ろしい				
+恐らく	おそらく	Probablement; sans doute　多分		4	<span class="kanji">恐<span class="furigana">おそ</span></span>らく				
+交響楽	こうきょうがく	Symphonie		4	<span class="kanji">交響楽<span class="furigana">こうきょうがく</span></span>				
+打てば響く	うてばひびく	働きかけるとすぐ反応する	慣用句	4	<span class="kanji">打<span class="furigana">う</span></span>てば<span class="kanji">響<span class="furigana">ひび</span></span>く				
+吉事	きちじ	めでたい事柄。縁起の良い事柄			<span class="kanji">吉事<span class="furigana">きちじ</span></span>				凶事
