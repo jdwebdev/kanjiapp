@@ -3030,13 +3030,13 @@
 絵巻(物)	えまき(もの)	Peintures en rouleau			<span class="kanji">絵巻<span class="furigana">えまき</span></span>(<span class="kanji">物<span class="furigana">もの</span></span>)				
 葉巻	はまき	Cigare			<span class="kanji">葉巻<span class="furigana">はまき</span></span>				
 取り巻く	とりまく	Encercler, entourer			<span class="kanji">取<span class="furigana">と</span></span>り<span class="kanji">巻<span class="furigana">ま</span></span>く				
-フランス語圏	フランスごけん	Régions francophones, francophonie			フランス<span class="kanji">語圏<span class="furigana">ごけん</span></span>				
+フランス語圏	フランスごけん	Régions francophones, francophonie		4	フランス<span class="kanji">語圏<span class="furigana">ごけん</span></span>				
 極地圏	きょくちけん	Cercle polaire			<span class="kanji">極地圏<span class="furigana">きょくちけん</span></span>				
-首都圏	しゅとけん	Région capitale, Tôkyô et sa banlieue			<span class="kanji">首都圏<span class="furigana">しゅとけん</span></span>				
+首都圏	しゅとけん	Région capitale, Tôkyô et sa banlieue		4	<span class="kanji">首都圏<span class="furigana">しゅとけん</span></span>				
 北極圏	ほっきょくけん	Cercle polaire arctique			<span class="kanji">北極圏<span class="furigana">ほっきょくけん</span></span>				
 南極圏	なんきょくけん	Cercle polaire antarctique			<span class="kanji">南極圏<span class="furigana">なんきょくけん</span></span>				
-圏内	けんない	Dans une zone			<span class="kanji">圏内<span class="furigana">けんない</span></span>				
-圏外	けんがい	Hors d'une zone, hors réseau			<span class="kanji">圏外<span class="furigana">けんがい</span></span>				
+圏内	けんない	Dans une zone		4	<span class="kanji">圏内<span class="furigana">けんない</span></span>				
+圏外	けんがい	Hors d'une zone, hors réseau		4	<span class="kanji">圏外<span class="furigana">けんがい</span></span>				
 勝つ	かつ	Gagner			<span class="kanji">勝<span class="furigana">か</span></span>つ				
 勝る	まさる	Surpasser			<span class="kanji">勝<span class="furigana">まさ</span></span>る				
 勝利	しょうり	Victoire			<span class="kanji">勝利<span class="furigana">しょうり</span></span>				
@@ -5215,12 +5215,12 @@
 倹約	けんやく	Frugalité, économie			<span class="kanji">倹約<span class="furigana">けんやく</span></span>				
 節倹	せっけん	Épargne, économie			<span class="kanji">節倹<span class="furigana">せっけん</span></span>				
 勤倹	きんけん	Diligence et épargne			<span class="kanji">勤倹<span class="furigana">きんけん</span></span>				
-剣	つるぎ	Épée			<span class="kanji">剣<span class="furigana">つるぎ</span></span>				
-剣道	けんどう	Kendo, escrime japonaise			<span class="kanji">剣道<span class="furigana">けんどう</span></span>				
-刀剣	とうけん	Armes blanches, épées			<span class="kanji">刀剣<span class="furigana">とうけん</span></span>				
-短剣	たんけん	Dague, poignard			<span class="kanji">短剣<span class="furigana">たんけん</span></span>				
+剣	つるぎ	Épée		4	<span class="kanji">剣<span class="furigana">つるぎ</span></span>				
+剣道	けんどう	Kendo, escrime japonaise		4	<span class="kanji">剣道<span class="furigana">けんどう</span></span>				
+刀剣	とうけん	Armes blanches, épées		4	<span class="kanji">刀剣<span class="furigana">とうけん</span></span>				
+短剣	たんけん	Dague, poignard		4	<span class="kanji">短剣<span class="furigana">たんけん</span></span>				
 剣劇	けんげき	Pièce / film de samurai			<span class="kanji">剣劇<span class="furigana">けんげき</span></span>				
-真剣	しんけん	Sérieux			<span class="kanji">真剣<span class="furigana">しんけん</span></span>		本気		
+真剣	しんけん	Sérieux		4	<span class="kanji">真剣<span class="furigana">しんけん</span></span>		本気		
 政策	せいさく	Politique		5	<span class="kanji">政策<span class="furigana">せいさく</span></span>				
 対策	たいさく	Mesure, contre-mesure		5	<span class="kanji">対策<span class="furigana">たいさく</span></span>				
 具体策	ぐたいさく	Mesure concrète			<span class="kanji">具体策<span class="furigana">ぐたいさく</span></span>				
@@ -6044,12 +6044,12 @@
 原爆	げんばく	Bombe atomique			<span class="kanji">原爆<span class="furigana">げんばく</span></span>				
 被爆者	ひばくしゃ	Victime d'un bombardement			<span class="kanji">被爆者<span class="furigana">ひばくしゃ</span></span>				
 爆薬	ばくやく	(Produit) explosif			<span class="kanji">爆薬<span class="furigana">ばくやく</span></span>				
-撃つ	うつ	Attaquer; tirer (avec une arme)			<span class="kanji">撃<span class="furigana">う</span></span>つ				
-攻撃	こうげき	Attaque, offensive			<span class="kanji">攻撃<span class="furigana">こうげき</span></span>			防御	
-反撃	はんげき	Contre-attaque			<span class="kanji">反撃<span class="furigana">はんげき</span></span>				
-爆撃	ばくげき	Bombardement			<span class="kanji">爆撃<span class="furigana">ばくげき</span></span>				
+撃つ	うつ	Attaquer; tirer (avec une arme)		4	<span class="kanji">撃<span class="furigana">う</span></span>つ				
+攻撃	こうげき	Attaque, offensive		4	<span class="kanji">攻撃<span class="furigana">こうげき</span></span>			防御	
+反撃	はんげき	Contre-attaque		4	<span class="kanji">反撃<span class="furigana">はんげき</span></span>				
+爆撃	ばくげき	Bombardement		4	<span class="kanji">爆撃<span class="furigana">ばくげき</span></span>				
 撃沈	げきちん	Couler (un vaisseau ennemi)			<span class="kanji">撃沈<span class="furigana">げきちん</span></span>				
-目撃者	もくげきしゃ	Témoin oculaire			<span class="kanji">目撃者<span class="furigana">もくげきしゃ</span></span>				
+目撃者	もくげきしゃ	Témoin oculaire		4	<span class="kanji">目撃者<span class="furigana">もくげきしゃ</span></span>				
 股	また	Cuisse; entrejambe			<span class="kanji">股<span class="furigana">また</span></span>				
 股関節	こかんせつ	Articulation de la hanche			<span class="kanji">股関節<span class="furigana">こかんせつ</span></span>				
 内股	うちまた	Partie intérieure des cuisses			<span class="kanji">内股<span class="furigana">うちまた</span></span>				
@@ -6097,12 +6097,12 @@
 油断	ゆだん	Inattention, négligence			<span class="kanji">油断<span class="furigana">ゆだん</span></span>			警戒	
 横断	おうだん	Traversée, croisement			<span class="kanji">横断<span class="furigana">おうだん</span></span>				
 断念	だんねん	Abandon, renoncement			<span class="kanji">断念<span class="furigana">だんねん</span></span>				
-継ぐ	つぐ	Suivre, succéder, héritage			<span class="kanji">継<span class="furigana">つ</span></span>ぐ				
+継ぐ	つぐ	Suivre, succéder, héritage		4	<span class="kanji">継<span class="furigana">つ</span></span>ぐ				
 後継	こうけい	Succession		4	<span class="kanji">後継<span class="furigana">こうけい</span></span>				
 継承	けいしょう	Succession, héritage		4	<span class="kanji">継承<span class="furigana">けいしょう</span></span>				
-継続	けいぞく	Continuation, continuité			<span class="kanji">継続<span class="furigana">けいぞく</span></span>			中止	
-中継	ちゅうけい	Retransmission, relais (télé, radio)			<span class="kanji">中継<span class="furigana">ちゅうけい</span></span>				
-受け継ぐ	うけつぐ	Hériter, succéder			<span class="kanji">受<span class="furigana">う</span></span>け<span class="kanji">継<span class="furigana">つ</span></span>ぐ				
+継続	けいぞく	Continuation, continuité		4	<span class="kanji">継続<span class="furigana">けいぞく</span></span>			中止	
+中継	ちゅうけい	Retransmission, relais (télé, radio)		4	<span class="kanji">中継<span class="furigana">ちゅうけい</span></span>				
+受け継ぐ	うけつぐ	Hériter, succéder		4	<span class="kanji">受<span class="furigana">う</span></span>け<span class="kanji">継<span class="furigana">つ</span></span>ぐ				
 判決	はんけつ	Décision juridique, sentence, verdict			<span class="kanji">判決<span class="furigana">はんけつ</span></span>				
 判明	はんめい	Devenir clair, s'éclaircir, se révéler			<span class="kanji">判明<span class="furigana">はんめい</span></span>				
 判事	はんじ	Juge			<span class="kanji">判事<span class="furigana">はんじ</span></span>				
@@ -6267,12 +6267,12 @@
 北緯	ほくい	Latitude nord		4	<span class="kanji">北緯<span class="furigana">ほくい</span></span>				
 南緯	なんい	Latitude sud		4	<span class="kanji">南緯<span class="furigana">なんい</span></span>				
 経緯	けいい	Longitude et latitude; circonstances, historique		4	<span class="kanji">経緯<span class="furigana">けいい</span></span>				
-迎える	むかえる	Aller à la rencontre, recevoir, inviter			<span class="kanji">迎<span class="furigana">むか</span></span>える				
+迎える	むかえる	Aller à la rencontre, recevoir, inviter		4	<span class="kanji">迎<span class="furigana">むか</span></span>える				
 歓迎	かんげい	Bienvenue, accueil		4	<span class="kanji">歓迎<span class="furigana">かんげい</span></span>				
-迎合	げいごう	Flatterie, obséquiosité			<span class="kanji">迎合<span class="furigana">げいごう</span></span>				
-送迎	そうげい	Accueil et reconduite			<span class="kanji">送迎<span class="furigana">そうげい</span></span>				
-出迎え	でむかえ	Accueil, aller chercher / à la rencontre			<span class="kanji">出迎<span class="furigana">でむか</span></span>え				
-迎え撃つ	むかえうつ	Affronter / faire face à l'ennemi			<span class="kanji">迎<span class="furigana">むか</span></span>え<span class="kanji">撃<span class="furigana">う</span></span>つ				
+迎合	げいごう	Flatterie, obséquiosité　自分の考えを曲げてでも、他人の気に入るように調子を合わせること		4	<span class="kanji">迎合<span class="furigana">げいごう</span></span>				
+送迎	そうげい	Accueil et reconduite		4	<span class="kanji">送迎<span class="furigana">そうげい</span></span>				
+出迎え	でむかえ	Accueil, aller chercher / à la rencontre		4	<span class="kanji">出迎<span class="furigana">でむか</span></span>え				
+迎え撃つ	むかえうつ	Affronter / faire face à l'ennemi		4	<span class="kanji">迎<span class="furigana">むか</span></span>え<span class="kanji">撃<span class="furigana">う</span></span>つ				
 仰ぐ	あおぐ	Lever les yeux; révérer, respecter; demander		4	<span class="kanji">仰<span class="furigana">あお</span></span>ぐ				
 仰せ	おおせ	À vos ordres / désirs			<span class="kanji">仰<span class="furigana">おお</span></span>せ				
 仰視	ぎょうし	Lever les yeux vers le haut		4	<span class="kanji">仰視<span class="furigana">ぎょうし</span></span>				
@@ -6426,11 +6426,11 @@
 掃除婦	そうじふ	Femme de ménage			<span class="kanji">掃除婦<span class="furigana">そうじふ</span></span>				
 掃討	そうとう	Nettoyage			<span class="kanji">掃討<span class="furigana">そうとう</span></span>				
 一掃	いっそう	Balayer, éliminer, extirper, purger			<span class="kanji">一掃<span class="furigana">いっそう</span></span>				
-兼	けん	Cumuler, combiner, faire simultanément			<span class="kanji">兼<span class="furigana">けん</span></span>				
-兼ねる	かねる	Cumuler, faire plusieurs choses à la fois; ne pas pouvoir			<span class="kanji">兼<span class="furigana">か</span></span>ねる				
-兼業	けんぎょう	Activité secondaire, second travail			<span class="kanji">兼業<span class="furigana">けんぎょう</span></span>				
-兼任	けんにん	Cumuler deux fonctions			<span class="kanji">兼任<span class="furigana">けんにん</span></span>	0_10			
-待ち兼ねる	まちかねる	Ne pas pouvoir attendre			<span class="kanji">待<span class="furigana">ま</span></span>ち<span class="kanji">兼<span class="furigana">か</span></span>ねる				
+兼	けん	Cumuler, combiner, faire simultanément		4	<span class="kanji">兼<span class="furigana">けん</span></span>				
+兼ねる	かねる	Cumuler, faire plusieurs choses à la fois; ne pas pouvoir		4	<span class="kanji">兼<span class="furigana">か</span></span>ねる				
+兼業	けんぎょう	Activité secondaire, second travail		4	<span class="kanji">兼業<span class="furigana">けんぎょう</span></span>				
+兼任	けんにん	Cumuler deux fonctions		4	<span class="kanji">兼任<span class="furigana">けんにん</span></span>	0_10			
+待ち兼ねる	まちかねる	Ne pas pouvoir attendre		4	<span class="kanji">待<span class="furigana">ま</span></span>ち<span class="kanji">兼<span class="furigana">か</span></span>ねる				
 気兼ね	きがね	Gêne, peur de déranger			<span class="kanji">気兼<span class="furigana">きが</span></span>ね				
 鎌	かま	Faucille			<span class="kanji">鎌<span class="furigana">かま</span></span>				
 鎌をかける	かまをかける	Tirer les vers du nez à quelqu'un			<span class="kanji">鎌<span class="furigana">かま</span></span>をかける				
@@ -6716,7 +6716,7 @@
 額縁	がくぶち	Cadre (d'un tableau)		4	<span class="kanji">額縁<span class="furigana">がくぶち</span></span>				
 墜落	ついらく	Tomber, s'écraser			<span class="kanji">墜落<span class="furigana">ついらく</span></span>				
 墜死	ついし	Chute mortelle			<span class="kanji">墜死<span class="furigana">ついし</span></span>				
-撃墜	げきつい	Abattre (un avion)			<span class="kanji">撃墜<span class="furigana">げきつい</span></span>				
+撃墜	げきつい	Abattre (un avion)		4	<span class="kanji">撃墜<span class="furigana">げきつい</span></span>				
 失墜	しっつい	Perte, déchéance			<span class="kanji">失墜<span class="furigana">しっつい</span></span>				
 遂げる	とげる	Accomplir, réaliser, mener à bonne fin			<span class="kanji">遂<span class="furigana">と</span></span>げる				
 遂行	すいこう	Exécution, accomplissement			<span class="kanji">遂行<span class="furigana">すいこう</span></span>				
@@ -7033,11 +7033,11 @@
 所轄	しょかつ	Juridiction			<span class="kanji">所轄<span class="furigana">しょかつ</span></span>				
 統轄	とうかつ	Administration, gouvernement			<span class="kanji">統轄<span class="furigana">とうかつ</span></span>				
 直轄	ちょっかつ	Surveillance / contrôle direct(e)			<span class="kanji">直轄<span class="furigana">ちょっかつ</span></span>				
-軒	けん	(Numéral pour compter les bâtiments)			<span class="kanji">軒<span class="furigana">けん</span></span>				
-軒	のき	Auvent, avant-toit			<span class="kanji">軒<span class="furigana">のき</span></span>				
-一軒	いっけん	Une maison			<span class="kanji">一軒<span class="furigana">いっけん</span></span>				
-軒数	けんすう	Nombre de maison			<span class="kanji">軒数<span class="furigana">けんすう</span></span>				
-軒並	のきなみ	Rangée de maisons; partout, général			<span class="kanji">軒並<span class="furigana">のきなみ</span></span>				
+軒	けん	(Numéral pour compter les bâtiments)		4	<span class="kanji">軒<span class="furigana">けん</span></span>				
+軒	のき	Auvent, avant-toit		4	<span class="kanji">軒<span class="furigana">のき</span></span>				
+一軒	いっけん	Une maison		4	<span class="kanji">一軒<span class="furigana">いっけん</span></span>				
+軒数	けんすう	Nombre de maison		4	<span class="kanji">軒数<span class="furigana">けんすう</span></span>				
+軒並	のきなみ	Rangée de maisons; partout, général		4	<span class="kanji">軒並<span class="furigana">のきなみ</span></span>				
 軒先	のきさき	Avant-toit, auvent; façade de la maison		4	<span class="kanji">軒先<span class="furigana">のきさき</span></span>				
 汗	あせ	Sueur		4	<span class="kanji">汗<span class="furigana">あせ</span></span>				
 発汗	はっかん	Transpiration, sueur		4	<span class="kanji">発汗<span class="furigana">はっかん</span></span>				
@@ -7500,12 +7500,12 @@
 脇腹	わきばら	Côté, flanc; enfant illégitime			<span class="kanji">脇腹<span class="furigana">わきばら</span></span>				
 脇目も振らず	わきめもふらず	Se pas se laisser distraire, s'absorber (dans qqch)			<span class="kanji">脇目<span class="furigana">わきめ</span></span>も<span class="kanji">振<span class="furigana">ふ</span></span>らず				
 脇見	わきみ	Regarder à côté / ailleurs, détourner le regard			<span class="kanji">脇見<span class="furigana">わきみ</span></span>				
-肩	かた	Épaule			<span class="kanji">肩<span class="furigana">かた</span></span>				
-肩章	けんしょう	Patte d'épaule, épaulette			<span class="kanji">肩章<span class="furigana">けんしょう</span></span>				
-比肩	ひけん	De même rang / niveau, comparable			<span class="kanji">比肩<span class="furigana">ひけん</span></span>				
-肩書き	かたがき	Titre (académique etc.)			<span class="kanji">肩書<span class="furigana">かたが</span></span>き				
+肩	かた	Épaule		4	<span class="kanji">肩<span class="furigana">かた</span></span>				
+肩章	けんしょう	Patte d'épaule, épaulette		4	<span class="kanji">肩章<span class="furigana">けんしょう</span></span>				
+比肩	ひけん	De même rang / niveau, comparable		4	<span class="kanji">比肩<span class="furigana">ひけん</span></span>				
+肩書き	かたがき	Titre (académique etc.)		4	<span class="kanji">肩書<span class="furigana">かたが</span></span>き				
 肩身	かたみ	①肩と身。からだ　②世間・他人に対する面目		4	<span class="kanji">肩身<span class="furigana">かたみ</span></span>				
-肩身が広い	かたみがひろい	Se sentir fier			<span class="kanji">肩身<span class="furigana">かたみ</span></span>が<span class="kanji">広<span class="furigana">ひろ</span></span>い				
+肩身が広い	かたみがひろい	Se sentir fier		4	<span class="kanji">肩身<span class="furigana">かたみ</span></span>が<span class="kanji">広<span class="furigana">ひろ</span></span>い				
 肩身が狭い	かたみがせまい	Se sentir honteux		4	<span class="kanji">肩身<span class="furigana">かたみ</span></span>が<span class="kanji">狭<span class="furigana">せま</span></span>い				
 肩代わり	かたがわり	Remplacer, transférer (une charge)			<span class="kanji">肩代<span class="furigana">かたが</span></span>わり				
 背	せ	Dos; taille (corps)		5	<span class="kanji">背<span class="furigana">せ</span></span>				
@@ -9171,7 +9171,7 @@
 史跡	しせき	Monument / lieu historique, vestiges		7	<span class="kanji">史跡<span class="furigana">しせき</span></span>				
 足跡	あしあと、そくせき	Traces de pas			<span class="kanji">足跡<span class="furigana">あしあと</span></span>				
 傷跡	きずあと	Cicatrice			<span class="kanji">傷跡<span class="furigana">きずあと</span></span>				
-跡継ぎ	あとつぎ	Successeur, héritier			<span class="kanji">跡継<span class="furigana">あとつ</span></span>ぎ				
+跡継ぎ	あとつぎ	Successeur, héritier		4	<span class="kanji">跡継<span class="furigana">あとつ</span></span>ぎ				
 踪跡	そうせき	Traces, empreintes, endroit où l'on se trouve			<span class="kanji">踪跡<span class="furigana">そうせき</span></span>				
 失踪	しっそう	Disparaître sans laisser de traces			<span class="kanji">失踪<span class="furigana">しっそう</span></span>				
 大赦	たいしゃ	Amnistie générale			<span class="kanji">大赦<span class="furigana">たいしゃ</span></span>				
@@ -9311,7 +9311,7 @@
 双方	そうほう	Les deux parties / côtés			<span class="kanji">双方<span class="furigana">そうほう</span></span>				
 双生児	そうせいじ	Jumeaux			<span class="kanji">双生児<span class="furigana">そうせいじ</span></span>				
 双眼鏡	そうがんきょう	Binoculaire, jumelles			<span class="kanji">双眼鏡<span class="furigana">そうがんきょう</span></span>				
-双肩	そうけん	Épaules			<span class="kanji">双肩<span class="furigana">そうけん</span></span>				
+双肩	そうけん	Épaules		4	<span class="kanji">双肩<span class="furigana">そうけん</span></span>				
 双子	ふたご	Jumeaux			<span class="kanji">双子<span class="furigana">ふたご</span></span>				
 努める	つとめる	Faire des efforts, s'appliquer			<span class="kanji">努<span class="furigana">つと</span></span>める				
 努力	どりょく	Effort			<span class="kanji">努力<span class="furigana">どりょく</span></span>				
@@ -10263,7 +10263,7 @@
 ～に飽かして	～にあかして	Sans tenir compte de ...			～に<span class="kanji">飽<span class="furigana">あ</span></span>かして				
 大砲	たいほう	Canon			<span class="kanji">大砲<span class="furigana">たいほう</span></span>				
 鉄砲	てっぽう	Fusil			<span class="kanji">鉄砲<span class="furigana">てっぽう</span></span>				
-砲撃	ほうげき	Tir d'artillerie, bombardement			<span class="kanji">砲撃<span class="furigana">ほうげき</span></span>				
+砲撃	ほうげき	Tir d'artillerie, bombardement		4	<span class="kanji">砲撃<span class="furigana">ほうげき</span></span>				
 砲兵	ほうへい	Artilleur, artillerie			<span class="kanji">砲兵<span class="furigana">ほうへい</span></span>				
 砲火	ほうか	Feux			<span class="kanji">砲火<span class="furigana">ほうか</span></span>				
 十字砲火	じゅうじほうか	Feux croisés			<span class="kanji">十字砲火<span class="furigana">じゅうじほうか</span></span>				
@@ -12840,9 +12840,10 @@
 継嗣	けいし	Successeur		4	<span class="kanji">継嗣<span class="furigana">けいし</span></span>				
 継承者	けいしょうしゃ	Successeur		4	<span class="kanji">継承者<span class="furigana">けいしょうしゃ</span></span>				
 後継者	こうけいしゃ	Successeur; héritier		4	<span class="kanji">後継者<span class="furigana">こうけいしゃ</span></span>				
+引き継ぎ	ひきつぎ	Remise; succession		4	<span class="kanji">引<span class="furigana">ひ</span></span>き<span class="kanji">継<span class="furigana">つ</span></span>ぎ				
 迎撃	げいげき	Se défendre contre qqch; contre-attaquer		4	<span class="kanji">迎撃<span class="furigana">げいげき</span></span>				
 迎春	げいしゅん	新春を迎えること。新年を迎えること。年頭の挨拶の言葉として、年賀状などに用いられる		4	<span class="kanji">迎春<span class="furigana">げいしゅん</span></span>				
-迎え火	むかうび	客人や神霊をむかえるためにたく火のこと		4	<span class="kanji">迎<span class="furigana">むか</span></span>え<span class="kanji">火<span class="furigana">び</span></span>				
+迎え火	むかえび	客人や神霊をむかえるためにたく火のこと		4	<span class="kanji">迎<span class="furigana">むか</span></span>え<span class="kanji">火<span class="furigana">び</span></span>				
 撃退	げきたい	Repousser, refouler qqn		4	<span class="kanji">撃退<span class="furigana">げきたい</span></span>				
 撃破	げきは	Écraser (l'ennemi)		4	<span class="kanji">撃破<span class="furigana">げきは</span></span>				
 襲撃	しゅうげき	Assaut, attaque; attentat		4	<span class="kanji">襲撃<span class="furigana">しゅうげき</span></span>				
@@ -12877,3 +12878,11 @@
 老練	ろうれん	Expérimenté, expert			<span class="kanji">老練<span class="furigana">ろうれん</span></span>				
 本を正す	もとをただす	物事の起こりや原因を調べて、はっきりさせる	慣用句		<span class="kanji">本<span class="furigana">もと</span></span>を<span class="kanji">正<span class="furigana">ただ</span></span>す				
 火の元	ひのもと	火事のもととなるような火のある所。火を使う所			<span class="kanji">火<span class="furigana">ひ</span></span>の<span class="kanji">元<span class="furigana">もと</span></span>				
+絶世	ぜっせい	Sans égal			<span class="kanji">絶世<span class="furigana">ぜっせい</span></span>				
+絶世の美女	ぜっせいのびじょ	Beauté sans égale			<span class="kanji">絶世<span class="furigana">ぜっせい</span></span>の<span class="kanji">美女<span class="furigana">びじょ</span></span>				
+形見	かたみ	Souvenir (laissé par un être aimé)			<span class="kanji">形見<span class="furigana">かたみ</span></span>		遺品		
+多大	ただい	Considérable; sérieux, important			<span class="kanji">多大<span class="furigana">ただい</span></span>				多大な影響
+噂をすれば影がさす	うわさをすればかげがさす	Quand on parle du loup, on en voit la queue	諺		<span class="kanji">噂<span class="furigana">うわさ</span></span>をすれば<span class="kanji">影<span class="furigana">かげ</span></span>がさす				
+負けじと	まけじと	負けたくない、負けるものかと意気込むさま			<span class="kanji">負<span class="furigana">ま</span></span>けじと				
+気色	けしき	Avoir l'air de ..., ne pas avoir l'air de ...			<span class="kanji">気色<span class="furigana">けしき</span></span>				反省している気色すらない。ひるむ気色も見せない
+吊り革	つりかわ	Poignée			<span class="kanji">吊<span class="furigana">つ</span></span>り<span class="kanji">革<span class="furigana">かわ</span></span>				
