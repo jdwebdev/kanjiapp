@@ -1,4 +1,4 @@
-単語	読み方	定義	カテゴリー	級		参考	類義	対義	その他
+単語	読み方	定義	カテゴリー	級	アニメーション	参考	類義	対義	その他
 人	ひと	Une personne		10	<span class="kanji">人<span class="furigana">ひと</span></span>				
 フランス人	フランスじん	Français		10	フランス<span class="kanji">人<span class="furigana">じん</span></span>				
 １００人	ひゃくにん	Cent personnes		10	<span class="kanji">１００人<span class="furigana">ひゃくにん</span></span>				
@@ -4672,7 +4672,7 @@
 兵卒	へいそつ	Simple soldat, homme de troupe			<span class="kanji">兵卒<span class="furigana">へいそつ</span></span>				
 率いる	ひきいる	Mener, diriger		6	<span class="kanji">率<span class="furigana">ひき</span></span>いる				
 率直	そっちょく	Franchise, droiture, sincérité			<span class="kanji">率直<span class="furigana">そっちょく</span></span>				
-軽率	けいそつ	Étourdi, irréfléchi, insouciant			<span class="kanji">軽率<span class="furigana">けいそつ</span></span>				
+軽率	けいそつ	Étourdi, irréfléchi, insouciant			<span class="kanji">軽率<span class="furigana">けいそつ</span></span>			慎重	
 能率	のうりつ	Efficacité, rendement		6	<span class="kanji">能率<span class="furigana">のうりつ</span></span>				
 成長率	せいちょうりつ	Taux de croissance			<span class="kanji">成長率<span class="furigana">せいちょうりつ</span></span>				
 血	ち	Sang			<span class="kanji">血<span class="furigana">ち</span></span>				
@@ -6443,7 +6443,7 @@
 釜飯	かまめし	(Riz cuit avec divers ingrédients dans un pot avec couvercle)			<span class="kanji">釜飯<span class="furigana">かまめし</span></span>				
 尋ねる	たずねる	Rechercher; interroger, s'informer			<span class="kanji">尋<span class="furigana">たず</span></span>ねる				
 尋問	じんもん	Interrogatoire			<span class="kanji">尋問<span class="furigana">じんもん</span></span>				
-尋常	じんじょう	Normal, ordinaire			<span class="kanji">尋常<span class="furigana">じんじょう</span></span>				
+尋常	じんじょう	Normal, ordinaire			<span class="kanji">尋常<span class="furigana">じんじょう</span></span>		普通		
 尋ね人	たずねびと	Personne recherchée / disparue			<span class="kanji">尋<span class="furigana">たず</span></span>ね<span class="kanji">人<span class="furigana">びと</span></span>				
 租税	そぜい	Impôt, contributions			<span class="kanji">租税<span class="furigana">そぜい</span></span>				
 地租	ちそ	Impôt foncier			<span class="kanji">地租<span class="furigana">ちそ</span></span>				
@@ -6917,7 +6917,7 @@
 並列	へいれつ	Être juxtaposé, aligné		5	<span class="kanji">並列<span class="furigana">へいれつ</span></span>				
 並木	なみき	Rangée / ligne d'arbres		5	<span class="kanji">並木<span class="furigana">なみき</span></span>				
 平年並み	へいねんなみ	Année normale, comme chaque année			<span class="kanji">平年並<span class="furigana">へいねんな</span></span>み				
-普通	ふつう	Ordinaire, courant			<span class="kanji">普通<span class="furigana">ふつう</span></span>				
+普通	ふつう	Ordinaire, courant			<span class="kanji">普通<span class="furigana">ふつう</span></span>		尋常		
 普選	ふせん	Suffrage universel			<span class="kanji">普選<span class="furigana">ふせん</span></span>				
 普通選挙	ふつうせんきょ	Suffrage universel			<span class="kanji">普通選挙<span class="furigana">ふつうせんきょ</span></span>				
 普遍的	ふへんてき	Universel, général			<span class="kanji">普遍的<span class="furigana">ふへんてき</span></span>				
@@ -9299,7 +9299,7 @@
 献呈本	けんていぼん	Exemplaire gratuit			<span class="kanji">献呈本<span class="furigana">けんていぼん</span></span>				
 謹呈	きんてい	"Avec les compliments de l'auteur"			<span class="kanji">謹呈<span class="furigana">きんてい</span></span>				
 露呈	ろてい	Révélation, divulgation			<span class="kanji">露呈<span class="furigana">ろてい</span></span>				
-是非	ぜひ	Juste et injuste; à tout prix, coûte que coûte			<span class="kanji">是非<span class="furigana">ぜひ</span></span>				
+是非	ぜひ	Juste et injuste; à tout prix, coûte que coûte			<span class="kanji">是非<span class="furigana">ぜひ</span></span>		可否		
 是正	ぜせい	Corriger, rectifier			<span class="kanji">是正<span class="furigana">ぜせい</span></span>				
 是認	ぜにん	Approbation, accord			<span class="kanji">是認<span class="furigana">ぜにん</span></span>				
 是々非々	ぜぜひひ	Impartialité			<span class="kanji">是々非々<span class="furigana">ぜぜひひ</span></span>				
@@ -9933,7 +9933,7 @@
 占う	うらなう	Prédire l'avenir			<span class="kanji">占<span class="furigana">うらな</span></span>う				
 占有	せんゆう	Possession, occupation			<span class="kanji">占有<span class="furigana">せんゆう</span></span>				
 占領	せんりょう	Occupation, prise			<span class="kanji">占領<span class="furigana">せんりょう</span></span>				
-独占	どくせん	Monopole			<span class="kanji">独占<span class="furigana">どくせん</span></span>				
+独占	どくせん	Monopole			<span class="kanji">独占<span class="furigana">どくせん</span></span>		専有		
 買い占め	かいしめ	Accaparer / truster (le marché)			<span class="kanji">買<span class="furigana">か</span></span>い<span class="kanji">占<span class="furigana">し</span></span>め				
 星占い	ほしうらない	Astrologie; horoscope			<span class="kanji">星占<span class="furigana">ほしうらな</span></span>い				
 貼る	はる	Coller, fixer			<span class="kanji">貼<span class="furigana">は</span></span>る				
@@ -10381,7 +10381,7 @@
 膝詰め談判	ひざづめだんぱん	Négociation en tête à tête / directe			<span class="kanji">膝詰<span class="furigana">ひざづ</span></span>め<span class="kanji">談判<span class="furigana">だんぱん</span></span>				
 慎む	つつしむ	Être circonspect / prudent / discret; s'abstenir, se modérer			<span class="kanji">慎<span class="furigana">つつし</span></span>む				
 謹慎	きんしん	Réserver, retenue; réclusion à domicile			<span class="kanji">謹慎<span class="furigana">きんしん</span></span>				
-慎重	しんちょう	Prudent, circonspect			<span class="kanji">慎重<span class="furigana">しんちょう</span></span>				
+慎重	しんちょう	Prudent, circonspect			<span class="kanji">慎重<span class="furigana">しんちょう</span></span>			軽率	
 慎み深い	つつしみぶかい	Modeste, discret, réservé			<span class="kanji">慎<span class="furigana">つつし</span></span>み<span class="kanji">深<span class="furigana">ぶか</span></span>い				
 鎮める	しずめる	Calmer, apaiser; réprimer			<span class="kanji">鎮<span class="furigana">しず</span></span>める				
 鎮まる	しずまる	S'apaiser, se calmer			<span class="kanji">鎮<span class="furigana">しず</span></span>まる				
@@ -12190,7 +12190,7 @@
 作法	さほう	-			<span class="kanji">作法<span class="furigana">さほう</span></span>	1_7			
 早期	そうき	Première période; premiers stades			<span class="kanji">早期<span class="furigana">そうき</span></span>				
 文豪	ぶんごう	文学の大家。大作家			<span class="kanji">文豪<span class="furigana">ぶんごう</span></span>				
-可否	かひ	Le pour et le contre; le oui et le non		5	<span class="kanji">可否<span class="furigana">かひ</span></span>				
+可否	かひ	Le pour et le contre; le oui et le non		5	<span class="kanji">可否<span class="furigana">かひ</span></span>		是非		
 同数	どうすう	Le même nombre		5	<span class="kanji">同数<span class="furigana">どうすう</span></span>				
 可否同数	かひどうすう	Autant de pour que de contre		5	<span class="kanji">可否同数<span class="furigana">かひどうすう</span></span>				
 途方に暮れる	とほうにくれる	Désorienté; déconcerté; se sentir perdu; ne plus savoir que faire	慣用句	5	<span class="kanji">途方<span class="furigana">とほう</span></span>に<span class="kanji">暮<span class="furigana">く</span></span>れる				
@@ -13100,3 +13100,47 @@
 密に	みつに	Étroitement; intimement			<span class="kanji">密<span class="furigana">みつ</span></span>に				
 連絡を密にする	れんらくをみつにする	Garder des relations étroites avec qqn			<span class="kanji">連絡<span class="furigana">れんらく</span></span>を<span class="kanji">密<span class="furigana">みつ</span></span>にする				
 病弱	びょうじゃく	Maladif; de santé fragile			<span class="kanji">病弱<span class="furigana">びょうじゃく</span></span>			丈夫	
+寝食	しんしょく	寝ることと食べること。日常生活		4	<span class="kanji">寝食<span class="furigana">しんしょく</span></span>				
+寝食を忘れる	しんしょくをわすれる	寝ることも食べることも忘れて、物事に熱中する	慣用句	4	<span class="kanji">寝食<span class="furigana">しんしょく</span></span>を<span class="kanji">忘<span class="furigana">わす</span></span>れる				
+寝息	ねいき	睡眠中の呼吸		4	<span class="kanji">寝息<span class="furigana">ねいき</span></span>				
+寝袋	ねぶくろ	Sac de couchage		4	<span class="kanji">寝袋<span class="furigana">ねぶくろ</span></span>				
+寝坊	ねぼう	Faire la grasse matinée; se lever tard		4	<span class="kanji">寝坊<span class="furigana">ねぼう</span></span>				
+寝惚け眼	ねぼけまなこ	Yeux ensommeillés		4	<span class="kanji">寝惚<span class="furigana">ねぼ</span></span>け<span class="kanji">眼<span class="furigana">まなこ</span></span>				
+不謹慎	ふきんしん	Indiscrétion; indiscret; inconvenant		4	<span class="kanji">不謹慎<span class="furigana">ふきんしん</span></span>				
+言葉を慎む	ことばをつつしむ	Faire attention à, mesurer ses paroles		4	<span class="kanji">言葉<span class="furigana">ことば</span></span>を<span class="kanji">慎<span class="furigana">つつし</span></span>む				
+震度	しんど	Degré d'intensité sismique		4	<span class="kanji">震度<span class="furigana">しんど</span></span>				
+激震	げきしん	Violent tremblement de terre, séisme		4	<span class="kanji">激震<span class="furigana">げきしん</span></span>				
+耐震	たいしん	Résistant aux tremblements de terre		4	<span class="kanji">耐震<span class="furigana">たいしん</span></span>				
+薪炭商	しんたんしょう	Négociant en bois, charbon de chauffage		4	<span class="kanji">薪炭商<span class="furigana">しんたんしょう</span></span>				
+薪能	たきぎのう	夕方から夜にかけ、野外で薪をたいて行われる能		4	<span class="kanji">薪能<span class="furigana">たきぎのう</span></span>				
+薪拾い	たきぎひろい	Ramasser du bois pour le chauffage		4	<span class="kanji">薪拾<span class="furigana">たきぎひろ</span></span>い				
+理不尽	りふじん	Absurde, déraisonnable		4	<span class="kanji">理不尽<span class="furigana">りふじん</span></span>				
+初陣	ういじん	初めて戦場に出ること。また、その戦い。転じて、初めて試合・競技に出場すること	難読	4	<span class="kanji">初陣<span class="furigana">ういじん</span></span>				
+円陣	えんじん	円形をなす陣立て。人が集まって円形に並ぶこと		4	<span class="kanji">円陣<span class="furigana">えんじん</span></span>				
+円陣を組む	えんじんをくむ	Faire un cercle, forme un cercle (autour de qqn)		4	<span class="kanji">円陣<span class="furigana">えんじん</span></span>を<span class="kanji">組<span class="furigana">く</span></span>む				
+出陣	しゅつじん	Partir au front		4	<span class="kanji">出陣<span class="furigana">しゅつじん</span></span>				
+布陣	ふじん	Prise de position		4	<span class="kanji">布陣<span class="furigana">ふじん</span></span>				
+千尋	せんじん	(「尋」は長さの単位)　山などが非常に高いこと。また、谷や海などが非常に深いこと		4	<span class="kanji">千尋<span class="furigana">せんじん</span></span>				
+吹奏楽	すいそうがく	Musique d'harmonie (pour instruments à vent)		4	<span class="kanji">吹奏楽<span class="furigana">すいそうがく</span></span>				
+吹鳴	すいめい	吹きならすこと。また、汽笛などを高く鳴らすこと		4	<span class="kanji">吹鳴<span class="furigana">すいめい</span></span>				
+霧吹き	きりふき	液体、霧状にして吹きかけること。また、その器具		4	<span class="kanji">霧吹<span class="furigana">きりふ</span></span>き				
+息吹	いぶき	Souffle		4	<span class="kanji">息吹<span class="furigana">いぶき</span></span>				
+同姓同名	どうせいどうめい	Même nom et prénom		4	<span class="kanji">同姓同名<span class="furigana">どうせいどうめい</span></span>				
+素姓	すじょう	Naissance; origine; identité; antécédents	難読	4	<span class="kanji">素姓<span class="furigana">すじょう</span></span>				
+征圧	せいあつ	征服し、押さえ込むこと		4	<span class="kanji">征圧<span class="furigana">せいあつ</span></span>				
+征途	せいと	旅に行く道。戦争や遠征に行く道		4	<span class="kanji">征途<span class="furigana">せいと</span></span>				
+征討	せいとう	兵を出して、背く者や逆らう者を討ち鎮めること。征伐		4	<span class="kanji">征討<span class="furigana">せいとう</span></span>				
+形跡	けいせき	Trace, piste, marque		4	<span class="kanji">形跡<span class="furigana">けいせき</span></span>				
+追跡	ついせき	Poursuite; recherche		4	<span class="kanji">追跡<span class="furigana">ついせき</span></span>				
+名所旧跡	めいしょきゅうせき	Lieux célèbres et sites historiques		4	<span class="kanji">名所旧跡<span class="furigana">めいしょきゅうせき</span></span>				
+跡形もなく	あとかたもなく	Sans laisser aucune trace		4	<span class="kanji">跡形<span class="furigana">あとかた</span></span>もなく				
+筆跡	ひっせき	Écriture; graphisme		4	<span class="kanji">筆跡<span class="furigana">ひっせき</span></span>				
+手相	てそう	Lignes de la main		4	<span class="kanji">手相<span class="furigana">てそう</span></span>				
+手相占い	てそううらない	Chiromancie (lire dans les lignes de la main)		4	<span class="kanji">手相占<span class="furigana">てそううらな</span></span>い				
+扇状地	せんじょうち	Éventail alluvial		4	<span class="kanji">扇状地<span class="furigana">せんじょうち</span></span>				
+夏炉冬扇	かろとうせん	時期外れで役に立たない物事のたとえ		4	<span class="kanji">夏炉冬扇<span class="furigana">かろとうせん</span></span>				
+鮮血	せんけつ	Sang frais		4	<span class="kanji">鮮血<span class="furigana">せんけつ</span></span>				
+鮮烈	せんれつ	Vif, vive		4	<span class="kanji">鮮烈<span class="furigana">せんれつ</span></span>				
+生鮮	せいせん	Frais, périssable		4	<span class="kanji">生鮮<span class="furigana">せいせん</span></span>				
+生鮮食料品	せいせんしょくりょうひん	Denrées périssables; produits frais		4	<span class="kanji">生鮮食料品<span class="furigana">せいせんしょくりょうひん</span></span>				
+専有	せんゆう	Accaparement; monopoliser, accaparer			<span class="kanji">専有<span class="furigana">せんゆう</span></span>		独占		
