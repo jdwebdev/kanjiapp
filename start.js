@@ -98,11 +98,11 @@ function createKanji(pRow) {
 function createWord(pRow) {
 	const row = pRow;
     let test;
-    for (let i = 0; i < row.length; i++) {
+    for (let i = 1; i < row.length; i++) {
         row[i] = row[i].split('\t');
         //?                  語彙	   読み	     意味	 
         //?             pId, pWord,   pYomi,     pImi,      pInfo,     pKanken,   pFurigana, pRef
-        test = new Word(i, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4], row[i][5], row[i][6]);
+        test = new Word(i-1, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4], row[i][5], row[i][6]);
     }
 }
 
