@@ -395,6 +395,7 @@ main {
 	opacity: 0;
 	transition: all ease 0.3s;
 	box-shadow: -2px -2px 2px var(--dark_blue);
+	color: var(--white);
 }
 
 #filter_panel.open {
