@@ -4956,7 +4956,7 @@
 冷静	れいせい	Calme, serein, de sang-froid			<span class="kanji">冷静<span class="furigana">れいせい</span></span>		沈着	熱烈	
 年齢	ねんれい	Âge			<span class="kanji">年齢<span class="furigana">ねんれい</span></span>				
 学齢	がくれい	Âge scolaire			<span class="kanji">学齢<span class="furigana">がくれい</span></span>				
-老齢	ろうれい	Grand âge			<span class="kanji">老齢<span class="furigana">ろうれい</span></span>				
+老齢	ろうれい	Grand âge			<span class="kanji">老齢<span class="furigana">ろうれい</span></span>			幼年	
 高齢者	こうれいしゃ	Personne âgée			<span class="kanji">高齢者<span class="furigana">こうれいしゃ</span></span>				
 高齢化社会	こうれいかしゃかい	Société vieillissante			<span class="kanji">高齢化社会<span class="furigana">こうれいかしゃかい</span></span>				
 領土	りょうど	Territoire			<span class="kanji">領土<span class="furigana">りょうど</span></span>				
@@ -13545,30 +13545,98 @@
 良家	りょうけ、りょうか	身分のある家。現代では、教養があり暮らし向きが水準以上の家庭をいう			<span class="kanji">良家<span class="furigana">りょうけ</span></span>				
 正夢	まさゆめ	Rêve qui se réalise			<span class="kanji">正夢<span class="furigana">まさゆめ</span></span>				
 出任せを言う	でまかせをいう	Parler en l'air; parler à tort et à travers			<span class="kanji">出任<span class="furigana">でまか</span></span>せを<span class="kanji">言<span class="furigana">い</span></span>う				
-黙読	もくどく	Lire des yeux; faire une lecture silencieuse		4					
-黙秘	もくひ	Garder le silence; se taire		4					
-暗黙	あんもく	Tacite; tacitement		4					
-黙想	もくそう	Méditation, contemplation, recueillement		4					
-紋服	もんぷく	紋をつけた和服。紋付き		4					
-紋様	もんよう	調度・器物・衣服などの表面に装飾された図形		4					
-渦紋	かもん	渦の形の模様。渦巻き模様		4					
-家紋	かもん	家々で定める紋。名家の紋所		4					
-躍る	おどる	②喜びや期待などで鼓動が激しくなる。わくわくする		4					
-躍起になる	やっきになる	Désespérément, avec acharnement; avec ardeur; fortement		4					
-小躍り	こおどり	Bondir, sauter (ex: de joie)		4					
-一躍	いちやく	D'un bond; d'un coup; du jour au lendemain		4					
-雄姿	ゆうし	Figure magnifique; forme imposante; port superbe		4					
-雄図	ゆうと	雄々しいはかりごと。雄大な計画		4					
-雄飛	ゆうひ	雄鳥が大空に飛び上がるように、大きな志をいだいて盛んに活動すること		4					
-雄花	おばな	Fleur mâle		4					
-関与	かんよ	Participation; participer à qqch; prendre part à		4					
-寄与	きよ	Contribution; contribuer à		4					
-譲与	じょうよ	Transmission; transmettre qqch à qqn		4					
-毀誉	きよ	けなすこととほめること。悪口と称賛		4					
-称誉	しょうよ	ほめたたえること		4					
-溶剤	ようざい	Solvant		4					
-溶接	ようせつ	Soudure; souder qqch		4					
-水溶液	すいようえき	Solution aqueuse		4					
-腰痛	ようつう	Lumbago, douleur lombaire		4					
-足腰	あしこし	①足と腰。下半身　②(比喩的に)組織や団体などの活動を支えるメンバーの意欲と資金力		4					
-中腰	ちゅうごし	Posture à moitié debout		4					
+黙読	もくどく	Lire des yeux; faire une lecture silencieuse		4	<span class="kanji">黙読<span class="furigana">もくどく</span></span>				
+黙秘	もくひ	Garder le silence; se taire		4	<span class="kanji">黙秘<span class="furigana">もくひ</span></span>				
+暗黙	あんもく	Tacite; tacitement		4	<span class="kanji">暗黙<span class="furigana">あんもく</span></span>				
+黙想	もくそう	Méditation, contemplation, recueillement		4	<span class="kanji">黙想<span class="furigana">もくそう</span></span>				
+紋服	もんぷく	紋をつけた和服。紋付き		4	<span class="kanji">紋服<span class="furigana">もんぷく</span></span>				
+紋様	もんよう	調度・器物・衣服などの表面に装飾された図形		4	<span class="kanji">紋様<span class="furigana">もんよう</span></span>				
+渦紋	かもん	渦の形の模様。渦巻き模様		4	<span class="kanji">渦紋<span class="furigana">かもん</span></span>				
+家紋	かもん	家々で定める紋。名家の紋所		4	<span class="kanji">家紋<span class="furigana">かもん</span></span>				
+躍る	おどる	②喜びや期待などで鼓動が激しくなる。わくわくする		4	<span class="kanji">躍<span class="furigana">おど</span></span>る				
+躍起になる	やっきになる	Désespérément, avec acharnement; avec ardeur; fortement		4	<span class="kanji">躍起<span class="furigana">やっき</span></span>になる				
+小躍り	こおどり	Bondir, sauter (ex: de joie)		4	<span class="kanji">小躍<span class="furigana">こおど</span></span>り				
+一躍	いちやく	D'un bond; d'un coup; du jour au lendemain		4	<span class="kanji">一躍<span class="furigana">いちやく</span></span>				
+雄姿	ゆうし	Figure magnifique; forme imposante; port superbe		4	<span class="kanji">雄姿<span class="furigana">ゆうし</span></span>				
+雄図	ゆうと	雄々しいはかりごと。雄大な計画		4	<span class="kanji">雄図<span class="furigana">ゆうと</span></span>				
+雄飛	ゆうひ	雄鳥が大空に飛び上がるように、大きな志をいだいて盛んに活動すること		4	<span class="kanji">雄飛<span class="furigana">ゆうひ</span></span>				
+雄花	おばな	Fleur mâle		4	<span class="kanji">雄花<span class="furigana">おばな</span></span>				
+関与	かんよ	Participation; participer à qqch; prendre part à		4	<span class="kanji">関与<span class="furigana">かんよ</span></span>				
+寄与	きよ	Contribution; contribuer à		4	<span class="kanji">寄与<span class="furigana">きよ</span></span>				
+譲与	じょうよ	Transmission; transmettre qqch à qqn		4	<span class="kanji">譲与<span class="furigana">じょうよ</span></span>				
+毀誉	きよ	けなすこととほめること。悪口と称賛		4	<span class="kanji">毀誉<span class="furigana">きよ</span></span>				
+称誉	しょうよ	ほめたたえること		4	<span class="kanji">称誉<span class="furigana">しょうよ</span></span>				
+溶剤	ようざい	Solvant		4	<span class="kanji">溶剤<span class="furigana">ようざい</span></span>				
+溶接	ようせつ	Soudure; souder qqch		4	<span class="kanji">溶接<span class="furigana">ようせつ</span></span>				
+水溶液	すいようえき	Solution aqueuse		4	<span class="kanji">水溶液<span class="furigana">すいようえき</span></span>				
+腰痛	ようつう	Lumbago, douleur lombaire		4	<span class="kanji">腰痛<span class="furigana">ようつう</span></span>				
+足腰	あしこし	①足と腰。下半身　②(比喩的に)組織や団体などの活動を支えるメンバーの意欲と資金力		4	<span class="kanji">足腰<span class="furigana">あしこし</span></span>				
+中腰	ちゅうごし	Posture à moitié debout		4	<span class="kanji">中腰<span class="furigana">ちゅうごし</span></span>				
+踊躍	ようやく	喜んで、おどり上がること。飛び跳ねること		4	<span class="kanji">踊躍<span class="furigana">ようやく</span></span>				
+素謡	すうたい	能の略式演奏の一		4	<span class="kanji">素謡<span class="furigana">すうたい</span></span>				
+翼下	よっか	①飛行機などのつばさのした　②勢力の及ぶ範囲内。保護の内。傘下		4	<span class="kanji">翼下<span class="furigana">よっか</span></span>				
+一翼	いちよく	①一つの翼。また、1羽の鳥　②全体の中での役割などの一端。一つの任務		4	<span class="kanji">一翼<span class="furigana">いちよく</span></span>				
+主翼	しゅよく	航空機の翼のうち、全重量を支える揚力を発生させる大きな翼		4	<span class="kanji">主翼<span class="furigana">しゅよく</span></span>				
+雷雲	らいう	Orage		4	<span class="kanji">雷雲<span class="furigana">らいう</span></span>				
+付和雷同	ふわらいどう	Suivre comme des moutons de Panurge		4	<span class="kanji">付和雷同<span class="furigana">ふわらいどう</span></span>				
+神頼み	かみだのみ	神に祈って加護を願うこと。神の助けを願い求めること		4	<span class="kanji">神頼<span class="furigana">かみだの</span></span>み				
+苦しい時の神頼み	くるしいときのかみだのみ	Le danger passé, on oublie Dieu		4	<span class="kanji">苦<span class="furigana">くる</span></span>しい<span class="kanji">時<span class="furigana">とき</span></span>の<span class="kanji">神頼<span class="furigana">かみだの</span></span>み				
+頼り甲斐	たよりがい	頼りにするだけのねうち。頼っただけの効果		4	<span class="kanji">頼<span class="furigana">たよ</span></span>り<span class="kanji">甲斐<span class="furigana">がい</span></span>				
+短絡的	たんらくてき	Simpliste; court-circuit		4	<span class="kanji">短絡的<span class="furigana">たんらくてき</span></span>				
+連絡網	れんらくもう	Chaine de contact, communication		4	<span class="kanji">連絡網<span class="furigana">れんらくもう</span></span>				
+籠絡	ろうらく	巧みに手なずけて、自分の思いどおりに操ること		4	<span class="kanji">籠絡<span class="furigana">ろうらく</span></span>				
+欄間	らんま	Imposte décorée		4	<span class="kanji">欄間<span class="furigana">らんま</span></span>				
+別離	べつり	Séparation; adieu		4	<span class="kanji">別離<span class="furigana">べつり</span></span>				
+離れ業	はなれわざ	Tour de force; acrobaties		4	<span class="kanji">離<span class="furigana">はな</span></span>れ<span class="kanji">業<span class="furigana">わざ</span></span>				
+乳離れ	ちばなれ	Sevrage; cesser de téter sa mère		4	<span class="kanji">乳離<span class="furigana">ちばな</span></span>れ				
+微粒子	びりゅうし	Corpuscule; particule		4	<span class="kanji">微粒子<span class="furigana">びりゅうし</span></span>				
+大粒	おおつぶ	粒が大きいこと。大きな粒		4	<span class="kanji">大粒<span class="furigana">おおつぶ</span></span>				
+豆粒	まめつぶ	豆の粒		4	<span class="kanji">豆粒<span class="furigana">まめつぶ</span></span>				
+思慮	しりょ	Considération; réflexion; discernement		4	<span class="kanji">思慮<span class="furigana">しりょ</span></span>				
+短慮	たんりょ	①考えがあさはかなこと。思慮の足りないこと　②気の短いこと		4	<span class="kanji">短慮<span class="furigana">たんりょ</span></span>				
+不慮	ふりょ	Accidentel; fortuit; inattendu		4	<span class="kanji">不慮<span class="furigana">ふりょ</span></span>				
+苦慮	くりょ	Se torturer l'esprit		4	<span class="kanji">苦慮<span class="furigana">くりょ</span></span>				
+療法	りょうほう	Thérapie, cure		4	<span class="kanji">療法<span class="furigana">りょうほう</span></span>				
+療養	りょうよう	Cure; se soigner		4	<span class="kanji">療養<span class="furigana">りょうよう</span></span>				
+荒療治	あらりょうじ	Remède énergique; remède de cheval; mesures drastiques		4	<span class="kanji">荒療治<span class="furigana">あらりょうじ</span></span>				
+加療	かりょう	病気やけがの治療をすること		4	<span class="kanji">加療<span class="furigana">かりょう</span></span>				
+隣家	りんか	Maison voisine		4	<span class="kanji">隣家<span class="furigana">りんか</span></span>				
+隣室	りんしつ	となりの部屋		4	<span class="kanji">隣室<span class="furigana">りんしつ</span></span>				
+近隣	きんりん	Voisin　近所		4	<span class="kanji">近隣<span class="furigana">きんりん</span></span>		周辺	遠方	
+隣近所	となりきんじょ	①隣の家や近所の家。また、そこに住む人々　②近い所。周り。周辺		4	<span class="kanji">隣近所<span class="furigana">となりきんじょ</span></span>				
+涙腺	るいせん	Glande lacrymale		4	<span class="kanji">涙腺<span class="furigana">るいせん</span></span>				
+声涙	せいるい	声と涙		4	<span class="kanji">声涙<span class="furigana">せいるい</span></span>				
+落涙	らくるい	涙をこぼすこと。泣くこと		4	<span class="kanji">落涙<span class="furigana">らくるい</span></span>				
+涙雨	なみだあめ	①悲しみの涙が化した降ると思われる雨　②ほんの少し降る雨		4	<span class="kanji">涙雨<span class="furigana">なみだあめ</span></span>				
+涙目	なみだめ	Avoir les larmes aux yeux		4	<span class="kanji">涙目<span class="furigana">なみだめ</span></span>				
+加齢	かれい	誕生日または新年を迎えて、年齢が増加すること		4	<span class="kanji">加齢<span class="furigana">かれい</span></span>				
+高齢	こうれい	Grand âge, âge avancé; quatrième âge		4	<span class="kanji">高齢<span class="furigana">こうれい</span></span>				
+弱齢	じゃくれい	年齢が若いこと。若年		4	<span class="kanji">弱齢<span class="furigana">じゃくれい</span></span>				
+適齢期	てきれいき	Âge nubile; nubilité; en âge de se marier		4	<span class="kanji">適齢期<span class="furigana">てきれいき</span></span>				
+妙齢	みょうれい	Nubile　適齢期		4	<span class="kanji">妙齢<span class="furigana">みょうれい</span></span>				
+麗筆	れいひつ	美しい筆跡。また、美しい文章		4	<span class="kanji">麗筆<span class="furigana">れいひつ</span></span>				
+暦年	れきねん	①暦の上での１年　②年月。歳月		4	<span class="kanji">暦年<span class="furigana">れきねん</span></span>				
+暦法	れきほう	こよみに関する学問。また、暦を作る基準。法則		4	<span class="kanji">暦法<span class="furigana">れきほう</span></span>				
+新暦	しんれき	Nouveau calendrier		4	<span class="kanji">新暦<span class="furigana">しんれき</span></span>				
+劣悪	れつあく	Mauvais, de mauvaise qualité		4	<span class="kanji">劣悪<span class="furigana">れつあく</span></span>			優良	
+劣化	れっか	性能・品質などが低下して以前より劣ってくること		4	<span class="kanji">劣化<span class="furigana">れっか</span></span>				
+劣化ウラン	れっかウラン	Uranium appauvri		4	<span class="kanji">劣化<span class="furigana">れっか</span></span>ウラン				
+卑劣	ひれつ	Ignominie; bassesse; abjection		4	<span class="kanji">卑劣<span class="furigana">ひれつ</span></span>				
+見劣り	みおとり	Paraître inférieur; ne pouvoir soutenir la comparaison avec qqch		4	<span class="kanji">見劣<span class="furigana">みおと</span></span>り				
+烈火	れっか	激しい勢いで燃える火		4	<span class="kanji">烈火<span class="furigana">れっか</span></span>				
+烈日	れつじつ	激しく照り付ける夏の太陽。また、その光		4	<span class="kanji">烈日<span class="furigana">れつじつ</span></span>				
+苛烈	かれつ	Sévère; violent; cruel; féroce		4	<span class="kanji">苛烈<span class="furigana">かれつ</span></span>				
+露骨	ろこつ	Cru, brutal; franc; crûment, sans gêne		4	<span class="kanji">露骨<span class="furigana">ろこつ</span></span>				
+露天	ろてん	Plein air		4	<span class="kanji">露天<span class="furigana">ろてん</span></span>				
+露天風呂	とてんぶろ	Bain en plein air		4	<span class="kanji">露天風呂<span class="furigana">とてんぶろ</span></span>				
+夜露	よつゆ	Rosée du soir; serein	難読	4	<span class="kanji">夜露<span class="furigana">よつゆ</span></span>				
+新郎	しんろう	(Nouveau) marié		4	<span class="kanji">新郎<span class="furigana">しんろう</span></span>				
+惑溺	わくでき	ある事に夢中になり、本心を奪われること		4	<span class="kanji">惑溺<span class="furigana">わくでき</span></span>				
+幻惑	げんわく	人の目先を惑わすこと		4	<span class="kanji">幻惑<span class="furigana">げんわく</span></span>				
+戸惑う	とまどう	Se troubler; être déconcerté, désorienté, embarrassé		4	<span class="kanji">戸惑<span class="furigana">とまど</span></span>う				
+腕白	わんぱく	Gamin, fripon		4	<span class="kanji">腕白<span class="furigana">わんぱく</span></span>				
+豪腕	ごうわん	①腕っぷしの強いこと。特に野球で、速球を得意とする投手などにいう　②自分の考えを強引に押し通す力		4	<span class="kanji">豪腕<span class="furigana">ごうわん</span></span>				
+腕利き	うできき	Homme capable; habile, capable		4	<span class="kanji">腕利<span class="furigana">うでき</span></span>き				
+腕章	わんしょう	Brassard		4	<span class="kanji">腕章<span class="furigana">わんしょう</span></span>				
+腕試し	うでだめし	腕力や技能を試すこと。力試し		4	<span class="kanji">腕試<span class="furigana">うでだめ</span></span>し				
+幼年	ようねん	Première enfance, bas âge		5	<span class="kanji">幼年<span class="furigana">ようねん</span></span>			老齢	
