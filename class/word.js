@@ -7,7 +7,7 @@ class Word {
 	static previous = null;
 	static firstWordWithoutFurigana = -1;
 	
-	constructor(pId, pWord, pYomi, pImi, pInfo, pKanken, pFurigana = "", pRef = "") {
+	constructor(pId, pWord, pYomi, pImi, pInfo, pKanken, pFurigana = "", pRef = "", pSynonym = "", pAntonym = "", pSonota = "") {
 		this.id = pId;
 		Word.ID++;
 
@@ -36,6 +36,18 @@ class Word {
 
 		this.ref = pRef;
 		this.wRef = null;
+
+		this.synonymRaw = pSynonym;
+		this.synonymRawList = [];
+		this.synonymList = [];
+		if (pSynonym != "") this.synonymRawList = pSynonym.split("、");
+
+		this.antonymRaw = pAntonym;
+		this.antonymRawList = [];
+		this.antonymList = [];
+		if (pAntonym != "") this.antonymRawList = pAntonym.split("、");
+
+		this.sonota = pSonota;
 
 		if (this.furigana == "") {
 			if (Word.firstWordWithoutFurigana == -1) {
@@ -77,6 +89,23 @@ class Word {
 	setKanji(pKanji) {
 		// this.kanjiList.push(pKanji);
 		this.tmpKanjiList.push(pKanji);
+	}
+
+	static setSynonymAntonym() {
+		Word.list.forEach(w => {
+			if (w.synonymRaw != "") {
+				w.synonymRawList.forEach(s => {
+					const foundWord = Word.list.find(w2 => w2.word == s);
+					if (foundWord) w.synonymList.push(foundWord);
+				});
+			}
+			if (w.antonymRaw != "") {
+				w.antonymRawList.forEach(s => {
+					const foundWord = Word.list.find(w2 => w2.word == s);
+					if (foundWord) w.antonymList.push(foundWord);
+				});
+			}
+		});
 	}
 
 }

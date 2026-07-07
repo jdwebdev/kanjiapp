@@ -849,6 +849,28 @@ function wordInfo(pIndex, pElementFrom = "", pbBack = false) {
 			<p class="modal_separator">読み</p>
 			<p class="modal_imi">${word.yomi}</p>
 		`;
+		if (word.synonymList.length > 0 || word.antonymList.length > 0) {
+			html += `
+				<p class="modal_separator">類義語・対義語</p>
+				<div class="modal_imi">
+			`;
+	
+			word.synonymList.forEach((s, index) => {
+				html += `<button class="ref_link" onClick="wordInfo(${s.id}, 'w')">${s.word} ➤</button>`;
+				
+				if (index < word.synonymList.length - 1 || word.antonymList.length > 0) {
+					html += "、";
+				}
+			});
+			word.antonymList.forEach((s, index) => {
+				html += `<button class="ref_link ref_link_antonym" onClick="wordInfo(${s.id}, 'w')">${s.word} ➤</button>`;
+				
+				if (index < word.antonymList.length - 1) {
+					html += "、";
+				}
+			});
+			html += `</div>`;
+		}
 	}
 
 	html += `<div class="modal_words">`;

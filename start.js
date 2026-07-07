@@ -101,9 +101,10 @@ function createWord(pRow) {
     for (let i = 1; i < row.length; i++) {
         row[i] = row[i].split('\t');
         //?                  語彙	   読み	     意味	 
-        //?             pId, pWord,   pYomi,     pImi,      pInfo,     pKanken,   pFurigana, pRef
-        test = new Word(i-1, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4], row[i][5], row[i][6]);
+        //?             pId, pWord,   pYomi,     pImi,      pInfo,     pKanken,   pFurigana,   pRef,      pRuigigo,  pTaigigo,  pSonota
+        test = new Word(i-1, row[i][0], row[i][1], row[i][2], row[i][3], row[i][4], row[i][5], row[i][6], row[i][7], row[i][8], row[i][9]);
     }
+	Word.setSynonymAntonym();
 }
 
 function createYojijukugo(pRow) {
