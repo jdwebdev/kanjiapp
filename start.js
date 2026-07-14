@@ -186,6 +186,20 @@ function createMinnaWord(pRow) {
 			}
 		});
 	});
+
+	MinnaWord.list.forEach(w => {
+		if (w.tmpKanjiList.length > 0) {
+			for (let i = 0; i < w.word.length; i++) {
+				if (!kana.includes(w.word[i]) && !letterList.includes(w.word[i].toLowerCase()) ) {
+					w.tmpKanjiList.forEach(id => {
+						if (Kanji.list[id].kanji == w.word[i] && !w.kanjiList.includes(id)) {
+							w.kanjiList.push(id);
+						}
+					});
+				}
+			}
+		}
+	});
 }
 function createMinnaGram(pRow) {
 	const row = pRow;

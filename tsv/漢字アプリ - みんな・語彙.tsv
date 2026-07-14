@@ -249,3 +249,103 @@ CD		CD	1	2		Nom
 普通	ふつう	(Train) omnibus	1	5		Nom	
 急行	きゅうこう	(Train) Express	1	5		Nom	
 特急	とっきゅう	(Train) Spécial express	1	5		Nom	
+食べる	たべる	Manger	1	6	たべます	Ru-Vb	～を
+飲む	のむ	Boire	1	6	のみます	U-Vb	～を
+吸う	すう	Fumer	1	6	すいます	U-Vb	～を
+たばこを吸う	たばこをすう	Fumer une cigarette	1	6	すいます	U-Vb	
+見る	みる	Regarder, voir	1	6	みます	Ru-Vb	～を
+聞く	きく	Écouter	1	6	ききます	U-Vb	～を
+読む	よむ	Lire	1	6	よみます	U-Vb	～を
+書く	かく	Écrire	1	6	かきます	U-Vb	～を
+買う	かう	Acheter	1	6	かいます	U-Vb	～を
+撮る	とる	Prendre (une photo)	1	6	とります	U-Vb	～を
+写真を撮る	しゃしんをとる	Prendre une photo	1	6	とります	U-Vb	
+する		Faire	1	6	します	Irr-Vb	～を
+会う	あう	Rencontrer, voir	1	6	あいます	U-Vb	～に
+ご飯	ごはん	Repas, riz (cuit)	1	6		Nom	
+朝ご飯	あさごはん	Petit déjeuner	1	6		Nom	
+昼ご飯	ひるごはん	Déjeuner	1	6		Nom	
+晩ご飯	ばんごはん	Dîner	1	6		Nom	
+パン		Pain	1	6		Nom	
+卵	たまご	Oeuf	1	6		Nom	
+肉	にく	Viande	1	6		Nom	
+魚	さかな	Poisson	1	6		Nom	
+野菜	やさい	Légume	1	6		Nom	
+果物	くだもの	Fruit	1	6		Nom	
+水	みず	Eau	1	6		Nom	
+お茶	おちゃ	Thé, thé vert	1	6		Nom	
+紅茶	こうちゃ	Thé anglais	1	6		Nom	
+牛乳	ぎゅうにゅう	Lait	1	6		Nom	
+ジュース		Jus (de fruit)	1	6		Nom	
+ビール		Bière	1	6		Nom	
+お酒	おさけ	Alcool, saké japonais	1	6		Nom	
+たばこ		Cigarette	1	6		Nom	
+手紙	てがみ	Lettre	1	6		Nom	
+レポート		Rapport, compte-rendu	1	6		Nom	
+写真	しゃしん	Photo	1	6		Nom	
+ビデオ		Vidéo; cassette-vidéo, magnétoscope	1	6		Nom	
+店	みせ	Magasin, boutique	1	6		Nom	
+庭	にわ	Jardin	1	6		Nom	
+宿題	しゅくだい	Devoir	1	6		Nom	
+テニス		Tennis	1	6		Nom	
+サッカー		Football	1	6		Nom	
+お花見	おはなみ	Contemplation des fleurs de cerisiers	1	6		Nom	
+何	なに	Que, quoi	1	6			
+一緒に	いっしょに	Ensemble	1	6			
+ちょっと		Un peu	1	6		Adv	
+いつも		Toujours, habituellement	1	6			
+時々	ときどき	De temps en temps, parfois	1	6			
+それから		Après cela, ensuite, puis	1	6		Exp	
+ええ		Oui	1	6		Exp	
+いいですね		Ce serait bien	1	6		Exp	
+分かりました	わかりました	D'accord / Je vois	1	6		Exp	
+何ですか	なんですか	Oui ?	1	6		Exp	
+じゃ、また［あした］		Bon [à demain]	1	6		Exp	
+メキシコ		Mexique	1	6		Nom	
+切る	きる	Couper, découper	1	7	きります	U-Vb	～を
+送る	おくる	Envoyer	1	7	おくります	U-Vb	～を
+あげる		Donner, offrir	1	7	あげます	Ru-Vb	～を
+もらう		Recevoir	1	7	もらいます	U-Vb	～を
+貸す	かす	Prêter, louer	1	7	かします	U-Vb	～を
+借りる	かりる	Emprunter	1	7	かります	Ru-Vb	～を
+教える	おしえる	Enseigner, apprendre	1	7	おしえます	Ru-Vb	～を
+習う	ならう	Apprendre (par quelqu'un)	1	7	ならいます	U-Vb	～を
+かける		Passer (un coup de téléphone)	1	7	かけます	Ru-Vb	～を
+電話をかける	でんわをかける	Téléphoner	1	7	かけます	Ru-Vb	
+手	て	Main	1	7		Nom	
+箸	はし	Baguettes (pour manger)	1	7		Nom	
+スプーン		Cuillère	1	7		Nom	
+ナイフ		Couteau	1	7		Nom	
+フォーク		Fourchette	1	7		Nom	
+はさみ		Ciseaux	1	7		Nom	
+パソコン		Ordinateur personnel	1	7		Nom	
+ケータイ		Téléphone portable	1	7		Nom	
+メール		Mail, courriel électronique	1	7		Nom	
+年賀状	ねんがじょう	Carte de voeux du Nouvel An	1	7		Nom	
+パンチ		Perforeuse	1	7		Nom	
+ホッチキス		Agrafeuse	1	7		Nom	
+セロテープ		Ruban adhésif, scotch	1	7		Nom	
+消しゴム	けしゴム	Gomme à effacer	1	7		Nom	
+紙	かみ	Feuille, papier	1	7		Nom	
+花	はな	Fleur	1	7		Nom	
+シャツ		Chemise	1	7		Nom	
+プレゼント		Cadeau	1	7		Nom	
+荷物	にもつ	Bagage	1	7		Nom	
+お金	おかね	Argent	1	7		Nom	
+切符	きっぷ	Billet, ticket	1	7		Nom	
+クリスマス		Noël	1	7		Nom	
+父	ちち	Père, mon père	1	7		Nom	
+母	はは	Mère, ma mère	1	7		Nom	
+お父さん	おとうさん	Père	1	7		Nom	
+お母さん	おかあさん	Mère	1	7		Nom	
+もう		Déjà	1	7		Adv	
+まだ		Pas encore	1	7		Adv	
+これから		Maintenant, dès maintenant	1	7		Exp	
+［～］すてきですね		～ est très joli !	1	7		Exp	
+いらっしゃい		Bonjour (litt. Bienvenue)	1	7		Exp	
+どうぞお上がりください	どうぞおあがりください	Entrez, je vous en prie	1	7		Exp	
+失礼します	しつれいします	Excusez-moi pour le dérangement	1	7		Exp	
+［～は］いかがですか		Que diriez-vous de [～] ? (Quand on offre quelque chose)	1	7		Exp	
+いただきます		Merci, je vais en prendre (Avant de manger ou de boire)	1	7		Exp	
+ごちそうさま［でした］		Merci pour le repas (Après avoir mangé ou bu)	1	7		Exp	
+スペイン		Espagne	1	7		Nom	

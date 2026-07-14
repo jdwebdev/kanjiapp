@@ -1339,7 +1339,8 @@ main {
 
 .gmFilter_cat_btn {
 	font-size: 18px;
-	width: 65px;
+	/* width: 65px; */
+	width: 62px;
 	margin-bottom: 5px;
 	/* font-family: Arial, Helvetica, sans-serif; */
 }

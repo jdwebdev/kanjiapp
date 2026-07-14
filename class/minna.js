@@ -15,6 +15,7 @@ class MinnaWord {
 		this.imi = pImi;
 		MinnaWord.imiList.push(this.imi.toLowerCase());
 		this.kanjiList = [];
+		this.tmpKanjiList = [];
 
 		this.book = pBook;
 		this.lesson = pLesson;
@@ -26,7 +27,8 @@ class MinnaWord {
 	}
 
 	setKanji(pKanji) {
-		this.kanjiList.push(pKanji);
+		// this.kanjiList.push(pKanji);
+		this.tmpKanjiList.push(pKanji);
 	}
 }
 

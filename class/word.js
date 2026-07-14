@@ -81,7 +81,7 @@ class Word {
 		this.tmpFuriganaArr = [];
 		this.furiganaArr = [];
 
-		this.bInfoSup = (this.yojijukugo || this.ateji || this.kotowaza || this.kanken != "");
+		this.bInfoSup = (this.yojijukugo || this.ateji || this.kotowaza || this.kanken != "" || this.nandoku);
 
 		Word.list.push(this);
 	}
