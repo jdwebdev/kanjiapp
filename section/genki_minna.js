@@ -286,12 +286,15 @@ function displayGMResult() {
 		exactWordArr = exactWordArr.concat(includingWordArr);
 
 		exactWordArr.forEach((w, index) => {
-			wordHTML += 
-			`
-			<div class="word_result" id="word_id_${w.id}" onClick="minnaWordInfo(${w.id})">
+			if (currentMode == MODE.GENKI) {
+				wordHTML += `<div class="word_result" id="word_id_${w.id}" onClick="">`
+			} else {
+				wordHTML += `<div class="word_result" id="word_id_${w.id}" onClick="minnaWordInfo(${w.id})">`
+			}
+			wordHTML += `
 				<div class="word_result_yomi_word">
 					<div class="word_result_yomi">${w.yomi}</div>
-					`;
+			`;
 			if (currentMode == MODE.GENKI) {
 				wordHTML += `<div class="word_result_word">${w.word}</div>`;
 			} else {
